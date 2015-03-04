@@ -10,8 +10,19 @@ namespace AlgorithmDemo.Drivers
 {
     public class SolidColor : IStarfieldDriver
     {
-        Color DrawColor = Color.Black;
+        #region Private Members
+        Color drawColor = Color.Black;
+        #endregion
 
+        #region Public Properties
+        public Color DrawColor
+        {
+            get { return drawColor; }
+            set { drawColor = value; }
+        }
+        #endregion
+
+        #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
             for(ulong x = 0; x < Starfield.NUM_X; x++)
@@ -26,21 +37,6 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        public System.Windows.Forms.Panel GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Solid Color";
-        }
-
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
@@ -48,5 +44,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Solid Color";
+        }
+        #endregion
     }
 }

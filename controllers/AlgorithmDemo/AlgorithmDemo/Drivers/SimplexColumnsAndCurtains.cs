@@ -13,18 +13,97 @@ namespace AlgorithmDemo.Drivers
 {
     class SimplexColumnsAndCurtains : IStarfieldDriver
     {
-        Color PrimaryColor = Color.Red;
-        Color SecondaryColor = Color.Blue;
-        int NumOctaves = 4;
-        float Persistance = .25f;
-        float Lacunarity = 2.0f;
-        static float Time = 0;
-        const bool CapAtMax = false;
-        const float TimeStep = .005f;
-        float UpperThreshold = .5f;//.75f;//
-        float LowerThreshold = .4f;//.25f;//
-        bool HighContrast = false;
+        #region Private Members
+        Color primaryColor = Color.Red;
+        Color secondaryColor = Color.Blue;
+        int numOctaves = 4;
+        float persistance = .25f;
+        float lacunarity = 2.0f;
+        static float time = 0;
+        bool capAtMax = false;
+        float timeStep = .005f;
+        float upperThreshold = .5f;
+        float lowerThreshold = .4f;
+        float fadeInThreshold = .1f;
+        bool fade = true;
+        bool highContrast = false;
+        #endregion
 
+        #region Public Properties
+        public bool CapAtMax
+        {
+            get { return capAtMax; }
+            set { capAtMax = value; }
+        }
+
+        public bool Fade
+        {
+            get { return fade; }
+            set { fade = value; }
+        }
+
+        public float FadeInThreshold
+        {
+            get { return fadeInThreshold; }
+            set { fadeInThreshold = value; }
+        }
+
+        public bool HighContrast
+        {
+            get { return highContrast; }
+            set { highContrast = value; }
+        }
+
+        public float Lacunarity
+        {
+            get { return lacunarity; }
+            set { lacunarity = value; }
+        }
+
+        public float LowerThreshold
+        {
+            get { return lowerThreshold; }
+            set { lowerThreshold = value; }
+        }
+
+        public int NumOctaves
+        {
+            get { return numOctaves; }
+            set { numOctaves = value; }
+        }
+
+        public float Persistance
+        {
+            get { return persistance; }
+            set { persistance = value; }
+        }
+
+        public Color PrimaryColor
+        {
+            get { return primaryColor; }
+            set { primaryColor = value; }
+        }
+
+        public Color SecondaryColor
+        {
+            get { return secondaryColor; }
+            set { secondaryColor = value; }
+        }
+
+        public float TimeStep
+        {
+            get { return timeStep; }
+            set { timeStep = value; }
+        }
+
+        public float UpperThreshold
+        {
+            get { return upperThreshold; }
+            set { upperThreshold = value; }
+        }
+        #endregion
+
+        #region IStarfieldDriver Implmentation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NUM_X; x++)
@@ -33,7 +112,7 @@ namespace AlgorithmDemo.Drivers
                 {
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
-                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, Time, NumOctaves, Persistance, Lacunarity);
+                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
                         Color toDraw = Color.Black;
                         if (n < UpperThreshold && n > LowerThreshold)
                         {
@@ -48,28 +127,24 @@ namespace AlgorithmDemo.Drivers
                                 toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
                             }
                         }
+                        else if (Fade && !HighContrast && n < (UpperThreshold + FadeInThreshold) && n > UpperThreshold)
+                        {
+                            n -= UpperThreshold;
+                            n *= 1 / FadeInThreshold;
+                            toDraw = ColorUtils.GetGradientColor(SecondaryColor, Color.Black, n, CapAtMax);
+                        }
+                        else if (Fade && !HighContrast && n > (LowerThreshold - FadeInThreshold) && n < LowerThreshold)
+                        {
+                            n -= (LowerThreshold - FadeInThreshold);
+                            n *= 1 / FadeInThreshold;
+                            toDraw = ColorUtils.GetGradientColor(Color.Black, PrimaryColor, n, CapAtMax);
+                        }
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
                 }
             }
-            Time = (Time + TimeStep);
+            time = (time + TimeStep);
         }
-
-        Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Simplex Columns and Curtains";
-        }
-
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
@@ -78,5 +153,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Simplex Columns and Curtains";
+        }
+        #endregion
     }
 }

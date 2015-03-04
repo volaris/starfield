@@ -10,16 +10,39 @@ namespace AlgorithmDemo.Drivers
 {
     public class TestFill : IStarfieldDriver
     {
-        Color DrawColor = Color.Black;
-        Color[] Colors = { Color.Red, Color.Green, Color.Blue };
-        int ColorIndex = 0;
+        #region Private Members
+        Color drawColor = Color.Black;
+        Color[] colors = { Color.Red, Color.Green, Color.Blue };
+        int colorIndex = 0;
         int fillIndex = 0;
-        int Delay = 25;
-        int Step = 0;
+        int delay = 25;
+        int step = 0;
+        #endregion
 
+        #region Public Properties
+        public Color[] Colors
+        {
+            get { return colors; }
+            set { colors = value; }
+        }
+
+        public int Delay
+        {
+            get { return delay; }
+            set { delay = value; }
+        }
+
+        public Color DrawColor
+        {
+            get { return drawColor; }
+            set { drawColor = value; }
+        }
+        #endregion
+
+        #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
-            if (Step == 0)
+            if (step == 0)
             {
                 int i = 0;
                 for (ulong x = 0; x < Starfield.NUM_X; x++)
@@ -31,7 +54,7 @@ namespace AlgorithmDemo.Drivers
                             Color toDraw = Color.Black;
                             if(i <= fillIndex)
                             {
-                                toDraw = Colors[ColorIndex];
+                                toDraw = Colors[colorIndex];
                             }
                             Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                             i++;
@@ -42,26 +65,11 @@ namespace AlgorithmDemo.Drivers
                 fillIndex = (fillIndex + 1) % (int)(Starfield.NUM_X * Starfield.NUM_Y * Starfield.NUM_Z);
                 if(fillIndex == 0)
                 {
-                    ColorIndex = (ColorIndex + 1) % Colors.Length;
+                    colorIndex = (colorIndex + 1) % Colors.Length;
                 }
             }
 
-            Step = (Step + 1) % Delay;
-        }
-
-        public System.Windows.Forms.Panel GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Test Fill";
+            step = (step + 1) % Delay;
         }
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
@@ -71,5 +79,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Test Fill";
+        }
+        #endregion
     }
 }

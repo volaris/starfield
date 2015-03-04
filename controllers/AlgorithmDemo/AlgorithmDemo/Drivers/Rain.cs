@@ -10,19 +10,56 @@ namespace AlgorithmDemo.Drivers
 {
     public class Rain : IStarfieldDriver
     {
+        #region Private Members
         Random rand = new Random();
-        Color RainColor = Color.Blue;
-        Color LightningColor = Color.Yellow;
+        Color rainColor = Color.Blue;
+        Color lightningColor = Color.Yellow;
         int Time = 0;
-        int WrapTime = 20;
-        Color[, ,] RainState;
-        bool Lightning = true;
-        bool Down = true;
+        int wrapTime = 20;
+        Color[, ,] rainState;
+        bool lightning = true;
+        bool down = true;
+        #endregion
 
+        #region Public Properties
+        public bool Down
+        {
+            get { return down; }
+            set { down = value; }
+        }
+
+        public bool Lightning
+        {
+            get { return lightning; }
+            set { lightning = value; }
+        }
+
+        public Color LightningColor
+        {
+            get { return lightningColor; }
+            set { lightningColor = value; }
+        }
+
+        public Color RainColor
+        {
+            get { return rainColor; }
+            set { rainColor = value; }
+        }
+
+        public int WrapTime
+        {
+            get { return wrapTime; }
+            set { wrapTime = value; }
+        }
+        #endregion
+
+        #region Constructors
         public Rain()
         {
         }
+        #endregion
 
+        #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
             if (Time == 0)
@@ -33,7 +70,7 @@ namespace AlgorithmDemo.Drivers
                     {
                         for (ulong z = 0; z < Starfield.NUM_Z; z++)
                         {
-                            RainState[x, y, z] = RainState[x, y + 1, z];
+                            rainState[x, y, z] = rainState[x, y + 1, z];
                         }
                     }
                 }
@@ -49,7 +86,7 @@ namespace AlgorithmDemo.Drivers
                         {
                             toDraw = RainColor;
                         }
-                        RainState[x, Starfield.NUM_Y - 1, z] = toDraw;
+                        rainState[x, Starfield.NUM_Y - 1, z] = toDraw;
                     }
                 }
 
@@ -59,7 +96,7 @@ namespace AlgorithmDemo.Drivers
                     {
                         for (ulong z = 0; z < Starfield.NUM_Z; z++)
                         {
-                            Starfield.SetColor((int)x, (int)y, (int)z, RainState[x, y, z]);
+                            Starfield.SetColor((int)x, (int)y, (int)z, rainState[x, y, z]);
                         }
                     }
                 }
@@ -83,19 +120,51 @@ namespace AlgorithmDemo.Drivers
             Time = (Time + 1) % WrapTime;
         }
 
-        public void GenerateLightning(StarfieldModel Starfield, int x, int z, int y)
+        void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            if(y == 0)
+            rainState = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+
+            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            {
+                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                {
+                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    {
+                        if (Time == 0)
+                        {
+                            rainState[x, y, z] = Color.Black;
+                        }
+                    }
+                }
+            }
+        }
+
+        void IStarfieldDriver.Stop()
+        {
+        }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Rain";
+        }
+        #endregion
+
+        #region Private Methods
+        private void GenerateLightning(StarfieldModel Starfield, int x, int z, int y)
+        {
+            if (y == 0)
             {
                 Starfield.SetColor(x, y, z, LightningColor);
                 return;
             }
 
             int behavior = rand.Next(10);
-            if(behavior == 9) // split
+            if (behavior == 9) // split
             {
                 int dir = rand.Next(2);
-                if(dir == 0)
+                if (dir == 0)
                 {
                     if (x < (int)(Starfield.NUM_X - 1))
                     {
@@ -122,7 +191,7 @@ namespace AlgorithmDemo.Drivers
                     }
                 }
             }
-            if(behavior > 5) // curve
+            if (behavior > 5) // curve
             {
                 int axis = rand.Next(2);
                 int dir = rand.Next(2);
@@ -159,43 +228,6 @@ namespace AlgorithmDemo.Drivers
                 GenerateLightning(Starfield, x, z, y - 1);
             }
         }
-
-        public System.Windows.Forms.Panel GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Rain";
-        }
-
-        void IStarfieldDriver.Start(StarfieldModel Starfield)
-        {
-            RainState = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
-            {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
-                {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
-                    {
-                        if (Time == 0)
-                        {
-                            RainState[x, y, z] = Color.Black;
-                        }
-                    }
-                }
-            }
-        }
-
-        void IStarfieldDriver.Stop()
-        {
-        }
+        #endregion
     }
 }

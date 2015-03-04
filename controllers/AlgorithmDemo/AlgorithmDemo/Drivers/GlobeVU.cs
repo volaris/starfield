@@ -10,7 +10,7 @@ namespace AlgorithmDemo.Drivers
 {
     class GlobeVU : IStarfieldDriver
     {
-        bool Rendering = false;
+        #region Private Members
         int current;
         int goal;
         Color[] rainbow10 = new Color[10];
@@ -20,11 +20,32 @@ namespace AlgorithmDemo.Drivers
         bool transitioning = false;
         float gradientPercent;
         float gradientStep = .01f;
-        public bool fade = true;
-        public float rate = .8f;
-
+        private bool fade = true;
+        private float rate = .8f;
         Globe vuGlobe = new Globe();
+        #endregion
 
+        #region Public Properties
+        public bool Fade
+        {
+            get { return fade; }
+            set { fade = value; }
+        }
+
+        public float GradientStep
+        {
+            get { return gradientStep; }
+            set { gradientStep = value; }
+        }
+
+        public float Rate
+        {
+            get { return rate; }
+            set { rate = value; }
+        }
+        #endregion
+
+        #region Constructors
         public GlobeVU()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
@@ -38,14 +59,29 @@ namespace AlgorithmDemo.Drivers
             rainbow10[8] = rainbow7[6] = Color.FromArgb(0xFF, 0, 0xFF);
             rainbow10[9] = Color.FromArgb(0xEE, 0x82, 0xEE);
         }
+        #endregion
 
+        #region Event Handlers
+        void soundProcessor_OnFrameUpdate(SoundUtils.Frame frame)
+        {
+            byte vu = Math.Max(frame.VU[0], frame.VU[1]);
+            vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
+        }
+
+        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
+        {
+            if (!transitioning)
+            {
+                gradientPercent = 0f;
+                goal = (current + 1) % rainbow7.Length;
+                transitioning = true;
+            }
+        }
+        #endregion
+
+        #region IStarfieldDrive Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            if(!Rendering)
-            {
-                return;
-            }
-
             float centerX = ((Starfield.NUM_X - 1) * 4.0f) / 2;
             float centerY = ((Starfield.NUM_Y - 1) * 4.0f) / 2;
             float centerZ = ((Starfield.NUM_Z - 1) * 4.0f) / 2;
@@ -90,19 +126,8 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        System.Windows.Forms.Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            Rendering = true;
             soundProcessor = new SoundUtils.CSCoreLoopbackSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
@@ -113,31 +138,17 @@ namespace AlgorithmDemo.Drivers
             vuGlobe.InnerRadius = 0;
         }
 
-        void soundProcessor_OnFrameUpdate(SoundUtils.Frame frame)
-        {
-            byte vu = Math.Max(frame.VU[0], frame.VU[1]);
-            vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
-        }
-
         void IStarfieldDriver.Stop()
         {
             soundProcessor = null;
-            Rendering = false;
         }
+        #endregion
 
-        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
-        {
-            if(!transitioning)
-            {
-                gradientPercent = 0f;
-                goal = (current + 1) % rainbow7.Length;
-                transitioning = true;
-            }
-        }
-
+        #region Overrides
         public override string ToString()
         {
             return "Rainbow Globe VU";
         }
+        #endregion
     }
 }

@@ -11,15 +11,17 @@ namespace AlgorithmDemo.Drivers
 {
     public class FluidPour : IStarfieldDriver
     {
+        #region Private Members
         Solver fluidSolver = new Solver();
-
         List<Particle> fluid = new List<Particle>();
         Vec3D[] externalForces;
+        #endregion
 
+        #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
-            Console.WriteLine("Start Render");
-            if(fluid.Count < 4000)
+            Console.WriteLine("Start Render: " + System.Threading.Thread.CurrentThread.ManagedThreadId + " - " + DateTime.Now);
+            if(fluid.Count < 100)
             {
                 Vec3D position1;
                 position1.X = .2d;
@@ -110,22 +112,7 @@ namespace AlgorithmDemo.Drivers
             fluidSolver.ComputeInterfaceFources(fluid.ToArray());
             fluidSolver.Integrate(fluid.ToArray());
 
-            Console.WriteLine("End Render");
-        }
-
-        public System.Windows.Forms.Panel GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Basic Fluid";
+            Console.WriteLine("End Render: " + System.Threading.Thread.CurrentThread.ManagedThreadId + " - " + DateTime.Now);
         }
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
@@ -135,5 +122,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Basic Fluid";
+        }
+        #endregion
     }
 }

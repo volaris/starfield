@@ -15,16 +15,16 @@ namespace StarfieldClient
         private const float DEFAULT_X_STEP = 2;
         private const float DEFAULT_Y_STEP = 2;
         private const float DEFAULT_Z_STEP = 2;
-        private const ulong DEFAULT_NUM_X = 7;//16;//32;
-        private const ulong DEFAULT_NUM_Y = 4;//7;//14;
-        private const ulong DEFAULT_NUM_Z = 5;//16;//32;
+        private const ulong DEFAULT_NUM_X = 7;
+        private const ulong DEFAULT_NUM_Y = 4;
+        private const ulong DEFAULT_NUM_Z = 5;
 
         public float X_STEP = 2;
         public float Y_STEP = 2;
         public float Z_STEP = 2;
-        public ulong NUM_X = 7;//16;//32;
-        public ulong NUM_Y = 4;//7;//14;
-        public ulong NUM_Z = 5;//16;//32;
+        public ulong NUM_X = 7;
+        public ulong NUM_Y = 4;
+        public ulong NUM_Z = 5;
         public ulong ANIMATION_INTERVAL = 30;
         Timer dimmer = new Timer(3000);
         Timer flush;
@@ -34,6 +34,24 @@ namespace StarfieldClient
         Object lockObject = new Object();
 
         public static Color[, ,] LEDColors;
+
+        public static StarfieldModel HomeStarfield(System.Net.IPAddress ip, int port)
+        {
+            // 12' x 8' x 7.5' spaced at 2' intervals
+            return new StarfieldModel(2.0f, 2.0f, 2.0f, 7, 4, 5, ip, port);
+        }
+
+        public static StarfieldModel CriticalNWStarfield(System.Net.IPAddress ip, int port)
+        {
+            // 20' x 20' x 20' spaced at 2' intervals
+            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 11, 10, ip, port);
+        }
+
+        public static StarfieldModel BurningManStarfield(System.Net.IPAddress ip, int port)
+        {
+            // 60' x 60' x 30' spaced at 2' intervals on the y axis and 4' intervals on the x & z axes
+            return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 16, 15, ip, port);
+        }
 
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, System.Net.IPAddress ip, int port)
         {

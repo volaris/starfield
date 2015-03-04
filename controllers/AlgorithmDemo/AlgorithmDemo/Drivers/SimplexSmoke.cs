@@ -13,19 +13,85 @@ namespace AlgorithmDemo.Drivers
 {
     class SimplexSmoke : IStarfieldDriver
     {
-        Color PrimaryColor = Color.Blue;
-        Color SecondaryColor = Color.Red;
-        int NumOctaves = 4;
-        float Persistance = .25f;
-        float Lacunarity = 2.0f;
-        static float Time = 0;
-        bool CapAtMax = false;
-        float TimeStep = .005f;
-        float Threshold = .75f;
-        float GradientMultiple = 2;
-        bool HighContrast = false;
+        #region Private Members
+        Color primaryColor = Color.Blue;
+        Color secondaryColor = Color.Red;
+        int numOctaves = 4;
+        float persistance = .25f;
+        float lacunarity = 2.0f;
+        float time = 0;
+        bool capAtMax = false;
+        float timeStep = .005f;
+        float threshold = .75f;
+        bool highContrast = false;
         int count = 0;
+        bool fade = true;
+        float fadeThreshold = .1f;
+        #endregion
 
+        #region Public Properties
+        public bool Fade
+        {
+            get { return fade; }
+            set { fade = value; }
+        }
+
+        public float FadeThreshold
+        {
+            get { return fadeThreshold; }
+            set { fadeThreshold = value; }
+        }
+
+        public bool HighContrast
+        {
+            get { return highContrast; }
+            set { highContrast = value; }
+        }
+
+        public float Lacunarity
+        {
+            get { return lacunarity; }
+            set { lacunarity = value; }
+        }
+
+        public int NumOctaves
+        {
+            get { return numOctaves; }
+            set { numOctaves = value; }
+        }
+
+        public float Persistance
+        {
+            get { return persistance; }
+            set { persistance = value; }
+        }
+
+        public Color PrimaryColor
+        {
+            get { return primaryColor; }
+            set { primaryColor = value; }
+        }
+
+        public Color SecondaryColor
+        {
+            get { return secondaryColor; }
+            set { secondaryColor = value; }
+        }
+
+        public float Threshold
+        {
+            get { return threshold; }
+            set { threshold = value; }
+        }
+
+        public float TimeStep
+        {
+            get { return timeStep; }
+            set { timeStep = value; }
+        }
+        #endregion
+
+        #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             if (count % 3 == 0)
@@ -46,7 +112,7 @@ namespace AlgorithmDemo.Drivers
             {
                 for (ulong z = 0; z < Starfield.NUM_Z; z++)
                 {
-                    float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, Time, NumOctaves, Persistance, Lacunarity);
+                    float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
                     Color toDraw = Color.Black;
                     if (n > Threshold)
                     {
@@ -57,32 +123,22 @@ namespace AlgorithmDemo.Drivers
                         else
                         {
                             n -= Threshold;
-                            n *= GradientMultiple;
+                            n *= 1 / (1 - Threshold);
                             toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
                         }
+                    }
+                    else if(Fade && !HighContrast && n > (Threshold - FadeThreshold))
+                    {
+                        n -= (Threshold - FadeThreshold);
+                        n *= 1 / FadeThreshold;
+                        toDraw = ColorUtils.GetGradientColor(Color.Black, PrimaryColor, n, CapAtMax);
                     }
                     Starfield.SetColor((int)x, 0, (int)z, toDraw);
                 }
             }
-            Time = (Time + TimeStep);
+            time = (time + TimeStep);
             count++;
         }
-
-        Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Simplex Noise Smoke";
-        }
-
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
@@ -91,5 +147,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Simplex Noise Smoke";
+        }
+        #endregion
     }
 }

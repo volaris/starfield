@@ -13,6 +13,7 @@ namespace AlgorithmDemo.Drivers
 {
     class FractalFlame4D : IStarfieldDriver
     {
+        #region Enums
         enum State
         {
             Hold,
@@ -24,10 +25,20 @@ namespace AlgorithmDemo.Drivers
         {
             Prime4D
         }
+        #endregion
 
+        #region Structs
+        private struct ColorStruct
+        {
+            public int index;
+            public Color color;
+        }
+        #endregion
+
+        #region Private Members
         Random rand;
-        Color PrimaryColor = Color.Red;
-        Color SecondaryColor = Color.Blue;
+        Color primaryColor = Color.Red;
+        Color secondaryColor = Color.Blue;
         State state = State.Hold;
         double[, , , ] colors;
         double[, , , ] alphas;
@@ -35,23 +46,59 @@ namespace AlgorithmDemo.Drivers
         int step = 0;
         int numSteps = 5;
         int time = 0;
+        int holdTime = 64;
         int subTime = 0;
-        int NUM_TIME = 64;
-        int NUM_SUB_TIME_STEP = 10;
+        int subTimeSteps = 10;
+        #endregion
 
+        #region Public Properties
+        public int HoldTime
+        {
+            get { return holdTime; }
+            set { holdTime = value; }
+        }
+
+        public int NumSteps
+        {
+            get { return numSteps; }
+            set { numSteps = value; }
+        }
+
+        public Color PrimaryColor
+        {
+            get { return primaryColor; }
+            set { primaryColor = value; }
+        }
+
+        public Color SecondaryColor
+        {
+            get { return secondaryColor; }
+            set { secondaryColor = value; }
+        }
+
+        public int SubTimeSteps
+        {
+            get { return subTimeSteps; }
+            set { subTimeSteps = value; }
+        }
+        #endregion
+
+        #region Constructors
         public FractalFlame4D()
         {
         }
+        #endregion
 
+        #region IStarfieldDriver Implemention
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             if(subTime == 0)
             {
-                subTime = (subTime + 1) % NUM_SUB_TIME_STEP;
+                subTime = (subTime + 1) % subTimeSteps;
             }
             else
             {
-                subTime = (subTime + 1) % NUM_SUB_TIME_STEP;
+                subTime = (subTime + 1) % subTimeSteps;
                 return;
             }
             Console.WriteLine("time: " + time);
@@ -85,7 +132,7 @@ namespace AlgorithmDemo.Drivers
                                 state = State.FadeIn;
                             }
                         }
-                        if(this.state == State.Hold && time < NUM_TIME - 1)
+                        if(this.state == State.Hold && time < holdTime - 1)
                         {
                             Color current = toDraw[x, y, z, (ulong)time];
                             Color next = toDraw[x, y, z, (ulong)time+1];
@@ -94,13 +141,13 @@ namespace AlgorithmDemo.Drivers
                             int blueDiff = current.B - next.B;
 
                             redDiff *= subTime;
-                            redDiff /= NUM_SUB_TIME_STEP;
+                            redDiff /= subTimeSteps;
                             greenDiff *= subTime;
-                            greenDiff /= NUM_SUB_TIME_STEP;
+                            greenDiff /= subTimeSteps;
                             blueDiff *= subTime;
-                            blueDiff /= NUM_SUB_TIME_STEP;
+                            blueDiff /= subTimeSteps;
 
-                            Color draw = ColorUtils.GetGradientColor(current, next, ((float)subTime) / NUM_SUB_TIME_STEP, true);
+                            Color draw = ColorUtils.GetGradientColor(current, next, ((float)subTime) / subTimeSteps, true);
 
                             Starfield.SetColor((int)x, (int)y, (int)z, draw);
                         }
@@ -117,44 +164,34 @@ namespace AlgorithmDemo.Drivers
                 step++;
             }
 
-            time = (time + 1) % NUM_TIME;
+            time = (time + 1) % holdTime;
             if (time == 0)
             {
                 state = State.FadeOut;
-                Console.WriteLine("new fractal");
             }
         }
-
-        Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "4D Fractal Flame";
-        }
-
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             this.state = State.Hold;
             rand = new Random();
             GenerateFlame(Starfield);
-            //newFractal.Start();
         }
 
         void IStarfieldDriver.Stop()
         {
-            //newFractal.Stop();
         }
+        #endregion
 
-        void GenerateFlame(StarfieldModel Starfield)
+        #region Overrides
+        public override string ToString()
+        {
+            return "4D Fractal Flame";
+        }
+        #endregion
+
+        #region Private Members
+        private void GenerateFlame(StarfieldModel Starfield)
         {
             AffineCoefs4d[] coefs_arr = new AffineCoefs4d[3];
             for(int i = 0; i < coefs_arr.Length; i++)
@@ -162,9 +199,9 @@ namespace AlgorithmDemo.Drivers
                 coefs_arr[i] = GenerateRandomAffine();
             }
 
-            colors = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, NUM_TIME];
-            alphas = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, NUM_TIME];
-            toDraw = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, NUM_TIME];
+            colors = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
+            alphas = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
+            toDraw = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
 
             int xPos = 0;
             int yPos = 0;
@@ -185,12 +222,12 @@ namespace AlgorithmDemo.Drivers
             double xScale = Starfield.NUM_X / (xHigh - xLow);
             double yScale = Starfield.NUM_Y / (yHigh - yLow);
             double zScale = Starfield.NUM_Z / (zHigh - zLow);
-            double tScale = NUM_TIME / (tHigh - tLow);
+            double tScale = holdTime / (tHigh - tLow);
 
             double xOffset = Starfield.NUM_X / 2;
             double yOffset = Starfield.NUM_Y / 2;
             double zOffset = Starfield.NUM_Z / 2;
-            double tOffset = NUM_TIME / 2;
+            double tOffset = holdTime / 2;
 
             double color = rand.NextDouble();
             double alpha = 0;
@@ -206,7 +243,7 @@ namespace AlgorithmDemo.Drivers
             double IfsPointZ = 0;
             double IfsPointT = 0;
 
-            while (count < (int)(Starfield.NUM_X * Starfield.NUM_Y * Starfield.NUM_Z * (ulong)NUM_TIME))
+            while (count < (int)(Starfield.NUM_X * Starfield.NUM_Y * Starfield.NUM_Z * (ulong)holdTime))
             {
                 count++;
 
@@ -269,7 +306,7 @@ namespace AlgorithmDemo.Drivers
                 {
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
-                        for(ulong t = 0; t < (ulong)NUM_TIME; t++)
+                        for(ulong t = 0; t < (ulong)holdTime; t++)
                         {
                             if(alphas[x,y,z,t] != 0 && maxAlpha != 1)
                             {
@@ -334,7 +371,7 @@ namespace AlgorithmDemo.Drivers
             state = State.FadeOut;
         }
 
-        void ApplyVariant(int index, double x, double y, double z, double t, ref double xOut, ref double yOut, ref double zOut, ref double tOut)
+        private void ApplyVariant(int index, double x, double y, double z, double t, ref double xOut, ref double yOut, ref double zOut, ref double tOut)
         {
             double rSquared = Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2) + Math.Pow(t, 2);
             switch(index)
@@ -348,7 +385,7 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        AffineCoefs4d GenerateRandomAffine()
+        private AffineCoefs4d GenerateRandomAffine()
         {
             AffineCoefs4d coefs = new AffineCoefs4d();
 
@@ -376,13 +413,7 @@ namespace AlgorithmDemo.Drivers
             return coefs;
         }
 
-        private struct ColorStruct
-        {
-            public int index;
-            public Color color;
-        }
-
-        Color[] GenerateRandomPalette(int NumColors)
+        private Color[] GenerateRandomPalette(int NumColors)
         {
             int smooth = 10;
             int nodeQuantity = 2;
@@ -431,7 +462,7 @@ namespace AlgorithmDemo.Drivers
             return palette;
         }
 
-        public void Blend(int index1, int index2, Color[] palette)
+        private void Blend(int index1, int index2, Color[] palette)
         {
             double red, green, blue;
             double redStep, greenStep, blueStep, distance;
@@ -491,7 +522,7 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        public void Smooth(int softness, Color[] palette)
+        private void Smooth(int softness, Color[] palette)
         {
             int red, green, blue;
             for (int j = 0; j < softness; j++)
@@ -516,5 +547,6 @@ namespace AlgorithmDemo.Drivers
 
             }
         }
+        #endregion
     }
 }

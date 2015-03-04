@@ -12,15 +12,50 @@ namespace AlgorithmDemo.Drivers
 {
     class RainbowSimplexSmoothed : IStarfieldDriver
     {
+        #region Private Members
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
-        int NumOctaves = 4;
-        float Persistance = .25f;
-        float Lacunarity = 2.0f;
-        static float Time = 0;
-        const bool CapAtMax = false;
-        const float TimeStep = .005f;
+        int numOctaves = 4;
+        float persistance = .25f;
+        float lacunarity = 2.0f;
+        static float time = 0;
+        bool capAtMax = false;
+        float timeStep = .005f;
+        #endregion
 
+        #region Public Properties
+        public bool CapAtMax
+        {
+            get { return capAtMax; }
+            set { capAtMax = value; }
+        }
+
+        public int NumOctaves
+        {
+            get { return numOctaves; }
+            set { numOctaves = value; }
+        }
+
+        public float Persistance
+        {
+            get { return persistance; }
+            set { persistance = value; }
+        }
+
+        public float Lacunarity
+        {
+            get { return lacunarity; }
+            set { lacunarity = value; }
+        }
+
+        public float TimeStep
+        {
+            get { return timeStep; }
+            set { timeStep = value; }
+        }
+        #endregion
+
+        #region Constructors
         public RainbowSimplexSmoothed()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
@@ -34,7 +69,9 @@ namespace AlgorithmDemo.Drivers
             rainbow10[8] = rainbow7[6] = Color.FromArgb(0xFF, 0, 0xFF);
             rainbow10[9] = Color.FromArgb(0xEE, 0x82, 0xEE);
         }
+        #endregion
 
+        #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NUM_X; x++)
@@ -44,7 +81,7 @@ namespace AlgorithmDemo.Drivers
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
                         Color toDraw;
-                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, Time, NumOctaves, Persistance, Lacunarity);
+                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
 
                         if (n > 0 && n < 1)
                         {
@@ -68,24 +105,8 @@ namespace AlgorithmDemo.Drivers
                     }
                 }
             }
-            Time = (Time + TimeStep);
+            time = (time + TimeStep);
         }
-
-        Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Smooth Rainbow Simplex Noise";
-        }
-
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
@@ -94,5 +115,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Smooth Rainbow Simplex Noise";
+        }
+        #endregion
     }
 }

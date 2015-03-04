@@ -11,22 +11,43 @@ namespace AlgorithmDemo.Drivers
 {
     public class FadingStatic : IStarfieldDriver
     {
+        #region Private Members
         Random rand = new Random();
-        Color DrawColor = Color.Blue;
-        float Time = 0f;
-        float Increment = .03f;
-        float AnimationDuration = 1f;
+        Color drawColor = Color.Blue;
+        float time = 0f;
+        float increment = .03f;
+        float animationDuration = 1f;
 
         int[, ,] Prev;
         int[, ,] Next;
+        #endregion
 
+        #region Public Properties
+        public float AnimationDuration
+        {
+            get { return animationDuration; }
+            set { animationDuration = value; }
+        }
 
+        public Color DrawColor
+        {
+            get { return drawColor; }
+            set { drawColor = value; }
+        }
+
+        public float Increment
+        {
+            get { return increment; }
+            set { increment = value; }
+        }
+        #endregion
+
+        #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
 
-            if (Time == 0f)
+            if (time == 0f)
             {
-                Console.WriteLine("new goal");
                 Prev = Next;
                 Next = new int[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
 
@@ -36,7 +57,7 @@ namespace AlgorithmDemo.Drivers
                     {
                         for (ulong z = 0; z < Starfield.NUM_Z; z++)
                         {
-                            if (Time == 0)
+                            if (time == 0)
                             {
                                 Next[x, y, z] = rand.Next(2);
                             }
@@ -53,36 +74,21 @@ namespace AlgorithmDemo.Drivers
                     {
                         Color prevColor = Prev[x,y,z] > 0 ? DrawColor : Color.Black;
                         Color nextColor = Next[x, y, z] > 0 ? DrawColor : Color.Black;
-                        Color toDraw = ColorUtils.GetGradientColor(prevColor, nextColor, Time, true);
+                        Color toDraw = ColorUtils.GetGradientColor(prevColor, nextColor, time, true);
 
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
                 }
             }
 
-            if (Time < AnimationDuration)
+            if (time < AnimationDuration)
             {
-                Time += Increment;
+                time += Increment;
             }
             else
             {
-                Time = 0f;
+                time = 0f;
             }
-        }
-
-        public System.Windows.Forms.Panel GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Fading Static";
         }
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
@@ -94,5 +100,13 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
         }
+        #endregion
+
+        #region Overrides
+        public override string ToString()
+        {
+            return "Fading Static";
+        }
+        #endregion
     }
 }

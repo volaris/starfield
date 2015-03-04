@@ -20,6 +20,8 @@ namespace AlgorithmDemo
         StarfieldModel Model;
         IStarfieldDriver CurrentDriver;
         Object RenderLock = new Object();
+        string DefaultIP = "192.168.0.102";
+        int DefaultPort = 7890;
 
         public FormDemo()
         {
@@ -32,8 +34,13 @@ namespace AlgorithmDemo
                     comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
                 }
             }
+            textBoxIP.Text = DefaultIP;
+            textBoxPort.Text = DefaultPort.ToString();
             comboBoxAlgorithm.SelectedIndex = 0;
-            Model = new StarfieldModel(System.Net.IPAddress.Parse("192.168.0.102"), 7890);//System.Net.IPAddress.Parse("127.0.0.1"), 7890 );//
+            comboBoxStarfield.Items.Add("Home Starfield");
+            comboBoxStarfield.Items.Add("Critical NW Starfield");
+            comboBoxStarfield.Items.Add("Burning Man Starfield");
+            comboBoxStarfield.SelectedIndex = 0;
             System.Timers.Timer render = new System.Timers.Timer(RenderInterval);
             render.Elapsed += render_Elapsed;
             render.Start();
@@ -41,15 +48,32 @@ namespace AlgorithmDemo
 
         void render_Elapsed(object sender, ElapsedEventArgs e)
         {
-            lock (RenderLock)
+            bool lockTaken = false;
+            System.Threading.Monitor.TryEnter(RenderLock, ref lockTaken);
+            if (lockTaken)
             {
-                this.CurrentDriver.Render(this.Model);
+                try
+                {
+                    this.CurrentDriver.Render(this.Model);
+                }
+                catch
+                { }
+                finally
+                {
+                    System.Threading.Monitor.Exit(RenderLock);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Dropped frame");
             }
         }
 
         private void comboBoxAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lock(RenderLock)
+            System.Threading.Monitor.Enter(RenderLock);
+
+            try
             {
                 if (this.CurrentDriver != null)
                 {
@@ -57,6 +81,63 @@ namespace AlgorithmDemo
                 }
                 this.CurrentDriver = ((IStarfieldDriver)comboBoxAlgorithm.SelectedItem);
                 this.CurrentDriver.Start(this.Model);
+                propertyGridDriver.SelectedObject = this.CurrentDriver;
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
+            }
+        }
+
+        private void comboBoxStarfield_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ip = textBoxIP.Text;
+            int port = int.Parse(textBoxPort.Text);
+            
+            System.Threading.Monitor.Enter(RenderLock);
+
+            try
+            {
+                switch (comboBoxStarfield.SelectedIndex)
+                {
+                    case 0:
+                        Model = StarfieldModel.HomeStarfield(System.Net.IPAddress.Parse(ip), port);
+                        break;
+                    case 1:
+                        Model = StarfieldModel.CriticalNWStarfield(System.Net.IPAddress.Parse(ip), port);
+                        break;
+                    case 2:
+                        Model = StarfieldModel.BurningManStarfield(System.Net.IPAddress.Parse(ip), port);
+                        break;
+                }
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
+            }
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            System.Threading.Monitor.Enter(RenderLock);
+
+            try
+            {
+                if (this.CurrentDriver != null)
+                {
+                    this.CurrentDriver.Stop();
+                    this.CurrentDriver.Start(this.Model);
+                }
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
             }
         }
     }

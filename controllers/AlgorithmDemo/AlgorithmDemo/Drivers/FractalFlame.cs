@@ -13,6 +13,7 @@ namespace AlgorithmDemo.Drivers
 {
     class FractalFlame : IStarfieldDriver
     {
+        #region Enums
         enum State
         {
             Sleep,
@@ -24,10 +25,20 @@ namespace AlgorithmDemo.Drivers
         {
             Prime3D
         }
+        #endregion
 
+        #region Structs
+        private struct ColorStruct
+        {
+            public int index;
+            public Color color;
+        }
+        #endregion
+
+        #region Private Members
         Random rand;
-        Color PrimaryColor = Color.Red;
-        Color SecondaryColor = Color.Blue;
+        Color primaryColor = Color.Red;
+        Color secondaryColor = Color.Blue;
         State state = State.Sleep;
         double[, ,] colors;
         double[, ,] alphas;
@@ -36,17 +47,42 @@ namespace AlgorithmDemo.Drivers
         int numSteps = 5;
         System.Timers.Timer newFractal = new System.Timers.Timer(5000);
         StarfieldModel Starfield;
+        #endregion
 
+        #region Public Properties
+        public int NumSteps
+        {
+            get { return numSteps; }
+            set { numSteps = value; }
+        }
+        public Color PrimaryColor
+        {
+            get { return primaryColor; }
+            set { primaryColor = value; }
+        }
+
+        public Color SecondaryColor
+        {
+            get { return secondaryColor; }
+            set { secondaryColor = value; }
+        }
+        #endregion
+
+        #region Constructors
         public FractalFlame()
         {
             newFractal.Elapsed += newFractal_Elapsed;
         }
+        #endregion
 
+        #region Event Handlers
         void newFractal_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             GenerateFlame(Starfield);
         }
+        #endregion
 
+        #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NUM_X; x++)
@@ -90,22 +126,6 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return "Fractal Flame";
-        }
-
-
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             this.Starfield = Starfield;
@@ -119,8 +139,17 @@ namespace AlgorithmDemo.Drivers
         {
             newFractal.Stop();
         }
+        #endregion
 
-        void GenerateFlame(StarfieldModel Starfield)
+        #region Overrides
+        public override string ToString()
+        {
+            return "Fractal Flame";
+        }
+        #endregion
+
+        #region Private Methods
+        private void GenerateFlame(StarfieldModel Starfield)
         {
             AffineCoefs3d[] coefs_arr = new AffineCoefs3d[3];
             for(int i = 0; i < coefs_arr.Length; i++)
@@ -287,7 +316,7 @@ namespace AlgorithmDemo.Drivers
             state = State.FadeOut;
         }
 
-        void ApplyVariant(int index, double x, double y, double z, ref double xOut, ref double yOut, ref double zOut)
+        private void ApplyVariant(int index, double x, double y, double z, ref double xOut, ref double yOut, ref double zOut)
         {
             double rSquared = Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2);
             switch(index)
@@ -300,7 +329,7 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        AffineCoefs3d GenerateRandomAffine()
+        private AffineCoefs3d GenerateRandomAffine()
         {
             AffineCoefs3d coefs = new AffineCoefs3d();
 
@@ -320,13 +349,7 @@ namespace AlgorithmDemo.Drivers
             return coefs;
         }
 
-        private struct ColorStruct
-        {
-            public int index;
-            public Color color;
-        }
-
-        Color[] GenerateRandomPalette(int NumColors)
+        private Color[] GenerateRandomPalette(int NumColors)
         {
             int smooth = 10;
             int nodeQuantity = 2;
@@ -375,7 +398,7 @@ namespace AlgorithmDemo.Drivers
             return palette;
         }
 
-        public void Blend(int index1, int index2, Color[] palette)
+        private void Blend(int index1, int index2, Color[] palette)
         {
             double red, green, blue;
             double redStep, greenStep, blueStep, distance;
@@ -435,7 +458,7 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        public void Smooth(int softness, Color[] palette)
+        private void Smooth(int softness, Color[] palette)
         {
             int red, green, blue;
             for (int j = 0; j < softness; j++)
@@ -460,5 +483,6 @@ namespace AlgorithmDemo.Drivers
 
             }
         }
+        #endregion 
     }
 }
