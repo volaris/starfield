@@ -17,15 +17,16 @@ namespace AlgorithmDemo.Drivers
 
     class SoundResponsiveGlobes : IStarfieldDriver
     {
-        bool Rendering = false;
+        #region Private Members
         Color current = Color.Black;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
         SoundUtils.CSCoreLoopbackSoundProcessor soundProcessor;
         float maxDistance;
-
         Queue<Globe> globes = new Queue<Globe>();
+        #endregion
 
+        #region Constructors
         public SoundResponsiveGlobes()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
@@ -39,14 +40,23 @@ namespace AlgorithmDemo.Drivers
             rainbow10[8] = rainbow7[6] = Color.FromArgb(0xFF, 0, 0xFF);
             rainbow10[9] = Color.FromArgb(0xEE, 0x82, 0xEE);
         }
+        #endregion
 
+        #region Event Handlers
+        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
+        {
+            Random rand = new Random();
+            Globe globe = new Globe();
+            globe.OuterRadius = 2.0f;
+            globe.InnerRadius = -22f;
+            globe.color = rainbow7[rand.Next(rainbow7.Length - 1)];
+            globes.Enqueue(globe);
+        }
+        #endregion
+
+        #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            if(!Rendering)
-            {
-                return;
-            }
-
             float centerX = ((Starfield.NUM_X - 1) * 4.0f) / 2;
             float centerY = ((Starfield.NUM_Y - 1) * 4.0f) / 2;
             float centerZ = ((Starfield.NUM_Z - 1) * 4.0f) / 2;
@@ -78,7 +88,7 @@ namespace AlgorithmDemo.Drivers
                         }
                         catch
                         {
-                            Console.WriteLine("skipped");
+                            // TODO: we shouldn't need this now that we have the render lock
                             return;
                         }
 
@@ -107,19 +117,8 @@ namespace AlgorithmDemo.Drivers
             }
         }
 
-        System.Windows.Forms.Panel IStarfieldDriver.GetConfigPanel()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IStarfieldDriver.ApplyConfig()
-        {
-            throw new NotImplementedException();
-        }
-
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            Rendering = true;
             soundProcessor = new SoundUtils.CSCoreLoopbackSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
@@ -128,22 +127,14 @@ namespace AlgorithmDemo.Drivers
         void IStarfieldDriver.Stop()
         {
             soundProcessor = null;
-            Rendering = false;
         }
+        #endregion
 
-        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
-        {
-            Random rand = new Random();
-            Globe globe = new Globe();
-            globe.OuterRadius = 2.0f;
-            globe.InnerRadius = -22f;
-            globe.color = rainbow7[rand.Next(rainbow7.Length - 1)];
-            globes.Enqueue(globe);
-        }
-
+        #region Overrides
         public override string ToString()
         {
             return "Artifact Triggered Globes";
         }
+        #endregion
     }
 }

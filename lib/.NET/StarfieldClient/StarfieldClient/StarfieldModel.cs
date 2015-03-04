@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Drawing;
-using Leap;
+//using Leap;
 
 namespace StarfieldClient
 {
@@ -148,7 +148,7 @@ namespace StarfieldClient
         }
 
         // TODO: pull this out of this class
-        public void DrawAt(Vector brushPosition, Frame frame)
+        /*public void DrawAt(Vector brushPosition, Frame frame)
         {
             // normalize location
             InteractionBox box = frame.InteractionBox;
@@ -159,7 +159,7 @@ namespace StarfieldClient
 
             // convert starfield coordinates to the closest LED and draw it
             LEDColors[(int)Math.Round(starfieldPoint.x), (int)Math.Round(starfieldPoint.z), (int)Math.Round(starfieldPoint.y)] = Color.FromArgb(0, 0xFF, 0);
-        }
+        }*/
 
         public void Clear()
         {

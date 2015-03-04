@@ -30,6 +30,12 @@ namespace AlgorithmDemo.Drivers
         #endregion
 
         #region Public Properties
+        public bool CapAtMax
+        {
+            get { return capAtMax; }
+            set { capAtMax = value; }
+        }
+
         public bool Fade
         {
             get { return fade; }
