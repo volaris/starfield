@@ -27,13 +27,44 @@ namespace AlgorithmDemo
         {
             InitializeComponent();
 
+            // load builtin drivers
             foreach(Type type in Assembly.GetExecutingAssembly().GetTypes())
             {
-                if(typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface)
+                if(typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface  && !type.IsAbstract)
                 {
                     comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
                 }
             }
+
+            // load plugins
+            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
+            if(System.IO.Directory.Exists(pluginPath))
+            {
+                Console.WriteLine("Loading Plugins");
+
+                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
+                foreach(string filename in plugins)
+                {
+                    try
+                    {
+                        Assembly plugin = Assembly.LoadFrom(filename);
+
+                        foreach (Type type in plugin.GetTypes())
+                        {
+                            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
+                            {
+                                comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Unable to load: {0}", filename);
+                    }
+                }
+            }
+
             textBoxIP.Text = DefaultIP;
             textBoxPort.Text = DefaultPort.ToString();
             comboBoxAlgorithm.SelectedIndex = 0;
