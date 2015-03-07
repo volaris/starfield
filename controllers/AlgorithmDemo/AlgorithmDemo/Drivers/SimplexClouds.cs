@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
-using AlgorithmDemo.Utils;
-using AlgorithmDemo.MathUtils;
+using StarfieldUtils;
+using StarfieldUtils.MathUtils;
+using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {

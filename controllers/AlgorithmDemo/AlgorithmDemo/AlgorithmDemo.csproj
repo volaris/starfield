@@ -39,9 +39,6 @@
     <Reference Include="Exocortex.DSP.v1">
       <HintPath>..\..\..\..\..\..\Downloads\ExocortexDSP_v1.2\src\bin\Debug\Exocortex.DSP.v1.dll</HintPath>
     </Reference>
-    <Reference Include="LeapCSharp.NET4.0">
-      <HintPath>..\..\..\lib\.NET\StarfieldClient\StarfieldClient\bin\Release\LeapCSharp.NET4.0.dll</HintPath>
-    </Reference>
     <Reference Include="StarfieldClient">
       <HintPath>..\..\..\lib\.NET\StarfieldClient\StarfieldClient\bin\Release\StarfieldClient.dll</HintPath>
     </Reference>
@@ -55,6 +52,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Utils">
+      <HintPath>..\..\..\lib\.NET\Utils\Utils\bin\Release\Utils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\BoidSwarms.cs" />
@@ -72,19 +72,6 @@
     <Compile Include="Drivers\SolidColorSoundUpdate.cs" />
     <Compile Include="Drivers\SimplexWaves.cs" />
     <Compile Include="Drivers\FractalFlame.cs" />
-    <Compile Include="FlockingUtils\Boid.cs" />
-    <Compile Include="FlockingUtils\Boid1.cs" />
-    <Compile Include="FlockingUtils\Swarm.cs" />
-    <Compile Include="FluidUtils\DefaultKernels.cs" />
-    <Compile Include="FluidUtils\Particle.cs" />
-    <Compile Include="FluidUtils\Solver.cs" />
-    <Compile Include="MathUtils\Affine.cs" />
-    <Compile Include="MathUtils\FFTTools.cs" />
-    <Compile Include="MathUtils\MathTools.cs" />
-    <Compile Include="MathUtils\Quaternion.cs" />
-    <Compile Include="SoundUtils\CSCoreLoopbackSoundProcessor.cs" />
-    <Compile Include="SoundUtils\ISoundProcessor.cs" />
-    <Compile Include="Utils\ColorUtils.cs" />
     <Compile Include="FormDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,7 +81,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\SimplexCurtains.cs" />
-    <Compile Include="MathUtils\SimplexNoise.cs" />
     <Compile Include="Drivers\RainbowSimplex.cs" />
     <Compile Include="Drivers\SimplexClouds.cs" />
     <Compile Include="Drivers\FadingStatic.cs" />

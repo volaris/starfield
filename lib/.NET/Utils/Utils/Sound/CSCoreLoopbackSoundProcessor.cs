@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace AlgorithmDemo.SoundUtils
+namespace StarfieldUtils.SoundUtils
 {
-    class CSCoreLoopbackSoundProcessor : ISoundProcessor
+    public class CSCoreLoopbackSoundProcessor : ISoundProcessor
     {
         public event OnArtifactDetectedHandler OnArtifactDetected;
         public event OnFrameUpdateHandler OnFrameUpdate;
@@ -101,11 +101,11 @@ namespace AlgorithmDemo.SoundUtils
                 }
 
                 //FFT
-                fftChannel1 = new float[AlgorithmDemo.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel1.Length)];
-                AlgorithmDemo.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartChannel1, fftChannel1, out dcComponent);
+                fftChannel1 = new float[StarfieldUtils.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel1.Length)];
+                StarfieldUtils.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartChannel1, fftChannel1, out dcComponent);
 
-                fftChannel2 = new float[AlgorithmDemo.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel2.Length)];
-                AlgorithmDemo.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartChannel2, fftChannel2, out dcComponent);
+                fftChannel2 = new float[StarfieldUtils.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel2.Length)];
+                StarfieldUtils.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartChannel2, fftChannel2, out dcComponent);
 
                 float bucketWidth = e.Format.SampleRate / (fftChannel1.Length / 2);
 

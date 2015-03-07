@@ -33,9 +33,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmDemo.MathUtils
+namespace StarfieldUtils.MathUtils
 {
-    class SimplexNoise
+    public class SimplexNoise
     {
         static float[,] GRAD3 = new float[,]{ {1,1,0},{-1,1,0},{1,-1,0},{-1,-1,0}, 
 	                                         {1,0,1},{-1,0,1},{1,0,-1},{-1,0,-1}, 

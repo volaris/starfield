@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmDemo.FluidUtils
+namespace StarfieldUtils.CFDUtils
 {
-    class DefaultKernels
+    public class DefaultKernels
     {
         public static double WPoly6(double Radius, double H)
         {
             if(0 <= Radius && Radius <= H)
             {
-                return (315 / (64 * Math.PI * Math.Pow(H, 9))) * Math.Pow(Math.Pow(H, 2) - Math.Pow(Radius, 2), 3);
+                return (315 / (64 * System.Math.PI * System.Math.Pow(H, 9))) * System.Math.Pow(System.Math.Pow(H, 2) - System.Math.Pow(Radius, 2), 3);
             }
             else
             {
@@ -24,7 +24,7 @@ namespace AlgorithmDemo.FluidUtils
         {
             if (0 <= Radius && Radius <= H)
             {
-                return (315 / (64 * Math.PI * Math.Pow(H, 9))) * 6 * Math.Pow(Math.Pow(H, 2) - Math.Pow(Radius, 2), 2) * Radius;
+                return (315 / (64 * System.Math.PI * System.Math.Pow(H, 9))) * 6 * System.Math.Pow(Math.Pow(H, 2) - System.Math.Pow(Radius, 2), 2) * Radius;
             }
             else
             {

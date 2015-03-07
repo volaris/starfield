@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using StarfieldUtils.MathUtils;
 
-namespace AlgorithmDemo.FluidUtils
+namespace StarfieldUtils.CFDUtils
 {
-    class Solver
+    public class Solver
     {
         public double SmoothingLength = 1;
         public double delta_t = .006;
@@ -15,7 +16,7 @@ namespace AlgorithmDemo.FluidUtils
         public static double k = 20;
         public double sigma_i = .6;
         public double sigma_s = .6;
-        public Vec3D FarCorner;
+        public Vec3D FarCorner = new Vec3D(0,0,0);
 
         public Solver()
         {
@@ -75,9 +76,9 @@ namespace AlgorithmDemo.FluidUtils
 
         public void ComputeBasicForces(Particle[] Particles, Vec3D[] ExternalForces)
         {
-            Vec3D fPressure;
-            Vec3D fViscosity;
-            Vec3D fExternal;
+            Vec3D fPressure = new Vec3D(0,0,0);
+            Vec3D fViscosity = new Vec3D(0,0,0);
+            Vec3D fExternal = new Vec3D(0,0,0);
 
             for(int i = 0; i < Particles.Length; i++)
             {
@@ -90,13 +91,13 @@ namespace AlgorithmDemo.FluidUtils
             {
                 for(int j = i+1; j < Particles.Length; j++)
                 {
-                    Vec3D dx;
+                    Vec3D dx = new Vec3D(0,0,0);
                     dx.X = Particles[i].Position.X - Particles[j].Position.X;
                     dx.Y = Particles[i].Position.Y - Particles[j].Position.Y;
                     dx.Z = Particles[i].Position.Z - Particles[j].Position.Z;
                     double r2 = Math.Pow(dx.X, 2) + Math.Pow(dx.Y, 2) + Math.Pow(dx.Z, 2);
                     double r = Math.Sqrt(r2);
-                    Vec3D ddx;
+                    Vec3D ddx = new Vec3D(0,0,0);
                     ddx.X = Particles[j].Velocity.X - Particles[i].Velocity.X;
                     ddx.Y = Particles[j].Velocity.Y - Particles[i].Velocity.Y;
                     ddx.Z = Particles[j].Velocity.Z - Particles[i].Velocity.Z;
@@ -129,18 +130,15 @@ namespace AlgorithmDemo.FluidUtils
         public Vec3D ApplyExternalForces(Particle particle)
         {
             //additional damping?
-            Vec3D force;
-            force.X = 0;
-            force.Y = -9.81;
-            force.Z = 0;
+            Vec3D force = new Vec3D(0, -9.8, 0);
 
             return force;
         }
 
         public void ComputeInterfaceFources(Particle[] Particles)
         {
-            Vec3D fInterface;
-            Vec3D fSurfaceTension;
+            Vec3D fInterface = new Vec3D(0,0,0);
+            Vec3D fSurfaceTension = new Vec3D(0,0,0);
 
             for (int i = 0; i < Particles.Length; i++)
             {
@@ -165,7 +163,7 @@ namespace AlgorithmDemo.FluidUtils
             {
                 for (int j = i + 1; j < Particles.Length; j++)
                 {
-                    Vec3D dx;
+                    Vec3D dx = new Vec3D(0,0,0);
                     dx.X = Particles[i].Position.X - Particles[j].Position.X;
                     dx.Y = Particles[i].Position.Y - Particles[j].Position.Y;
                     dx.Z = Particles[i].Position.Z - Particles[j].Position.Z;
@@ -230,12 +228,12 @@ namespace AlgorithmDemo.FluidUtils
         {
             for(int i = 0; i < Particles.Length; i++)
             {
-                Vec3D acceleration;
+                Vec3D acceleration = new Vec3D(0,0,0);
                 acceleration.X = Particles[i].Force.X / Particles[i].Mass;
                 acceleration.Y = Particles[i].Force.Y / Particles[i].Mass;
                 acceleration.Z = Particles[i].Force.Z / Particles[i].Mass;
 
-                Vec3D newPosition;
+                Vec3D newPosition = new Vec3D(0,0,0);
                 newPosition.X = Particles[i].Position.X;
                 newPosition.Y = Particles[i].Position.Y;
                 newPosition.Z = Particles[i].Position.Z;

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using StarfieldClient;
+using StarfieldUtils.SoundUtils;
+using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
@@ -15,7 +17,7 @@ namespace AlgorithmDemo.Drivers
         int goal;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
-        SoundUtils.CSCoreLoopbackSoundProcessor soundProcessor;
+        CSCoreLoopbackSoundProcessor soundProcessor;
         float maxDistance;
         bool transitioning = false;
         float gradientPercent;
@@ -62,13 +64,13 @@ namespace AlgorithmDemo.Drivers
         #endregion
 
         #region Event Handlers
-        void soundProcessor_OnFrameUpdate(SoundUtils.Frame frame)
+        void soundProcessor_OnFrameUpdate(Frame frame)
         {
             byte vu = Math.Max(frame.VU[0], frame.VU[1]);
             vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
         }
 
-        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
+        void soundProcessor_OnArtifactDetected(Artifact artifact)
         {
             if (!transitioning)
             {
@@ -115,7 +117,7 @@ namespace AlgorithmDemo.Drivers
                                     current = goal;
                                     transitioning = false;
                                 }
-                                toDraw = AlgorithmDemo.Utils.ColorUtils.GetGradientColor(rainbow7[current], rainbow7[goal], gradientPercent, true);
+                                toDraw = ColorUtils.GetGradientColor(rainbow7[current], rainbow7[goal], gradientPercent, true);
                                 gradientPercent += gradientStep;
                             }
                         }
@@ -128,7 +130,7 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new SoundUtils.CSCoreLoopbackSoundProcessor();
+            soundProcessor = new CSCoreLoopbackSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
             soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;

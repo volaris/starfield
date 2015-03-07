@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using StarfieldClient;
-using AlgorithmDemo.FluidUtils;
+using StarfieldUtils.CFDUtils;
+using StarfieldUtils.MathUtils;
 
 namespace AlgorithmDemo.Drivers
 {
@@ -23,17 +24,11 @@ namespace AlgorithmDemo.Drivers
             Console.WriteLine("Start Render: " + System.Threading.Thread.CurrentThread.ManagedThreadId + " - " + DateTime.Now);
             if(fluid.Count < 100)
             {
-                Vec3D position1;
-                position1.X = .2d;
-                position1.Y = .7d;
-                position1.Z = .2d;
-                Vec3D position2;
-                position2.X = .7d;
-                position2.Y = .7d;
-                position2.Z = .7d;
+                Vec3D position1 = new Vec3D(.2d, .7d,.2d);
+                Vec3D position2 = new Vec3D(.7d, .7d, .7d);
                 for(int i = 0; i < 100; i++)
                 {
-                    Vec3D actual;
+                    Vec3D actual = new Vec3D(0, 0, 0);
                     if(i%2 == 0)
                     {
                         actual.X = position1.X;
@@ -53,7 +48,7 @@ namespace AlgorithmDemo.Drivers
                 }
                 for(int i = 0; i < 100; i++)
                 {
-                    Vec3D actual;
+                    Vec3D actual = new Vec3D(0,0,0);
                     if(i%2 == 0)
                     {
                         actual.X = position2.X;
@@ -88,7 +83,8 @@ namespace AlgorithmDemo.Drivers
 
             foreach(Particle p in fluid)
             {
-                Vec3D light, scaled;
+                Vec3D light = new Vec3D(0, 0, 0);
+                Vec3D scaled = new Vec3D(0, 0, 0);
                 scaled.X = p.Position.X * ((double)(Starfield.NUM_X - 1) / fluidSolver.FarCorner.X);
                 scaled.Y = p.Position.Y * ((double)(Starfield.NUM_Y - 1) / fluidSolver.FarCorner.Y);
                 scaled.Z = p.Position.Z * ((double)(Starfield.NUM_Z - 1) / fluidSolver.FarCorner.Z);

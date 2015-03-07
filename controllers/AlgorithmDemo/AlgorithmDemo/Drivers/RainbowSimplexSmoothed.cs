@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
-using AlgorithmDemo.MathUtils;
+using StarfieldUtils.MathUtils;
+using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
@@ -88,7 +89,7 @@ namespace AlgorithmDemo.Drivers
                             int index1 = (int)(Math.Floor(9 * n));
                             int index2 = (int)(Math.Ceiling(9 * n));
                             float percent = (9 * n) - index1;
-                            toDraw = AlgorithmDemo.Utils.ColorUtils.GetGradientColor(rainbow10[index1], rainbow10[index2], percent, true);
+                            toDraw = ColorUtils.GetGradientColor(rainbow10[index1], rainbow10[index2], percent, true);
                             Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                         }
                         else

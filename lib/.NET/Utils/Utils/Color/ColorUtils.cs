@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace AlgorithmDemo.Utils
+namespace StarfieldUtils.ColorUtils
 {
-    class ColorUtils
+    public class ColorUtils
     {
         public static Color GetGradientColor(Color start, Color goal, float n, bool preventOverflow)
         {
@@ -84,7 +84,7 @@ namespace AlgorithmDemo.Utils
             int index1 = (int)(Math.Floor((colors.Length - 1) * n));
             int index2 = (int)(Math.Ceiling((colors.Length - 1) * n));
             float percent = ((colors.Length - 1) * n) - index1;
-            return AlgorithmDemo.Utils.ColorUtils.GetGradientColor(colors[index1], colors[index2], percent, true);
+            return StarfieldUtils.ColorUtils.ColorUtils.GetGradientColor(colors[index1], colors[index2], percent, true);
         }
 
         public static Color GetRandomVibrantColor()

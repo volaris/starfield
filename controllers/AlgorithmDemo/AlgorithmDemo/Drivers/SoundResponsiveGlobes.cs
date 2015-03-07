@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using StarfieldClient;
+using StarfieldUtils.SoundUtils;
 
 namespace AlgorithmDemo.Drivers
 {
@@ -21,7 +22,7 @@ namespace AlgorithmDemo.Drivers
         Color current = Color.Black;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
-        SoundUtils.CSCoreLoopbackSoundProcessor soundProcessor;
+        CSCoreLoopbackSoundProcessor soundProcessor;
         float maxDistance;
         Queue<Globe> globes = new Queue<Globe>();
         #endregion
@@ -43,7 +44,7 @@ namespace AlgorithmDemo.Drivers
         #endregion
 
         #region Event Handlers
-        void soundProcessor_OnArtifactDetected(SoundUtils.Artifact artifact)
+        void soundProcessor_OnArtifactDetected(Artifact artifact)
         {
             Random rand = new Random();
             Globe globe = new Globe();
@@ -119,7 +120,7 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new SoundUtils.CSCoreLoopbackSoundProcessor();
+            soundProcessor = new CSCoreLoopbackSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
         }

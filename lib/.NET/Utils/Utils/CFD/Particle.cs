@@ -4,15 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using StarfieldUtils.MathUtils;
 
-namespace AlgorithmDemo.FluidUtils
+namespace StarfieldUtils.CFDUtils
 {
-    public struct Vec3D
-    {
-        public double X;
-        public double Y;
-        public double Z;
-    }
 
     public struct Particle
     {

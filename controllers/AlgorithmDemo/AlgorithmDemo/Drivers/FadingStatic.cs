@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using StarfieldClient;
-using AlgorithmDemo.Utils;
+using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {

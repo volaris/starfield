@@ -3,36 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Leap;
 
-namespace AlgorithmDemo.MathUtils
+namespace StarfieldUtils.MathUtils
 {
     public struct Quaternion
     {
-        public float X, Y, Z, W;
+        public double X, Y, Z, W;
 
-        public Quaternion(float w, float x, float y, float z)
+        public Quaternion(double w, double x, double y, double z)
         {
             W = w; X = x; Y = y; Z = z;
         }
 
-        public Quaternion(float w, Vector v)
+        public Quaternion(float w, Vec3D v)
         {
-            W = w; X = v.x; Y = v.y; Z = v.z;
+            W = w; X = v.X; Y = v.Y; Z = v.Z;
         }
 
-        public Vector V
+        public Vec3D V
         {
-            set { X = value.x; Y = value.y; Z = value.z; }
-            get { return new Vector(X, Y, Z); }
+            set { X = value.X; Y = value.Y; Z = value.Z; }
+            get { return new Vec3D(X, Y, Z); }
         }
 
         public void Normalise()
         {
-            float m = W * W + X * X + Y * Y + Z * Z;
+            double m = W * W + X * X + Y * Y + Z * Z;
             if (m > 0.001)
             {
-                m = (float)Math.Sqrt(m);
+                m = Math.Sqrt(m);
                 W /= m;
                 X /= m;
                 Y /= m;
@@ -49,30 +48,30 @@ namespace AlgorithmDemo.MathUtils
             X = -X; Y = -Y; Z = -Z;
         }
 
-        public static Quaternion Euler(float x, float y, float z)
+        public static Quaternion Euler(double x, double y, double z)
         {
             var quatX = new Quaternion();
-            quatX.FromAxisAngle(Vector.XAxis, x);
+            quatX.FromAxisAngle(Vec3D.XAxis, x);
 
             var quatY = new Quaternion();
-            quatY.FromAxisAngle(Vector.YAxis, y);
+            quatY.FromAxisAngle(Vec3D.YAxis, y);
 
             var quatZ = new Quaternion();
-            quatZ.FromAxisAngle(Vector.ZAxis, z);
+            quatZ.FromAxisAngle(Vec3D.ZAxis, z);
 
             return (quatZ * quatX) * quatZ;
         }
 
-        public void FromAxisAngle(Vector axis, float angleRadian)
+        public void FromAxisAngle(Vec3D axis, double angleRadian)
         {
-            float m = axis.Magnitude;
+            double m = axis.Magnitude;
             if (m > 0.0001)
             {
-                float ca = (float)Math.Cos(angleRadian / 2);
-                float sa = (float)Math.Sin(angleRadian / 2);
-                X = axis.x / m * sa;
-                Y = axis.y / m * sa;
-                Z = axis.z / m * sa;
+                double ca = Math.Cos(angleRadian / 2);
+                double sa = Math.Sin(angleRadian / 2);
+                X = axis.X / m * sa;
+                Y = axis.Y / m * sa;
+                Z = axis.Z / m * sa;
                 W = ca;
             }
             else
@@ -93,41 +92,41 @@ namespace AlgorithmDemo.MathUtils
 
         //                  -1
         // V'=q*V*q     ,
-        public void Rotate(Vector pt)
+        public void Rotate(Vec3D pt)
         {
             this.Normalise();
             Quaternion q1 = this.Copy();
             q1.Conjugate();
 
-            Quaternion qNode = new Quaternion(0, pt.x, pt.y, pt.z);
+            Quaternion qNode = new Quaternion(0, pt.X, pt.Y, pt.Z);
             qNode = this * qNode * q1;
-            pt.x = qNode.X;
-            pt.y = qNode.Y;
-            pt.z = qNode.Z;
+            pt.X = qNode.X;
+            pt.Y = qNode.Y;
+            pt.Z = qNode.Z;
         }
 
-        public void Rotate(Vector[] nodes)
+        public void Rotate(Vec3D[] nodes)
         {
             this.Normalise();
             Quaternion q1 = this.Copy();
             q1.Conjugate();
             for (int i = 0; i < nodes.Length; i++)
             {
-                Quaternion qNode = new Quaternion(0, nodes[i].x, nodes[i].y, nodes[i].z);
+                Quaternion qNode = new Quaternion(0, nodes[i].X, nodes[i].Y, nodes[i].Z);
                 qNode = this * qNode * q1;
-                nodes[i].x = qNode.X;
-                nodes[i].y = qNode.Y;
-                nodes[i].z = qNode.Z;
+                nodes[i].X = qNode.X;
+                nodes[i].Y = qNode.Y;
+                nodes[i].Z = qNode.Z;
             }
         }
 
         // Multiplying q1 with q2 is meaning of doing q2 firstly then q1
         public static Quaternion operator *(Quaternion q1, Quaternion q2)
         {
-            float nw = q1.W * q2.W - q1.X * q2.X - q1.Y * q2.Y - q1.Z * q2.Z;
-            float nx = q1.W * q2.X + q1.X * q2.W + q1.Y * q2.Z - q1.Z * q2.Y;
-            float ny = q1.W * q2.Y + q1.Y * q2.W + q1.Z * q2.X - q1.X * q2.Z;
-            float nz = q1.W * q2.Z + q1.Z * q2.W + q1.X * q2.Y - q1.Y * q2.X;
+            double nw = q1.W * q2.W - q1.X * q2.X - q1.Y * q2.Y - q1.Z * q2.Z;
+            double nx = q1.W * q2.X + q1.X * q2.W + q1.Y * q2.Z - q1.Z * q2.Y;
+            double ny = q1.W * q2.Y + q1.Y * q2.W + q1.Z * q2.X - q1.X * q2.Z;
+            double nz = q1.W * q2.Z + q1.Z * q2.W + q1.X * q2.Y - q1.Y * q2.X;
             return new Quaternion(nw, nx, ny, nz);
         }
 

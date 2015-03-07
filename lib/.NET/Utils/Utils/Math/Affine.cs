@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmDemo.MathUtils
+namespace StarfieldUtils.MathUtils
 {
     public class AffineCoefs2d
     {

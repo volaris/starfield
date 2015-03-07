@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmDemo.MathUtils
+namespace StarfieldUtils.MathUtils
 {
-    class FFTTools
+    public class FFTTools
     {
         public static int RoundToNextPowerOf2(int x)
         {

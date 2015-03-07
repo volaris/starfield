@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmDemo.SoundUtils
+namespace StarfieldUtils.SoundUtils
 {
     public delegate void OnArtifactDetectedHandler(Artifact artifact);
     public delegate void OnFrameUpdateHandler(Frame frame);
@@ -52,7 +52,7 @@ namespace AlgorithmDemo.SoundUtils
         }
     }
 
-    interface ISoundProcessor
+    public interface ISoundProcessor
     {
         event OnArtifactDetectedHandler OnArtifactDetected;
         event OnFrameUpdateHandler OnFrameUpdate;

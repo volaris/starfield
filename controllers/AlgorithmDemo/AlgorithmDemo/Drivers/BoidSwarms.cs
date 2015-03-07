@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using AlgorithmDemo.FlockingUtils;
-using Leap;
+using StarfieldUtils.FlockingUtils;
 using StarfieldClient;
 using System.Timers;
+using StarfieldUtils.MathUtils;
 
 namespace AlgorithmDemo.Drivers
 {
@@ -22,7 +22,7 @@ namespace AlgorithmDemo.Drivers
         bool trails = true;
         List<Swarm> Swarms = new List<Swarm>();
         List<int> GoalIndexes = new List<int>();
-        List<Vector> Goals = new List<Vector>();
+        List<Vec3D> Goals = new List<Vec3D>();
         List<Timer> Timers = new List<Timer>();
         int Time = 0;
         int WrapTime = 5;
@@ -86,11 +86,11 @@ namespace AlgorithmDemo.Drivers
             rainbow10[9] = Color.FromArgb(0xEE, 0x82, 0xEE);
 
             // create goals
-            Goals.Add((new Vector(10, 24, 10)));
-            Goals.Add((new Vector(30, 4, 10)));
-            Goals.Add((new Vector(50, 24, 10)));
-            Goals.Add((new Vector(50, 4, 30)));
-            Goals.Add((new Vector(50, 4, 50)));
+            Goals.Add((new Vec3D(10, 24, 10)));
+            Goals.Add((new Vec3D(30, 4, 10)));
+            Goals.Add((new Vec3D(50, 24, 10)));
+            Goals.Add((new Vec3D(50, 4, 30)));
+            Goals.Add((new Vec3D(50, 4, 50)));
 
             int skip = Math.Max(1, Goals.Count / NumSwarms);
             int startIndex = 0;
@@ -154,10 +154,10 @@ namespace AlgorithmDemo.Drivers
                 {
                     foreach (Boid boid in swarm.Boids)
                     {
-                        Vector position = boid.Position;
-                        int x = (int)Math.Round(position.x / LocationMultiplier);
-                        int y = (int)Math.Round(position.y / LocationMultiplier);
-                        int z = (int)Math.Round(position.z / LocationMultiplier);
+                        Vec3D position = boid.Position;
+                        int x = (int)Math.Round(position.X / LocationMultiplier);
+                        int y = (int)Math.Round(position.Y / LocationMultiplier);
+                        int z = (int)Math.Round(position.Z / LocationMultiplier);
 
                         if (x > 0 && (ulong)x < Starfield.NUM_X &&
                            y > 0 && (ulong)y < Starfield.NUM_Y &&
@@ -177,7 +177,7 @@ namespace AlgorithmDemo.Drivers
                 // update goals
                 for (int i = 0; i < Swarms.Count; i++)
                 {
-                    Vector goallDiff = Swarms[i].GetCenter() - Swarms[i].Goal;
+                    Vec3D goallDiff = Swarms[i].GetCenter() - Swarms[i].Goal;
                     if (goallDiff.Magnitude < GoalThreshold)
                     {
                         Timers[i].Stop();
