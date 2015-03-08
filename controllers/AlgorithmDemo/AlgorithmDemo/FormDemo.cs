@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Reflection;
 using StarfieldClient;
 using System.Timers;
-using AlgorithmDemo.Drivers;
 
 namespace AlgorithmDemo
 {
@@ -27,13 +26,26 @@ namespace AlgorithmDemo
         {
             InitializeComponent();
 
+            textBoxIP.Text = DefaultIP;
+            textBoxPort.Text = DefaultPort.ToString();
+
             // load builtin drivers
             foreach(Type type in Assembly.GetExecutingAssembly().GetTypes())
             {
-                if(typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface  && !type.IsAbstract)
+                loadType(type);
+            }
+
+            // load default drivers
+            try
+            {
+                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
                 {
-                    comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
+                    loadType(type);
                 }
+            }
+            catch
+            {
+                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
             }
 
             // load plugins
@@ -52,10 +64,7 @@ namespace AlgorithmDemo
 
                         foreach (Type type in plugin.GetTypes())
                         {
-                            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
-                            {
-                                comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
-                            }
+                            loadType(type);
                         }
                     }
                     catch
@@ -64,10 +73,10 @@ namespace AlgorithmDemo
                     }
                 }
             }
-
-            textBoxIP.Text = DefaultIP;
-            textBoxPort.Text = DefaultPort.ToString();
-            comboBoxAlgorithm.SelectedIndex = 0;
+            if (comboBoxAlgorithm.Items.Count > 0)
+            {
+                comboBoxAlgorithm.SelectedIndex = 0;
+            }
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
@@ -124,9 +133,34 @@ namespace AlgorithmDemo
 
         private void comboBoxStarfield_SelectedIndexChanged(object sender, EventArgs e)
         {
+            reconnect();
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            System.Threading.Monitor.Enter(RenderLock);
+
+            try
+            {
+                if (this.CurrentDriver != null)
+                {
+                    this.CurrentDriver.Stop();
+                    this.CurrentDriver.Start(this.Model);
+                }
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
+            }
+        }
+
+        private void reconnect()
+        {
             string ip = textBoxIP.Text;
             int port = int.Parse(textBoxPort.Text);
-            
+
             System.Threading.Monitor.Enter(RenderLock);
 
             try
@@ -152,23 +186,11 @@ namespace AlgorithmDemo
             }
         }
 
-        private void buttonRestart_Click(object sender, EventArgs e)
+        private void loadType(Type type)
         {
-            System.Threading.Monitor.Enter(RenderLock);
-
-            try
+            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
             {
-                if (this.CurrentDriver != null)
-                {
-                    this.CurrentDriver.Stop();
-                    this.CurrentDriver.Start(this.Model);
-                }
-            }
-            catch
-            { }
-            finally
-            {
-                System.Threading.Monitor.Exit(RenderLock);
+                comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
             }
         }
     }

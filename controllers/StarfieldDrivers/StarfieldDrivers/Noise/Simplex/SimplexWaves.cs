@@ -3,29 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers
 {
-    class SimplexCurtains : IStarfieldDriver
+    class SimplexWaves : IStarfieldDriver
     {
         #region Private Members
-        Color primaryColor = Color.Blue;
-        Color secondaryColor = Color.Red;
+        Color primaryColor = Color.Red;
+        Color secondaryColor = Color.Blue;
         int numOctaves = 4;
         float persistance = .25f;
         float lacunarity = 2.0f;
         float time = 0;
-        bool capAtMax = false;
+        bool capAtMax = true;
         float timeStep = .005f;
-        float upperThreshold = .5f;
-        float lowerThreshold = .4f;
-        bool highContrast = false;
         #endregion
 
         #region Public Properties
@@ -35,22 +31,10 @@ namespace AlgorithmDemo.Drivers
             set { capAtMax = value; }
         }
 
-        public bool HighContrast
-        {
-            get { return highContrast; }
-            set { highContrast = value; }
-        }
-
         public float Lacunarity
         {
             get { return lacunarity; }
             set { lacunarity = value; }
-        }
-
-        public float LowerThreshold
-        {
-            get { return lowerThreshold; }
-            set { lowerThreshold = value; }
         }
 
         public int NumOctaves
@@ -82,12 +66,6 @@ namespace AlgorithmDemo.Drivers
             get { return timeStep; }
             set { timeStep = value; }
         }
-
-        public float UpperThreshold
-        {
-            get { return upperThreshold; }
-            set { upperThreshold = value; }
-        }
         #endregion
 
         #region IStarfieldDriver Implementation
@@ -99,20 +77,11 @@ namespace AlgorithmDemo.Drivers
                 {
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
-                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
                         Color toDraw = Color.Black;
-                        if (n < UpperThreshold && n > LowerThreshold)
+                        float n = .5f + SimplexNoise.fbm_noise3((float)x / (float)Starfield.NUM_X, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
+                        if (.3f * n * Starfield.NUM_Y > y)
                         {
-                            if (HighContrast)
-                            {
-                                toDraw = PrimaryColor;
-                            }
-                            else
-                            {
-                                n -= LowerThreshold;
-                                n *= 1 / (UpperThreshold - LowerThreshold);
-                                toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
-                            }
+                           toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
                         }
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
@@ -133,7 +102,7 @@ namespace AlgorithmDemo.Drivers
         #region Overrides
         public override string ToString()
         {
-            return "Simplex Noise Curtains";
+            return "Simplex Waves";
         }
         #endregion
     }

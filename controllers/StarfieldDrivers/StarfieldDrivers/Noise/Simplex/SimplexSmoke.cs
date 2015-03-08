@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers
 {
     class SimplexSmoke : IStarfieldDriver
     {

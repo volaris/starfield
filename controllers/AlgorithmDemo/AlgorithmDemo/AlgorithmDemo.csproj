@@ -42,6 +42,9 @@
     <Reference Include="StarfieldClient">
       <HintPath>..\..\..\lib\.NET\StarfieldClient\StarfieldClient\bin\Release\StarfieldClient.dll</HintPath>
     </Reference>
+    <Reference Include="StarfieldDrivers">
+      <HintPath>..\..\StarfieldDrivers\StarfieldDrivers\bin\Release\StarfieldDrivers.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,21 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drivers\BoidSwarms.cs" />
-    <Compile Include="Drivers\FractalFlame4D.cs" />
-    <Compile Include="Drivers\RainbowSimplexSmoothed.cs" />
-    <Compile Include="Drivers\SimplexSmoke.cs" />
-    <Compile Include="Drivers\SimplexColumnsAndCurtains.cs" />
-    <Compile Include="Drivers\Rain.cs" />
-    <Compile Include="Drivers\GlobeVU.cs" />
-    <Compile Include="Drivers\FluidPour.cs" />
-    <Compile Include="Drivers\SimplexTwinkle.cs" />
-    <Compile Include="Drivers\TestFill.cs" />
-    <Compile Include="Drivers\SoundResponsiveGlobesRandomFix.cs" />
-    <Compile Include="Drivers\SoundResponsiveGlobes.cs" />
-    <Compile Include="Drivers\SolidColorSoundUpdate.cs" />
-    <Compile Include="Drivers\SimplexWaves.cs" />
-    <Compile Include="Drivers\FractalFlame.cs" />
     <Compile Include="FormDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,15 +68,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Drivers\SimplexCurtains.cs" />
-    <Compile Include="Drivers\RainbowSimplex.cs" />
-    <Compile Include="Drivers\SimplexClouds.cs" />
-    <Compile Include="Drivers\FadingStatic.cs" />
-    <Compile Include="Drivers\Static.cs" />
-    <Compile Include="Drivers\TwoColorSimplex.cs" />
-    <Compile Include="Drivers\SingleColorSimplex.cs" />
-    <Compile Include="Drivers\SolidColor.cs" />
-    <Compile Include="Drivers\IStarfieldDriver.cs" />
     <EmbeddedResource Include="FormDemo.resx">
       <DependentUpon>FormDemo.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,12 +93,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="LeapCSharp.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

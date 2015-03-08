@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
 using StarfieldUtils.MathUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers
 {
     class RainbowSimplex : IStarfieldDriver
     {

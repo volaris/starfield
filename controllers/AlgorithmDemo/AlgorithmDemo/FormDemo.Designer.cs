@@ -119,7 +119,7 @@
             // textBoxPort
             // 
             this.textBoxPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPort.Location = new System.Drawing.Point(368, 14);
+            this.textBoxPort.Location = new System.Drawing.Point(368, 13);
             this.textBoxPort.Name = "textBoxPort";
             this.textBoxPort.Size = new System.Drawing.Size(33, 20);
             this.textBoxPort.TabIndex = 8;

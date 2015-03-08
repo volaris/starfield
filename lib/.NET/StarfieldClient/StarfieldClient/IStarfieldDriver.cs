@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using StarfieldClient;
+﻿using StarfieldClient;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldClient
 {
-    interface IStarfieldDriver
+    public interface IStarfieldDriver
     {
         // called at every render iteration
         void Render(StarfieldModel Starfield);

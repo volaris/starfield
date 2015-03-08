@@ -8,33 +8,40 @@ using StarfieldClient;
 
 namespace AlgorithmDemo.Drivers
 {
-    public class SolidColor : IStarfieldDriver
+    public class Static : IStarfieldDriver
     {
         #region Private Members
-        Color drawColor = Color.Black;
-        #endregion
-
-        #region Public Properties
-        public Color DrawColor
-        {
-            get { return drawColor; }
-            set { drawColor = value; }
-        }
+        Random rand = new Random();
+        Color DrawColor = Color.Blue;
+        int Time = 0;
+        int WrapTime = 4;
         #endregion
 
         #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
-            for(ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NUM_X; x++)
             {
                 for (ulong y = 0; y < Starfield.NUM_Y; y++)
                 {
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
-                        Starfield.SetColor((int)x, (int)y, (int)z, DrawColor);
+                        if (Time == 0)
+                        {
+                            Color toDraw = Color.Black;
+
+                            int val = rand.Next(2);
+                            if (val == 1)
+                            {
+                                toDraw = DrawColor;
+                            }
+                            Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
+                        }
                     }
                 }
             }
+
+            Time = (Time + 1) % WrapTime;
         }
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
@@ -49,7 +56,7 @@ namespace AlgorithmDemo.Drivers
         #region Overrides
         public override string ToString()
         {
-            return "Solid Color";
+            return "Static";
         }
         #endregion
     }

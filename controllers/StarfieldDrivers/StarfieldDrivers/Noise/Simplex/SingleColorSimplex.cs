@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers
 {
-    class SimplexWaves : IStarfieldDriver
+    class SingleColorSimplex : IStarfieldDriver
     {
         #region Private Members
-        Color primaryColor = Color.Red;
-        Color secondaryColor = Color.Blue;
+        Color drawColor = Color.Red;
         int numOctaves = 4;
         float persistance = .25f;
         float lacunarity = 2.0f;
@@ -30,6 +28,12 @@ namespace AlgorithmDemo.Drivers
         {
             get { return capAtMax; }
             set { capAtMax = value; }
+        }
+
+        public Color DrawColor
+        {
+            get { return drawColor; }
+            set { drawColor = value; }
         }
 
         public float Lacunarity
@@ -50,18 +54,6 @@ namespace AlgorithmDemo.Drivers
             set { persistance = value; }
         }
 
-        public Color PrimaryColor
-        {
-            get { return primaryColor; }
-            set { primaryColor = value; }
-        }
-
-        public Color SecondaryColor
-        {
-            get { return secondaryColor; }
-            set { secondaryColor = value; }
-        }
-
         public float TimeStep
         {
             get { return timeStep; }
@@ -78,12 +70,8 @@ namespace AlgorithmDemo.Drivers
                 {
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
-                        Color toDraw = Color.Black;
-                        float n = .5f + SimplexNoise.fbm_noise3((float)x / (float)Starfield.NUM_X, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
-                        if (.3f * n * Starfield.NUM_Y > y)
-                        {
-                           toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
-                        }
+                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
+                        Color toDraw = ColorUtils.GetGradientColor(Color.Black, DrawColor, n, CapAtMax);
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
                 }
@@ -103,7 +91,7 @@ namespace AlgorithmDemo.Drivers
         #region Overrides
         public override string ToString()
         {
-            return "Simplex Waves";
+            return "Single Color Simplex Noise";
         }
         #endregion
     }

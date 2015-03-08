@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using StarfieldClient;
 using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers
 {
-    class TwoColorSimplex : IStarfieldDriver
+    class SimplexClouds : IStarfieldDriver
     {
         #region Private Members
-        Color primaryColor = Color.Red;
-        Color secondaryColor = Color.Blue;
+        Color primaryColor = Color.Blue;
+        Color secondaryColor = Color.Red;
         int numOctaves = 4;
         float persistance = .25f;
         float lacunarity = 2.0f;
-        float time = 0;
-        bool capAtMax = true;
+        static float time = 0;
+        bool capAtMax = false;
         float timeStep = .005f;
+        float threshold = .75f;
+        float fadeInThreshold = .1f;
+        bool highContrast = false;
+        bool fade = true;
         #endregion
 
         #region Public Properties
@@ -30,6 +33,24 @@ namespace AlgorithmDemo.Drivers
         {
             get { return capAtMax; }
             set { capAtMax = value; }
+        }
+
+        public bool Fade
+        {
+            get { return fade; }
+            set { fade = value; }
+        }
+
+        public float FadeInThreshold
+        {
+            get { return fadeInThreshold; }
+            set { fadeInThreshold = value; }
+        }
+
+        public bool HighContrast
+        {
+            get { return highContrast; }
+            set { highContrast = value; }
         }
 
         public float Lacunarity
@@ -67,9 +88,15 @@ namespace AlgorithmDemo.Drivers
             get { return timeStep; }
             set { timeStep = value; }
         }
+
+        public float Threshold
+        {
+            get { return threshold; }
+            set { threshold = value; }
+        }
         #endregion
 
-        #region IStarfieldModel Implementation
+        #region IstarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NUM_X; x++)
@@ -79,7 +106,26 @@ namespace AlgorithmDemo.Drivers
                     for (ulong z = 0; z < Starfield.NUM_Z; z++)
                     {
                         float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
-                        Color toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
+                        Color toDraw = Color.Black;
+                        if (n > Threshold)
+                        {
+                            if (HighContrast)
+                            {
+                                toDraw = PrimaryColor;
+                            }
+                            else
+                            {
+                                n -= Threshold;
+                                n *= 1 / (1 - threshold);
+                                toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
+                            }
+                        }
+                        else if (Fade && !HighContrast && n > (Threshold - FadeInThreshold))
+                        {
+                            n -= (Threshold - FadeInThreshold);
+                            n *= 1 / FadeInThreshold;
+                            toDraw = ColorUtils.GetGradientColor(Color.Black, PrimaryColor, n, CapAtMax);
+                        }
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
                 }
@@ -99,7 +145,7 @@ namespace AlgorithmDemo.Drivers
         #region Overrides
         public override string ToString()
         {
-            return "Two Color Simplex Noise";
+            return "Simplex Noise Clouds";
         }
         #endregion
     }
