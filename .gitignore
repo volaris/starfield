@@ -42,7 +42,7 @@ dlldata.c
 *_p.c
 *_i.h
 *.ilk
-*.meta
+#*.meta meta files are needed for unity
 *.obj
 *.pch
 *.pdb
