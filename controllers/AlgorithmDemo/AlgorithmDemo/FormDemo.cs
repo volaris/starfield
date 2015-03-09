@@ -19,7 +19,7 @@ namespace AlgorithmDemo
         StarfieldModel Model;
         IStarfieldDriver CurrentDriver;
         Object RenderLock = new Object();
-        string DefaultIP = "192.168.0.102";
+        string DefaultIP = "192.168.0.10";
         int DefaultPort = 7890;
 
         public FormDemo()
