@@ -44,13 +44,13 @@ namespace StarfieldClient
         public static StarfieldModel CriticalNWStarfield(System.Net.IPAddress ip, int port)
         {
             // 20' x 20' x 20' spaced at 2' intervals
-            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 11, 10, ip, port);
+            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11, ip, port);
         }
 
         public static StarfieldModel BurningManStarfield(System.Net.IPAddress ip, int port)
         {
             // 60' x 60' x 30' spaced at 2' intervals on the y axis and 4' intervals on the x & z axes
-            return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 16, 15, ip, port);
+            return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 15, 16, ip, port);
         }
 
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, System.Net.IPAddress ip, int port)
