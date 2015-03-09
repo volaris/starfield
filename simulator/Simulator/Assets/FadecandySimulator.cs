@@ -32,9 +32,11 @@ public class FadecandySimulator : MonoBehaviour {
 	
 	}
 
-	void OnDisable()
+	void OnApplicationQuit()
 	{
 		stop = true;
+		listener.Stop();
+		serverThread.Abort();
 	}
 
 	static void Service()
@@ -83,12 +85,12 @@ public class FadecandySimulator : MonoBehaviour {
 			case (byte)OPCCommands.SetPixelColors:
 			{
 				int numPixels = data.Length / 3;
-				for(int i = 0; i < numPixels && i < NewBehaviourScript.LEDs.Length; i++)
+				for(int i = 0; i < numPixels && i < StarfieldGenerator.LEDs.Length; i++)
 				{
 					byte red = data[3 * i];
 					byte green = data[(3 * i) + 1];
 					byte blue = data[(3 * i) + 2];
-					NewBehaviourScript.SetLEDColor((ulong)i, new Color32(red, green, blue, 0xFF));
+					StarfieldGenerator.SetLEDColor((ulong)i, new Color32(red, green, blue, 0xFF));
 				}
 				break;
 			}

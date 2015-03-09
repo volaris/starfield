@@ -44,12 +44,12 @@ public class FadecandyClient : MonoBehaviour {
 	
 	void flush_Elapsed(object sender, ElapsedEventArgs e)
 	{
-		byte[] pixelData = new byte[NewBehaviourScript.NUM_X * NewBehaviourScript.NUM_Y * NewBehaviourScript.NUM_Z * 3];
+		byte[] pixelData = new byte[StarfieldGenerator.NumX * StarfieldGenerator.NumY * StarfieldGenerator.NumZ * 3];
 		
 		// pack the array
-		for (ulong i = 0; i < (ulong)NewBehaviourScript.LEDColors.Length; i++)
+		for (ulong i = 0; i < (ulong)StarfieldGenerator.LEDColors.Length; i++)
 		{
-			Color32 color = NewBehaviourScript.GetLEDColor(i);
+			Color32 color = StarfieldGenerator.GetLEDColor(i);
 
 			pixelData[3 * i] = color.r;
 			pixelData[(3 * i) + 1] = color.g;
@@ -66,16 +66,16 @@ public class FadecandyClient : MonoBehaviour {
 	
 	void dimmer_Elapsed(object sender, ElapsedEventArgs e)
 	{
-		for (ulong x = 0; x < NewBehaviourScript.NUM_X; x++)
+		for (ulong x = 0; x < StarfieldGenerator.NumX; x++)
 		{
-			for (ulong y = 0; y < NewBehaviourScript.NUM_Y; y++)
+			for (ulong y = 0; y < StarfieldGenerator.NumY; y++)
 			{
-				for (ulong z = 0; z < NewBehaviourScript.NUM_Z; z++)
+				for (ulong z = 0; z < StarfieldGenerator.NumZ; z++)
 				{
-					byte red = (byte)(NewBehaviourScript.LEDColors[x, z, y].r * .94);
-					byte green = (byte)(NewBehaviourScript.LEDColors[x, z, y].r * .94);
-					byte blue = (byte)(NewBehaviourScript.LEDColors[x, z, y].r * .94);
-					NewBehaviourScript.LEDColors[x, z, y] = new Color32(red, green, blue, 0xFF);
+					byte red = (byte)(StarfieldGenerator.LEDColors[x, z, y].r * .94);
+					byte green = (byte)(StarfieldGenerator.LEDColors[x, z, y].r * .94);
+					byte blue = (byte)(StarfieldGenerator.LEDColors[x, z, y].r * .94);
+					StarfieldGenerator.LEDColors[x, z, y] = new Color32(red, green, blue, 0xFF);
 					//if (LEDColors[x, z, y].R > 0 || LEDColors[x, z, y].G > 0 || LEDColors[x, z, y].B > 0)
 					//{
 					//    Console.WriteLine(LEDColors[x, z, y]);
