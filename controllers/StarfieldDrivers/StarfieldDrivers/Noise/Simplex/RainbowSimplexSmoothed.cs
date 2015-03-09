@@ -19,7 +19,7 @@ namespace StarfieldDrivers
         float persistance = .25f;
         float lacunarity = 2.0f;
         static float time = 0;
-        bool capAtMax = false;
+        bool capAtMax = true;
         float timeStep = .005f;
         #endregion
 
