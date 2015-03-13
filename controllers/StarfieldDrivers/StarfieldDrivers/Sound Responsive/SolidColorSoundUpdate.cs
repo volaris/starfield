@@ -45,11 +45,11 @@ namespace AlgorithmDemo.Drivers
         #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         Starfield.SetColor((int)x, (int)y, (int)z, current);
                     }

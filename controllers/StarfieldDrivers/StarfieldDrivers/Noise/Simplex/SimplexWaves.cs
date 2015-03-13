@@ -71,15 +71,15 @@ namespace StarfieldDrivers
         #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         Color toDraw = Color.Black;
-                        float n = .5f + SimplexNoise.fbm_noise3((float)x / (float)Starfield.NUM_X, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
-                        if (.3f * n * Starfield.NUM_Y > y)
+                        float n = .5f + SimplexNoise.fbm_noise3((float)x / (float)Starfield.NumX, (float)z / (float)Starfield.NumZ, time, NumOctaves, Persistance, Lacunarity);
+                        if (.3f * n * Starfield.NumY > y)
                         {
                            toDraw = ColorUtils.GetGradientColor(PrimaryColor, SecondaryColor, n, CapAtMax);
                         }

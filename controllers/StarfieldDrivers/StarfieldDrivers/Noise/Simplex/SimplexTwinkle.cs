@@ -88,13 +88,13 @@ namespace StarfieldDrivers
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             offColor = Color.FromArgb((int)(drawColor.R * offPercent), (int)(drawColor.G * offPercent), (int)(drawColor.B * offPercent));
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
-                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, (float)y / (float)Starfield.NUM_Y, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
+                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NumX, (float)y / (float)Starfield.NumY, (float)z / (float)Starfield.NumZ, time, NumOctaves, Persistance, Lacunarity);
                         Color toDraw;
                         if(times[x,y,z] > 0)
                         {
@@ -122,15 +122,15 @@ namespace StarfieldDrivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            times = new int[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            times = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
             rand = new Random();
             Color OffColor = Color.FromArgb((int)(this.DrawColor.R * offPercent), (int)(this.DrawColor.G * offPercent), (int)(this.DrawColor.B * offPercent));
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         times[x, y, z] = 0;
                     }

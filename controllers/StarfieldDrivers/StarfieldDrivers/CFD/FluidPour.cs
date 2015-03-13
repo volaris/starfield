@@ -68,11 +68,11 @@ namespace AlgorithmDemo.Drivers
                 }
             }
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         Starfield.SetColor((int)x, (int)y, (int)z, Color.Black);
                     }
@@ -85,9 +85,9 @@ namespace AlgorithmDemo.Drivers
             {
                 Vec3D light = new Vec3D(0, 0, 0);
                 Vec3D scaled = new Vec3D(0, 0, 0);
-                scaled.X = p.Position.X * ((double)(Starfield.NUM_X - 1) / fluidSolver.FarCorner.X);
-                scaled.Y = p.Position.Y * ((double)(Starfield.NUM_Y - 1) / fluidSolver.FarCorner.Y);
-                scaled.Z = p.Position.Z * ((double)(Starfield.NUM_Z - 1) / fluidSolver.FarCorner.Z);
+                scaled.X = p.Position.X * ((double)(Starfield.NumX - 1) / fluidSolver.FarCorner.X);
+                scaled.Y = p.Position.Y * ((double)(Starfield.NumY - 1) / fluidSolver.FarCorner.Y);
+                scaled.Z = p.Position.Z * ((double)(Starfield.NumZ - 1) / fluidSolver.FarCorner.Z);
 
                 //Console.WriteLine("particle at: {0},{1},{2}", (int)p.Position.X, (int)p.Position.Y, (int)p.Position.Z);
                 //Console.WriteLine("scaled to: {0},{1},{2}", (int)scaled.X, (int)scaled.Y, (int)scaled.Z);

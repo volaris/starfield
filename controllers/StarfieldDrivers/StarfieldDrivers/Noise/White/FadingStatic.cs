@@ -49,13 +49,13 @@ namespace AlgorithmDemo.Drivers
             if (time == 0f)
             {
                 Prev = Next;
-                Next = new int[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+                Next = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                    for (ulong y = 0; y < Starfield.NumY; y++)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             if (time == 0)
                             {
@@ -66,11 +66,11 @@ namespace AlgorithmDemo.Drivers
                 }
             }
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         Color prevColor = Prev[x,y,z] > 0 ? DrawColor : Color.Black;
                         Color nextColor = Next[x, y, z] > 0 ? DrawColor : Color.Black;
@@ -93,8 +93,8 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            Prev = new int[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            Next = new int[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            Prev = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            Next = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
         }
 
         void IStarfieldDriver.Stop()

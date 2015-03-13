@@ -106,13 +106,13 @@ namespace StarfieldDrivers
         #region IStarfieldDriver Implmentation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
-                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
+                        float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NumX, 0, (float)z / (float)Starfield.NumZ, time, NumOctaves, Persistance, Lacunarity);
                         Color toDraw = Color.Black;
                         if (n < UpperThreshold && n > LowerThreshold)
                         {

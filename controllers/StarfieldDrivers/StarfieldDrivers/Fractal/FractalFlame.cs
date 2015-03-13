@@ -84,11 +84,11 @@ namespace StarfieldDrivers
         #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         if(this.state == State.Sleep)
                         {
@@ -156,9 +156,9 @@ namespace StarfieldDrivers
                 coefs_arr[i] = GenerateRandomAffine();
             }
 
-            colors = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            alphas = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            toDraw = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            colors = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            alphas = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            toDraw = new Color[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
             int xPos = 0;
             int yPos = 0;
@@ -173,13 +173,13 @@ namespace StarfieldDrivers
             double zHigh = 1;
             double zLow = -1;
 
-            double xScale = Starfield.NUM_X / (xHigh - xLow);
-            double yScale = Starfield.NUM_Y / (yHigh - yLow);
-            double zScale = Starfield.NUM_Z / (zHigh - zLow);
+            double xScale = Starfield.NumX / (xHigh - xLow);
+            double yScale = Starfield.NumY / (yHigh - yLow);
+            double zScale = Starfield.NumZ / (zHigh - zLow);
 
-            double xOffset = Starfield.NUM_X / 2;
-            double yOffset = Starfield.NUM_Y / 2;
-            double zOffset = Starfield.NUM_Z / 2;
+            double xOffset = Starfield.NumX / 2;
+            double yOffset = Starfield.NumY / 2;
+            double zOffset = Starfield.NumZ / 2;
 
             double color = rand.NextDouble();
             double alpha = 0;
@@ -193,7 +193,7 @@ namespace StarfieldDrivers
             double IfsPointY = 0;
             double IfsPointZ = 0;
 
-            while(count < 6000)//(StarfieldModel.NUM_X * StarfieldModel.NUM_Y * StarfieldModel.NUM_Z))
+            while(count < 6000)//(StarfieldModel.NumX * StarfieldModel.NumY * StarfieldModel.NumZ))
             {
                 count++;
 
@@ -234,10 +234,10 @@ namespace StarfieldDrivers
             double alphaGamma;
             double mappingScale;
 
-            byte[, ,] imageAlpha = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageRed = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageGreen = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageBlue = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            byte[, ,] imageAlpha = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageRed = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageGreen = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageBlue = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
             int pixelColor = 0;
             byte fixedBrightness = 0;
@@ -247,11 +247,11 @@ namespace StarfieldDrivers
 
             int tempPixel = 0;
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         if(alphas[x,y,z] != 0 && maxAlpha != 1)
                         {

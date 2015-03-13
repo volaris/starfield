@@ -51,17 +51,17 @@ namespace AlgorithmDemo.Drivers
         #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            float centerX = (Starfield.NUM_X * 4.0f) / 2;
-            float centerY = (Starfield.NUM_Y * 4.0f) / 2;
-            float centerZ = (Starfield.NUM_Z * 4.0f) / 2;
+            float centerX = (Starfield.NumX * 4.0f) / 2;
+            float centerY = (Starfield.NumY * 4.0f) / 2;
+            float centerZ = (Starfield.NumZ * 4.0f) / 2;
 
             maxDistance = (float)Math.Sqrt(Math.Pow(0 - centerX, 2) + Math.Pow(0 - centerY, 2) + Math.Pow(0 - centerZ, 2));
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         float xPos = x * 4.0f;
                         float yPos = y * 4.0f;

@@ -64,20 +64,20 @@ namespace AlgorithmDemo.Drivers
         {
             if (Time == 0)
             {
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong y = 0; y < Starfield.NUM_Y - 1; y++)
+                    for (ulong y = 0; y < Starfield.NumY - 1; y++)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             rainState[x, y, z] = rainState[x, y + 1, z];
                         }
                     }
                 }
 
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         Color toDraw = Color.Black;
 
@@ -86,15 +86,15 @@ namespace AlgorithmDemo.Drivers
                         {
                             toDraw = RainColor;
                         }
-                        rainState[x, Starfield.NUM_Y - 1, z] = toDraw;
+                        rainState[x, Starfield.NumY - 1, z] = toDraw;
                     }
                 }
 
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                    for (ulong y = 0; y < Starfield.NumY; y++)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             Starfield.SetColor((int)x, (int)y, (int)z, rainState[x, y, z]);
                         }
@@ -103,14 +103,14 @@ namespace AlgorithmDemo.Drivers
 
                 if(Lightning)
                 {
-                    for (ulong x = 0; x < Starfield.NUM_X; x++)
+                    for (ulong x = 0; x < Starfield.NumX; x++)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             int val = rand.Next(1000);
                             if (val == 1)
                             {
-                                GenerateLightning(Starfield, (int)x, (int)z, (int)(Starfield.NUM_Y - 1));
+                                GenerateLightning(Starfield, (int)x, (int)z, (int)(Starfield.NumY - 1));
                             }
                         }
                     }
@@ -122,13 +122,13 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            rainState = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            rainState = new Color[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         if (Time == 0)
                         {
@@ -166,7 +166,7 @@ namespace AlgorithmDemo.Drivers
                 int dir = rand.Next(2);
                 if (dir == 0)
                 {
-                    if (x < (int)(Starfield.NUM_X - 1))
+                    if (x < (int)(Starfield.NumX - 1))
                     {
                         Starfield.SetColor(x + 1, y, z, LightningColor);
                         GenerateLightning(Starfield, x + 1, z, y - 1);
@@ -179,7 +179,7 @@ namespace AlgorithmDemo.Drivers
                 }
                 else
                 {
-                    if (z < (int)(Starfield.NUM_Z - 1))
+                    if (z < (int)(Starfield.NumZ - 1))
                     {
                         Starfield.SetColor(x, y, z + 1, LightningColor);
                         GenerateLightning(Starfield, x, z + 1, y - 1);
@@ -197,7 +197,7 @@ namespace AlgorithmDemo.Drivers
                 int dir = rand.Next(2);
                 if (axis == 0)
                 {
-                    if (dir == 0 && x < (int)(Starfield.NUM_X - 1))
+                    if (dir == 0 && x < (int)(Starfield.NumX - 1))
                     {
                         Starfield.SetColor(x + 1, y, z, LightningColor);
                         GenerateLightning(Starfield, x + 1, z, y - 1);
@@ -210,7 +210,7 @@ namespace AlgorithmDemo.Drivers
                 }
                 else
                 {
-                    if (dir == 0 && z < (int)(Starfield.NUM_Z - 1))
+                    if (dir == 0 && z < (int)(Starfield.NumZ - 1))
                     {
                         Starfield.SetColor(x, y, z + 1, LightningColor);
                         GenerateLightning(Starfield, x, z + 1, y - 1);

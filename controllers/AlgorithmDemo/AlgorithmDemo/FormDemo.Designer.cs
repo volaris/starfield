@@ -39,7 +39,10 @@
             this.textBoxPort = new System.Windows.Forms.TextBox();
             this.labelEndpoint = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
+            this.labelBrightness = new System.Windows.Forms.Label();
+            this.trackBarBrightness = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAlgorithm
@@ -103,9 +106,9 @@
             this.propertyGridDriver.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.propertyGridDriver.Location = new System.Drawing.Point(15, 118);
+            this.propertyGridDriver.Location = new System.Drawing.Point(15, 172);
             this.propertyGridDriver.Name = "propertyGridDriver";
-            this.propertyGridDriver.Size = new System.Drawing.Size(386, 307);
+            this.propertyGridDriver.Size = new System.Drawing.Size(386, 253);
             this.propertyGridDriver.TabIndex = 6;
             // 
             // textBoxIP
@@ -143,11 +146,34 @@
             this.buttonRestart.UseVisualStyleBackColor = true;
             this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
+            // labelBrightness
+            // 
+            this.labelBrightness.AutoSize = true;
+            this.labelBrightness.Location = new System.Drawing.Point(12, 127);
+            this.labelBrightness.Name = "labelBrightness";
+            this.labelBrightness.Size = new System.Drawing.Size(56, 13);
+            this.labelBrightness.TabIndex = 11;
+            this.labelBrightness.Text = "Brightness";
+            // 
+            // trackBarBrightness
+            // 
+            this.trackBarBrightness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBarBrightness.Location = new System.Drawing.Point(74, 118);
+            this.trackBarBrightness.Maximum = 100;
+            this.trackBarBrightness.Name = "trackBarBrightness";
+            this.trackBarBrightness.Size = new System.Drawing.Size(327, 45);
+            this.trackBarBrightness.TabIndex = 12;
+            this.trackBarBrightness.Value = 100;
+            this.trackBarBrightness.ValueChanged += new System.EventHandler(this.trackBarBrightness_ValueChanged);
+            // 
             // FormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 466);
+            this.Controls.Add(this.trackBarBrightness);
+            this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.labelEndpoint);
             this.Controls.Add(this.textBoxPort);
@@ -162,6 +188,7 @@
             this.Name = "FormDemo";
             this.Text = "Starfield Display Driver";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +207,8 @@
         private System.Windows.Forms.TextBox textBoxPort;
         private System.Windows.Forms.Label labelEndpoint;
         private System.Windows.Forms.Button buttonRestart;
+        private System.Windows.Forms.Label labelBrightness;
+        private System.Windows.Forms.TrackBar trackBarBrightness;
     }
 }
 

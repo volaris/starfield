@@ -102,11 +102,11 @@ namespace StarfieldDrivers
                 return;
             }
             Console.WriteLine("time: " + time);
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         if(this.state == State.FadeIn)
                         {
@@ -199,9 +199,9 @@ namespace StarfieldDrivers
                 coefs_arr[i] = GenerateRandomAffine();
             }
 
-            colors = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
-            alphas = new double[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
-            toDraw = new Color[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z, holdTime];
+            colors = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ, holdTime];
+            alphas = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ, holdTime];
+            toDraw = new Color[Starfield.NumX, Starfield.NumY, Starfield.NumZ, holdTime];
 
             int xPos = 0;
             int yPos = 0;
@@ -219,14 +219,14 @@ namespace StarfieldDrivers
             double tHigh = 1;
             double tLow = -1;
 
-            double xScale = Starfield.NUM_X / (xHigh - xLow);
-            double yScale = Starfield.NUM_Y / (yHigh - yLow);
-            double zScale = Starfield.NUM_Z / (zHigh - zLow);
+            double xScale = Starfield.NumX / (xHigh - xLow);
+            double yScale = Starfield.NumY / (yHigh - yLow);
+            double zScale = Starfield.NumZ / (zHigh - zLow);
             double tScale = holdTime / (tHigh - tLow);
 
-            double xOffset = Starfield.NUM_X / 2;
-            double yOffset = Starfield.NUM_Y / 2;
-            double zOffset = Starfield.NUM_Z / 2;
+            double xOffset = Starfield.NumX / 2;
+            double yOffset = Starfield.NumY / 2;
+            double zOffset = Starfield.NumZ / 2;
             double tOffset = holdTime / 2;
 
             double color = rand.NextDouble();
@@ -243,7 +243,7 @@ namespace StarfieldDrivers
             double IfsPointZ = 0;
             double IfsPointT = 0;
 
-            while (count < (int)(Starfield.NUM_X * Starfield.NUM_Y * Starfield.NUM_Z * (ulong)holdTime))
+            while (count < (int)(Starfield.NumX * Starfield.NumY * Starfield.NumZ * (ulong)holdTime))
             {
                 count++;
 
@@ -287,10 +287,10 @@ namespace StarfieldDrivers
             double alphaGamma;
             double mappingScale;
 
-            byte[, ,] imageAlpha = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageRed = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageGreen = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
-            byte[, ,] imageBlue = new byte[Starfield.NUM_X, Starfield.NUM_Y, Starfield.NUM_Z];
+            byte[, ,] imageAlpha = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageRed = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageGreen = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+            byte[, ,] imageBlue = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
             int pixelColor = 0;
             byte fixedBrightness = 0;
@@ -300,11 +300,11 @@ namespace StarfieldDrivers
 
             int tempPixel = 0;
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                for (ulong y = 0; y < Starfield.NumY; y++)
                 {
-                    for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                    for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
                         for(ulong t = 0; t < (ulong)holdTime; t++)
                         {

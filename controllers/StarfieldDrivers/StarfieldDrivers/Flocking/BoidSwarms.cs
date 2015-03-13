@@ -131,11 +131,11 @@ namespace AlgorithmDemo.Drivers
             if (Time == 0)
             {
                 // render
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong y = 0; y < Starfield.NUM_Y; y++)
+                    for (ulong y = 0; y < Starfield.NumY; y++)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             if (Trails)
                             {
@@ -159,9 +159,9 @@ namespace AlgorithmDemo.Drivers
                         int y = (int)Math.Round(position.Y / LocationMultiplier);
                         int z = (int)Math.Round(position.Z / LocationMultiplier);
 
-                        if (x > 0 && (ulong)x < Starfield.NUM_X &&
-                           y > 0 && (ulong)y < Starfield.NUM_Y &&
-                           z > 0 && (ulong)z < Starfield.NUM_Z)
+                        if (x > 0 && (ulong)x < Starfield.NumX &&
+                           y > 0 && (ulong)y < Starfield.NumY &&
+                           z > 0 && (ulong)z < Starfield.NumZ)
                         {
                             Starfield.SetColor(x, y, z, boid.Color);
                         }

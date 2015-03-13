@@ -193,5 +193,10 @@ namespace AlgorithmDemo
                 comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
             }
         }
+
+        private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
+        {
+            Model.Brightness = (float)trackBarBrightness.Value / (float)trackBarBrightness.Maximum;
+        }
     }
 }

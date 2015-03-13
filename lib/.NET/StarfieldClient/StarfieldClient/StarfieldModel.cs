@@ -19,13 +19,14 @@ namespace StarfieldClient
         private const ulong DEFAULT_NUM_Y = 4;
         private const ulong DEFAULT_NUM_Z = 5;
 
-        public float X_STEP = 2;
-        public float Y_STEP = 2;
-        public float Z_STEP = 2;
-        public ulong NUM_X = 7;
-        public ulong NUM_Y = 4;
-        public ulong NUM_Z = 5;
-        public ulong ANIMATION_INTERVAL = 30;
+        public float XStep = 2;
+        public float YStep = 2;
+        public float ZStep = 2;
+        public ulong NumX = 7;
+        public ulong NumY = 4;
+        public ulong NumZ = 5;
+        public ulong AnimationInterval = 30;
+        float brightness = 1.0f;
         Timer dimmer = new Timer(3000);
         Timer flush;
         public bool EnableDimmer = false;
@@ -34,6 +35,12 @@ namespace StarfieldClient
         Object lockObject = new Object();
 
         public static Color[, ,] LEDColors;
+
+        public float Brightness
+        {
+            get { return brightness; }
+            set { brightness = Math.Min(Math.Max(0f,value),1f); }
+        }
 
         public static StarfieldModel HomeStarfield(System.Net.IPAddress ip, int port)
         {
@@ -55,15 +62,15 @@ namespace StarfieldClient
 
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, System.Net.IPAddress ip, int port)
         {
-            this.X_STEP = xStep;
-            this.Y_STEP = yStep;
-            this.Z_STEP = zStep;
-            this.NUM_X = numX;
-            this.NUM_Y = numY;
-            this.NUM_Z = numZ;
+            this.XStep = xStep;
+            this.YStep = yStep;
+            this.ZStep = zStep;
+            this.NumX = numX;
+            this.NumY = numY;
+            this.NumZ = numZ;
 
-            LEDColors = new Color[NUM_X, NUM_Z, NUM_Y];
-            pixelData = new byte[NUM_X * NUM_Y * NUM_Z * 3];
+            LEDColors = new Color[NumX, NumZ, NumY];
+            pixelData = new byte[NumX * NumY * NumZ * 3];
 
             client = new OPCClient(ip, port);
             if (!client.CanConnect())
@@ -73,7 +80,7 @@ namespace StarfieldClient
             dimmer.Elapsed += dimmer_Elapsed;
             dimmer.Start();
 
-            flush = new Timer(ANIMATION_INTERVAL);
+            flush = new Timer(AnimationInterval);
             flush.Elapsed += flush_Elapsed;
             flush.Start();
         }
@@ -104,13 +111,13 @@ namespace StarfieldClient
                 // pack the array
                 for (ulong i = 0; i < (ulong)(pixelData.Length / 3); i++)
                 {
-                    ulong x = i / (NUM_Z * NUM_Y);
-                    ulong z = (i % (NUM_Z * NUM_Y)) / NUM_Y;
-                    ulong y = (NUM_Y - 1) - ((i % (NUM_Z * NUM_Y)) % NUM_Y);
+                    ulong x = i / (NumZ * NumY);
+                    ulong z = (i % (NumZ * NumY)) / NumY;
+                    ulong y = (NumY - 1) - ((i % (NumZ * NumY)) % NumY);
 
-                    pixelData[3 * i] = LEDColors[x, z, y].R;
-                    pixelData[(3 * i) + 1] = LEDColors[x, z, y].G;
-                    pixelData[(3 * i) + 2] = LEDColors[x, z, y].B;
+                    pixelData[3 * i] = (byte)(LEDColors[x, z, y].R * brightness);
+                    pixelData[(3 * i) + 1] = (byte)(LEDColors[x, z, y].G * brightness);
+                    pixelData[(3 * i) + 2] = (byte)(LEDColors[x, z, y].B * brightness);
                 }
 
                 // send it
@@ -131,11 +138,11 @@ namespace StarfieldClient
         {
             if (EnableDimmer)
             {
-                for (ulong x = 0; x < NUM_X; x++)
+                for (ulong x = 0; x < NumX; x++)
                 {
-                    for (ulong y = 0; y < NUM_Y; y++)
+                    for (ulong y = 0; y < NumY; y++)
                     {
-                        for (ulong z = 0; z < NUM_Z; z++)
+                        for (ulong z = 0; z < NumZ; z++)
                         {
                             byte red = (byte)(LEDColors[x, z, y].R * .94);
                             byte green = (byte)(LEDColors[x, z, y].G * .94);
@@ -163,11 +170,11 @@ namespace StarfieldClient
 
         public void Clear()
         {
-            for (ulong x = 0; x < NUM_X; x++)
+            for (ulong x = 0; x < NumX; x++)
             {
-                for (ulong y = 0; y < NUM_Y; y++)
+                for (ulong y = 0; y < NumY; y++)
                 {
-                    for (ulong z = 0; z < NUM_Z; z++)
+                    for (ulong z = 0; z < NumZ; z++)
                     {
                         byte red = 0;
                         byte green = 0;

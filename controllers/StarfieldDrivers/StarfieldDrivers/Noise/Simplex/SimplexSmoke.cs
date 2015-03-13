@@ -102,11 +102,11 @@ namespace StarfieldDrivers
         {
             if (count % 3 == 0)
             {
-                for (ulong x = 0; x < Starfield.NUM_X; x++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong y = Starfield.NUM_Y - 1; y > 0; y--)
+                    for (ulong y = Starfield.NumY - 1; y > 0; y--)
                     {
-                        for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
                             Starfield.SetColor((int)x, (int)y, (int)z, Starfield.GetColor((int)x, (int)y - 1, (int)z));
                         }
@@ -114,11 +114,11 @@ namespace StarfieldDrivers
                 }
             }
 
-            for (ulong x = 0; x < Starfield.NUM_X; x++)
+            for (ulong x = 0; x < Starfield.NumX; x++)
             {
-                for (ulong z = 0; z < Starfield.NUM_Z; z++)
+                for (ulong z = 0; z < Starfield.NumZ; z++)
                 {
-                    float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NUM_X, 0, (float)z / (float)Starfield.NUM_Z, time, NumOctaves, Persistance, Lacunarity);
+                    float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NumX, 0, (float)z / (float)Starfield.NumZ, time, NumOctaves, Persistance, Lacunarity);
                     Color toDraw = Color.Black;
                     if (n > Threshold)
                     {
