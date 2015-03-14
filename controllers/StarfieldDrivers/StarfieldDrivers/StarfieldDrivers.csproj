@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA41636A-DDCE-4109-9D10-FF4AFB40273C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarfieldDrivers</RootNamespace>
+    <AssemblyName>StarfieldDrivers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StarfieldClient">
+      <HintPath>..\..\..\lib\.NET\StarfieldClient\StarfieldClient\bin\Release\StarfieldClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utils">
+      <HintPath>..\..\..\lib\.NET\Utils\Utils\bin\Release\Utils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\GameOfLife.cs" />
+    <Compile Include="Flocking\BoidSwarms.cs" />
+    <Compile Include="Noise\White\FadingStatic.cs" />
+    <Compile Include="CFD\FluidPour.cs" />
+    <Compile Include="Fractal\FractalFlame.cs" />
+    <Compile Include="Fractal\FractalFlame4D.cs" />
+    <Compile Include="Sound Responsive\GlobeVU.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Animation\Rain.cs" />
+    <Compile Include="Noise\Simplex\RainbowSimplex.cs" />
+    <Compile Include="Noise\Simplex\RainbowSimplexSmoothed.cs" />
+    <Compile Include="Noise\Simplex\SimplexClouds.cs" />
+    <Compile Include="Noise\Simplex\SimplexColumnsAndCurtains.cs" />
+    <Compile Include="Noise\Simplex\SimplexCurtains.cs" />
+    <Compile Include="Noise\Simplex\SimplexSmoke.cs" />
+    <Compile Include="Noise\Simplex\SimplexTwinkle.cs" />
+    <Compile Include="Noise\Simplex\SimplexWaves.cs" />
+    <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
+    <Compile Include="Debug\SolidColor.cs" />
+    <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveGlobesRandomFix.cs" />
+    <Compile Include="Noise\White\Static.cs" />
+    <Compile Include="Debug\TestFill.cs" />
+    <Compile Include="Noise\Simplex\TwoColorSimplex.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
