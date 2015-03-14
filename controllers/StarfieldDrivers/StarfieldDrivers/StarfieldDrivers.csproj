@@ -64,12 +64,12 @@
     <Compile Include="Noise\Simplex\SimplexTwinkle.cs" />
     <Compile Include="Noise\Simplex\SimplexWaves.cs" />
     <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
-    <Compile Include="Debug\SolidColor.cs" />
+    <Compile Include="Test\SolidColor.cs" />
     <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobesRandomFix.cs" />
     <Compile Include="Noise\White\Static.cs" />
-    <Compile Include="Debug\TestFill.cs" />
+    <Compile Include="Test\TestFill.cs" />
     <Compile Include="Noise\Simplex\TwoColorSimplex.cs" />
   </ItemGroup>
   <ItemGroup />
