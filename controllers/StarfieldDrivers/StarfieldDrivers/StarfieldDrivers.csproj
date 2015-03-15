@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\GameOfLife.cs" />
+    <Compile Include="Animation\RainbowTest.cs" />
     <Compile Include="Flocking\BoidSwarms.cs" />
     <Compile Include="Noise\White\FadingStatic.cs" />
     <Compile Include="CFD\FluidPour.cs" />

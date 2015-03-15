@@ -28,22 +28,6 @@ public class StarfieldGenerator : MonoBehaviour {
 	public static float LowestHeight = 1;
 	
 	string numXText, numYText, numZText, xStepText, yStepText, zStepText;
-	/*
-	// default stuff
-	private int time = 0;
-	private const int NUM_FRAMES = 2;
-	private const int NUM_STEPS = 10;
-	public static bool defaultAnimation = false;
-	private int currentGoal = 1;
-	private int startStep = 0;
-	private Color32[] rainbow = new Color32[7] { new Color32(0xFF, 0, 0, 0xFF),
-												 new Color32(0xFF, 0xA5, 0, 0xFF),
-												 new Color32(0xFF, 0xFF, 0, 0xFF),
-												 new Color32(0, 0x80, 0, 0xFF),
-												 new Color32(0, 0, 0xFF, 0xFF),
-												 new Color32(0x4B, 0, 0x82, 0xFF),
-												 new Color32(0xFF, 0, 0xFF, 0xFF) };
-												 */
 
 	public static GameObject[,,] LEDs = new GameObject[NumX,NumZ,NumY];
 	public static Color32[,,] LEDColors = new Color32[NumX,NumZ,NumY];
@@ -248,66 +232,19 @@ public class StarfieldGenerator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		/*if(defaultAnimation)
+		for (ulong x = 0; x < NumX; x++) 
 		{
-			time = (time++) % NUM_FRAMES;
-			if (time == 0) 
+			for(ulong y = 0; y < NumY; y++)
 			{
-				int localGoal = currentGoal;
-				int localStep = startStep;
-				Color32 goal, start, current;
-
-				for(ulong i = 0; i < NUM_X * NUM_Y * NUM_Z; i++)
+				for(ulong z = 0; z < NumZ; z++)
 				{
-					goal = rainbow[localGoal];
-					if(localGoal > 0)
+					if(LEDs[x,z,y] != null)
 					{
-						start = rainbow[localGoal - 1];
+						LEDs[x,z,y].renderer.material.color = LEDColors[x,z,y];
 					}
-					else
-					{
-						start = rainbow[rainbow.Length - 1];
-					}
-					current = GetGradientColor(start, goal, NUM_STEPS, localStep);
-					GetLED(i).renderer.material.color = current;
-					if(localStep == NUM_STEPS)
-					{
-						localStep = 0;
-						localGoal = (localGoal + 1) % rainbow.Length;
-					}
-					else
-					{
-						localStep++;
-					}
-				}
-
-				if(startStep == NUM_STEPS)
-				{
-					startStep = 0;
-					currentGoal = (currentGoal + 1) % rainbow.Length;
-				}
-				else 
-				{
-					startStep++;
 				}
 			}
 		}
-		else
-		{*/
-			for (ulong x = 0; x < NumX; x++) 
-			{
-				for(ulong y = 0; y < NumY; y++)
-				{
-					for(ulong z = 0; z < NumZ; z++)
-					{
-						if(LEDs[x,z,y] != null)
-						{
-							LEDs[x,z,y].renderer.material.color = LEDColors[x,z,y];
-						}
-					}
-				}
-			}
-		//}
 	}
 
 	public static GameObject GetLED(ulong Index)
@@ -336,58 +273,4 @@ public class StarfieldGenerator : MonoBehaviour {
 		
 		return LEDColors[x,z,y];
 	}
-
-	/*
-	Color32 GetGradientColor(Color32 start, Color32 goal, int numSteps, int currentStep)
-	{
-		byte redDelta, goalRed, startRed, redDiff, red;
-		byte greenDelta, goalGreen, startGreen, greenDiff, green;
-		byte blueDelta, goalBlue, startBlue, blueDiff, blue;
-		
-		goalRed = goal.r;
-		goalGreen = goal.g;
-		goalBlue = goal.b;
-		
-		startRed = start.r;
-		startGreen = start.g;
-		startBlue = start.b;
-		
-		redDelta = (byte)System.Math.Abs(goalRed - startRed);
-		blueDelta = (byte)System.Math.Abs(goalBlue - startBlue);
-		greenDelta = (byte)System.Math.Abs(goalGreen - startGreen);
-		
-		redDiff = (byte)((redDelta * currentStep) / numSteps);
-		blueDiff = (byte)((blueDelta * currentStep) / numSteps);
-		greenDiff = (byte)((greenDelta * currentStep) / numSteps);
-		
-		if(goalRed < startRed)
-		{
-			red = (byte)(startRed - redDiff);
-		}
-		else
-		{
-			red = (byte)(startRed + redDiff);
-		}
-		
-		if(goalGreen < startGreen)
-		{
-			green = (byte)(startGreen - greenDiff);
-		}
-		else
-		{
-			green = (byte)(startGreen + greenDiff);
-		}
-		
-		if(goalBlue < startBlue)
-		{
-			blue = (byte)(startBlue - blueDiff);
-		}
-		else
-		{
-			blue = (byte)(startBlue + blueDiff);
-		}
-		
-		return new Color32(red, green, blue, 0xFF);
-	}
-	*/
 }
