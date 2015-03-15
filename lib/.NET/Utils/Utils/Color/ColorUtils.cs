@@ -9,6 +9,9 @@ namespace StarfieldUtils.ColorUtils
 {
     public class ColorUtils
     {
+        // use n as a percent to determine the color between start and goal
+        // n should be in the range (0,1), if it isn't wraparound can occur,
+        // preventOverlow will cap the value
         public static Color GetGradientColor(Color start, Color goal, float n, bool preventOverflow)
         {
             byte redDelta, goalRed, startRed, redDiff, red;
@@ -70,6 +73,7 @@ namespace StarfieldUtils.ColorUtils
             return Color.FromArgb(red, green, blue);
         }
 
+        // takes a list of know reference points and uses n as a percent between them
         public static Color GetMultiColorGradient(Color[] colors, float n, bool preventOverflow)
         {
             if(n < 0)
@@ -87,6 +91,9 @@ namespace StarfieldUtils.ColorUtils
             return StarfieldUtils.ColorUtils.ColorUtils.GetGradientColor(colors[index1], colors[index2], percent, true);
         }
 
+        // for the purposes of the starfield, vibrant colors are defined as 
+        // those without any grey component, this means that only two of the
+        // color components can have values.
         public static Color GetRandomVibrantColor()
         {
             Random rand = new Random();

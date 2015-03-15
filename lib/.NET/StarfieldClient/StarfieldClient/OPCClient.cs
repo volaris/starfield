@@ -16,12 +16,14 @@ namespace StarfieldClient
         int port = 7890;
         TcpClient client;
 
+        // create an OPC connection to 127.0.0.1:7890
         public OPCClient()
         {
             dest = new IPEndPoint(ip, port);
             client = new TcpClient();
         }
 
+        // create an OPC connection to an arbitrary endpoint
         public OPCClient(IPAddress ip, int port)
         {
             this.ip = ip;
@@ -30,6 +32,7 @@ namespace StarfieldClient
             client = new TcpClient();
         }
 
+        // attempt to connect to the server, returns true if successful
         public bool CanConnect()
         {
             if (client.Connected)
@@ -44,7 +47,9 @@ namespace StarfieldClient
             }
             catch
             {
-                // Reset the client object. If we were connected, Connect will fail without this.
+                // We may have had a connection that got disconnected. Reset 
+                // the client object. If we were connected, Connect will 
+                // fail without this.
                 client = new TcpClient();
                 try
                 {

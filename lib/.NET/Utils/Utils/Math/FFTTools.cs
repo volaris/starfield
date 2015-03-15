@@ -8,6 +8,7 @@ namespace StarfieldUtils.MathUtils
 {
     public class FFTTools
     {
+        // round a value up in powers of 2
         public static int RoundToNextPowerOf2(int x)
         {
             if (x <= 1) return 1;
@@ -24,21 +25,38 @@ namespace StarfieldUtils.MathUtils
         {
             int nextPowerOf2 = RoundToNextPowerOf2(samples.Length);
             if (fft.Length < nextPowerOf2)
+            {
                 throw new Exception("length of fft result array must be big enough for next power of two");
-            Array.Copy(samples, fft, samples.Length);//Copy FFT input into the array that will hold the output so we don't destroy the input samples
+            }
+            // copy FFT input into the array that will hold the output so we don't destroy the input samples
+            Array.Copy(samples, fft, samples.Length);
             Exocortex.DSP.Fourier.RFFT(fft, Exocortex.DSP.FourierDirection.Forward);
-            for (int i = 2; i < nextPowerOf2; i++) fft[i] /= nextPowerOf2 / 2;//Divide all bins by N/2 to obtain amplitude of respective sinusoids(http://www.dspguide.com/ch8/5.htm)
-            fft[0] /= nextPowerOf2;//Special treatment of DC component
-            //Convert from rectangular coordinates to just the magnitude of polar coordinates - disregarding the phase 'coordinate'
-            //(http://www.dsprelated.com/showmessage/58198/1.php) 
+            // divide all bins by N/2 to obtain amplitude of respective 
+            // sinusoids(http://www.dspguide.com/ch8/5.htm)
+            for (int i = 2; i < nextPowerOf2; i++)
+            {
+                fft[i] /= nextPowerOf2 / 2;
+            }
+            //Special treatment of DC component
+            fft[0] /= nextPowerOf2;
+            // convert from rectangular coordinates to just the magnitude of 
+            // polar coordinates - disregarding the phase 'coordinate'
+            // (http://www.dsprelated.com/showmessage/58198/1.php) 
             dcComponent = fft[0];
-            for (int i = 1; i < nextPowerOf2 / 2; i++)//Skip the first pairas first bin is at index 2 and 3
+            // skip the first pair as first bin is at index 2 and 3
+            for (int i = 1; i < nextPowerOf2 / 2; i++)
+            {
                 fft[i - 1] = (float)Math.Sqrt(fft[i * 2] * fft[i * 2] + fft[i * 2 + 1] * fft[i * 2 + 1]);
-            for (int i = nextPowerOf2 / 2 - 1; i < fft.Length; i++)//Zerothe rest
+            }
+            // zero the rest
+            for (int i = nextPowerOf2 / 2 - 1; i < fft.Length; i++)
+            {
                 fft[i] = 0.0f;
-            //The fft array now holds plottable fft results from index 0 toN/2
+            }
+            // the fft array now holds plottable fft results from index 0 to N/2
         }
 
+        // returns the average of all the bytes in an array
         int Average(byte[] data)
         {
             decimal total = 0;

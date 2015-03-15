@@ -15,10 +15,21 @@ namespace AlgorithmDemo
 {
     public partial class FormDemo : Form
     {
+        // how often IStarfieldDriver.Render() is called  in milliseconds
         int RenderInterval = 30;
+
+        // Starfield client class, handles the communication with the display
         StarfieldModel Model;
+
+        // The algorithm that is currently rendering to the display
         IStarfieldDriver CurrentDriver;
+
+        // lock object to prevent multiple threads from modifying the the
+        // starfield at the same time
         Object RenderLock = new Object();
+
+        // endpoint that we will try to connect to first and that will be
+        // displayed when the app starts up
         string DefaultIP = "192.168.0.10";
         int DefaultPort = 7890;
 
@@ -75,17 +86,28 @@ namespace AlgorithmDemo
             }
             if (comboBoxAlgorithm.Items.Count > 0)
             {
+                // this will cause the event combo box selected index changed
+                // event handler to be called which will set the first driver
+                // in the list to be the current driver and call its
+                // IStarfieldDriver.Start() method
                 comboBoxAlgorithm.SelectedIndex = 0;
             }
+
+            // set up the starfield type combo box
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
             comboBoxStarfield.SelectedIndex = 0;
+
+            // start the render timer
             System.Timers.Timer render = new System.Timers.Timer(RenderInterval);
             render.Elapsed += render_Elapsed;
             render.Start();
         }
 
+        // request that the current driver renders a frame to the display
+        // if a driver hasn't completed rendering the previous frame, drop
+        // this frame
         void render_Elapsed(object sender, ElapsedEventArgs e)
         {
             bool lockTaken = false;
@@ -109,6 +131,7 @@ namespace AlgorithmDemo
             }
         }
 
+        // the user has selected a new algorithm, stop the old one and start the new one
         private void comboBoxAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
         {
             System.Threading.Monitor.Enter(RenderLock);
@@ -131,31 +154,14 @@ namespace AlgorithmDemo
             }
         }
 
+        // the user has requested that we render to a different Starfield size,
+        // update the client
         private void comboBoxStarfield_SelectedIndexChanged(object sender, EventArgs e)
         {
             reconnect();
         }
 
-        private void buttonRestart_Click(object sender, EventArgs e)
-        {
-            System.Threading.Monitor.Enter(RenderLock);
-
-            try
-            {
-                if (this.CurrentDriver != null)
-                {
-                    this.CurrentDriver.Stop();
-                    this.CurrentDriver.Start(this.Model);
-                }
-            }
-            catch
-            { }
-            finally
-            {
-                System.Threading.Monitor.Exit(RenderLock);
-            }
-        }
-
+        // connect to the new starfield
         private void reconnect()
         {
             string ip = textBoxIP.Text;
@@ -186,6 +192,30 @@ namespace AlgorithmDemo
             }
         }
 
+        // reset the current driver
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            System.Threading.Monitor.Enter(RenderLock);
+
+            try
+            {
+                if (this.CurrentDriver != null)
+                {
+                    this.CurrentDriver.Stop();
+                    this.CurrentDriver.Start(this.Model);
+                }
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
+            }
+        }
+
+        // try loading an instance of the given type into the algorithm combo 
+        // box the type must inherit from IStarfield driver, be a class, and 
+        // not be abstract
         private void loadType(Type type)
         {
             if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
@@ -194,6 +224,8 @@ namespace AlgorithmDemo
             }
         }
 
+        // the user wants to change the maximum brightness of the starfield,
+        // update the client
         private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
         {
             Model.Brightness = (float)trackBarBrightness.Value / (float)trackBarBrightness.Maximum;

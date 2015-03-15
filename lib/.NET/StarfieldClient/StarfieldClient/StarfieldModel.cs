@@ -19,21 +19,36 @@ namespace StarfieldClient
         private const ulong DEFAULT_NUM_Y = 4;
         private const ulong DEFAULT_NUM_Z = 5;
 
+        // distance in feet between pixels
         public float XStep = 2;
         public float YStep = 2;
         public float ZStep = 2;
+
+        // number of pixels
         public ulong NumX = 7;
         public ulong NumY = 4;
         public ulong NumZ = 5;
+
+        // interval between flushing pixel data to the server
         public ulong AnimationInterval = 30;
+
+        // change the maximum brightness of the starfield
+        // this field's range is (0,1)
         float brightness = 1.0f;
+
+        // set up the dimming timer
         Timer dimmer = new Timer(3000);
         Timer flush;
         public bool EnableDimmer = false;
         OPCClient client;
         byte[] pixelData;
+
+        // Flush lock: this ensures that only one thread is sending data to
+        // the server at a time. If we don't do this, it can cause the data
+        // stream to get jumbled.
         Object lockObject = new Object();
 
+        // current color state
         public static Color[, ,] LEDColors;
 
         public float Brightness
@@ -42,24 +57,28 @@ namespace StarfieldClient
             set { brightness = Math.Min(Math.Max(0f,value),1f); }
         }
 
+        // create a client with the defaults for the home prototype
         public static StarfieldModel HomeStarfield(System.Net.IPAddress ip, int port)
         {
             // 12' x 8' x 7.5' spaced at 2' intervals
             return new StarfieldModel(2.0f, 2.0f, 2.0f, 7, 4, 5, ip, port);
         }
 
+        // create a client with the defaults for the Critical NW version
         public static StarfieldModel CriticalNWStarfield(System.Net.IPAddress ip, int port)
         {
             // 20' x 20' x 20' spaced at 2' intervals
             return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11, ip, port);
         }
 
+        // create a client with the defaults for the Burning Man version
         public static StarfieldModel BurningManStarfield(System.Net.IPAddress ip, int port)
         {
             // 60' x 60' x 30' spaced at 2' intervals on the y axis and 4' intervals on the x & z axes
             return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 15, 16, ip, port);
         }
 
+        // create a client with arbitrary parameters
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, System.Net.IPAddress ip, int port)
         {
             this.XStep = xStep;
@@ -85,6 +104,7 @@ namespace StarfieldClient
             flush.Start();
         }
 
+        // create a client with the global defaults
         public StarfieldModel()
             : this(DEFAULT_X_STEP, 
                    DEFAULT_Y_STEP,
@@ -97,10 +117,20 @@ namespace StarfieldClient
         {
         }
 
-        public StarfieldModel(System.Net.IPAddress ip, int port) : this(2, 2, 2, 7, 4, 5, ip, port)
+        // create a client with the default parameters but to an arbitrary endpoint
+        public StarfieldModel(System.Net.IPAddress ip, int port)
+            : this(DEFAULT_X_STEP,
+                   DEFAULT_Y_STEP,
+                   DEFAULT_Z_STEP,
+                   DEFAULT_NUM_X,
+                   DEFAULT_NUM_Y,
+                   DEFAULT_NUM_Z, 
+                   ip, 
+                   port)
         {
         }
 
+        // flush the current color state to the display
         void flush_Elapsed(object sender, ElapsedEventArgs e)
         {
             bool lockTaken = false;
@@ -108,7 +138,8 @@ namespace StarfieldClient
 
             if (lockTaken)
             {
-                // pack the array
+                // pack the array 
+                // [Pixel0 Red, Pixel0 Green, Pixel0 Blue, Pixel1 Red, ..., PixelN Red, PixelN Green, PixelN Blue]
                 for (ulong i = 0; i < (ulong)(pixelData.Length / 3); i++)
                 {
                     ulong x = i / (NumZ * NumY);
@@ -125,6 +156,7 @@ namespace StarfieldClient
             }
             else
             {
+                // another thread was still flushing
                 Console.WriteLine("Frame Dropped");
             }
 
@@ -168,6 +200,7 @@ namespace StarfieldClient
             LEDColors[(int)Math.Round(starfieldPoint.x), (int)Math.Round(starfieldPoint.z), (int)Math.Round(starfieldPoint.y)] = Color.FromArgb(0, 0xFF, 0);
         }*/
 
+        // set all LEDs to black
         public void Clear()
         {
             for (ulong x = 0; x < NumX; x++)
@@ -176,20 +209,19 @@ namespace StarfieldClient
                 {
                     for (ulong z = 0; z < NumZ; z++)
                     {
-                        byte red = 0;
-                        byte green = 0;
-                        byte blue = 0;
-                        LEDColors[x, z, y] = Color.FromArgb(red, green, blue);
+                        LEDColors[x, z, y] = Color.Black;
                     }
                 }
             }
         }
 
+        // set the LED at (x, y, z) to the given color
         public void SetColor(int x, int y, int z, Color color)
         {
             LEDColors[x, z, y] = color;
         }
 
+        // returns the color of the LED at (x, y, z)
         public Color GetColor(int x, int y, int z)
         {
             return LEDColors[x, z, y];
