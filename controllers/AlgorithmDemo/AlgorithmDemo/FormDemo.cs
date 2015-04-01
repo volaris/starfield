@@ -30,8 +30,9 @@ namespace AlgorithmDemo
 
         // endpoint that we will try to connect to first and that will be
         // displayed when the app starts up
-        string DefaultIP = "192.168.0.10";
-        int DefaultPort = 7890;
+        string DefaultIP = "127.0.0.1";
+        int DefaultPort = 7890; 
+        System.Timers.Timer render;
 
         public FormDemo()
         {
@@ -84,6 +85,13 @@ namespace AlgorithmDemo
                     }
                 }
             }
+
+            // set up the starfield type combo box
+            comboBoxStarfield.Items.Add("Home Starfield");
+            comboBoxStarfield.Items.Add("Critical NW Starfield");
+            comboBoxStarfield.Items.Add("Burning Man Starfield");
+            comboBoxStarfield.SelectedIndex = 1;
+
             if (comboBoxAlgorithm.Items.Count > 0)
             {
                 // this will cause the event combo box selected index changed
@@ -93,14 +101,8 @@ namespace AlgorithmDemo
                 comboBoxAlgorithm.SelectedIndex = 0;
             }
 
-            // set up the starfield type combo box
-            comboBoxStarfield.Items.Add("Home Starfield");
-            comboBoxStarfield.Items.Add("Critical NW Starfield");
-            comboBoxStarfield.Items.Add("Burning Man Starfield");
-            comboBoxStarfield.SelectedIndex = 0;
-
             // start the render timer
-            System.Timers.Timer render = new System.Timers.Timer(RenderInterval);
+            render = new System.Timers.Timer(RenderInterval);
             render.Elapsed += render_Elapsed;
             render.Start();
         }
@@ -229,6 +231,18 @@ namespace AlgorithmDemo
         private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
         {
             Model.Brightness = (float)trackBarBrightness.Value / (float)trackBarBrightness.Maximum;
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            if(trackBar1.Value == 0 && render.Enabled)
+            {
+                render.Enabled = false;
+            }
+            else if(trackBar1.Value > 0 && !render.Enabled)
+            {
+                render.Enabled = true;
+            }
         }
     }
 }
