@@ -19,6 +19,9 @@ namespace StarfieldDrivers.Animation
         Color dead = Color.Black;
         Color alive = Color.Green;
         int seedDenominator = 5;
+        DateTime lastUpdate = DateTime.MinValue;
+        int delay = 1000; //ms
+        bool restart = false;
         #endregion
 
         #region Public Properties
@@ -57,6 +60,12 @@ namespace StarfieldDrivers.Animation
             set { deathUpperThreshold = value; }
         }
 
+        public int Delay
+        {
+            get { return delay; }
+            set { delay = value; }
+        }
+
         public int SeedDenominator
         {
             get { return seedDenominator; }
@@ -67,24 +76,50 @@ namespace StarfieldDrivers.Animation
         #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
-            //TODO: optimize by saving partial sums
+            if ((DateTime.Now - lastUpdate).TotalMilliseconds < Delay)
+            {
+                return;
+            }
+
+            bool allDead = true;
+            bool noChange = true;
+
             for(ulong x = 0; x < Starfield.NumX; x++)
             {
                 for(ulong y = 0; y < Starfield.NumY; y++)
                 {
                     for(ulong z = 0; z < Starfield.NumZ; z++)
                     {
+                        if(currentField[x,y,z])
+                        {
+                            Starfield.SetColor((int)x, (int)y, (int)z, alive);
+                            allDead = false;
+                        }
+                        else
+                        {
+                            Starfield.SetColor((int)x, (int)y, (int)z, dead);
+                        }
                         int sum = 0;
                         Starfield.SetColor((int)x, (int)y, (int)z, currentField[x, y, z] ? alive : dead);
-                        for(int i = Math.Max(0, ((int)x) - 1); i < Math.Min((int)Starfield.NumX - 1, (int)x + 1); i++)
+                        for(int i = -1; i < 2; i++)
                         {
-                            for (int j = Math.Max(0, ((int)y) - 1); j < Math.Min((int)Starfield.NumY - 1, (int)y + 1); j++)
+                            for (int j = -1; j < 2; j++)
                             {
-                                for (int k = Math.Max(0, ((int)z) - 1); k < Math.Min((int)Starfield.NumZ - 1, (int)z + 1); k++)
+                                for (int k = -1; k < 2; k++)
                                 {
-                                    if(!(i == (int)x && j == (int)y && k == (int)z))
+                                    int x_temp = (int)x+i;
+                                    int y_temp = (int)y + j;
+                                    int z_temp = (int)z + k;
+                                    if(!(i == 0 && j == 0 && k == 0) &&
+                                       (x_temp < (int)Starfield.NumX && x_temp >= 0) &&
+                                       (y_temp < (int)Starfield.NumY && y_temp >= 0) &&
+                                       (z_temp < (int)Starfield.NumZ && z_temp >= 0))
+
                                     {
-                                        sum++;
+                                        if (currentField[x_temp, y_temp, z_temp])
+                                        {
+                                            sum++;
+                                        }
                                     }
                                 }
                             }
@@ -92,10 +127,12 @@ namespace StarfieldDrivers.Animation
                         if(currentField[x,y,z] && (sum < deathLowerThreshold || sum > deathUpperThreshold))
                         {
                             nextField[x, y, z] = false;
+                            noChange = false;
                         }
-                        else if(!currentField[x,y,z] && (sum > birthLowerThreshold && sum < birthUpperThreshold))
+                        else if(!currentField[x,y,z] && (sum >= birthLowerThreshold && sum <= birthUpperThreshold))
                         {
                             nextField[x, y, z] = true;
+                            noChange = false;
                         }
                         else
                         {
@@ -106,6 +143,17 @@ namespace StarfieldDrivers.Animation
             }
 
             currentField = nextField;
+
+            if(allDead || restart)
+            {
+                Start(Starfield);
+                restart = false;
+            }
+            if(noChange)
+            {
+                restart = true;
+            }
+            lastUpdate = DateTime.Now;
         }
 
         public void Start(StarfieldModel Starfield)
