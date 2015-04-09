@@ -33,7 +33,7 @@ namespace StarfieldClient
         public ulong AnimationInterval = 30;
 
         // change the maximum brightness of the starfield
-        // this field's range is (0,1)
+        // this field's range is [0,1]
         float brightness = 1.0f;
 
         // set up the dimming timer

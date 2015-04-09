@@ -203,6 +203,8 @@ namespace StarfieldUtils.SoundUtils
                 threshold = Math.Max(threshold, MinimumArtifactThreshold);
             }
 
+            // generate the frame notification
+            // note that for the FFT, we're only looking at the last FFT
             Frame frame = new Frame();
             frame.EQ.Add(eqDataChannel1);
             frame.EQ.Add(eqDataChannel2);
