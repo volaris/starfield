@@ -17,6 +17,7 @@ namespace AlgorithmDemo.Drivers
         float time = 0f;
         float increment = .03f;
         float animationDuration = 1f;
+        bool flash = false;
 
         int[, ,] Prev;
         int[, ,] Next;
@@ -33,6 +34,11 @@ namespace AlgorithmDemo.Drivers
         {
             get { return drawColor; }
             set { drawColor = value; }
+        }
+        public bool Flash
+        {
+            get { return flash; }
+            set { flash = value; }
         }
 
         public float Increment
@@ -74,7 +80,7 @@ namespace AlgorithmDemo.Drivers
                     {
                         Color prevColor = Prev[x,y,z] > 0 ? DrawColor : Color.Black;
                         Color nextColor = Next[x, y, z] > 0 ? DrawColor : Color.Black;
-                        Color toDraw = ColorUtils.GetGradientColor(prevColor, nextColor, time, true);
+                        Color toDraw = ColorUtils.GetGradientColor(prevColor, nextColor, time, !flash);
 
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
@@ -84,6 +90,10 @@ namespace AlgorithmDemo.Drivers
             if (time < AnimationDuration)
             {
                 time += Increment;
+                if(!flash && time > AnimationDuration)
+                {
+                    time = AnimationDuration;
+                }
             }
             else
             {
