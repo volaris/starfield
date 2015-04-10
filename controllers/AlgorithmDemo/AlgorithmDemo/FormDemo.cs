@@ -171,6 +171,11 @@ namespace AlgorithmDemo
 
             System.Threading.Monitor.Enter(RenderLock);
 
+            if(Model != null)
+            {
+                Model.Stop();
+            }
+
             try
             {
                 switch (comboBoxStarfield.SelectedIndex)

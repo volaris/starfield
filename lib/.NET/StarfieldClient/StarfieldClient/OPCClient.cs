@@ -82,5 +82,10 @@ namespace StarfieldClient
             catch
             { }
         }
+
+        public void Disconnect()
+        {
+            client.Close();
+        }
     }
 }

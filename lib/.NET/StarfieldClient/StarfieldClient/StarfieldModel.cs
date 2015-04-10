@@ -81,6 +81,8 @@ namespace StarfieldClient
         // create a client with arbitrary parameters
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, System.Net.IPAddress ip, int port)
         {
+            System.Threading.Monitor.Enter(lockObject);
+
             this.XStep = xStep;
             this.YStep = yStep;
             this.ZStep = zStep;
@@ -102,6 +104,8 @@ namespace StarfieldClient
             flush = new Timer(AnimationInterval);
             flush.Elapsed += flush_Elapsed;
             flush.Start();
+
+            System.Threading.Monitor.Exit(lockObject);
         }
 
         // create a client with the global defaults
@@ -168,6 +172,8 @@ namespace StarfieldClient
 
         void dimmer_Elapsed(object sender, ElapsedEventArgs e)
         {
+            System.Threading.Monitor.Enter(lockObject);
+
             if (EnableDimmer)
             {
                 for (ulong x = 0; x < NumX; x++)
@@ -184,6 +190,8 @@ namespace StarfieldClient
                     }
                 }
             }
+
+            System.Threading.Monitor.Exit(lockObject);
         }
 
         // TODO: pull this out of this class
@@ -203,6 +211,8 @@ namespace StarfieldClient
         // set all LEDs to black
         public void Clear()
         {
+            System.Threading.Monitor.Enter(lockObject);
+
             for (ulong x = 0; x < NumX; x++)
             {
                 for (ulong y = 0; y < NumY; y++)
@@ -213,6 +223,8 @@ namespace StarfieldClient
                     }
                 }
             }
+
+            System.Threading.Monitor.Exit(lockObject);
         }
 
         // set the LED at (x, y, z) to the given color
@@ -225,6 +237,13 @@ namespace StarfieldClient
         public Color GetColor(int x, int y, int z)
         {
             return LEDColors[x, z, y];
+        }
+
+        public void Stop()
+        {
+            dimmer.Enabled = false;
+            flush.Enabled = false;
+            client.Disconnect();
         }
     }
 }
