@@ -32,16 +32,12 @@ namespace StarfieldUtils.ColorUtils
 
             if (preventOverflow)
             {
-                redDiff = (byte)(Math.Max(0, Math.Min(255, redDelta * n)));
-                blueDiff = (byte)(Math.Max(0, Math.Min(255, blueDelta * n)));
-                greenDiff = (byte)(Math.Max(0, Math.Min(255, greenDelta * n)));
+                n = Math.Min(1.0f, Math.Max(0f, n));
             }
-            else
-            {
-                redDiff = (byte)((redDelta * n));
-                blueDiff = (byte)((blueDelta * n));
-                greenDiff = (byte)((greenDelta * n));
-            }
+
+            redDiff = (byte)((redDelta * n));
+            blueDiff = (byte)((blueDelta * n));
+            greenDiff = (byte)((greenDelta * n));
 
             if (goalRed < startRed)
             {
