@@ -27,16 +27,15 @@ The Burning Man Starfield is a 16x16x15 voxel grid.
 
 ## Repository Layout
 ```
-\
-|-controllers\ _Starfield drivers and control software_
-  |-AlgorithmDemo\ _Test controller for showing and tweaking drivers_
-  |-StarfieldDrivers\ _Builtin animation implementations_
-|-docs\ _Starfield documentation_
-|-electronics\ _Electronic designs - power distribution, voxel design, etc._
-|-lib\ _Shared code and utility classes_
-  |-.NET\ _.NET utility classes_
-    |-StarfieldClient\ _OPC and higher level Starfield Model, used to connect and control the Starfield_
-    |-Utils\ _Math, color, sound, and other algorithm utilities_
-|-mechanical\ _Mechanical engineering designs and calculations for the structure_
-|-simulator\ _Unity simulator_
+/controllers - Starfield drivers and control software
+    /AlgorithmDemo - Test controller for showing and tweaking drivers
+    /StarfieldDrivers - Builtin animation implementations
+/docs - Starfield documentation
+/electronics - Electronics designs: power distribution, voxel design, etc.
+/lib - Shared code and utility classes
+    /.NET - .NET utility classes
+    /StarfieldClient - OPC and higher level Starfield Model, used to connect and control the Starfield
+    /Utils - Math, color, sound, and other algorithm utilities
+/mechanical - Mechanical engineering designs and calculations for the structure
+/simulator - Unity simulator
 ```
