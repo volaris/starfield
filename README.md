@@ -13,15 +13,17 @@ The core of the Starfield is driven by a [Fadecandy](https://github.com/scanlime
 
 ### Prototype
 
+The prototype Starfield is a 7x5x4 voxel grid designed for hardware, animation, and construction technique testing.
+
 ![Prototype Diagram](https://raw.githubusercontent.com/volaris/starfield/master/docs/images/Prototype.png)
 
 ### Critical NW
 
-
+The Critical NW Starfield is a 11x11x10 voxel grid.
 
 ### Burning Man
 
-
+The Burning Man Starfield is a 16x16x15 voxel grid.
 
 ## Repository Layout
 ```
