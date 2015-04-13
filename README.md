@@ -13,7 +13,7 @@ The core of the Starfield is driven by a [Fadecandy](https://github.com/scanlime
 
 ### Prototype
 
-![Prototype Diagream](https://raw.github.com/volaris/starfield/master/docs/images/prototype.png)
+![Prototype Diagram](https://raw.githubusercontent.com/volaris/starfield/master/docs/images/Prototype.png)
 
 ### Critical NW
 
