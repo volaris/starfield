@@ -130,6 +130,20 @@ namespace StarfieldUtils.MathUtils
             return new Quaternion(nw, nx, ny, nz);
         }
 
+        public override bool Equals(object obj)
+        {
+            if(obj is Quaternion)
+            {
+                return this == (Quaternion)obj;
+            }
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)X ^ (int)Y ^ (int)Z ^ (int)W;
+        }
+
         public static bool operator ==(Quaternion q1, Quaternion q2)
         {
             return (q1.X == q2.X) && (q1.Y == q2.Y) && (q1.Z == q2.Z) && (q1.W == q2.W);
