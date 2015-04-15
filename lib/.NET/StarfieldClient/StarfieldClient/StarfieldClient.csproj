@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="IStarfieldDriver.cs" />
     <Compile Include="OPCClient.cs" />
+    <Compile Include="TCPStarfieldClient.cs" />
     <Compile Include="StarfieldModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

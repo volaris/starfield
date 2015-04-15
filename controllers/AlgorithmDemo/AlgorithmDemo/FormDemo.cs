@@ -18,8 +18,11 @@ namespace AlgorithmDemo
         // how often IStarfieldDriver.Render() is called  in milliseconds
         int RenderInterval = 30;
 
-        // Starfield client class, handles the communication with the display
+        // Starfield model class, stores the colors
         StarfieldModel Model;
+
+        // Starfield client class, handles communication with the Starfield
+        TCPStarfieldClient Client;
 
         // The algorithm that is currently rendering to the display
         IStarfieldDriver CurrentDriver;
@@ -176,20 +179,27 @@ namespace AlgorithmDemo
                 Model.Stop();
             }
 
+            if(Client != null)
+            {
+                Client.Stop();
+            }
+
             try
             {
                 switch (comboBoxStarfield.SelectedIndex)
                 {
                     case 0:
-                        Model = StarfieldModel.HomeStarfield(System.Net.IPAddress.Parse(ip), port);
+                        Model = StarfieldModel.HomeStarfield();
                         break;
                     case 1:
-                        Model = StarfieldModel.CriticalNWStarfield(System.Net.IPAddress.Parse(ip), port);
+                        Model = StarfieldModel.CriticalNWStarfield();
                         break;
                     case 2:
-                        Model = StarfieldModel.BurningManStarfield(System.Net.IPAddress.Parse(ip), port);
+                        Model = StarfieldModel.BurningManStarfield();
                         break;
                 }
+
+                Client = new TCPStarfieldClient(Model, System.Net.IPAddress.Parse(ip), port);
             }
             catch
             { }
@@ -247,6 +257,29 @@ namespace AlgorithmDemo
             else if(trackBar1.Value > 0 && !render.Enabled)
             {
                 render.Enabled = true;
+            }
+        }
+
+        private void buttonReconnect_Click(object sender, EventArgs e)
+        {
+            string ip = textBoxIP.Text;
+            int port = int.Parse(textBoxPort.Text);
+
+            System.Threading.Monitor.Enter(RenderLock); 
+            try
+            {
+                if (Client != null)
+                {
+                    Client.Stop();
+                }
+
+                Client = new TCPStarfieldClient(Model, System.Net.IPAddress.Parse(ip), port);
+            }
+            catch
+            { }
+            finally
+            {
+                System.Threading.Monitor.Exit(RenderLock);
             }
         }
     }

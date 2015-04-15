@@ -41,6 +41,7 @@
             this.buttonRestart = new System.Windows.Forms.Button();
             this.labelBrightness = new System.Windows.Forms.Label();
             this.trackBarBrightness = new System.Windows.Forms.TrackBar();
+            this.buttonReconnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.comboBoxAlgorithm.FormattingEnabled = true;
             this.comboBoxAlgorithm.Location = new System.Drawing.Point(68, 40);
             this.comboBoxAlgorithm.Name = "comboBoxAlgorithm";
-            this.comboBoxAlgorithm.Size = new System.Drawing.Size(333, 21);
+            this.comboBoxAlgorithm.Size = new System.Drawing.Size(414, 21);
             this.comboBoxAlgorithm.TabIndex = 1;
             this.comboBoxAlgorithm.SelectedIndexChanged += new System.EventHandler(this.comboBoxAlgorithm_SelectedIndexChanged);
             // 
@@ -71,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar1.Location = new System.Drawing.Point(94, 67);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(307, 45);
+            this.trackBar1.Size = new System.Drawing.Size(388, 45);
             this.trackBar1.TabIndex = 2;
             this.trackBar1.Value = 10;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
@@ -110,12 +111,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.propertyGridDriver.Location = new System.Drawing.Point(15, 172);
             this.propertyGridDriver.Name = "propertyGridDriver";
-            this.propertyGridDriver.Size = new System.Drawing.Size(386, 253);
+            this.propertyGridDriver.Size = new System.Drawing.Size(467, 253);
             this.propertyGridDriver.TabIndex = 6;
             // 
             // textBoxIP
             // 
-            this.textBoxIP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxIP.Location = new System.Drawing.Point(262, 13);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(84, 20);
@@ -123,7 +123,6 @@
             // 
             // textBoxPort
             // 
-            this.textBoxPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPort.Location = new System.Drawing.Point(368, 13);
             this.textBoxPort.Name = "textBoxPort";
             this.textBoxPort.Size = new System.Drawing.Size(33, 20);
@@ -140,7 +139,8 @@
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(326, 431);
+            this.buttonRestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRestart.Location = new System.Drawing.Point(407, 431);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(75, 23);
             this.buttonRestart.TabIndex = 10;
@@ -164,16 +164,27 @@
             this.trackBarBrightness.Location = new System.Drawing.Point(74, 118);
             this.trackBarBrightness.Maximum = 100;
             this.trackBarBrightness.Name = "trackBarBrightness";
-            this.trackBarBrightness.Size = new System.Drawing.Size(327, 45);
+            this.trackBarBrightness.Size = new System.Drawing.Size(408, 45);
             this.trackBarBrightness.TabIndex = 12;
             this.trackBarBrightness.Value = 100;
             this.trackBarBrightness.ValueChanged += new System.EventHandler(this.trackBarBrightness_ValueChanged);
+            // 
+            // buttonReconnect
+            // 
+            this.buttonReconnect.Location = new System.Drawing.Point(407, 11);
+            this.buttonReconnect.Name = "buttonReconnect";
+            this.buttonReconnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonReconnect.TabIndex = 13;
+            this.buttonReconnect.Text = "Reconnect";
+            this.buttonReconnect.UseVisualStyleBackColor = true;
+            this.buttonReconnect.Click += new System.EventHandler(this.buttonReconnect_Click);
             // 
             // FormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 466);
+            this.ClientSize = new System.Drawing.Size(494, 466);
+            this.Controls.Add(this.buttonReconnect);
             this.Controls.Add(this.trackBarBrightness);
             this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.buttonRestart);
@@ -211,6 +222,7 @@
         private System.Windows.Forms.Button buttonRestart;
         private System.Windows.Forms.Label labelBrightness;
         private System.Windows.Forms.TrackBar trackBarBrightness;
+        private System.Windows.Forms.Button buttonReconnect;
     }
 }
 
