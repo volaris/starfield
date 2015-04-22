@@ -135,5 +135,32 @@ namespace StarfieldUtils.ColorUtils
                 return GetGradientColor(color1, color2, (float)((val - 5 * increment) * 6), true);
             }
         }
+
+        public  static Color Blend(Color[] colors, double[] weights)
+        {
+            double red = 0;
+            double green = 0;
+            double blue = 0;
+            double weight = 0;
+
+            if(colors.Length != weights.Length)
+            {
+                throw new ArgumentException("colors and weights must have the same number of elements");
+            }
+
+            for(int i = 0; i < colors.Length; i++)
+            {
+                red += colors[i].R * weights[i];
+                green += colors[i].G * weights[i];
+                blue += colors[i].B * weights[i];
+                weight += weights[i];
+            }
+
+            red /= weight;
+            green /= weight;
+            blue /= weight;
+
+            return Color.FromArgb(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
+        }
     }
 }
