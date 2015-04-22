@@ -7,7 +7,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
-namespace StarfieldClient
+namespace StarfieldClient.Networking
 {
     class OPCClient
     {

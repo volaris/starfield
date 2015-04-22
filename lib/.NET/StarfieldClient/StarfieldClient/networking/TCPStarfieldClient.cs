@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Net;
 
-namespace StarfieldClient
+namespace StarfieldClient.Networking
 {
     public class TCPStarfieldClient
     {
