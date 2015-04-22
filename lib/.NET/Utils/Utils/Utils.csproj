@@ -24,17 +24,23 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSCore">
-      <HintPath>..\..\..\..\..\Experiments\SoundResponsive\libs\CSCore.dll</HintPath>
+    <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\CSCore.dll</HintPath>
     </Reference>
-    <Reference Include="Exocortex.DSP.v1">
-      <HintPath>..\..\..\..\..\..\..\Downloads\ExocortexDSP_v1.2\src\bin\Debug\Exocortex.DSP.v1.dll</HintPath>
+    <Reference Include="Exocortex.DSP.v1, Version=1.0.5338.41091, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\Exocortex.DSP.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="StarfieldClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\StarfieldClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,7 +67,9 @@
     <Compile Include="Sound\CSCoreLoopbackSoundProcessor.cs" />
     <Compile Include="Sound\ISoundProcessor.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Display\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
