@@ -12,7 +12,7 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
         public double Cyan
         {
             get { return cyan; }
-            set { cyan = Math.Min(1.0d, Math.Max(0.0d, value)) }
+            set { cyan = Math.Min(1.0d, Math.Max(0.0d, value)); }
         }
 
         public double Magenta

@@ -11,7 +11,7 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
         public double X
         {
             get { return x; }
-            set { x = Math.Min(0.9505d, Math.Max(0.0, value)) }
+            set { x = Math.Min(0.9505d, Math.Max(0.0, value)); }
         }
 
         public double Y
@@ -54,6 +54,11 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             }
 
             return this == (CIEXYZ)obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.x.GetHashCode() ^ this.y.GetHashCode() ^ this.z.GetHashCode();
         }
     }
 }

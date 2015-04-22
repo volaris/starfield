@@ -55,6 +55,13 @@
     <Compile Include="CFD\DefaultKernels.cs" />
     <Compile Include="CFD\Particle.cs" />
     <Compile Include="CFD\Solver.cs" />
+    <Compile Include="Color\ColorSpace\CIELAB.cs" />
+    <Compile Include="Color\ColorSpace\CIEXYZ.cs" />
+    <Compile Include="Color\ColorSpace\CMYK.cs" />
+    <Compile Include="Color\ColorSpace\ConvertColorSpace.cs" />
+    <Compile Include="Color\ColorSpace\HSB.cs" />
+    <Compile Include="Color\ColorSpace\HSL.cs" />
+    <Compile Include="Color\ColorSpace\YUV.cs" />
     <Compile Include="Color\ColorUtils.cs" />
     <Compile Include="Flocking\Boid.cs" />
     <Compile Include="Flocking\Swarm.cs" />
