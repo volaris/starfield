@@ -6,17 +6,33 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
     {
         public static System.Drawing.Color ToRGB(CIELAB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToRGB(ConvertColorSpace.ToCIEXYZ(colorSpace));
         }
 
         public static System.Drawing.Color ToRGB(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            double[] rgb = new double[3];
+            rgb[0] = colorSpace.X * 3.2410 - colorSpace.Y * 1.5374 - colorSpace.Z * 0.4986;
+            rgb[1] = -colorSpace.X * 0.9692 + colorSpace.Y * 1.8760 - colorSpace.Z * 0.0416;
+            rgb[2] = colorSpace.X * 0.0556 - colorSpace.Y * 0.2040 + colorSpace.Z * 1.0570;
+
+            for (int i = 0; i < 3; i++)
+            {
+                rgb[i] = (rgb[i] <= 0.0031308) ? 12.92 * rgb[i] : (1 + 0.055) * Math.Pow(rgb[i], (1.0 / 2.4)) - 0.055;
+            }
+
+            return System.Drawing.Color.FromArgb(
+                Convert.ToInt32(Math.Round(rgb[0] * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round(rgb[1] * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round(rgb[2] * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
         public static System.Drawing.Color ToRGB(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return System.Drawing.Color.FromArgb(
+                Convert.ToInt32(Math.Round((1 - colorSpace.Cyan) * (1 - colorSpace.Black) * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round((1 - colorSpace.Magenta) * (1 - colorSpace.Black) * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round((1 - colorSpace.Yellow) * (1 - colorSpace.Black) * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
         public static System.Drawing.Color ToRGB(HSB colorSpace)
@@ -75,20 +91,66 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             }
 
             return System.Drawing.Color.FromArgb(
-                Convert.ToInt32(Math.Round(r)),
-                Convert.ToInt32(Math.Round(g)),
-                Convert.ToInt32(Math.Round(b))
-            );
+                Convert.ToInt32(Math.Round(r * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round(g * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round(b * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
         public static System.Drawing.Color ToRGB(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            if(colorSpace.Saturation == 0)
+            {
+                return System.Drawing.Color.FromArgb(
+                    Convert.ToInt32(Math.Round(colorSpace.Luminosity * 255.0d, MidpointRounding.AwayFromZero)),
+                    Convert.ToInt32(Math.Round(colorSpace.Luminosity * 255.0d, MidpointRounding.AwayFromZero)),
+                    Convert.ToInt32(Math.Round(colorSpace.Luminosity * 255.0d, MidpointRounding.AwayFromZero)));
+            }
+            else
+            {
+                double q = (colorSpace.Luminosity < 0.5) ? (colorSpace.Luminosity * (1.0 + colorSpace.Saturation)) :
+                    (colorSpace.Luminosity + colorSpace.Saturation - (colorSpace.Luminosity * colorSpace.Saturation));
+                double p = (2.0 * colorSpace.Luminosity) - q;
+
+                double hueNormalized = colorSpace.Hue / 360.0;
+                double[] rgb = new double[3];
+                rgb[0] = hueNormalized + (1.0 / 3.0);
+                rgb[1] = hueNormalized;
+                rgb[2] = hueNormalized - (1.0 / 3.0);
+
+                for (int i = 0; i < 3; i++)
+                {
+                    if (rgb[i] < 0) rgb[i] += 1.0;
+                    if (rgb[i] > 1) rgb[i] -= 1.0;
+
+                    if ((rgb[i] * 6) < 1)
+                    {
+                        rgb[i] = p + ((q - p) * 6.0 * rgb[i]);
+                    }
+                    else if ((rgb[i] * 2.0) < 1)
+                    {
+                        rgb[i] = q;
+                    }
+                    else if ((rgb[i] * 3.0) < 2)
+                    {
+                        rgb[i] = p + (q - p) * ((2.0 / 3.0) - rgb[i]) * 6.0;
+                    }
+                    else rgb[i] = p;
+                }
+
+
+                return System.Drawing.Color.FromArgb(
+                    Convert.ToInt32(Math.Round(rgb[0] * 255.0d, MidpointRounding.AwayFromZero)),
+                    Convert.ToInt32(Math.Round(rgb[1] * 255.0d, MidpointRounding.AwayFromZero)),
+                    Convert.ToInt32(Math.Round(rgb[2] * 255.0d, MidpointRounding.AwayFromZero)));
+            }
         }
 
         public static System.Drawing.Color ToRGB(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return System.Drawing.Color.FromArgb(
+                Convert.ToInt32(Math.Round((colorSpace.Y + 1.139837398373983740 * colorSpace.V) * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round((colorSpace.Y - 0.3946517043589703515 * colorSpace.U - 0.5805986066674976801 * colorSpace.V) * 255.0d, MidpointRounding.AwayFromZero)),
+                Convert.ToInt32(Math.Round((colorSpace.Y + 2.032110091743119266 * colorSpace.U) * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
         public static CIELAB ToCIELAB(System.Drawing.Color colorSpace)
@@ -96,29 +158,35 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToCIEXYZ(colorSpace));
         }
 
+        delegate double xyzTransform(double d);
         public static CIELAB ToCIELAB(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            xyzTransform f = x => ((x > 0.008856d) ? Math.Pow(x, (1.0d / 3.0d)) : (7.787d * x + 16.0d / 116.0d));
+
+            return new CIELAB(
+                116.0d * f(colorSpace.Y) - 16,
+                500.0d * f(colorSpace.X / 0.9505d) - f(colorSpace.Y),
+                200.0d * f(colorSpace.Y) - f(colorSpace.Z / 1.089d));
         }
 
         public static CIELAB ToCIELAB(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIELAB ToCIELAB(HSB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIELAB ToCIELAB(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIELAB ToCIELAB(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIEXYZ ToCIEXYZ(System.Drawing.Color colorSpace)
@@ -143,27 +211,41 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static CIEXYZ ToCIEXYZ(CIELAB colorSpace)
         {
-            throw new NotImplementedException();
+            double delta = 6.0 / 29.0;
+
+            double fy = (colorSpace.L + 16) / 116.0;
+            double fx = fy + (colorSpace.A / 500.0);
+            double fz = fy - (colorSpace.B / 200.0);
+
+            double deltaSquared = Math.Pow(delta, 2);
+            double fxCubed = Math.Pow(fx, 3);
+            double fyCubed = Math.Pow(fy, 3);
+            double fzCubed = Math.Pow(fz, 3);
+
+            return new CIEXYZ(
+                (fx > delta) ? 0.9505d * fxCubed : (fx - 16.0 / 116.0) * 3 * (deltaSquared) * 0.9505,
+                (fy > delta) ? fyCubed : (fy - 16.0 / 116.0) * 3 * (deltaSquared),
+                (fz > delta) ? 1.089d * fzCubed : (fz - 16.0 / 116.0) * 3 * (deltaSquared) * 1.089d);
         }
 
         public static CIEXYZ ToCIEXYZ(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIEXYZ ToCIEXYZ(HSB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIEXYZ ToCIEXYZ(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CIEXYZ ToCIEXYZ(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CMYK ToCMYK(System.Drawing.Color colorSpace)
@@ -186,12 +268,12 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static CMYK ToCMYK(CIELAB colorSpace)
         {
-            return ConvertColorSpace.ToCMYK(System.Drawing.Color.Pink);
+            return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CMYK ToCMYK(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CMYK ToCMYK(HSB colorSpace)
@@ -201,12 +283,12 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static CMYK ToCMYK(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static CMYK ToCMYK(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSB ToHSB(System.Drawing.Color colorSpace)
@@ -258,27 +340,27 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static HSB ToHSB(CIELAB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSB ToHSB(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSB ToHSB(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSB ToHSB(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSB ToHSB(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSL ToHSL(System.Drawing.Color colorSpace)
@@ -331,17 +413,17 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static HSL ToHSL(CIELAB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSL ToHSL(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSL ToHSL(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static HSL ToHSL(HSB colorSpace)
@@ -351,7 +433,7 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static HSL ToHSL(YUV colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static YUV ToYUV(System.Drawing.Color colorSpace)
@@ -370,17 +452,17 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static YUV ToYUV(CIELAB colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static YUV ToYUV(CIEXYZ colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static YUV ToYUV(CMYK colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
 
         public static YUV ToYUV(HSB colorSpace)
@@ -390,7 +472,7 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         public static YUV ToYUV(HSL colorSpace)
         {
-            throw new NotImplementedException();
+            return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
     }
 }
