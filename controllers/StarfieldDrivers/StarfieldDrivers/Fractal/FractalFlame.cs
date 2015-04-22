@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StarfieldClient;
+using Starfield;
 using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;

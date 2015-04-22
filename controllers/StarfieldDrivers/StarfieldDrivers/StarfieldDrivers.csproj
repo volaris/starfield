@@ -30,9 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StarfieldClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\.NET\bin\StarfieldClient.dll</HintPath>
+    <Reference Include="Starfield">
+      <HintPath>..\..\..\lib\.NET\bin\Starfield.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

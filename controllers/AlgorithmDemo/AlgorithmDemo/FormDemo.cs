@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
-using StarfieldClient;
+using Starfield;
+using Starfield.Networking;
 using System.Timers;
 
 namespace AlgorithmDemo

@@ -41,9 +41,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\lib\external\Exocortex.DSP.v1.dll</HintPath>
     </Reference>
-    <Reference Include="StarfieldClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Starfield, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\.NET\bin\StarfieldClient.dll</HintPath>
+      <HintPath>..\..\..\lib\.NET\bin\Starfield.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

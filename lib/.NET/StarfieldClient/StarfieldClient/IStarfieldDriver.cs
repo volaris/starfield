@@ -1,6 +1,6 @@
-﻿using StarfieldClient;
+﻿using Starfield;
 
-namespace StarfieldClient
+namespace Starfield
 {
     public interface IStarfieldDriver
     {

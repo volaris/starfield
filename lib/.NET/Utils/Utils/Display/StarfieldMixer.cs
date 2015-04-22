@@ -1,5 +1,5 @@
 ﻿using System;
-using StarfieldClient;
+using Starfield;
 using System.Collections.Generic;
 using System.Timers;
 using System.Drawing;

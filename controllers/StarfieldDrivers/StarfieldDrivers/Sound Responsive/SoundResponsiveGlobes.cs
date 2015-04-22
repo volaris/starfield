@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using StarfieldClient;
+using Starfield;
 using StarfieldUtils.SoundUtils;
 
 namespace AlgorithmDemo.Drivers

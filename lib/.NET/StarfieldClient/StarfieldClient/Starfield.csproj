@@ -7,8 +7,8 @@
     <ProjectGuid>{9FD24852-54FB-49FE-B0AB-B7FF9806297C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StarfieldClient</RootNamespace>
-    <AssemblyName>StarfieldClient</AssemblyName>
+    <RootNamespace>Starfield</RootNamespace>
+    <AssemblyName>Starfield</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IStarfieldDriver.cs" />
-    <Compile Include="OPCClient.cs" />
-    <Compile Include="TCPStarfieldClient.cs" />
+    <Compile Include="networking\OPCClient.cs" />
+    <Compile Include="networking\TCPStarfieldClient.cs" />
+    <Compile Include="networking\TCPStarfieldServer.cs" />
     <Compile Include="StarfieldModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

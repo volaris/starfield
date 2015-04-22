@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Drawing;
-//using Leap;
 
-namespace StarfieldClient
+namespace Starfield
 {
     public class StarfieldModel
     {

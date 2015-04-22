@@ -9,11 +9,11 @@ using System.Net.Sockets;
 using System.IO;
 using System.Drawing;
 
-namespace StarfieldClient.Networking
+namespace Starfield.Networking
 {
     class TCPStarfieldServer
     {
-        public static const int DefaultPort = 7890;
+        public const int DefaultPort = 7890;
         private Thread serverThread;
         private TcpListener listener;
         private bool stop = false;

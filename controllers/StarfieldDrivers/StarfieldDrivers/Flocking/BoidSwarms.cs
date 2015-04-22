@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using StarfieldUtils.FlockingUtils;
-using StarfieldClient;
+using Starfield;
 using System.Timers;
 using StarfieldUtils.MathUtils;
 

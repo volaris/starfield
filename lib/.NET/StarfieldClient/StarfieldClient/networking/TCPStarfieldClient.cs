@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Net;
+using Starfield;
 
-namespace StarfieldClient.Networking
+namespace Starfield.Networking
 {
     public class TCPStarfieldClient
     {
