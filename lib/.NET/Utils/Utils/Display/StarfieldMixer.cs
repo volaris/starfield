@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace StarfieldUtils.DisplayUtils
 {
-	public class Mixer
+	public class StarfieldMixer
 	{
 		public enum FadeStyle
 		{
@@ -18,24 +18,24 @@ namespace StarfieldUtils.DisplayUtils
 		// this is the actual Starfield that we want to render to
 		private StarfieldModel display;
 		private List<StarfieldModel> channels;
-        private Timer mix;
+        private System.Timers.Timer mix;
         private Thread fader;
 
-		public Mixer(StarfieldModel display)
+        public StarfieldMixer(StarfieldModel display)
 		{
 			this.display = display;
 			channels = new List<StarfieldModel>();
-            mix = new Timer(30);
+            mix = new System.Timers.Timer(30);
             mix.Elapsed += HandleElapsed;
         }
 
         void HandleElapsed(object sender, ElapsedEventArgs e)
         {
-            for(int x = 0; x < display.NumX; x++) 
+            for(ulong x = 0; x < display.NumX; x++) 
             {
-                for(int y = 0; y < display.NumY; y++) 
+                for (ulong y = 0; y < display.NumY; y++) 
                 {
-                    for(int z = 0; z < display.NumZ; z++)
+                    for (ulong z = 0; z < display.NumZ; z++)
                     {
                         int sumRed = 0;
                         int sumGreen = 0;
@@ -43,7 +43,7 @@ namespace StarfieldUtils.DisplayUtils
 
                         foreach(StarfieldModel channel in channels)
                         {
-                            Color color = channel.GetColor(x, y, z);
+                            Color color = channel.GetColor((int)x, (int)y, (int)z);
                             sumRed += color.R;
                             sumGreen += color.G;
                             sumBlue += color.B;
@@ -51,7 +51,7 @@ namespace StarfieldUtils.DisplayUtils
                             
                         Color mixed = Color.FromArgb(sumRed / channels.Count, sumGreen / channels.Count, sumBlue / channels.Count);
 
-                        display.SetColor(x, y, z, mixed);
+                        display.SetColor((int)x, (int)y, (int)z, mixed);
                     }
                 }
             }
@@ -91,6 +91,14 @@ namespace StarfieldUtils.DisplayUtils
             {
                 return;
             }
+        }
+
+        public void SetChannelValue(StarfieldModel channel, float level)
+        {
+            // clamp the input
+            level = Math.Min(1.0f, Math.Max(0.0f, level));
+
+
         }
 	}
 }
