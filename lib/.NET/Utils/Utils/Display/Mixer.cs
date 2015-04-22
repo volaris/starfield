@@ -5,7 +5,7 @@ using System.Timers;
 using System.Drawing;
 using System.Threading;
 
-namespace StarfieldUtils
+namespace StarfieldUtils.DisplayUtils
 {
 	public class Mixer
 	{
@@ -48,7 +48,7 @@ namespace StarfieldUtils
                             sumGreen += color.G;
                             sumBlue += color.B;
                         }
-
+                            
                         Color mixed = Color.FromArgb(sumRed / channels.Count, sumGreen / channels.Count, sumBlue / channels.Count);
 
                         display.SetColor(x, y, z, mixed);
