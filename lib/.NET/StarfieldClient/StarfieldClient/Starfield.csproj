@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriverType.cs" />
     <Compile Include="IStarfieldDriver.cs" />
     <Compile Include="networking\OPCClient.cs" />
     <Compile Include="networking\TCPStarfieldClient.cs" />
