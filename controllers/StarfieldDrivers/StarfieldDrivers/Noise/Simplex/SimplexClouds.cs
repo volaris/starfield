@@ -11,6 +11,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace StarfieldDrivers
 {
+    [DriverType(DriverTypes.Ambient)]
     class SimplexClouds : IStarfieldDriver
     {
         #region Private Members

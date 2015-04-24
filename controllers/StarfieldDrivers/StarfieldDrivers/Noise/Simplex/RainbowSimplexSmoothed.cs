@@ -10,6 +10,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace StarfieldDrivers
 {
+    [DriverType(DriverTypes.Ambient)]
     class RainbowSimplexSmoothed : IStarfieldDriver
     {
         #region Private Members

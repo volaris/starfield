@@ -10,6 +10,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.SoundResponsive)]
     class GlobeVU : IStarfieldDriver
     {
         #region Private Members

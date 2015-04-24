@@ -11,6 +11,7 @@ using StarfieldUtils.MathUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     class BoidSwarms : IStarfieldDriver
     {
         #region Private Members

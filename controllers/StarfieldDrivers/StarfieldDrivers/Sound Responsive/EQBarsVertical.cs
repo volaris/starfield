@@ -10,6 +10,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     class EQBarsVertical : IStarfieldDriver
     {
         #region Private Members

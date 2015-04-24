@@ -11,6 +11,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace StarfieldDrivers
 {
+    [DriverType(DriverTypes.Ambient)]
     class TwoColorSimplex : IStarfieldDriver
     {
         #region Private Members

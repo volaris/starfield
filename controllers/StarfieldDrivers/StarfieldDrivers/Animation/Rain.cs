@@ -8,6 +8,7 @@ using Starfield;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Ambient)]
     public class Rain : IStarfieldDriver
     {
         #region Private Members

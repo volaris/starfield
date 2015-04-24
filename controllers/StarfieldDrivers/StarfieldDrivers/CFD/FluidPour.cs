@@ -10,6 +10,7 @@ using StarfieldUtils.MathUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     public class FluidPour : IStarfieldDriver
     {
         #region Private Members

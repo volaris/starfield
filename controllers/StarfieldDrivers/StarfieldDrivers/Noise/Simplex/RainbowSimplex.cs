@@ -9,6 +9,7 @@ using StarfieldUtils.MathUtils;
 
 namespace StarfieldDrivers
 {
+    [DriverType(DriverTypes.Ambient)]
     class RainbowSimplex : IStarfieldDriver
     {
         #region Private Members

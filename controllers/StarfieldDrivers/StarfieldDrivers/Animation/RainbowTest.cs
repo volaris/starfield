@@ -9,6 +9,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace StarfieldDrivers.Animation
 {
+    [DriverType(DriverTypes.Ambient)]
     public class RainbowTest : IStarfieldDriver
     {
         #region Private members

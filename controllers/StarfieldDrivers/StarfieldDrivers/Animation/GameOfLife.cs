@@ -8,6 +8,7 @@ using System.Drawing;
 
 namespace StarfieldDrivers.Animation
 {
+    [DriverType(DriverTypes.Ambient)]
     class GameOfLife : IStarfieldDriver
     {
         #region Private Members

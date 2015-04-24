@@ -8,6 +8,7 @@ using Starfield;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     public class TestFill : IStarfieldDriver
     {
         #region Private Members

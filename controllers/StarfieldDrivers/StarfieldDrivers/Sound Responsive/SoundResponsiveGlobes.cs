@@ -16,6 +16,7 @@ namespace AlgorithmDemo.Drivers
         public Color color;
     }
 
+    [DriverType(DriverTypes.SoundResponsive)]
     class SoundResponsiveGlobes : IStarfieldDriver
     {
         #region Private Members

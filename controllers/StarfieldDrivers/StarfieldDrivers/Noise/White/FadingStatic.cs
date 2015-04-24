@@ -9,6 +9,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Ambient)]
     public class FadingStatic : IStarfieldDriver
     {
         #region Private Members

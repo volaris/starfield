@@ -10,6 +10,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Ambient)]
     public class CenterWave : IStarfieldDriver
     {
         #region Private Members

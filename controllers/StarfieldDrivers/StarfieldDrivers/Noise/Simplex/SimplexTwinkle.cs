@@ -10,6 +10,7 @@ using StarfieldUtils.MathUtils;
 
 namespace StarfieldDrivers
 {
+    [DriverType(DriverTypes.Ambient)]
     class SimplexTwinkle : IStarfieldDriver
     {
         #region Private Members

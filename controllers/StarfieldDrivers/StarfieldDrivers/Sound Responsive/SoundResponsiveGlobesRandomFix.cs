@@ -9,6 +9,7 @@ using StarfieldUtils.SoundUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     class SoundResponsiveGlobesRandomFix : IStarfieldDriver
     {
         #region Private Members

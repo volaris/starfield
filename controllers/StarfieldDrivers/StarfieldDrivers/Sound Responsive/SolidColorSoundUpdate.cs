@@ -9,6 +9,7 @@ using StarfieldUtils.SoundUtils;
 
 namespace AlgorithmDemo.Drivers
 {
+    [DriverType(DriverTypes.Experimental)]
     class SolidColorSoundUpdate : IStarfieldDriver
     {
         #region Private Members
