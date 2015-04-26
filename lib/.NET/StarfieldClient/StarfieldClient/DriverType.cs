@@ -20,7 +20,7 @@ namespace Starfield
     // the DriverType attribute is used to tag a class at compile time, drivers that connect over the 
     // network will need to supply this information when they connect
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    sealed class DriverType : Attribute
+    public sealed class DriverType : Attribute
     {
 
         // See the attribute guidelines at 

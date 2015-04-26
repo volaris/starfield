@@ -41,7 +41,7 @@ namespace Starfield
         private Object lockObject = new Object();
 
         // current color state
-        public static Color[, ,] LEDColors;
+        public Color[, ,] LEDColors;
 
         public float Brightness
         {

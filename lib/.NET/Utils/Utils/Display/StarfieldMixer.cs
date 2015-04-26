@@ -24,6 +24,9 @@ namespace StarfieldUtils.DisplayUtils
         // TODO: ReaderWriterLockSlim?
         private object lockObject = new object();
 
+        public delegate void FadeCompletedHandler(object Sender, StarfieldModel channel);
+        public event FadeCompletedHandler FadeCompleted;
+
         public StarfieldMixer(StarfieldModel display)
 		{
 			this.display = display;
@@ -32,12 +35,29 @@ namespace StarfieldUtils.DisplayUtils
             faders = new List<Task>();
             mix = new System.Timers.Timer(30);
             mix.Elapsed += HandleElapsed;
+            mix.Start();
         }
 
         void HandleElapsed(object sender, ElapsedEventArgs e)
         {
             lock (lockObject)
             {
+                int numWeights = 0;
+                bool multiWeight = false;
+
+                for (int i = 0; i < weights.Count; i++)
+                {
+                    if(weights[i] > 0)
+                    {
+                        numWeights++;
+                    }
+                }
+
+                if(numWeights > 1)
+                {
+                    multiWeight = true;
+                }
+
                 for (ulong x = 0; x < display.NumX; x++)
                 {
                     for (ulong y = 0; y < display.NumY; y++)
@@ -52,7 +72,7 @@ namespace StarfieldUtils.DisplayUtils
                                 colors[i] = channel.GetColor((int)x, (int)y, (int)z);
                             }
 
-                            Color mixed = ColorUtils.ColorUtils.Blend(colors, weights.ToArray());
+                            Color mixed = multiWeight ? ColorUtils.ColorUtils.BlendAveraged(colors, weights.ToArray()) : ColorUtils.ColorUtils.BlendRaw(colors, weights.ToArray());
 
                             display.SetColor((int)x, (int)y, (int)z, mixed);
                         }
@@ -69,6 +89,7 @@ namespace StarfieldUtils.DisplayUtils
                 channel = new StarfieldModel(display.XStep, display.YStep, display.ZStep, display.NumX, display.NumY, display.NumZ);
                 channels.Add(channel);
                 weights.Add(0d);
+                faders.Add(null);
             }
 			return channel;
 		}
@@ -154,7 +175,9 @@ namespace StarfieldUtils.DisplayUtils
             t *= Math.PI;
             t += Math.PI;
 
-            return Math.Cos(t);
+            t = (1.0d + Math.Cos(t)) / 2.0d;
+
+            return Math.Min(1.0f, Math.Max(0.0f, t));
         }
 
         private double linearFade(double t)
@@ -202,6 +225,11 @@ namespace StarfieldUtils.DisplayUtils
             {
                 weights[channels.IndexOf(channel)] = 0d;
             }
+
+            if (FadeCompleted != null)
+            {
+                FadeCompleted(this, channel);
+            }
         }
 
         private void doFadeIn(StarfieldModel channel, TimeSpan duration, FadeStyle fadeStyle)
@@ -212,7 +240,7 @@ namespace StarfieldUtils.DisplayUtils
 
             lock (lockObject)
             {
-                startWeight = weights[channels.IndexOf(channel)];
+                startWeight = 1.0d - weights[channels.IndexOf(channel)];
             }
 
             runtime = DateTime.Now - start;
@@ -240,6 +268,11 @@ namespace StarfieldUtils.DisplayUtils
             lock (lockObject)
             {
                 weights[channels.IndexOf(channel)] = 1.0d;
+            }
+
+            if(FadeCompleted != null)
+            {
+                FadeCompleted(this, channel);
             }
         }
 	}
