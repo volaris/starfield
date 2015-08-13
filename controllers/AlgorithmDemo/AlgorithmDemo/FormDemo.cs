@@ -94,7 +94,7 @@ namespace AlgorithmDemo
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
-            comboBoxStarfield.SelectedIndex = 1;
+            comboBoxStarfield.SelectedIndex = 0;
 
             if (comboBoxAlgorithm.Items.Count > 0)
             {

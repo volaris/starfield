@@ -1,4 +1,4 @@
-﻿namespace AlgorithmDemo
+﻿namespace Ambient
 {
     partial class FormDemo
     {

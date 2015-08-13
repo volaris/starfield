@@ -13,7 +13,7 @@ using Starfield.Networking;
 using StarfieldUtils.DisplayUtils;
 using System.Timers;
 
-namespace AlgorithmDemo
+namespace Ambient
 {
     public partial class FormDemo : Form
     {
@@ -45,7 +45,7 @@ namespace AlgorithmDemo
 
         // endpoint that we will try to connect to first and that will be
         // displayed when the app starts up
-        string DefaultIP = "127.0.0.1";
+        string DefaultIP = "127.0.0.1";//"192.168.0.10";//
         int DefaultPort = 7890;
         System.Timers.Timer render;
         System.Timers.Timer algorithmSwitch;
@@ -110,7 +110,7 @@ namespace AlgorithmDemo
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
-            comboBoxStarfield.SelectedIndex = 1;
+            comboBoxStarfield.SelectedIndex = 0;
 
             CurrentDrivers = new IStarfieldDriver[2];
             Channels = new StarfieldModel[2];

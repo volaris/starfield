@@ -11,12 +11,12 @@ namespace Starfield
     public class StarfieldModel
     {
         // these should match the values for the simulator or the starfield
-        private const float DEFAULT_X_STEP = 2;
-        private const float DEFAULT_Y_STEP = 2;
-        private const float DEFAULT_Z_STEP = 2;
-        private const ulong DEFAULT_NUM_X = 7;
-        private const ulong DEFAULT_NUM_Y = 4;
-        private const ulong DEFAULT_NUM_Z = 5;
+        protected const float DEFAULT_X_STEP = 2;
+        protected const float DEFAULT_Y_STEP = 2;
+        protected const float DEFAULT_Z_STEP = 2;
+        protected const ulong DEFAULT_NUM_X = 7;
+        protected const ulong DEFAULT_NUM_Y = 4;
+        protected const ulong DEFAULT_NUM_Z = 5;
 
         // distance in feet between pixels
         public float XStep = 2;
@@ -33,12 +33,12 @@ namespace Starfield
         float brightness = 1.0f;
 
         // set up the dimming timer
-        Timer dimmer = new Timer(3000);
+        protected Timer dimmer = new Timer(3000);
         public bool EnableDimmer = false;
 
         // Flush lock: this ensures that only one thread is modifying pixel
         // data at a time
-        private Object lockObject = new Object();
+        protected Object lockObject = new Object();
 
         // current color state
         public Color[, ,] LEDColors;
@@ -142,7 +142,7 @@ namespace Starfield
         }*/
 
         // set all LEDs to black
-        public void Clear()
+        public virtual void Clear()
         {
             System.Threading.Monitor.Enter(lockObject);
 
@@ -161,7 +161,7 @@ namespace Starfield
         }
 
         // set the LED at (x, y, z) to the given color
-        public void SetColor(int x, int y, int z, Color color)
+        public virtual void SetColor(int x, int y, int z, Color color)
         {
             System.Threading.Monitor.Enter(lockObject);
 
@@ -171,7 +171,7 @@ namespace Starfield
         }
 
         // returns the color of the LED at (x, y, z)
-        public Color GetColor(int x, int y, int z)
+        public virtual Color GetColor(int x, int y, int z)
         {
             Color color = LEDColors[x, z, y];
             return Color.FromArgb((int)(color.R * brightness), (int)(color.G * brightness), (int)(color.B * brightness));
