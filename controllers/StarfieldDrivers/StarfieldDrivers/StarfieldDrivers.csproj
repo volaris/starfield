@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,6 +51,7 @@
     <Compile Include="Animation\RainbowTest.cs" />
     <Compile Include="Animation\CenterWave.cs" />
     <Compile Include="Flocking\BoidSwarms.cs" />
+    <Compile Include="Noise\Simplex\RainbowSimplexSmoothed.cs" />
     <Compile Include="Noise\White\FadingStatic.cs" />
     <Compile Include="CFD\FluidPour.cs" />
     <Compile Include="Fractal\FractalFlame.cs" />
@@ -61,7 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Animation\Rain.cs" />
     <Compile Include="Noise\Simplex\RainbowSimplex.cs" />
-    <Compile Include="Noise\Simplex\RainbowSimplexSmoothed.cs" />
+    <Compile Include="Noise\Simplex\NoisyRainbowSimplexSmoothed.cs" />
     <Compile Include="Noise\Simplex\SimplexClouds.cs" />
     <Compile Include="Noise\Simplex\SimplexColumnsAndCurtains.cs" />
     <Compile Include="Noise\Simplex\SimplexCurtains.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="Noise\Simplex\SimplexTwinkle.cs" />
     <Compile Include="Noise\Simplex\SimplexWaves.cs" />
     <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveSimplexSmoke.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveSimplex.cs" />
     <Compile Include="Test\SolidColor.cs" />
     <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />

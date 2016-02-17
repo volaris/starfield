@@ -11,7 +11,7 @@ using StarfieldUtils.ColorUtils;
 namespace StarfieldDrivers
 {
     [DriverType(DriverTypes.Ambient)]
-    class RainbowSimplexSmoothed : IStarfieldDriver
+    class NoisyRainbowSimplexSmoothed : IStarfieldDriver
     {
         #region Private Members
         Color[] rainbow10 = new Color[10];
@@ -22,6 +22,7 @@ namespace StarfieldDrivers
         static float time = 0;
         bool capAtMax = true;
         float timeStep = .005f;
+        float timeDiv = 1;
         #endregion
 
         #region Public Properties
@@ -54,10 +55,16 @@ namespace StarfieldDrivers
             get { return timeStep; }
             set { timeStep = value; }
         }
+
+        public float TimeDiv
+        {
+            get { return timeDiv; }
+            set { timeDiv = value; }
+        }
         #endregion
 
         #region Constructors
-        public RainbowSimplexSmoothed()
+        public NoisyRainbowSimplexSmoothed()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
             rainbow10[1] = rainbow7[1] = Color.FromArgb(0xFF, 0xA5, 0);
@@ -75,6 +82,9 @@ namespace StarfieldDrivers
         #region IStarfieldDriver Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
+            float min = .5f + SimplexNoise.fbm_noise4(0f, 0f, 0f, time / TimeDiv, NumOctaves, Persistance, Lacunarity);
+            float pct = .5f + SimplexNoise.fbm_noise4(.5f, .5f, .5f, (time + .1f) / TimeDiv, NumOctaves, Persistance, Lacunarity);
+
             for (ulong x = 0; x < Starfield.NumX; x++)
             {
                 for (ulong y = 0; y < Starfield.NumY; y++)
@@ -84,12 +94,16 @@ namespace StarfieldDrivers
                         Color toDraw;
                         float n = .5f + SimplexNoise.fbm_noise4((float)x / (float)Starfield.NumX, (float)y / (float)Starfield.NumY, (float)z / (float)Starfield.NumZ, time, NumOctaves, Persistance, Lacunarity);
 
+                        n *= pct;
+                        n += min;
+
                         if (n > 0 && n < 1)
                         {
-                            int index1 = (int)(Math.Floor(9 * n));
+                            /*int index1 = (int)(Math.Floor(9 * n));
                             int index2 = (int)(Math.Ceiling(9 * n));
                             float percent = (9 * n) - index1;
-                            toDraw = ColorUtils.GetGradientColor(rainbow10[index1], rainbow10[index2], percent, true);
+                            toDraw = ColorUtils.GetGradientColor(rainbow10[index1], rainbow10[index2], percent, true);*/
+                            toDraw = ColorUtils.GetVibrantColorGradient(n);
                             Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                         }
                         else
@@ -121,7 +135,7 @@ namespace StarfieldDrivers
         #region Overrides
         public override string ToString()
         {
-            return "Smooth Rainbow Simplex Noise";
+            return "Noisy Smooth Rainbow Simplex Noise";
         }
         #endregion
     }

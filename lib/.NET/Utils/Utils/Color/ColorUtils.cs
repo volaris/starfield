@@ -136,6 +136,61 @@ namespace StarfieldUtils.ColorUtils
             }
         }
 
+        // For the purposes of the starfield, vibrant colors are defined as 
+        // those without any grey component, this means that only two of the
+        // color components can have values.
+        
+        // This function takes a single float as a percentage of red to red
+        // on the vibrant color spectrum as described above. Both 0.0 and 1.0
+        // will yield red.
+
+        // TODO: refactor GetRandomVibrantColor to use this function
+        public static Color GetVibrantColorGradient(float n)
+        {
+            Random rand = new Random();
+            double val = n;
+            Color color1, color2;
+
+            double increment = 1.0 / 6;
+
+            if (val < increment) // red: 255 green: variable increasing
+            {
+                color1 = Color.FromArgb(0xFF, 0, 0);
+                color2 = Color.FromArgb(0xFF, 0xFF, 0);
+                return GetGradientColor(color1, color2, (float)(val * 6), true);
+            }
+            else if (val < 2 * increment) // green: 255 red: variable decreasing
+            {
+                color1 = Color.FromArgb(0xFF, 0xFF, 0);
+                color2 = Color.FromArgb(0, 0xFF, 0);
+                return GetGradientColor(color1, color2, (float)((val - increment) * 6), true);
+            }
+            else if (val < 3 * increment) // green: 255 blue: variable increasing
+            {
+                color1 = Color.FromArgb(0, 0xFF, 0);
+                color2 = Color.FromArgb(0, 0xFF, 0xFF);
+                return GetGradientColor(color1, color2, (float)((val - 2 * increment) * 6), true);
+            }
+            else if (val < 4 * increment) // blue: 255 green: variable decreasing
+            {
+                color1 = Color.FromArgb(0, 0xFF, 0xFF);
+                color2 = Color.FromArgb(0, 0, 0xFF);
+                return GetGradientColor(color1, color2, (float)((val - 3 * increment) * 6), true);
+            }
+            else if (val < 5 * increment) // blue 255 red: variable increasing
+            {
+                color1 = Color.FromArgb(0, 0, 0xFF);
+                color2 = Color.FromArgb(0xFF, 0, 0xFF);
+                return GetGradientColor(color1, color2, (float)((val - 4 * increment) * 6), true);
+            }
+            else // (val <= 1) // red: 255 blue: variable decresing
+            {
+                color1 = Color.FromArgb(0xFF, 0, 0xFF);
+                color2 = Color.FromArgb(0xFF, 0, 0);
+                return GetGradientColor(color1, color2, (float)((val - 5 * increment) * 6), true);
+            }
+        }
+
         public  static Color BlendAveraged(Color[] colors, double[] weights)
         {
             double red = 0;
