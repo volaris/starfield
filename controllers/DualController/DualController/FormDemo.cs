@@ -13,7 +13,7 @@ using Starfield.Networking;
 using System.Timers;
 using StarfieldUtils.DisplayUtils;
 
-namespace AlgorithmDemo
+namespace DualController
 {
     public enum DriverLocation
     {
@@ -28,6 +28,7 @@ namespace AlgorithmDemo
 
         // Starfield model class, stores the colors
         SplitStarfieldModel Model;
+        StarfieldMapper Mapper;
 
         // Starfield client class, handles communication with the Starfield
         TCPStarfieldClient Client;
@@ -160,6 +161,8 @@ namespace AlgorithmDemo
             algorithmSwitchExterior = new System.Timers.Timer(AlgorithmSwitchInterval);
             algorithmSwitchExterior.Elapsed += algorithmSwitchExterior_Elapsed;
 
+            checkBoxAmbientExterior.Checked = true;
+
             // start the render timer
             render = new System.Timers.Timer(RenderInterval);
             render.Elapsed += render_Elapsed;
@@ -283,9 +286,10 @@ namespace AlgorithmDemo
 
             try
             {
-                Model = new SplitStarfieldModel(2, 2, 2, 10, 25, 4, 1);
+                Model = new SplitStarfieldModel(2, 2, 2, 15, 20, 4, 1);
+                Mapper = new StarfieldMapper(StarfieldModel.HomeStarfield(), Model);
 
-                Client = new TCPStarfieldClient(Model, System.Net.IPAddress.Parse(ip), port);
+                Client = new TCPStarfieldClient(Mapper, System.Net.IPAddress.Parse(ip), port);
             }
             catch
             { }

@@ -151,169 +151,198 @@ namespace StarfieldDrivers
         #region Private Methods
         private void GenerateFlame(StarfieldModel Starfield)
         {
-            AffineCoefs3d[] coefs_arr = new AffineCoefs3d[3];
-            for(int i = 0; i < coefs_arr.Length; i++)
+            for (int retry = 0; retry < 3; retry++)
             {
-                coefs_arr[i] = GenerateRandomAffine();
-            }
-
-            colors = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-            alphas = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-            toDraw = new Color[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-
-            int xPos = 0;
-            int yPos = 0;
-            int zPos = 0;
-
-            int count = -20;
-
-            double xHigh = 1;
-            double xLow = -1;
-            double yHigh = 1;
-            double yLow = -1;
-            double zHigh = 1;
-            double zLow = -1;
-
-            double xScale = Starfield.NumX / (xHigh - xLow);
-            double yScale = Starfield.NumY / (yHigh - yLow);
-            double zScale = Starfield.NumZ / (zHigh - zLow);
-
-            double xOffset = Starfield.NumX / 2;
-            double yOffset = Starfield.NumY / 2;
-            double zOffset = Starfield.NumZ / 2;
-
-            double color = rand.NextDouble();
-            double alpha = 0;
-            double maxAlpha = 0;
-
-            double pointX = rand.NextDouble() * (xHigh - xLow) - (xHigh - xLow) / 2;
-            double pointY = rand.NextDouble() * (yHigh - yLow) - (yHigh - yLow) / 2;
-            double pointZ = rand.NextDouble() * (zHigh - zLow) - (zHigh - zLow) / 2;
-
-            double IfsPointX = 0;
-            double IfsPointY = 0;
-            double IfsPointZ = 0;
-
-            while(count < 6000)//(StarfieldModel.NumX * StarfieldModel.NumY * StarfieldModel.NumZ))
-            {
-                count++;
-
-                AffineCoefs3d coefs = coefs_arr[rand.Next(0, coefs_arr.Length)];
-
-                IfsPointX = pointX * coefs.a + pointY * coefs.b + pointZ * coefs.c + coefs.d;
-                IfsPointY = pointX * coefs.e + pointY * coefs.f + pointZ * coefs.g + coefs.h;
-                IfsPointZ = pointX * coefs.i + pointY * coefs.j + pointZ * coefs.k + coefs.l;
-
-                ApplyVariant(0, IfsPointX, IfsPointY, IfsPointZ, ref pointX, ref pointY, ref pointZ);
-
-                color = (color + 1 / 2);
-
-                if(pointX > xLow && pointX < xHigh &&
-                   pointY > yLow && pointY < yHigh &&
-                   pointZ > zLow && pointZ < zHigh &&
-                   count > 20)
+                AffineCoefs3d[] coefs_arr = new AffineCoefs3d[3];
+                for (int i = 0; i < coefs_arr.Length; i++)
                 {
-                    xPos = (int)(pointX * xScale + xOffset);
-                    yPos = (int)(pointY * yScale + yOffset);
-                    zPos = (int)(pointZ * zScale + zOffset);
+                    coefs_arr[i] = GenerateRandomAffine();
+                }
 
-                    alpha = ++alphas[xPos, yPos, zPos];
-                    colors[xPos, yPos, zPos] += color;
+                colors = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                alphas = new double[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                toDraw = new Color[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
-                    if(alpha >= maxAlpha)
+                int xPos = 0;
+                int yPos = 0;
+                int zPos = 0;
+
+                int count = -20;
+
+                double xHigh = 1;
+                double xLow = -1;
+                double yHigh = 1;
+                double yLow = -1;
+                double zHigh = 1;
+                double zLow = -1;
+
+                double xScale = Starfield.NumX / (xHigh - xLow);
+                double yScale = Starfield.NumY / (yHigh - yLow);
+                double zScale = Starfield.NumZ / (zHigh - zLow);
+
+                double xOffset = Starfield.NumX / 2;
+                double yOffset = Starfield.NumY / 2;
+                double zOffset = Starfield.NumZ / 2;
+
+                double color = rand.NextDouble();
+                double alpha = 0;
+                double maxAlpha = 0;
+
+                double pointX = rand.NextDouble() * (xHigh - xLow) - (xHigh - xLow) / 2;
+                double pointY = rand.NextDouble() * (yHigh - yLow) - (yHigh - yLow) / 2;
+                double pointZ = rand.NextDouble() * (zHigh - zLow) - (zHigh - zLow) / 2;
+
+                double IfsPointX = 0;
+                double IfsPointY = 0;
+                double IfsPointZ = 0;
+
+                while (count < 6000)//(StarfieldModel.NumX * StarfieldModel.NumY * StarfieldModel.NumZ))
+                {
+                    count++;
+
+                    AffineCoefs3d coefs = coefs_arr[rand.Next(0, coefs_arr.Length)];
+
+                    IfsPointX = pointX * coefs.a + pointY * coefs.b + pointZ * coefs.c + coefs.d;
+                    IfsPointY = pointX * coefs.e + pointY * coefs.f + pointZ * coefs.g + coefs.h;
+                    IfsPointZ = pointX * coefs.i + pointY * coefs.j + pointZ * coefs.k + coefs.l;
+
+                    ApplyVariant(0, IfsPointX, IfsPointY, IfsPointZ, ref pointX, ref pointY, ref pointZ);
+
+                    color = (color + 1 / 2);
+
+                    if (pointX > xLow && pointX < xHigh &&
+                       pointY > yLow && pointY < yHigh &&
+                       pointZ > zLow && pointZ < zHigh &&
+                       count > 20)
                     {
-                        maxAlpha = alpha;
+                        xPos = (int)(pointX * xScale + xOffset);
+                        yPos = (int)(pointY * yScale + yOffset);
+                        zPos = (int)(pointZ * zScale + zOffset);
+
+                        alpha = ++alphas[xPos, yPos, zPos];
+                        colors[xPos, yPos, zPos] += color;
+
+                        if (alpha >= maxAlpha)
+                        {
+                            maxAlpha = alpha;
+                        }
                     }
                 }
-            }
 
-            double alphaScaleColor = 0;
-            double alphaLog = 0;
-            double logDensity = 0;
-            double gammasSum = 0;
-            double gamma = 0;
-            double alphaGamma;
-            double mappingScale;
+                double alphaScaleColor = 0;
+                double alphaLog = 0;
+                double logDensity = 0;
+                double gammasSum = 0;
+                double gamma = 0;
+                double alphaGamma;
+                double mappingScale;
 
-            byte[, ,] imageAlpha = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-            byte[, ,] imageRed = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-            byte[, ,] imageGreen = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
-            byte[, ,] imageBlue = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                byte[, ,] imageAlpha = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                byte[, ,] imageRed = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                byte[, ,] imageGreen = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
+                byte[, ,] imageBlue = new byte[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
 
-            int pixelColor = 0;
-            byte fixedBrightness = 0;
-            Color[] palette = GenerateRandomPalette(256);
+                int pixelColor = 0;
+                byte fixedBrightness = 0;
+                Color[] palette = GenerateRandomPalette(256);
 
-            gamma = (1 - .2) * (1 / 5);
+                gamma = (1 - .2) * (1 / 5);
 
-            int tempPixel = 0;
+                int tempPixel = 0;
 
-            for (ulong x = 0; x < Starfield.NumX; x++)
-            {
-                for (ulong y = 0; y < Starfield.NumY; y++)
+                for (ulong x = 0; x < Starfield.NumX; x++)
                 {
-                    for (ulong z = 0; z < Starfield.NumZ; z++)
+                    for (ulong y = 0; y < Starfield.NumY; y++)
                     {
-                        if(alphas[x,y,z] != 0 && maxAlpha != 1)
+                        for (ulong z = 0; z < Starfield.NumZ; z++)
                         {
-                            alphaLog = Math.Log(alphas[x, y, z], maxAlpha);
-                            alphaScaleColor = alphaLog / alphas[x, y, z];
+                            if (alphas[x, y, z] != 0 && maxAlpha != 1)
+                            {
+                                alphaLog = Math.Log(alphas[x, y, z], maxAlpha);
+                                alphaScaleColor = alphaLog / alphas[x, y, z];
+                            }
+                            else
+                            {
+                                alphaLog = 0;
+                                alphaScaleColor = 0;
+                            }
+
+                            logDensity = alphaScaleColor * alphas[x, y, z];
+
+                            if (alphaLog == 0)
+                            {
+                                alphaGamma = 0;
+                            }
+                            else
+                            {
+                                alphaGamma = .2 / (alphaLog * 2.2);
+                            }
+
+                            gammasSum = gamma + alphaGamma;
+
+                            if (gammasSum == 0)
+                            {
+                                mappingScale = 0;
+                            }
+                            else
+                            {
+                                mappingScale = Math.Pow(alphaLog, gammasSum);
+                            }
+
+                            pixelColor = (int)(logDensity * (255));
+
+                            fixedBrightness = (byte)(130 * logDensity);
+
+                            tempPixel = (int)(palette[pixelColor].R * mappingScale) + fixedBrightness;
+                            tempPixel = Math.Min(tempPixel, 255);
+                            tempPixel = Math.Max(tempPixel, 0);
+                            imageRed[x, y, z] = (byte)tempPixel;
+
+                            tempPixel = (int)(palette[pixelColor].G * mappingScale) + fixedBrightness;
+                            tempPixel = Math.Min(tempPixel, 255);
+                            tempPixel = Math.Max(tempPixel, 0);
+                            imageGreen[x, y, z] = (byte)tempPixel;
+
+                            tempPixel = (int)(palette[pixelColor].B * mappingScale) + fixedBrightness;
+                            tempPixel = Math.Min(tempPixel, 255);
+                            tempPixel = Math.Max(tempPixel, 0);
+                            imageBlue[x, y, z] = (byte)tempPixel;
+
+                            imageAlpha[x, y, z] = (byte)(255 * alphaLog);
+
+                            toDraw[x, y, z] = Color.FromArgb(imageAlpha[x, y, z], imageRed[x, y, z], imageGreen[x, y, z], imageBlue[x, y, z]);
                         }
-                        else
-                        {
-                            alphaLog = 0;
-                            alphaScaleColor = 0;
-                        }
-
-                        logDensity = alphaScaleColor * alphas[x, y, z];
-
-                        if(alphaLog == 0)
-                        {
-                            alphaGamma = 0;
-                        }
-                        else
-                        {
-                            alphaGamma = .2 / (alphaLog * 2.2);
-                        }
-
-                        gammasSum = gamma + alphaGamma;
-
-                        if(gammasSum == 0)
-                        {
-                            mappingScale = 0;
-                        }
-                        else
-                        {
-                            mappingScale = Math.Pow(alphaLog, gammasSum);
-                        }
-
-                        pixelColor = (int)(logDensity * (255));
-
-                        fixedBrightness = (byte)(130 * logDensity);
-                        
-                        tempPixel = (int)(palette[pixelColor].R * mappingScale) + fixedBrightness;
-                        tempPixel = Math.Min(tempPixel, 255);
-                        tempPixel = Math.Max(tempPixel, 0);
-                        imageRed[x, y, z] = (byte)tempPixel;
-
-                        tempPixel = (int)(palette[pixelColor].G * mappingScale) + fixedBrightness;
-                        tempPixel = Math.Min(tempPixel, 255);
-                        tempPixel = Math.Max(tempPixel, 0);
-                        imageGreen[x, y, z] = (byte)tempPixel;
-
-                        tempPixel = (int)(palette[pixelColor].B * mappingScale) + fixedBrightness;
-                        tempPixel = Math.Min(tempPixel, 255);
-                        tempPixel = Math.Max(tempPixel, 0);
-                        imageBlue[x, y, z] = (byte)tempPixel;
-
-                        imageAlpha[x, y, z] = (byte)(255 * alphaLog);
-
-                        toDraw[x, y, z] = Color.FromArgb(imageAlpha[x, y, z], imageRed[x, y, z], imageGreen[x, y, z], imageBlue[x, y, z]);
                     }
+                }
+                if(IsBrightEnough(Starfield))
+                {
+                    break;
                 }
             }
 
             state = State.FadeOut;
+        }
+
+        private bool IsBrightEnough(StarfieldModel Starfield)
+        {
+            int max = (int)(Starfield.NumX * Starfield.NumY * Starfield.NumZ * 3 * 255);
+            int threshold = max / 9;
+            int val = 0;
+
+            for (int x = 0; x < (int)Starfield.NumX; x++)
+            {
+                for (int y = 0; y < (int)Starfield.NumY; y++)
+                {
+                    for (int z = 0; z < (int)Starfield.NumZ; z++)
+                    {
+                        val += toDraw[x, y, z].R;
+                        val += toDraw[x, y, z].G;
+                        val += toDraw[x, y, z].B;
+                    }
+                }
+            }
+
+            return val >= threshold ? true : false;
         }
 
         private void ApplyVariant(int index, double x, double y, double z, ref double xOut, ref double yOut, ref double zOut)

@@ -42,20 +42,11 @@ namespace Starfield
         }
 
         // set all LEDs to black
-        public void Clear()
+        public override void Clear()
         {
             System.Threading.Monitor.Enter(lockObject);
 
-            for (ulong x = 0; x < NumX; x++)
-            {
-                for (ulong y = 0; y < NumY; y++)
-                {
-                    for (ulong z = 0; z < NumZ; z++)
-                    {
-                        LEDColors[x, z, y] = Color.Black;
-                    }
-                }
-            }
+            base.Clear();
 
             for (ulong x = 0; x < model1.NumX; x++)
             {
