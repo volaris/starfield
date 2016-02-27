@@ -71,6 +71,7 @@
     <Compile Include="Noise\Simplex\SimplexWaves.cs" />
     <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexClouds.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveSimplexSmokeGradientChange.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmoke.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplex.cs" />
     <Compile Include="Test\SolidColor.cs" />
