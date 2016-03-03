@@ -13,14 +13,15 @@ namespace StarfieldUtils.SoundUtils
 
         }
 
+        // TODO: need to differentiate loopback and external input
         public static BaseSoundProcessor GetSoundProcessor()
         {
             switch(Environment.OSVersion.Platform)
             {
                 case PlatformID.MacOSX:
-                    return null;
+                    return new NullSoundProcessor();
                 case PlatformID.Unix:
-                    return null;
+                    return new NullSoundProcessor();
                 case PlatformID.Win32NT:
                     return new CSCoreLoopbackSoundProcessor();
                 default:

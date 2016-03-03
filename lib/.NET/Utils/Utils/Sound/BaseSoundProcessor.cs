@@ -75,7 +75,7 @@ namespace StarfieldUtils.SoundUtils
 
     // any class that processes sound for the starfield should derive
     // from this class
-    public abstract class BaseSoundProcessor
+    public class BaseSoundProcessor
     {
         public event OnArtifactDetectedHandler OnArtifactDetected;
         public event OnFrameUpdateHandler OnFrameUpdate;
