@@ -18,7 +18,7 @@ namespace AlgorithmDemo.Drivers
         int goal;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
-        CSCoreLoopbackSoundProcessor soundProcessor;
+        BaseSoundProcessor soundProcessor;
         float maxDistance;
         bool transitioning = false;
         float gradientPercent;
@@ -131,7 +131,7 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new CSCoreLoopbackSoundProcessor();
+            soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
             soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;

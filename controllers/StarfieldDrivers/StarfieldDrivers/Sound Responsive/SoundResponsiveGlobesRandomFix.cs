@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +16,10 @@ namespace AlgorithmDemo.Drivers
         Color current = Color.Black;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
-        CSCoreLoopbackSoundProcessor soundProcessor;
+        BaseSoundProcessor soundProcessor;
         float maxDistance;
         Random rand = new Random();
-        Queue<Globe> globes = new Queue<Globe>();
+        ConcurrentQueue<Globe> globes = new ConcurrentQueue<Globe>();
         #endregion
 
         #region Constructors
@@ -100,10 +100,11 @@ namespace AlgorithmDemo.Drivers
 
             while(globes.Count > 0)
             {
-                Globe globe = globes.Peek();
+                Globe globe;
+                while (!globes.TryPeek(out globe)) { };
                 if (globe.InnerRadius > maxDistance)
                 {
-                    globes.Dequeue();
+                    while (!globes.TryDequeue(out globe)) { };
                 }
                 else
                 {
@@ -114,7 +115,7 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new CSCoreLoopbackSoundProcessor();
+            soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
         }

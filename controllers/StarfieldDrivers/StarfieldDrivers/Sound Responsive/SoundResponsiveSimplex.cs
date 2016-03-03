@@ -27,7 +27,7 @@ namespace StarfieldDrivers
         float minSpread = .2f;
         bool smoothed = false;
         float smoothFactor = .05f;
-        CSCoreLoopbackSoundProcessor soundProcessor;
+        BaseSoundProcessor soundProcessor;
         #endregion
 
         #region Public Properties
@@ -175,7 +175,7 @@ namespace StarfieldDrivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new CSCoreLoopbackSoundProcessor();
+            soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;
         }

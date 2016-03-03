@@ -33,7 +33,7 @@ namespace StarfieldDrivers
         int count = 0;
         int countMax = 3;
         float lastSpread = 0;
-        CSCoreLoopbackSoundProcessor soundProcessor;
+        BaseSoundProcessor soundProcessor;
         #endregion
 
         #region Public Properties
@@ -220,7 +220,7 @@ namespace StarfieldDrivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new CSCoreLoopbackSoundProcessor();
+            soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;
         }

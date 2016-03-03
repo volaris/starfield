@@ -32,7 +32,7 @@ namespace StarfieldDrivers
         bool fade = true;
         float fadeThreshold = .1f;
         private float rate = .8f;
-        CSCoreLoopbackSoundProcessor soundProcessor;
+        BaseSoundProcessor soundProcessor;
         #endregion
 
         #region Public Properties
@@ -206,7 +206,7 @@ namespace StarfieldDrivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
-            soundProcessor = new CSCoreLoopbackSoundProcessor();
+            soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;
         }
