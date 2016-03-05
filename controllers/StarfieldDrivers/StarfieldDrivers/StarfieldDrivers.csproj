@@ -74,6 +74,7 @@
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmokeGradientChange.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmoke.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplex.cs" />
+    <Compile Include="Sound Responsive\snakes.cs" />
     <Compile Include="Test\SolidColor.cs" />
     <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />
