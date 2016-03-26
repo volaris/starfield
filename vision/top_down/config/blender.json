@@ -1,0 +1,45 @@
+{
+    "output_size" : 
+    {
+        "width" : 190,
+        "height" : 142
+    },
+    "camera_params" : 
+    [
+        {
+            "x" : 8,
+            "y" : 25,
+            "width" : 80,
+            "height" : 60,
+			"orientation" : 0
+        },
+        {
+            "x" : 8,
+            "y" : 57,
+            "width" : 80,
+            "height" : 60,
+			"orientation" : 0
+        },
+        {
+            "x" : 102,
+            "y" : 25,
+            "width" : 80,
+            "height" : 60,
+			"orientation" : 0
+        },
+        {
+            "x" : 102,
+            "y" : 57,
+            "width" : 80,
+            "height" : 60,
+			"orientation" : 0
+        },
+        {
+            "x" : 55,
+            "y" : 31,
+            "width" : 61,
+            "height" : 80,
+			"orientation" : 90
+        }
+    ]
+}
