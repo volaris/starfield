@@ -1,0 +1,41 @@
+{
+    "files" : 
+    [
+        {
+            "server" : "192.168.1.100",
+            "user" : "foo",
+            "remote_path" : "img/latest.jpg",
+            "temp_path" : "./tmp/0.jpg",
+            "local_path" : "./img/0.jpg"
+        },
+        {
+            "server" : "192.168.1.101",
+            "user" : "foo",
+            "remote_path" : "img/latest.jpg",
+            "temp_path" : "./tmp/1.jpg",
+            "local_path" : "./img/1.jpg"
+        },
+        {
+            "server" : "192.168.1.102",
+            "user" : "foo",
+            "remote_path" : "img/latest.jpg",
+            "temp_path" : "./tmp/2.jpg",
+            "local_path" : "./img/2.jpg"
+        },
+        {
+            "server" : "192.168.1.103",
+            "user" : "foo",
+            "password" : "bar",
+            "remote_path" : "img/latest.jpg",
+            "temp_path" : "./tmp/3.jpg",
+            "local_path" : "./img/3.jpg"
+        },
+        {
+            "server" : "192.168.1.104",
+            "user" : "foo",
+            "remote_path" : "img/latest.jpg",
+            "temp_path" : "./tmp/4.jpg",
+            "local_path" : "./img/4.jpg"
+        }
+    ]
+}
