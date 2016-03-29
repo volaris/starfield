@@ -5,6 +5,7 @@ configFile = "./config/processor.json"
 outDir = "./output/"
 
 config = None
+verbose = False
 
 def loadConfig():
     global config
@@ -33,8 +34,13 @@ def processImage(image):
 def exportActivity(activity):
     points = []
     for x in range(11):
+        string = ""
         for y in range(11):
+            if verbose:
+                string = string + "\t" + str(int(activity[x][y]))
             points.append({"x" : x, "y" : y, "activity" : activity[x][y]})
+        if verbose:
+            print(string)
     with open(outDir + "activity.json", "w+") as out_file:
         json.dump(points, out_file, indent=2)
     
