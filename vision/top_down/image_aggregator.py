@@ -1,5 +1,6 @@
 import json
 from subprocess import call
+import os
 
 configFile = "./config/scp.json"
 imagesDir = "./img"
@@ -14,11 +15,17 @@ def loadConfig():
 def getImages():
     for remote_file in config["files"]:
         command = remote_file["user"] + "@" + remote_file["server"] + ":" + remote_file["remote_path"]
-        call(["scp", command, remote_file["temp_path"]], shell=True)
+        if os.name == "nt":
+            call(["winscp", command, remote_file["temp_path"]], shell=True)
+        else:
+            call(["scp", command, remote_file["temp_path"]], shell=True)
         
 def renameImages():
     for remote_file in config["files"]:
-        call(["mv", "-f", remote_file["temp_path"], remote_file["local_path"]], shell=True)
+        if os.name == "nt":
+            call(["move", "/Y", remote_file["temp_path"], remote_file["local_path"]], shell=True)
+        else:
+            call(["mv", "-f", remote_file["temp_path"], remote_file["local_path"]], shell=True)
 
 loadConfig()
 getImages()
