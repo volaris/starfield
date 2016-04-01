@@ -24,11 +24,13 @@ def processImage(image):
     for x in range(11):
         for y in range(11):
             point = (base[0] + x * step, base[1] + y * step)
+            sum = 0
             for pixX in range(int(point[0] - width), int(point[0] + width)):
                 for pixY in range(int(point[1] - width), int(point[1] + width)):
                     pixel = image.getpixel((pixX, pixY))
                     val = ((pixel[0] + pixel[1] + pixel[2]) / 3) / 255.0
-                    activity[x][y] = activity[x][y] + val
+                    sum = sum + val
+            activity[x][y] = sum
     return activity
     
 def exportActivity(activity):

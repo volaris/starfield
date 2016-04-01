@@ -5,8 +5,6 @@ import shutil
 import urllib.request
 
 configFile = "./config/scp.json"
-imagesDir = "./img"
-
 config = None
 
 def loadConfig():
@@ -16,12 +14,13 @@ def loadConfig():
         
 def getImages():
     for remote_file in config["files"]:
-        urllib.request.urlretrieve("http://"+remote_file["server"]+"/"+remote_file["remote_path"], remote_file["temp_path"])
-        
-def renameImages():
-    for remote_file in config["files"]:
-            shutil.copy(remote_file["temp_path"], remote_file["local_path"])
+        while True:
+            try:
+                urllib.request.urlretrieve("http://"+remote_file["server"]+"/"+remote_file["remote_path"], remote_file["temp_path"])
+            except Exception:
+                continue
+            break
+        print("server: " + remote_file["server"] + " is up")
 
 loadConfig()
 getImages()
-renameImages()

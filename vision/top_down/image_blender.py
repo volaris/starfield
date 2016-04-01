@@ -21,13 +21,13 @@ def loadImages():
     images = []
     
     for file in files:
-        image = Image.open(file).copy().convert("RGBA")
+        image = Image.open(file).copy()
         images.append(image)
     return images
     
 def blendImages(images):
     output_size = config["output_size"]
-    output = Image.open("in.jpg").copy().convert("RGBA")
+    output = Image.open("in.jpg").copy()
     blended = output.copy()
     i = 0
     for image in images:
