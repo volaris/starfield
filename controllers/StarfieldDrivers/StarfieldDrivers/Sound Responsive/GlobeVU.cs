@@ -67,6 +67,7 @@ namespace AlgorithmDemo.Drivers
         #region Event Handlers
         void soundProcessor_OnFrameUpdate(Frame frame)
         {
+            //TODO: scale for starfield size
             byte vu = Math.Max(frame.VU[0], frame.VU[1]);
             vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
         }
@@ -85,9 +86,9 @@ namespace AlgorithmDemo.Drivers
         #region IStarfieldDrive Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            float centerX = ((Starfield.NumX - 1) * 4.0f) / 2;
-            float centerY = ((Starfield.NumY - 1) * 4.0f) / 2;
-            float centerZ = ((Starfield.NumZ - 1) * 4.0f) / 2;
+            float centerX = ((Starfield.NumX - 1) * Starfield.XStep) / 2;
+            float centerY = ((Starfield.NumY - 1) * Starfield.YStep) / 2;
+            float centerZ = ((Starfield.NumZ - 1) * Starfield.ZStep) / 2;
 
             maxDistance = (float)Math.Sqrt(Math.Pow(0 - centerX, 2) + Math.Pow(0 - centerY, 2) + Math.Pow(0 - centerZ, 2));
 
@@ -97,9 +98,9 @@ namespace AlgorithmDemo.Drivers
                 {
                     for (ulong z = 0; z < Starfield.NumZ; z++)
                     {
-                        float xPos = x * 4.0f;
-                        float yPos = y * 4.0f;
-                        float zPos = z * 4.0f;
+                        float xPos = x * Starfield.XStep;
+                        float yPos = y * Starfield.YStep;
+                        float zPos = z * Starfield.ZStep;
                         Color atPos = Starfield.GetColor((int)x, (int)y, (int)z);
                         Color toDraw = fade ? Color.FromArgb((int)(rate * atPos.R), (int)(rate * atPos.G), (int)(rate * atPos.B)) : Color.Black;
 

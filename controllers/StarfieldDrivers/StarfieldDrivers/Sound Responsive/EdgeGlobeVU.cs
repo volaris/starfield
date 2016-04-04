@@ -1,37 +1,56 @@
 ﻿using System;
-using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 using StarfieldUtils.SoundUtils;
+using StarfieldUtils.ColorUtils;
 using StarfieldUtils.MathUtils;
 
 namespace AlgorithmDemo.Drivers
 {
-    class Globe
-    {
-        public float OuterRadius;
-        public float InnerRadius;
-        public Color color;
-        public Vec3D location;
-    }
-
     [DriverType(DriverTypes.SoundResponsive)]
-    class SoundResponsiveGlobes : IStarfieldDriver
+    class EdgeGlobeVU : IStarfieldDriver
     {
         #region Private Members
-        Color current = Color.Black;
+        int current;
+        int goal;
         Color[] rainbow10 = new Color[10];
         Color[] rainbow7 = new Color[7];
         BaseSoundProcessor soundProcessor;
         float maxDistance;
-        ConcurrentQueue<Globe> globes = new ConcurrentQueue<Globe>();
+        bool transitioning = false;
+        float gradientPercent;
+        float gradientStep = .01f;
+        private bool fade = true;
+        private float rate = .8f;
+        Globe vuGlobe = new Globe();
+        #endregion
+
+        #region Public Properties
+        public bool Fade
+        {
+            get { return fade; }
+            set { fade = value; }
+        }
+
+        public float GradientStep
+        {
+            get { return gradientStep; }
+            set { gradientStep = value; }
+        }
+
+        public float Rate
+        {
+            get { return rate; }
+            set { rate = value; }
+        }
         #endregion
 
         #region Constructors
-        public SoundResponsiveGlobes()
+        public EdgeGlobeVU()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
             rainbow10[1] = rainbow7[1] = Color.FromArgb(0xFF, 0xA5, 0);
@@ -47,18 +66,24 @@ namespace AlgorithmDemo.Drivers
         #endregion
 
         #region Event Handlers
+        void soundProcessor_OnFrameUpdate(Frame frame)
+        {
+            byte vu = Math.Max(frame.VU[0], frame.VU[1]);
+            vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
+        }
+
         void soundProcessor_OnArtifactDetected(Artifact artifact)
         {
-            Random rand = new Random();
-            Globe globe = new Globe();
-            globe.OuterRadius = 2.0f;
-            globe.InnerRadius = -22f;
-            globe.color = rainbow7[rand.Next(rainbow7.Length - 1)];
-            globes.Enqueue(globe);
+            if (!transitioning)
+            {
+                gradientPercent = 0f;
+                goal = (current + 1) % rainbow7.Length;
+                transitioning = true;
+            }
         }
         #endregion
 
-        #region IStarfieldDriver Implementation
+        #region IStarfieldDrive Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             float centerX = ((Starfield.NumX - 1) * Starfield.XStep) / 2;
@@ -76,53 +101,31 @@ namespace AlgorithmDemo.Drivers
                         float xPos = x * Starfield.XStep;
                         float yPos = y * Starfield.YStep;
                         float zPos = z * Starfield.ZStep;
-                        Color toDraw = Color.Black;
+                        Color atPos = Starfield.GetColor((int)x, (int)y, (int)z);
+                        Color toDraw = fade ? Color.FromArgb((int)(rate * atPos.R), (int)(rate * atPos.G), (int)(rate * atPos.B)) : Color.Black;
 
                         float distanceToCenter = (float)Math.Sqrt(Math.Pow(xPos - centerX, 2) + Math.Pow(yPos - centerY, 2) + Math.Pow(zPos - centerZ, 2));
 
-                        try
+                        if (distanceToCenter < vuGlobe.OuterRadius && distanceToCenter > vuGlobe.InnerRadius)
                         {
-                            foreach (Globe globe in globes)
+                            if (!transitioning)
                             {
-                                if(globe == null)
-                                {
-                                    continue;
-                                }
-                                if (distanceToCenter < globe.OuterRadius && distanceToCenter > globe.InnerRadius)
-                                {
-                                    toDraw = globe.color;
-                                }
+                                toDraw = rainbow7[current];
                             }
-                        }
-                        catch
-                        {
-                            // TODO: we shouldn't need this now that we have the render lock
-                            return;
+                            else
+                            {
+                                if(gradientPercent >= 1f)
+                                {
+                                    current = goal;
+                                    transitioning = false;
+                                }
+                                toDraw = ColorUtils.GetGradientColor(rainbow7[current], rainbow7[goal], gradientPercent, true);
+                                gradientPercent += gradientStep;
+                            }
                         }
 
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }
-                }
-            }
-
-            foreach(Globe globe in globes)
-            {
-                //TODO: scale for starfield size?
-                globe.OuterRadius += 1f;
-                globe.InnerRadius += 1f;
-            }
-
-            while(globes.Count > 0)
-            {
-                Globe globe;
-                while (!globes.TryPeek(out globe)) { };
-                if (globe.InnerRadius > maxDistance)
-                {
-                    while (!globes.TryDequeue(out globe)) { };
-                }
-                else
-                {
-                    break;
                 }
             }
         }
@@ -132,6 +135,11 @@ namespace AlgorithmDemo.Drivers
             soundProcessor = SoundProcessor.GetSoundProcessor();
             soundProcessor.ArtifactDelay = 100;
             soundProcessor.OnArtifactDetected += soundProcessor_OnArtifactDetected;
+            soundProcessor.OnFrameUpdate += soundProcessor_OnFrameUpdate;
+            current = 0;
+            goal = 0;
+            transitioning = false;
+            vuGlobe.InnerRadius = 0;
         }
 
         void IStarfieldDriver.Stop()
@@ -143,7 +151,7 @@ namespace AlgorithmDemo.Drivers
         #region Overrides
         public override string ToString()
         {
-            return "Artifact Triggered Globes";
+            return "Edge Globe VU";
         }
         #endregion
     }

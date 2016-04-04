@@ -56,8 +56,11 @@
     <Compile Include="CFD\FluidPour.cs" />
     <Compile Include="Fractal\FractalFlame.cs" />
     <Compile Include="Fractal\FractalFlame4D.cs" />
+    <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="Sound Responsive\EQBarsVertical.cs" />
     <Compile Include="Sound Responsive\EQBarsHorizontal.cs" />
+    <Compile Include="Sound Responsive\EdgeGlobeVU.cs" />
+    <Compile Include="Sound Responsive\MultiGlobeVU.cs" />
     <Compile Include="Sound Responsive\GlobeVU.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Animation\Rain.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Noise\Simplex\SimplexTwinkle.cs" />
     <Compile Include="Noise\Simplex\SimplexWaves.cs" />
     <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
+    <Compile Include="Sound Responsive\SoundResponsiveSimplexSpeed.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexClouds.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmokeGradientChange.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmoke.cs" />
