@@ -22,6 +22,9 @@ def renameImages():
     for remote_file in config["files"]:
             shutil.copy(remote_file["temp_path"], remote_file["local_path"])
 
-loadConfig()
-getImages()
-renameImages()
+def aggregate():
+    loadConfig()
+    getImages()
+    renameImages()
+    
+aggregate()

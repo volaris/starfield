@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{7A684A52-045A-4F11-A595-996EF943D028}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StarfieldUtils</RootNamespace>
-    <AssemblyName>Utils</AssemblyName>
+    <RootNamespace>PresenceSimulator</RootNamespace>
+    <AssemblyName>PresenceSimulator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,65 +23,62 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\external\CSCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Exocortex.DSP.v1, Version=1.0.5338.41091, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\external\Exocortex.DSP.v1.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
-    <Reference Include="Starfield, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Starfield.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CFD\DefaultKernels.cs" />
-    <Compile Include="CFD\Particle.cs" />
-    <Compile Include="CFD\Solver.cs" />
-    <Compile Include="Color\ColorSpace\CIELAB.cs" />
-    <Compile Include="Color\ColorSpace\CIEXYZ.cs" />
-    <Compile Include="Color\ColorSpace\CMYK.cs" />
-    <Compile Include="Color\ColorSpace\ConvertColorSpace.cs" />
-    <Compile Include="Color\ColorSpace\HSB.cs" />
-    <Compile Include="Color\ColorSpace\HSL.cs" />
-    <Compile Include="Color\ColorSpace\YUV.cs" />
-    <Compile Include="Color\ColorUtils.cs" />
-    <Compile Include="Display\StarfieldMixer.cs" />
-    <Compile Include="Flocking\Boid.cs" />
-    <Compile Include="Flocking\Swarm.cs" />
-    <Compile Include="Math\Affine.cs" />
-    <Compile Include="Math\FFTTools.cs" />
-    <Compile Include="Math\Quaternion.cs" />
-    <Compile Include="Math\SimplexNoise.cs" />
-    <Compile Include="Math\Vec3D.cs" />
-    <Compile Include="Presence\Activity.cs" />
-    <Compile Include="Presence\PresenceClient.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sound\BaseSoundProcessor.cs" />
-    <Compile Include="Sound\CSCoreLoopbackSoundProcessor.cs" />
-    <Compile Include="Sound\NullSoundProcessor.cs" />
-    <Compile Include="Sound\SoundProcessor.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

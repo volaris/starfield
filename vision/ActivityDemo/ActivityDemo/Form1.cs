@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using Newtonsoft.Json;
+using System.Net;
 using System.IO;
 
 namespace ActivityDemo
@@ -20,8 +20,8 @@ namespace ActivityDemo
 
     public partial class Form1 : Form
     {
-        string path;
         Timer myTimer = new Timer();
+        string url = "http://localhost:8000/activity.json";
 
         public Form1()
         {
@@ -33,9 +33,9 @@ namespace ActivityDemo
         {
             try
             {
-                using (StreamReader r = new StreamReader(path))
+                using (WebClient wc = new WebClient())
                 {
-                    string json = r.ReadToEnd();
+                    string json = wc.DownloadString(url);
                     List<List<Activity>> foo = JsonConvert.DeserializeObject<List<List<Activity>>>(json);
                     Color baseColor = Color.Red;
 
@@ -63,13 +63,13 @@ namespace ActivityDemo
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            OpenFileDialog myOFD = new OpenFileDialog();
+            /*OpenFileDialog myOFD = new OpenFileDialog();
             if (myOFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 path = myOFD.FileName;
-                myTimer.Interval = 100;
-                myTimer.Enabled = true;
-            }
+            }*/
+            myTimer.Interval = 100;
+            myTimer.Enabled = true;
         }
     }
 }

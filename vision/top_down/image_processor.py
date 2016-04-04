@@ -47,8 +47,11 @@ def exportActivity(activity):
             print(string)
     with open(outDir + "activity.json", "w+") as out_file:
         json.dump(points, out_file, indent=2)
+
+def doProcessing():
+    loadConfig()
+    img = loadImage()
+    act = processImage(img)
+    exportActivity(act)
     
-loadConfig()
-img = loadImage()
-act = processImage(img)
-exportActivity(act)
+doProcessing()
