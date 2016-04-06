@@ -6,21 +6,6 @@ Software to capture and process IR images. This version assumes that cameras are
 ## image_aggregator.py
 Retrieves the images from the remote cameras and prepares them for image_blender.py.
 
-### Setup
-```
-Local 
-$> cd .ssh
-$> scp .ssh/id_rsa.pub user@targetmachine:
-```
-Remote
-```
-$> mkdir .ssh
-$> chmod 700 .ssh
-$> cat id_rsa.pub >> .ssh/authorized_keys
-$> chmod 600 .ssh/authorized_keys
-$> exit
-```
-
 ## image_blender.py
 Takes the 5 images and blends them into a single image for heat map processing.
 
