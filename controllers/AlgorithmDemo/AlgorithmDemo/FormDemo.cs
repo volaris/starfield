@@ -201,6 +201,12 @@ namespace AlgorithmDemo
                 }
 
                 Client = new TCPStarfieldClient(Model, System.Net.IPAddress.Parse(ip), port);
+
+                if (this.CurrentDriver != null)
+                {
+                    this.CurrentDriver.Stop();
+                    this.CurrentDriver.Start(this.Model);
+                }
             }
             catch
             { }
