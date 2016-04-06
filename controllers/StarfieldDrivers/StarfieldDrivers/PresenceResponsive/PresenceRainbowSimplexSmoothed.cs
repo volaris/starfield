@@ -11,7 +11,7 @@ using Starfield.Presence;
 
 namespace StarfieldDrivers
 {
-    [DriverType(DriverTypes.Ambient)]
+    [DriverType(DriverTypes.Interactive)]
     class PresenceResponsiveRainbowSimplexSmoothed : IStarfieldDriver
     {
         #region Private Members
