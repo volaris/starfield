@@ -73,8 +73,6 @@
     <Compile Include="Math\Quaternion.cs" />
     <Compile Include="Math\SimplexNoise.cs" />
     <Compile Include="Math\Vec3D.cs" />
-    <Compile Include="Presence\Activity.cs" />
-    <Compile Include="Presence\PresenceClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sound\BaseSoundProcessor.cs" />
     <Compile Include="Sound\CSCoreLoopbackSoundProcessor.cs" />

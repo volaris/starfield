@@ -31,6 +31,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -46,6 +47,8 @@
     <Compile Include="networking\OPCClient.cs" />
     <Compile Include="networking\TCPStarfieldClient.cs" />
     <Compile Include="networking\TCPStarfieldServer.cs" />
+    <Compile Include="Presence\Activity.cs" />
+    <Compile Include="Presence\PresenceClient.cs" />
     <Compile Include="SplitStarfieldModel.cs" />
     <Compile Include="StarfieldModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

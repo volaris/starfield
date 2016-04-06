@@ -7,7 +7,7 @@ using Starfield;
 using System.Drawing;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
-using StarfieldUtils.PresenceUtils;
+using Starfield.Presence;
 
 namespace StarfieldDrivers
 {
@@ -25,7 +25,6 @@ namespace StarfieldDrivers
         float timeStep = .005f;
         float radius = 4.0f;
         float height = 4.0f;
-        PresenceClient client = new PresenceClient();
         #endregion
 
         #region Public Properties
@@ -86,7 +85,7 @@ namespace StarfieldDrivers
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             Color toDraw = Color.Black;
-            List<List<Activity>> activity = client.GetLatest();
+            List<List<Activity>> activity = Starfield.GetPresence();
             int numPoints = 0;
             KMeansPoint[] points = new KMeansPoint[Starfield.NumX * Starfield.NumZ];
 
@@ -138,20 +137,28 @@ namespace StarfieldDrivers
                             }
                         }
 
-                        double pct = 0;
+                        double val = 0;
                         KMeansPoint point = new KMeansPoint();
-                        point.x = x;
-                        point.y = z;
+                        point.x = x * Starfield.XStep;
+                        point.y = z * Starfield.ZStep;
 
                         for(int i = 0; i < result.centroids.Length; i++)
                         {
-                            if(point.distance(result.centroids[i]) < this.radius / Starfield.XStep)
+                            KMeansPoint centroid = new KMeansPoint();
+                            centroid.x = result.centroids[i].x * Starfield.XStep;
+                            centroid.y = result.centroids[i].y * Starfield.ZStep;
+
+                            double dist = point.distance(centroid);
+                            if(dist < this.radius)
                             {
-                                pct = 1 - point.distance(result.centroids[i])/this.radius;
+                                val = Math.Max(val, 3.5 * (Math.Cos(dist * (Math.PI/(2 * radius))) + 1));
                             }
                         }
 
-                        toDraw = Color.FromArgb((int)(toDraw.R * pct), (int)(toDraw.G * pct), (int)(toDraw.B * pct));
+                        if(y * Starfield.YStep > val)
+                        {
+                            toDraw = Color.Black;
+                        }
 
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                     }

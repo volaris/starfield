@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Starfield;
-using StarfieldUtils.PresenceUtils;
+using Starfield.Presence;
 
 using System.Drawing;
 
@@ -15,9 +15,6 @@ namespace StarfieldDrivers.PresenceResponsive
     {
         #region Private Members
         Color drawColor = Color.Red;
-        PresenceClient client = new PresenceClient();
-        int index = 0;
-        List<List<Activity>> activity;
         #endregion
 
         #region Public Properties
@@ -31,11 +28,8 @@ namespace StarfieldDrivers.PresenceResponsive
         #region IStarfieldDriver Implementation
         public void Render(StarfieldModel Starfield)
         {
-            if(index == 0)
-            {
-                activity = client.GetLatest();
-            }
-            //index = (index + 1) % 10;
+            List<List<Activity>> activity;
+            activity = Starfield.GetPresence();
 
             for (ulong x = 0; x < Starfield.NumX; x++)
             {

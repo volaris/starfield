@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace StarfieldUtils.PresenceUtils
+namespace Starfield.Presence
 {
     public class PresenceClient
     {

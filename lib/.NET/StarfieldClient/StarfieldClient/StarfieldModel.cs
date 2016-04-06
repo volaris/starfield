@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Drawing;
+using Starfield.Presence;
 
 namespace Starfield
 {
@@ -36,12 +37,17 @@ namespace Starfield
         protected Timer dimmer = new Timer(3000);
         public bool EnableDimmer = false;
 
+        protected Timer activityUpdate = new Timer(10);
+
         // Flush lock: this ensures that only one thread is modifying pixel
         // data at a time
         protected Object lockObject = new Object();
 
         // current color state
         public Color[, ,] LEDColors;
+
+        private PresenceClient presenceClient;
+        private List<List<Activity>> presence;
 
         public float Brightness
         {
@@ -60,7 +66,7 @@ namespace Starfield
         public static StarfieldModel CriticalNWStarfield()
         {
             // 20' x 20' x 20' spaced at 2' intervals
-            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11);
+            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11, new PresenceClient());
         }
 
         // create a model with the defaults for the Burning Man version
@@ -70,8 +76,19 @@ namespace Starfield
             return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 15, 16);
         }
 
+        public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ) : this(xStep,
+                                                                                                                yStep,
+                                                                                                                zStep,
+                                                                                                                numX,
+                                                                                                                numY,
+                                                                                                                numZ,
+                                                                                                                null)
+        {
+
+        }
+
         // create a model with arbitrary parameters
-        public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ)
+        public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ, PresenceClient presenceClient)
         {
             System.Threading.Monitor.Enter(lockObject);
 
@@ -84,8 +101,31 @@ namespace Starfield
 
             LEDColors = new Color[NumX, NumZ, NumY];
 
+            this.presenceClient = presenceClient;
+
             dimmer.Elapsed += dimmer_Elapsed;
             dimmer.Start();
+
+            if(presenceClient != null)
+            {
+                activityUpdate.Elapsed +=activityUpdate_Elapsed;
+                activityUpdate.Start();
+            }
+
+            presence = new List<List<Activity>>();
+            for(int x = 0; x < (int)numX; x++)
+            {
+                List<Activity> xList = new List<Activity>();
+
+                for(int y = 0; y < (int)numZ; y++)
+                {
+                    Activity act = new Activity();
+                    act.activity = 0;
+                    xList.Add(act);
+                }
+
+                presence.Add(xList);
+            }
 
             System.Threading.Monitor.Exit(lockObject);
         }
@@ -125,6 +165,21 @@ namespace Starfield
             }
 
             System.Threading.Monitor.Exit(lockObject);
+        }
+
+        void activityUpdate_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            if(presenceClient != null)
+            {
+ 	            List<List<Activity>> activity = presenceClient.GetLatest();
+                for(int x = 0; x < (int)this.NumX; x++)
+                {
+                    for(int y = 0; y < (int)this.NumZ; y++)
+                    {
+                        presence[x][y].activity = activity[x][y].activity;
+                    }
+                }
+            }
         }
 
         // TODO: pull this out of this class
@@ -177,14 +232,33 @@ namespace Starfield
             return Color.FromArgb((int)(color.R * brightness), (int)(color.G * brightness), (int)(color.B * brightness));
         }
 
-        /*public List<List<Activity>> GetPresence()
+        public List<List<Activity>> GetPresence()
         {
-            PresenceClient client = new PresenceClient();
-        }*/
+            System.Threading.Monitor.Enter(lockObject);
+
+            List<List<Activity>> presenceCopy = new List<List<Activity>>();
+
+            foreach(List<Activity> x in presence)
+            {
+                List<Activity> xCopy = new List<Activity>();
+                foreach(Activity act in x)
+                {
+                    Activity actCopy = new Activity();
+                    actCopy.activity = act.activity;
+                    xCopy.Add(actCopy);
+                }
+                presenceCopy.Add(xCopy);
+            }
+
+            System.Threading.Monitor.Exit(lockObject);
+
+            return presenceCopy;
+        }
 
         public void Stop()
         {
             dimmer.Enabled = false;
+            activityUpdate.Enabled = false;
         }
     }
 }
