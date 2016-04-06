@@ -69,6 +69,7 @@
     <Compile Include="Flocking\Swarm.cs" />
     <Compile Include="Math\Affine.cs" />
     <Compile Include="Math\FFTTools.cs" />
+    <Compile Include="Math\KMeans.cs" />
     <Compile Include="Math\Quaternion.cs" />
     <Compile Include="Math\SimplexNoise.cs" />
     <Compile Include="Math\Vec3D.cs" />

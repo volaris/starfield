@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace StarfieldDrivers.PresenceResponsive
 {
-    [DriverType(DriverTypes.Interactive)]
+    [DriverType(DriverTypes.Experimental)]
     public class PresenceClouds : IStarfieldDriver
     {
         #region Private Members

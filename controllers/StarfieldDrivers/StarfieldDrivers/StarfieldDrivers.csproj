@@ -57,6 +57,7 @@
     <Compile Include="Fractal\FractalFlame.cs" />
     <Compile Include="Fractal\FractalFlame4D.cs" />
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
+    <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />
     <Compile Include="Sound Responsive\EQBarsVertical.cs" />
     <Compile Include="Sound Responsive\EQBarsHorizontal.cs" />
     <Compile Include="Sound Responsive\EdgeGlobeVU.cs" />

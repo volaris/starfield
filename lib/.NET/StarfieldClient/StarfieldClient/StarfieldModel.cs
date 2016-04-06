@@ -177,6 +177,11 @@ namespace Starfield
             return Color.FromArgb((int)(color.R * brightness), (int)(color.G * brightness), (int)(color.B * brightness));
         }
 
+        /*public List<List<Activity>> GetPresence()
+        {
+            PresenceClient client = new PresenceClient();
+        }*/
+
         public void Stop()
         {
             dimmer.Enabled = false;
