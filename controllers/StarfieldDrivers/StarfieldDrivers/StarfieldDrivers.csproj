@@ -56,6 +56,8 @@
     <Compile Include="CFD\FluidPour.cs" />
     <Compile Include="Fractal\FractalFlame.cs" />
     <Compile Include="Fractal\FractalFlame4D.cs" />
+    <Compile Include="PresenceResponsive\InteractiveSoundResponsiveGlobes.cs" />
+    <Compile Include="PresenceResponsive\GenericTrails.cs" />
     <Compile Include="PresenceResponsive\PresenceTrails.cs" />
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />

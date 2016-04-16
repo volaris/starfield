@@ -10,11 +10,12 @@ namespace Starfield
     // this is used to allow a driver program to select a random driver for the appropriate time
     public enum DriverTypes
     {
-        Ambient,            // just an animation
-        AmbientInteractive, // an animation that responds to input, will work as an ambient animation
-        SoundResponsive,    // responds to sound
-        Interactive,        // only responds to interactivity
-        Experimental        // still in development
+        Ambient,                    // just an animation
+        AmbientInteractive,         // an animation that responds to input, will work as an ambient animation
+        SoundResponsive,            // responds to sound
+        Interactive,                // only responds to interactivity
+        InteractiveSoundResponsive, // responds to sound and interactivity
+        Experimental                // still in development
     }
 
     // the DriverType attribute is used to tag a class at compile time, drivers that connect over the 

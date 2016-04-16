@@ -14,7 +14,7 @@ namespace Starfield.Presence
 
         public PresenceClient()
         {
-            this.url = "http://localhost:8000/";
+            this.url = "http://localhost:8000/activity.json";
         }
 
         public PresenceClient(string URL)
@@ -26,10 +26,17 @@ namespace Starfield.Presence
         {
             using (WebClient wc = new WebClient())
             {
-                string json = wc.DownloadString(url);
-                List<List<Activity>> activity = JsonConvert.DeserializeObject<List<List<Activity>>>(json);
+                try
+                {
+                    string json = wc.DownloadString(url);
+                    List<List<Activity>> activity = JsonConvert.DeserializeObject<List<List<Activity>>>(json);
 
-                return activity;
+                    return activity;
+                }
+                catch
+                {
+                    return null;
+                }
             }
         }
     }

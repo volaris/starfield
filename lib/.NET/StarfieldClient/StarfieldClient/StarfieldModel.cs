@@ -172,6 +172,10 @@ namespace Starfield
             if(presenceClient != null)
             {
  	            List<List<Activity>> activity = presenceClient.GetLatest();
+                if(activity == null)
+                {
+                    return;
+                }
                 for(int x = 0; x < (int)this.NumX; x++)
                 {
                     for(int y = 0; y < (int)this.NumZ; y++)

@@ -26,7 +26,10 @@ namespace AlgorithmDemo.Drivers
         float gradientStep = .01f;
         private bool fade = true;
         private float rate = .8f;
-        Globe vuGlobe = new Globe();
+        List<Globe> globes = new List<Globe>();
+        int numGlobes = 4;
+        float outerRadius = 0.0f;
+        List<Vec3D> positions = new List<Vec3D>();
         #endregion
 
         #region Public Properties
@@ -40,6 +43,12 @@ namespace AlgorithmDemo.Drivers
         {
             get { return gradientStep; }
             set { gradientStep = value; }
+        }
+
+        public int NumGlobes
+        {
+            get { return numGlobes; }
+            set { numGlobes = Math.Max(1,Math.Min(value,6)); }
         }
 
         public float Rate
@@ -69,7 +78,7 @@ namespace AlgorithmDemo.Drivers
         void soundProcessor_OnFrameUpdate(Frame frame)
         {
             byte vu = Math.Max(frame.VU[0], frame.VU[1]);
-            vuGlobe.OuterRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
+            outerRadius = 4.0f + ((maxDistance - 4.0f) * (vu / 255f));
         }
 
         void soundProcessor_OnArtifactDetected(Artifact artifact)
@@ -86,11 +95,29 @@ namespace AlgorithmDemo.Drivers
         #region IStarfieldDrive Implementation
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
-            float centerX = ((Starfield.NumX - 1) * Starfield.XStep) / 2;
-            float centerY = ((Starfield.NumY - 1) * Starfield.YStep) / 2;
-            float centerZ = ((Starfield.NumZ - 1) * Starfield.ZStep) / 2;
+            if (globes.Count > numGlobes)
+            {
+                for (int i = globes.Count - 1; i >= numGlobes; i--)
+                {
+                    globes.RemoveAt(i);
+                }
+            }
+            else if (globes.Count < numGlobes)
+            {
+                for (int i = 0; i < numGlobes - globes.Count; i++)
+                {
+                    Globe globe = new Globe();
+                    globe.InnerRadius = 0.0f;
+                    globes.Add(globe);
+                }
+            }
 
-            maxDistance = (float)Math.Sqrt(Math.Pow(0 - centerX, 2) + Math.Pow(0 - centerY, 2) + Math.Pow(0 - centerZ, 2));
+            for(int i = 0; i < numGlobes; i++)
+            {
+                globes[i].location = positions[i];
+            }
+
+            maxDistance = (float)Math.Sqrt(Math.Pow(0 - globes[0].location.X, 2) + Math.Pow(0 - globes[0].location.Y, 2) + Math.Pow(0 - globes[0].location.Z, 2));
 
             for (ulong x = 0; x < Starfield.NumX; x++)
             {
@@ -104,24 +131,28 @@ namespace AlgorithmDemo.Drivers
                         Color atPos = Starfield.GetColor((int)x, (int)y, (int)z);
                         Color toDraw = fade ? Color.FromArgb((int)(rate * atPos.R), (int)(rate * atPos.G), (int)(rate * atPos.B)) : Color.Black;
 
-                        float distanceToCenter = (float)Math.Sqrt(Math.Pow(xPos - centerX, 2) + Math.Pow(yPos - centerY, 2) + Math.Pow(zPos - centerZ, 2));
-
-                        if (distanceToCenter < vuGlobe.OuterRadius && distanceToCenter > vuGlobe.InnerRadius)
+                        foreach (Globe globe in globes)
                         {
-                            if (!transitioning)
+                            float distanceToCenter = (float)Math.Sqrt(Math.Pow(xPos - globe.location.X, 2) + Math.Pow(yPos - globe.location.Y, 2) + Math.Pow(zPos - globe.location.Z, 2));
+
+                            if (distanceToCenter < outerRadius && distanceToCenter > globe.InnerRadius)
                             {
-                                toDraw = rainbow7[current];
-                            }
-                            else
-                            {
-                                if(gradientPercent >= 1f)
+                                if (!transitioning)
                                 {
-                                    current = goal;
-                                    transitioning = false;
+                                    toDraw = rainbow7[(current + globes.IndexOf(globe)) % 7];
                                 }
-                                toDraw = ColorUtils.GetGradientColor(rainbow7[current], rainbow7[goal], gradientPercent, true);
-                                gradientPercent += gradientStep;
+                                else
+                                {
+                                    if (gradientPercent >= 1f)
+                                    {
+                                        current = goal;
+                                        transitioning = false;
+                                    }
+                                    toDraw = ColorUtils.GetGradientColor(rainbow7[(current + globes.IndexOf(globe)) % 7], rainbow7[(goal + globes.IndexOf(globe)) % 7], gradientPercent, true);
+                                    gradientPercent += gradientStep;
+                                }
                             }
+
                         }
 
                         Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
@@ -139,7 +170,20 @@ namespace AlgorithmDemo.Drivers
             current = 0;
             goal = 0;
             transitioning = false;
-            vuGlobe.InnerRadius = 0;
+
+            float farX = ((Starfield.NumX - 1) * Starfield.XStep);
+            float farY = ((Starfield.NumY - 1) * Starfield.YStep);
+            float farZ = ((Starfield.NumZ - 1) * Starfield.ZStep);
+            float centerX = farX / 2;
+            float centerY = farY / 2;
+            float centerZ = farZ / 2;
+
+            positions.Add(new Vec3D(0, centerY, centerZ));
+            positions.Add(new Vec3D(farX, centerY, centerZ));
+            positions.Add(new Vec3D(centerX, centerY, 0));
+            positions.Add(new Vec3D(centerX, centerY, farZ));
+            positions.Add(new Vec3D(centerX, 0, centerZ));
+            positions.Add(new Vec3D(centerX, farY, centerZ));
         }
 
         void IStarfieldDriver.Stop()
