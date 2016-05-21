@@ -4,7 +4,7 @@ import os
 import shutil
 import urllib.request
 
-configFile = "./config/scp.json"
+configFile = "./config/fetch.json"
 imagesDir = "./img"
 
 config = None
