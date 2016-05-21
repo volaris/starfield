@@ -2,31 +2,31 @@
     "files" : 
     [
         {
-            "server" : "192.168.0.50:8000",
+            "server" : "192.168.0.54:8000",
             "remote_path" : "latest.jpg",
             "temp_path" : "./tmp/0.jpg",
             "local_path" : "./img/0.jpg"
         },
         {
-            "server" : "192.168.0.51:8000",
+            "server" : "192.168.0.50:8000",
             "remote_path" : "latest.jpg",
             "temp_path" : "./tmp/1.jpg",
             "local_path" : "./img/1.jpg"
         },
         {
-            "server" : "192.168.0.52:8000",
+            "server" : "192.168.0.51:8000",
             "remote_path" : "latest.jpg",
             "temp_path" : "./tmp/2.jpg",
             "local_path" : "./img/2.jpg"
         },
         {
-            "server" : "192.168.0.53:8000",
+            "server" : "192.168.0.52:8000",
             "remote_path" : "latest.jpg",
             "temp_path" : "./tmp/3.jpg",
             "local_path" : "./img/3.jpg"
         },
         {
-            "server" : "192.168.0.54:8000",
+            "server" : "192.168.0.53:8000",
             "remote_path" : "latest.jpg",
             "temp_path" : "./tmp/4.jpg",
             "local_path" : "./img/4.jpg"
