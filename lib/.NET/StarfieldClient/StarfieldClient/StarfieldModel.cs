@@ -37,8 +37,6 @@ namespace Starfield
         protected Timer dimmer = new Timer(3000);
         public bool EnableDimmer = false;
 
-        protected Timer activityUpdate = new Timer(10);
-
         // Flush lock: this ensures that only one thread is modifying pixel
         // data at a time
         protected Object lockObject = new Object();
@@ -48,6 +46,8 @@ namespace Starfield
 
         private PresenceClient presenceClient;
         private List<List<Activity>> presence;
+        private bool runPresenceClientThread = true;
+        private int presenceUpdateInterval = 10;
 
         public float Brightness
         {
@@ -106,11 +106,8 @@ namespace Starfield
             dimmer.Elapsed += dimmer_Elapsed;
             dimmer.Start();
 
-            if(presenceClient != null)
-            {
-                activityUpdate.Elapsed +=activityUpdate_Elapsed;
-                activityUpdate.Start();
-            }
+            System.Threading.Thread presenceThread = new System.Threading.Thread(new System.Threading.ThreadStart(presenceThreadWorker));
+            presenceThread.Start();
 
             presence = new List<List<Activity>>();
             for(int x = 0; x < (int)numX; x++)
@@ -167,22 +164,31 @@ namespace Starfield
             System.Threading.Monitor.Exit(lockObject);
         }
 
-        void activityUpdate_Elapsed(object sender, ElapsedEventArgs e)
+        void presenceThreadWorker()
         {
-            if(presenceClient != null)
+            while (runPresenceClientThread)
             {
- 	            List<List<Activity>> activity = presenceClient.GetLatest();
-                if(activity == null)
+                try
                 {
-                    return;
-                }
-                for(int x = 0; x < (int)this.NumX; x++)
-                {
-                    for(int y = 0; y < (int)this.NumZ; y++)
+                    if (presenceClient != null)
                     {
-                        presence[x][y].activity = activity[x][y].activity;
+                        List<List<Activity>> activity = presenceClient.GetLatest();
+                        if (activity == null)
+                        {
+                            return;
+                        }
+                        for (int x = 0; x < (int)this.NumX; x++)
+                        {
+                            for (int y = 0; y < (int)this.NumZ; y++)
+                            {
+                                presence[x][y].activity = activity[x][y].activity;
+                            }
+                        }
                     }
                 }
+                catch(Exception e)
+                { }
+                System.Threading.Thread.Sleep(presenceUpdateInterval);
             }
         }
 
@@ -262,7 +268,7 @@ namespace Starfield
         public void Stop()
         {
             dimmer.Enabled = false;
-            activityUpdate.Enabled = false;
+            runPresenceClientThread = false;
         }
     }
 }
