@@ -61,6 +61,7 @@
     <Compile Include="PresenceResponsive\PresenceTrails.cs" />
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />
+    <Compile Include="PresenceResponsive\WhackAMole.cs" />
     <Compile Include="Sound Responsive\EdgeGlobeEQ.cs" />
     <Compile Include="Sound Responsive\EdgeGlobeVUFlipping.cs" />
     <Compile Include="Sound Responsive\EQBarsVertical.cs" />
