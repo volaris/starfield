@@ -82,7 +82,26 @@ namespace StarfieldDrivers.PresenceResponsive
                             if (x >= (ulong)(target.X - 1) && x <= (ulong)target.X &&
                                 z >= (ulong)(target.Y - 1) && z <= (ulong)target.Y)
                             {
-                                Starfield.SetColor((int)x, (int)y, (int)z, drawColor);
+                                float pct = 0.0f;
+                                if (step > 60)
+                                {
+                                    step = 0;
+                                }
+
+                                if(step <= 30)
+                                {
+                                    pct = ((float)step) / 30.0f;
+                                }
+                                else if (step <= 60)
+                                {
+                                    pct = (60.0f - ((float)step)) / 30.0f;
+                                }
+
+                                pct *= .5f;
+                                pct += .5f;
+
+                                Color toDraw = Color.FromArgb((int)(drawColor.R * pct), (int)(drawColor.G * pct), (int)(drawColor.B * pct));
+                                Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                                 if(activity[(int)x][(int)z].activity > 0)
                                 {
                                     win();
@@ -99,7 +118,16 @@ namespace StarfieldDrivers.PresenceResponsive
                             if (x >= (ulong)(target.X - 1) && x <= (ulong)target.X &&
                                    z >= (ulong)(target.Y - 1) && z <= (ulong)target.Y)
                             {
-                                Starfield.SetColor((int)x, (int)y, (int)z, drawColor);
+                                Color toDraw;
+                                if(y > (ulong)(step / 6))
+                                {
+                                    toDraw = drawColor;
+                                }
+                                else
+                                {
+                                    toDraw = Color.Black;
+                                }
+                                Starfield.SetColor((int)x, (int)y, (int)z, toDraw);
                             }
                             else
                             {
@@ -112,12 +140,12 @@ namespace StarfieldDrivers.PresenceResponsive
 
             if(state == State.win)
             {
-                step++;
                 if (step >= numSteps)
                 {
                     chooseNextTarget();
                 }
             }
+            step++;
         }
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
