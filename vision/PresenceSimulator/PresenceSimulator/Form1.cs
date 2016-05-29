@@ -120,7 +120,7 @@ namespace PresenceSimulator
 
                         double pct = dist / -.3 + 100.0d;
 
-                        activity[actX][actY].activity = Math.Max(pct, activity[actX][actY].activity);
+                        activity[actY][actX].activity = Math.Max(pct, activity[actY][actX].activity);
                     }
                 }
             }
@@ -139,7 +139,7 @@ namespace PresenceSimulator
                     int pixX = x * 15 + (int)(x * 5.5);
                     int pixY = y * 15 + (int)(y * 5.5);
 
-                    double pct = activity[x][y].activity / 100;
+                    double pct = activity[y][x].activity / 100;
                     Color draw = Color.FromArgb((int)(baseColor.R * pct), (int)(baseColor.G * pct), (int)(baseColor.B * pct));
                     Brush pen = new SolidBrush(draw);
 
