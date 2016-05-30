@@ -28,6 +28,8 @@ namespace StarfieldUtils.SoundUtils
     public class Artifact
     {
         public ArtifactDetectionAlgorithm Type;
+
+        public double OPM = -1;
     }
 
     // information about the current sound frame
@@ -99,6 +101,8 @@ namespace StarfieldUtils.SoundUtils
         private float[] lastFFT;
         private List<float> fluxWindow = new List<float>();
         private float lastFlux = 0.0f;
+        private bool detected = false;
+        private List<DateTime> onsetTimes = new List<DateTime>();
         
         // the threshold for naive artifact detection
         private float threshold = 0;
@@ -236,11 +240,32 @@ namespace StarfieldUtils.SoundUtils
 
                     float threshold = avg * 1.5f;
 
-                    if(lastFlux > flux)
+                    if(lastFlux > flux && !detected)
                     {
                         var artifact = new Artifact();
                         lastOnset = DateTime.Now;
                         artifact.Type = ArtifactDetectionAlgorithm.Onset;
+                        detected = true;
+                        onsetTimes.Add(lastOnset);
+                        if(onsetTimes.Count > 10)
+                        {
+                            onsetTimes.RemoveAt(0);
+                        }
+                        if(onsetTimes.Count > 1)
+                        {
+                            // calculate onsets per minute, this is close to BPM, but until we get better
+                            // beat vs onset detection it'll be a bit inaccurate and more useful for relative
+                            // tempo
+                            double delta = 0;
+                            for(int j = 1; j < onsetTimes.Count; j++)
+                            {
+                                delta += (onsetTimes[j] - onsetTimes[j - 1]).TotalMilliseconds;
+                            }
+                            delta /= onsetTimes.Count - 1;
+
+                            double opm = (60 * 1000) / delta;
+                            artifact.OPM = opm;
+                        }
                         OnArtifactDetected(artifact);
                     }
 
@@ -250,6 +275,7 @@ namespace StarfieldUtils.SoundUtils
                     }
                     else
                     {
+                        detected = false;
                         lastFlux = 0.0f;
                     }
                 }
