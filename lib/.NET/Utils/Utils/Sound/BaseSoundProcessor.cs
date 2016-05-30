@@ -21,6 +21,7 @@ namespace StarfieldUtils.SoundUtils
         TempoChange,
         MoodChange,
         KeyChange,
+        Onset
     }
 
     // information about the artifact that was detected
@@ -89,10 +90,15 @@ namespace StarfieldUtils.SoundUtils
         // TODO: don't assume stereo
         private float[] fftChannel1;
         private float[] fftChannel2;
+        private float[] fftAveraged;
         private float[] eqDataChannel1;
         private float[] eqDataChannel2;
         private byte vuChannel1 = 0;
         private byte vuChannel2 = 0;
+
+        private float[] lastFFT;
+        private List<float> fluxWindow = new List<float>();
+        private float lastFlux = 0.0f;
         
         // the threshold for naive artifact detection
         private float threshold = 0;
@@ -100,6 +106,9 @@ namespace StarfieldUtils.SoundUtils
         
         // the last time we detected artifact and sent a notification
         protected DateTime lastArtifact = DateTime.MinValue;
+
+
+        protected DateTime lastOnset = DateTime.MinValue;
 
         // the minimum time between artifact notifications
         // TODO: change this to be per artifact type
@@ -145,12 +154,21 @@ namespace StarfieldUtils.SoundUtils
 
             float[] fftPartChannel1 = new float[FFT_INPUT_SIZE];
             float[] fftPartChannel2 = new float[FFT_INPUT_SIZE];
+            
+            float[] averaged = new float[Channel1.Length];
+            float[] fftPartAveraged = new float[FFT_INPUT_SIZE];
+
+            for(int i = 0; i < Channel1.Length; i++)
+            {
+                averaged[i] = (Channel1[i] + Channel2[i]) / 2;
+            }
 
             for (int i = 0; (i + 1) * fftPartChannel1.Length < Channel1.Length; i++)
             {
                 // copy the sample data into the FFT input arrays
                 Array.Copy(Channel1, i * fftPartChannel1.Length, fftPartChannel1, 0, fftPartChannel1.Length);
                 Array.Copy(Channel2, i * fftPartChannel2.Length, fftPartChannel2, 0, fftPartChannel2.Length);
+                Array.Copy(averaged, i * fftPartAveraged.Length, fftPartAveraged, 0, fftPartAveraged.Length);
 
                 // apply a hamming window, this prevents frequency artifacts
                 // in the FFT from the edge of the frame
@@ -159,6 +177,7 @@ namespace StarfieldUtils.SoundUtils
                     float coefficient = (float)(.54 - .46 * Math.Cos((2 * Math.PI * j) / (fftPartChannel1.Length - 1)));
                     fftPartChannel1[j] *= coefficient;
                     fftPartChannel2[j] *= coefficient;
+                    fftPartAveraged[i] *= coefficient;
                 }
 
                 // compute the FFT
@@ -167,6 +186,9 @@ namespace StarfieldUtils.SoundUtils
 
                 fftChannel2 = new float[StarfieldUtils.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel2.Length)];
                 StarfieldUtils.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartChannel2, fftChannel2, out dcComponent);
+
+                fftAveraged = new float[StarfieldUtils.MathUtils.FFTTools.RoundToNextPowerOf2(fftPartChannel2.Length)];
+                StarfieldUtils.MathUtils.FFTTools.ComputeFFTPolarMag(fftPartAveraged, fftAveraged, out dcComponent);
 
                 float bucketWidth = SampleRate / (fftChannel1.Length / 2);
 
@@ -186,6 +208,53 @@ namespace StarfieldUtils.SoundUtils
                     eqDataChannel1[currentBand] += fftChannel1[j];
                     eqDataChannel2[currentBand] += fftChannel2[j];
                 }
+
+                if(lastFFT != null)
+                {
+                    // compute rectified spectral flux
+                    float flux = 0.0f;
+                    for(int j = 0; j < fftAveraged.Length; j++)
+                    {
+                        float value = fftAveraged[j] - lastFFT[j];
+                        flux += Math.Max(0.0f, value);
+                    }
+
+                    fluxWindow.Add(flux);
+
+                    if (fluxWindow.Count > 10)
+                    {
+                        fluxWindow.RemoveAt(0);
+                    }
+
+                    float avg = 0.0f;
+                    for(int j = 0; j < fluxWindow.Count; j++)
+                    {
+                        avg += fluxWindow[j];
+                    }
+
+                    avg /= fluxWindow.Count;
+
+                    float threshold = avg * 1.5f;
+
+                    if(lastFlux > flux)
+                    {
+                        var artifact = new Artifact();
+                        lastOnset = DateTime.Now;
+                        artifact.Type = ArtifactDetectionAlgorithm.Onset;
+                        OnArtifactDetected(artifact);
+                    }
+
+                    if (flux > threshold)
+                    {
+                        lastFlux = flux;
+                    }
+                    else
+                    {
+                        lastFlux = 0.0f;
+                    }
+                }
+
+                lastFFT = fftAveraged;
             }
 
             // naive threshold based artifact detection
@@ -270,6 +339,8 @@ namespace StarfieldUtils.SoundUtils
             frame.Samples.Add(Channel2);
             frame.VU.Add(vuChannel1);
             frame.VU.Add(vuChannel2);
+
+
             if (OnFrameUpdate != null)
             {
                 OnFrameUpdate(frame);

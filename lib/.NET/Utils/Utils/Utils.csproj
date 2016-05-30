@@ -78,6 +78,7 @@
     <Compile Include="Sound\CSCoreLoopbackSoundProcessor.cs" />
     <Compile Include="Sound\NullSoundProcessor.cs" />
     <Compile Include="Sound\SoundProcessor.cs" />
+    <Compile Include="Sound\SoundUtils.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -28,6 +28,21 @@ namespace AlgorithmDemo.Drivers
         BaseSoundProcessor soundProcessor;
         float maxDistance;
         ConcurrentQueue<Globe> globes = new ConcurrentQueue<Globe>();
+        private bool onsetOnly = true;
+        #endregion
+
+        #region Public Properties
+        public bool OnsetOnly
+        {
+            get
+            {
+                return onsetOnly;
+            }
+            set
+            {
+                onsetOnly = value;
+            }
+        }
         #endregion
 
         #region Constructors
@@ -49,12 +64,15 @@ namespace AlgorithmDemo.Drivers
         #region Event Handlers
         void soundProcessor_OnArtifactDetected(Artifact artifact)
         {
-            Random rand = new Random();
-            Globe globe = new Globe();
-            globe.OuterRadius = 2.0f;
-            globe.InnerRadius = -22f;
-            globe.color = rainbow7[rand.Next(rainbow7.Length - 1)];
-            globes.Enqueue(globe);
+            if (!onsetOnly || artifact.Type == ArtifactDetectionAlgorithm.Onset)
+            {
+                Random rand = new Random();
+                Globe globe = new Globe();
+                globe.OuterRadius = 2.0f;
+                globe.InnerRadius = -22f;
+                globe.color = rainbow7[rand.Next(rainbow7.Length - 1)];
+                globes.Enqueue(globe);
+            }
         }
         #endregion
 
