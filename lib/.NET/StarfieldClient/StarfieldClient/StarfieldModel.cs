@@ -76,6 +76,12 @@ namespace Starfield
             return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 15, 16);
         }
 
+        public static StarfieldModel KekeMohy()
+        {
+            // 14 x 60 x 2 pixel art car, step in y is tiny, x, z is larger and unknown
+            return new StarfieldModel(2.0f, .083f, 6.0f, 14, 60, 2);
+        }
+
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ) : this(xStep,
                                                                                                                 yStep,
                                                                                                                 zStep,
