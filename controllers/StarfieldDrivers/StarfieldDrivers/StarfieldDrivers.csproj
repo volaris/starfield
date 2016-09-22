@@ -58,6 +58,7 @@
     <Compile Include="Fractal\FractalFlame4D.cs" />
     <Compile Include="PresenceResponsive\InteractiveSoundResponsiveGlobes.cs" />
     <Compile Include="PresenceResponsive\GenericTrails.cs" />
+    <Compile Include="PresenceResponsive\ConnectiveOrbs.cs" />
     <Compile Include="PresenceResponsive\PresenceTrails.cs" />
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmoke.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplex.cs" />
     <Compile Include="Sound Responsive\snakes.cs" />
+    <Compile Include="Test\Checkout.cs" />
     <Compile Include="Test\SolidColor.cs" />
     <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />
