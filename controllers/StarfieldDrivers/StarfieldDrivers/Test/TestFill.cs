@@ -75,6 +75,8 @@ namespace AlgorithmDemo.Drivers
 
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
+            step = 0;
+            fillIndex = 0;
         }
 
         void IStarfieldDriver.Stop()
