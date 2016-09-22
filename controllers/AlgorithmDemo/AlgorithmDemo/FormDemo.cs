@@ -94,7 +94,8 @@ namespace AlgorithmDemo
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
-            comboBoxStarfield.SelectedIndex = 0;
+            comboBoxStarfield.Items.Add("Keke Mohy");
+            comboBoxStarfield.SelectedIndex = 1;
 
             if (comboBoxAlgorithm.Items.Count > 0)
             {
@@ -197,6 +198,9 @@ namespace AlgorithmDemo
                         break;
                     case 2:
                         Model = StarfieldModel.BurningManStarfield();
+                        break;
+                    case 3:
+                        Model = StarfieldModel.KekeMohy();
                         break;
                 }
 

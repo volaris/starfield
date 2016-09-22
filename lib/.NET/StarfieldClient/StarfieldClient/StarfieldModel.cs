@@ -49,10 +49,26 @@ namespace Starfield
         private bool runPresenceClientThread = true;
         private int presenceUpdateInterval = 10;
 
+        private bool needSafetyLight = false;
+
+        private int minLevel = 0x50;
+
         public float Brightness
         {
             get { return brightness; }
             set { brightness = Math.Min(Math.Max(0f,value),1f); }
+        }
+
+        public bool NeedSafetyLight
+        {
+            get { return needSafetyLight; }
+            set { needSafetyLight = value; }
+        }
+
+        public int MinLevel
+        {
+            get { return minLevel; }
+            set { minLevel = value; }
         }
 
         // create a model with the defaults for the home prototype
@@ -66,7 +82,7 @@ namespace Starfield
         public static StarfieldModel CriticalNWStarfield()
         {
             // 20' x 20' x 20' spaced at 2' intervals
-            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11, new PresenceClient());
+            return (StarfieldModel)new CriticalStarfieldModel(2.0f, 2.0f, 2.0f, 11, 10, 11, new PresenceClient());
         }
 
         // create a model with the defaults for the Burning Man version
@@ -74,6 +90,12 @@ namespace Starfield
         {
             // 60' x 60' x 30' spaced at 2' intervals on the y axis and 4' intervals on the x & z axes
             return new StarfieldModel(4.0f, 2.0f, 4.0f, 16, 15, 16);
+        }
+
+        public static StarfieldModel KekeMohy()
+        {
+            // 14 x 60 x 2 pixel art car, step in y is tiny, x, z is larger and unknown
+            return new StarfieldModel(2.0f, .083f, 6.0f, 14, 60, 2);
         }
 
         public StarfieldModel(float xStep, float yStep, float zStep, ulong numX, ulong numY, ulong numZ) : this(xStep,
@@ -155,7 +177,10 @@ namespace Starfield
                             byte red = (byte)(LEDColors[x, z, y].R * .94);
                             byte green = (byte)(LEDColors[x, z, y].G * .94);
                             byte blue = (byte)(LEDColors[x, z, y].B * .94);
-                            LEDColors[x, z, y] = Color.FromArgb(red, green, blue);
+                            if ((red + blue + green) > MinLevel)
+                            {
+                                LEDColors[x, z, y] = Color.FromArgb(red, green, blue);
+                            }
                         }
                     }
                 }
@@ -181,7 +206,7 @@ namespace Starfield
                         {
                             for (int y = 0; y < (int)this.NumZ; y++)
                             {
-                                presence[x][y].activity = activity[x][y].activity;
+                                presence[y][x].activity = activity[x][y].activity;
                             }
                         }
                     }
@@ -217,7 +242,14 @@ namespace Starfield
                 {
                     for (ulong z = 0; z < NumZ; z++)
                     {
-                        LEDColors[x, z, y] = Color.Black;
+                        if (NeedSafetyLight)
+                        {
+                            LEDColors[x, z, y] = Color.FromArgb(MinLevel / 3, MinLevel / 3, MinLevel / 3);
+                        }
+                        else
+                        {
+                            LEDColors[x, z, y] = Color.Black;
+                        }
                     }
                 }
             }
@@ -230,7 +262,14 @@ namespace Starfield
         {
             System.Threading.Monitor.Enter(lockObject);
 
-            LEDColors[x, z, y] = color;
+            if (NeedSafetyLight && (color.R + color.G + color.B) < MinLevel)
+            {
+                LEDColors[x, z, y] = Color.FromArgb(MinLevel/3, MinLevel/3, MinLevel/3);
+            }
+            else
+            {
+                LEDColors[x, z, y] = color;
+            }
 
             System.Threading.Monitor.Exit(lockObject);
         }

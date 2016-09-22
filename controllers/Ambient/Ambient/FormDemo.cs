@@ -45,8 +45,8 @@ namespace Ambient
 
         // endpoint that we will try to connect to first and that will be
         // displayed when the app starts up
-        string DefaultIP = "127.0.0.1";//"192.168.0.10";//
-        int DefaultPort = 7890;
+        string DefaultIP = "192.168.0.50";//"127.0.0.1";//
+        int DefaultPort = 7891;
         System.Timers.Timer render;
         System.Timers.Timer algorithmSwitch;
 
@@ -59,58 +59,14 @@ namespace Ambient
             textBoxIP.Text = DefaultIP;
             textBoxPort.Text = DefaultPort.ToString();
 
-            Drivers = new List<IStarfieldDriver>();
-
-            // load builtin drivers
-            foreach(Type type in Assembly.GetExecutingAssembly().GetTypes())
-            {
-                loadType(type);
-            }
-
-            // load default drivers
-            try
-            {
-                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
-                {
-                    loadType(type);
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
-            }
-
-            // load plugins
-            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
-            if(System.IO.Directory.Exists(pluginPath))
-            {
-                Console.WriteLine("Loading Plugins");
-
-                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
-                foreach(string filename in plugins)
-                {
-                    try
-                    {
-                        Assembly plugin = Assembly.LoadFrom(filename);
-
-                        foreach (Type type in plugin.GetTypes())
-                        {
-                            loadType(type);
-                        }
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Unable to load: {0}", filename);
-                    }
-                }
-            }
+            reloadDrivers();
 
             // set up the starfield type combo box
             comboBoxStarfield.Items.Add("Home Starfield");
             comboBoxStarfield.Items.Add("Critical NW Starfield");
             comboBoxStarfield.Items.Add("Burning Man Starfield");
-            comboBoxStarfield.SelectedIndex = 0;
+            comboBoxStarfield.Items.Add("KekeMohy");
+            comboBoxStarfield.SelectedIndex = 1;
 
             CurrentDrivers = new IStarfieldDriver[2];
             Channels = new StarfieldModel[2];
@@ -230,6 +186,9 @@ namespace Ambient
                     case 2:
                         Model = StarfieldModel.BurningManStarfield();
                         break;
+                    case 3:
+                        Model = StarfieldModel.KekeMohy();
+                        break;
                 }
 
                 Client = new TCPStarfieldClient(Model, System.Net.IPAddress.Parse(ip), port);
@@ -239,6 +198,57 @@ namespace Ambient
             finally
             {
                 System.Threading.Monitor.Exit(RenderLock);
+            }
+        }
+
+        private void reloadDrivers()
+        {
+
+            Drivers = new List<IStarfieldDriver>();
+
+            // load builtin drivers
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                loadType(type);
+            }
+
+            // load default drivers
+            try
+            {
+                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
+                {
+                    loadType(type);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
+            }
+
+            // load plugins
+            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
+            if (System.IO.Directory.Exists(pluginPath))
+            {
+                Console.WriteLine("Loading Plugins");
+
+                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
+                foreach (string filename in plugins)
+                {
+                    try
+                    {
+                        Assembly plugin = Assembly.LoadFrom(filename);
+
+                        foreach (Type type in plugin.GetTypes())
+                        {
+                            loadType(type);
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Unable to load: {0}", filename);
+                    }
+                }
             }
         }
 
@@ -256,7 +266,13 @@ namespace Ambient
                 driverType = driverTypeAttribute.Type;
             }
 
-            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract && (driverType == DriverTypes.Ambient || driverType == DriverTypes.AmbientInteractive))
+            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && 
+                !type.IsInterface && 
+                !type.IsAbstract && 
+                ((driverType == DriverTypes.Ambient && checkBoxAmbient.Checked) || 
+                 (driverType == DriverTypes.AmbientInteractive && checkBoxAmbientInteractive.Checked)  || 
+                 (driverType == DriverTypes.SoundResponsive && checkBoxSoundResponsive.Checked) ||
+                 (driverType == DriverTypes.Interactive && checkBoxInteractive.Checked)))
             {
                 Drivers.Add((IStarfieldDriver)Activator.CreateInstance(type));
             }
@@ -365,6 +381,13 @@ namespace Ambient
         private void buttonNext_Click(object sender, EventArgs e)
         {
             SwitchAlgorithm(true);
+        }
+
+        private void buttonReload_Click(object sender, EventArgs e)
+        {
+            System.Threading.Monitor.Enter(RenderLock);
+            reloadDrivers();
+            System.Threading.Monitor.Exit(RenderLock);
         }
     }
 }
