@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CriticalStarfieldModel.cs" />
     <Compile Include="DriverType.cs" />
     <Compile Include="IStarfieldDriver.cs" />
     <Compile Include="networking\OPCClient.cs" />
