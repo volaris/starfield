@@ -53,5 +53,20 @@ namespace StarfieldUtils.MathUtils
         {
             return new Vec3D(left.X + right.X, left.Y + right.Y, left.Z + right.Z);
         }
+
+        public static Vec3D operator *(Vec3D vector, double scalar)
+        {
+            return new Vec3D(vector.X * scalar, vector.Y * scalar, vector.Z * scalar);
+        }
+
+        public static Vec3D operator *(double scalar, Vec3D vector)
+        {
+            return new Vec3D(vector.X * scalar, vector.Y * scalar, vector.Z * scalar);
+        }
+
+        public static Vec3D operator /(double scalar, Vec3D vector)
+        {
+            return new Vec3D(vector.X / scalar, vector.Y / scalar, vector.Z / scalar);
+        }
     }
 }
