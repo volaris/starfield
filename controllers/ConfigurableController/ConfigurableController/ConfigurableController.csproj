@@ -7,8 +7,8 @@
     <ProjectGuid>{FF71DF1E-CD8D-40CB-B10D-A180C89845E8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ambient</RootNamespace>
-    <AssemblyName>Ambient</AssemblyName>
+    <RootNamespace>ConfigurableController</RootNamespace>
+    <AssemblyName>ConfigurableController</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,6 +40,10 @@
     <Reference Include="Exocortex.DSP.v1, Version=1.0.5338.41091, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\lib\external\Exocortex.DSP.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\external\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Starfield, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

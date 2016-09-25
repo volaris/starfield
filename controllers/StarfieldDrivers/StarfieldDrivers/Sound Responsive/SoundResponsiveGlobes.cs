@@ -8,7 +8,7 @@ using Starfield;
 using StarfieldUtils.SoundUtils;
 using StarfieldUtils.MathUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     class Globe
     {

@@ -8,7 +8,7 @@ using Starfield;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.Ambient)]
     public class CenterWave : IStarfieldDriver

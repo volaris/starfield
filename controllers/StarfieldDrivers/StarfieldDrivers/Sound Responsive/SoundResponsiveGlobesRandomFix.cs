@@ -7,7 +7,7 @@ using System.Drawing;
 using Starfield;
 using StarfieldUtils.SoundUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.Experimental)]
     class SoundResponsiveGlobesRandomFix : IStarfieldDriver

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.Ambient)]
     public class Rain : IStarfieldDriver

@@ -9,7 +9,7 @@ using Starfield;
 using System.Timers;
 using StarfieldUtils.MathUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.Experimental)]
     class BoidSwarms : IStarfieldDriver

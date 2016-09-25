@@ -10,7 +10,7 @@ using StarfieldUtils.ColorUtils;
 using StarfieldUtils.MathUtils;
 using Starfield.Presence;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.SoundResponsive)]
     class InteractiveSoundResponsiveGlobes : IStarfieldDriver

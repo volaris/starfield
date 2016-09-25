@@ -7,7 +7,7 @@ using System.Drawing;
 using Starfield;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.Ambient)]
     public class FadingStatic : IStarfieldDriver

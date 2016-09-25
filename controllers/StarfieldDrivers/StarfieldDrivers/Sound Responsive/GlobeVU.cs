@@ -8,7 +8,7 @@ using Starfield;
 using StarfieldUtils.SoundUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace AlgorithmDemo.Drivers
+namespace StarfieldDrivers.Drivers
 {
     [DriverType(DriverTypes.SoundResponsive)]
     class GlobeVU : IStarfieldDriver
