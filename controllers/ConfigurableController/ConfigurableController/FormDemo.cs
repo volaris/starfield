@@ -218,12 +218,8 @@ namespace Ambient
             }
             if (FileName != null)
             {
-                JsonSerializerSettings settings = new JsonSerializerSettings();
-                settings.TypeNameHandling = TypeNameHandling.Objects;
-                System.IO.StreamReader reader = new System.IO.StreamReader(FileName);
-                String json = reader.ReadToEnd();
-                List<CustomDriver> list = JsonConvert.DeserializeObject<List<CustomDriver>>(json, settings);
-                listBoxDrivers.Items.Clear();
+                List<CustomDriver> list = new List<CustomDriver>();
+                DriverLoader.LoadCustomDrivers(FileName, list);
                 foreach (CustomDriver driver in list)
                 {
                     listBoxDrivers.Items.Add(driver);

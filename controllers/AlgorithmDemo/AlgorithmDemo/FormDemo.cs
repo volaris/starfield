@@ -45,49 +45,20 @@ namespace AlgorithmDemo
             textBoxIP.Text = DefaultIP;
             textBoxPort.Text = DefaultPort.ToString();
 
+            List<IStarfieldDriver> drivers = new List<IStarfieldDriver>();
+
             // load builtin drivers
-            foreach(Type type in Assembly.GetExecutingAssembly().GetTypes())
-            {
-                loadType(type);
-            }
+            DriverLoader.LoadBuiltinDrivers(drivers);
 
             // load default drivers
-            try
-            {
-                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
-                {
-                    loadType(type);
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
-            }
+            DriverLoader.LoadDefaultDrivers(drivers);
 
             // load plugins
-            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
-            if(System.IO.Directory.Exists(pluginPath))
+            DriverLoader.LoadPlugins(drivers);
+
+            foreach(IStarfieldDriver driver in drivers)
             {
-                Console.WriteLine("Loading Plugins");
-
-                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
-                foreach(string filename in plugins)
-                {
-                    try
-                    {
-                        Assembly plugin = Assembly.LoadFrom(filename);
-
-                        foreach (Type type in plugin.GetTypes())
-                        {
-                            loadType(type);
-                        }
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Unable to load: {0}", filename);
-                    }
-                }
+                comboBoxAlgorithm.Items.Add(driver);
             }
 
             // set up the starfield type combo box

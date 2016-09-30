@@ -156,13 +156,9 @@ namespace ControllerConfigGenerator
             OpenFileDialog myOFD = new OpenFileDialog();
             if(myOFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                JsonSerializerSettings settings = new JsonSerializerSettings();
-                settings.TypeNameHandling = TypeNameHandling.Objects;
-                System.IO.StreamReader reader = new System.IO.StreamReader(myOFD.FileName);
-                String json = reader.ReadToEnd();
-                List<CustomDriver> list = JsonConvert.DeserializeObject<List<CustomDriver>>(json, settings);
-                listBoxDrivers.Items.Clear();
-                foreach(CustomDriver driver in list)
+                List<CustomDriver> list = new List<CustomDriver>();
+                DriverLoader.LoadCustomDrivers(myOFD.FileName, list);
+                foreach (CustomDriver driver in list)
                 {
                     listBoxDrivers.Items.Add(driver);
                 }

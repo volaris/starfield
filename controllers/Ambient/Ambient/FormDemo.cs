@@ -205,57 +205,19 @@ namespace Ambient
         {
 
             Drivers = new List<IStarfieldDriver>();
+            DriverLoader.DriverFilterDelegate del = loadType;
 
             // load builtin drivers
-            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-            {
-                loadType(type);
-            }
+            DriverLoader.LoadBuiltinDrivers(Drivers, del);
 
             // load default drivers
-            try
-            {
-                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
-                {
-                    loadType(type);
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
-            }
+            DriverLoader.LoadDefaultDrivers(Drivers, del);
 
             // load plugins
-            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
-            if (System.IO.Directory.Exists(pluginPath))
-            {
-                Console.WriteLine("Loading Plugins");
-
-                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
-                foreach (string filename in plugins)
-                {
-                    try
-                    {
-                        Assembly plugin = Assembly.LoadFrom(filename);
-
-                        foreach (Type type in plugin.GetTypes())
-                        {
-                            loadType(type);
-                        }
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Unable to load: {0}", filename);
-                    }
-                }
-            }
+            DriverLoader.LoadPlugins(Drivers, del);
         }
 
-        // try loading an instance of the given type into the algorithm combo 
-        // box the type must inherit from IStarfield driver, be a class, and 
-        // not be abstract
-        private void loadType(Type type)
+        private bool loadType(Type type)
         {
             DriverTypes driverType = DriverTypes.Experimental;
             Attribute attribute = type.GetCustomAttribute(typeof(DriverType));
@@ -274,8 +236,10 @@ namespace Ambient
                  (driverType == DriverTypes.SoundResponsive && checkBoxSoundResponsive.Checked) ||
                  (driverType == DriverTypes.Interactive && checkBoxInteractive.Checked)))
             {
-                Drivers.Add((IStarfieldDriver)Activator.CreateInstance(type));
+                return true;
             }
+
+            return false;
         }
 
         // the user wants to change the maximum brightness of the starfield,
