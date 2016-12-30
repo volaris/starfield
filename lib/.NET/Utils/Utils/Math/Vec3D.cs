@@ -44,6 +44,11 @@ namespace StarfieldUtils.MathUtils
             return Math.Sqrt(Math.Pow(X - vector.X, 2) + Math.Pow(Y - vector.Y, 2) + Math.Pow(Z - vector.Z, 2));
         }
 
+        public double Dot(Vec3D vector)
+        {
+            return this.X * vector.X + this.Y * vector.Y + this.Z * vector.Z;
+        }
+
         public static Vec3D operator -(Vec3D left, Vec3D right)
         {
             return new Vec3D(left.X - right.X, left.Y - right.Y, left.Z - right.Z);
@@ -64,7 +69,7 @@ namespace StarfieldUtils.MathUtils
             return new Vec3D(vector.X * scalar, vector.Y * scalar, vector.Z * scalar);
         }
 
-        public static Vec3D operator /(double scalar, Vec3D vector)
+        public static Vec3D operator /(Vec3D vector, double scalar)
         {
             return new Vec3D(vector.X / scalar, vector.Y / scalar, vector.Z / scalar);
         }
