@@ -212,17 +212,6 @@ namespace AlgorithmDemo
             }
         }
 
-        // try loading an instance of the given type into the algorithm combo 
-        // box the type must inherit from IStarfield driver, be a class, and 
-        // not be abstract
-        private void loadType(Type type)
-        {
-            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
-            {
-                comboBoxAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
-            }
-        }
-
         // the user wants to change the maximum brightness of the starfield,
         // update the client
         private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
