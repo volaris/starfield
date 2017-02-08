@@ -28,6 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\bin\Utils.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -85,6 +86,7 @@
     <Compile Include="Math\Delaunay\Vertex.cs" />
     <Compile Include="Math\Delaunay\Voronoi.cs" />
     <Compile Include="Math\FFTTools.cs" />
+    <Compile Include="Math\Geometry\Clipper\clipper.cs" />
     <Compile Include="Math\Geometry\Rect.cs" />
     <Compile Include="Math\Geometry\Circle.cs" />
     <Compile Include="Math\Geometry\LineSegment.cs" />
