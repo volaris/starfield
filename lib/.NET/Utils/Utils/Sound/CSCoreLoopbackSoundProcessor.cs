@@ -7,6 +7,10 @@ using System.Threading;
 
 namespace StarfieldUtils.SoundUtils
 {
+    /**
+     * <summary>    A sound processor based on the CS Core audio capture library. </summary>
+     */
+
     public class CSCoreLoopbackSoundProcessor : BaseSoundProcessor
     {
         CSCore.SoundIn.WasapiLoopbackCapture loopback;

@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.Sound
 {
+    /**
+     * <summary>    Generic utilities for audio processing. </summary>
+     */
+
     public class SoundUtils
     {
+        /**
+         * <summary>    Convert 2 channels of PCM data into an array of floats [0.0,1.0]. </summary>
+         *
+         * <remarks>    Volar, 2/13/2017. </remarks>
+         *
+         * <param name="leftChannel">   The left channel. </param>
+         * <param name="rightChannel">  The right channel. </param>
+         *
+         * <returns>    The PCM converted. </returns>
+         */
+
         public static float[] convertPCM( short[] leftChannel, short[] rightChannel )
         {
            float[] result = new float[leftChannel.Length];

@@ -4,27 +4,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/**
+// namespace: StarfieldUtils.SoundUtils
+//
+// summary:	Countains all of the audio processing classes.
+ */
+
 namespace StarfieldUtils.SoundUtils
 {
-    // This event will be called when a music analysis algorithm detects an
-    // artifact. The Artifact class will indicate the type and details about
-    // it.
+    /**
+     * <summary>    This event will be called when a music analysis algorithm detects an artifact.
+     *              The Artifact class will indicate the type and details about it. </summary>
+     *
+     * <param name="artifact">  The artifact. </param>
+     */
+
     public delegate void OnArtifactDetectedHandler(Artifact artifact);
-    // This event will be called for each frame. It gives information like the
-    // volume, FFT, and EQ channels for the frame.
+
+    /**
+     * <summary>    This event will be called for each frame. It gives information like the volume,
+     *              FFT, and EQ channels for the frame. </summary>
+     *
+     * <param name="frame"> The frame. </param>
+     */
+
     public delegate void OnFrameUpdateHandler(Frame frame);
 
-    // the artifact types, currently only NaiveImportantNotes is implemented
+    /**
+     * <summary>    the artifact types, currently only NaiveImportantNotes is implemented. </summary>
+     */
+
     public enum ArtifactDetectionAlgorithm
     {
+         /** <summary>    An enum constant representing the naive important notes option. </summary> */
         NaiveImportantNotes,
+         /** <summary>    An enum constant representing the tempo change option. </summary> */
         TempoChange,
+         /** <summary>    An enum constant representing the mood change option. </summary> */
         MoodChange,
+         /** <summary>    An enum constant representing the key change option. </summary> */
         KeyChange,
+         /** <summary>    An enum constant representing the onset option. </summary> */
         Onset
     }
 
-    // information about the artifact that was detected
+    /**
+     * <summary>    information about the artifact that was detected. </summary>
+     */
+
     public class Artifact
     {
         public ArtifactDetectionAlgorithm Type;
@@ -32,11 +60,13 @@ namespace StarfieldUtils.SoundUtils
         public double OPM = -1;
     }
 
-    // information about the current sound frame
+    /**
+     * <summary>    information about the current sound frame. </summary>
+     */
+
     public class Frame
     {
-        // a list of bands, the values are the upper values for their 
-        // respective bands
+        /** <summary>    a list of bands, the values are the upper values for their respective bands. </summary> */
         public static float[] bands = 
         {
             30,
@@ -51,21 +81,37 @@ namespace StarfieldUtils.SoundUtils
             float.PositiveInfinity
         };
 
-        // the list of EQ values for each channel
-        // the float array contains the EQ values, a list entry is generated 
-        // for each channel
+        /**
+         * <summary>    the list of EQ values for each channel the float array contains the EQ values, a
+         *              list entry is generated for each channel. </summary>
+         */
+
         public List<float[]> EQ;
-        // the raw sample values for each channel
-        // the float array contains the sample values, a list entry is generated 
-        // for each channel
+
+        /**
+         * <summary>    the raw sample values for each channel the float array contains the sample values,
+         *              a list entry is generated for each channel. </summary>
+         */
+
         public List<float[]> Samples;
-        // the list of FFT values for each channel
-        // the float array contains the FFT values, a list entry is generated 
-        // for each channel
+
+        /**
+         * <summary>    the list of FFT values for each channel the float array contains the FFT values,
+         *              a list entry is generated for each channel. </summary>
+         */
+
         public List<float[]> FFT;
-        // the list of volume values for each channel
-        // a list entry is generated for each channel
+
+        /**
+         * <summary>    the list of volume values for each channel a list entry is generated for each
+         *              channel. </summary>
+         */
+
         public List<byte> VU;
+
+        /**
+         * <summary>    Default constructor. </summary>
+         */
 
         public Frame()
         {
@@ -76,11 +122,15 @@ namespace StarfieldUtils.SoundUtils
         }
     }
 
-    // any class that processes sound for the starfield should derive
-    // from this class
+    /**
+     * <summary>    any class that processes sound for the starfield should derive from this class. </summary>
+     */
+
     public class BaseSoundProcessor
     {
+        /** <summary>    Event queue for all listeners interested in OnArtifactDetected events. These events indicate that the sound processor has detected something interesting in the sound stream. </summary> */
         public event OnArtifactDetectedHandler OnArtifactDetected;
+        /** <summary>    Event queue for all listeners interested in OnFrameUpdate events. These events happen at a regular interval during sound processing. </summary> */
         public event OnFrameUpdateHandler OnFrameUpdate;
 
         private int artifactDelay = 0;
@@ -108,14 +158,17 @@ namespace StarfieldUtils.SoundUtils
         private float threshold = 0;
         private Random rand = new Random();
         
-        // the last time we detected artifact and sent a notification
+        /** <summary>    the last time we detected artifact and sent a notification. </summary> */
         protected DateTime lastArtifact = DateTime.MinValue;
 
 
+        /** <summary>    The last onset Date/Time. </summary> */
         protected DateTime lastOnset = DateTime.MinValue;
 
-        // the minimum time between artifact notifications
-        // TODO: change this to be per artifact type
+        /**
+         * <summary>    the minimum time between artifact notifications. </summary>
+         */
+         // TODO: change this to be per artifact type
         public int ArtifactDelay
         {
             get
@@ -127,6 +180,10 @@ namespace StarfieldUtils.SoundUtils
                 artifactDelay = value;
             }
         }
+
+        /**
+         * <summary>    Gets or sets the minimum artifact threshold. </summary>
+         */
 
         public float MinimumArtifactThreshold
         {
@@ -140,11 +197,23 @@ namespace StarfieldUtils.SoundUtils
             }
         }
 
+        /**
+         * <summary>    Specialised default constructor for use only by derived class. </summary>
+         */
+
         protected BaseSoundProcessor()
         {
             eqDataChannel1 = new float[Frame.bands.Length];
             eqDataChannel2 = new float[Frame.bands.Length];
         }
+
+        /**
+         * <summary>    Process the audio frame. </summary>
+         *
+         * <param name="Channel1">      The first audio channel. </param>
+         * <param name="Channel2">      The second audio channel. </param>
+         * <param name="SampleRate">    The sample rate. </param>
+         */
 
         protected void ProcessFrame(float[] Channel1, float[] Channel2, int SampleRate)
         {

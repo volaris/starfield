@@ -4,7 +4,7 @@ using Starfield;
 namespace Starfield
 {
     /**
-     * <summary>    Interface for starfield drivers. </summary>
+     * <summary>    Interface for Starfield drivers. Implement this interface to create a new animation.</summary>
      */
 
     public interface IStarfieldDriver
@@ -12,7 +12,7 @@ namespace Starfield
         /**
          * <summary>    Renders the given Starfield. Called at every render iteration.</summary>
          *
-         * <param name="Starfield"> The starfield model to render to. </param>
+         * <param name="Starfield"> The Starfield model to render to. </param>
          */
         void Render(StarfieldModel Starfield);
 
@@ -37,10 +37,24 @@ namespace Starfield
         void Stop();
     }
 
+    /**
+     * <summary>    This class is used to create named instances for configurable sets of Starfield animations that can use multiple instances of a single driver type with different settings. </summary>
+     *
+     * <remarks>    Volar, 2/10/2017. </remarks>
+     */
+
     public class CustomDriver
     {
+        /** <summary>    The instance of the driver used to render the animation. </summary> */
         public IStarfieldDriver Driver;
+        /** <summary>    The name of this instance. </summary> */
         public String Name;
+
+        /**
+         * <summary>    Returns the name of this object. </summary>
+         *
+         * <returns>    The name of object. </returns>
+         */
 
         public override string ToString()
         {

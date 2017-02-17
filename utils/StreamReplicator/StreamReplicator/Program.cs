@@ -27,6 +27,9 @@ namespace StreamReplicator
         {
             TcpListener inputStream;
             List<TcpClient> outputs = new List<TcpClient>();
+            List<Endpoint> failed = new List<Endpoint>();
+            List<Endpoint> tempFailed = new List<Endpoint>();
+            DateTime lastConnect = DateTime.Now;
             // Buffer for reading data
             Byte[] bytes = new Byte[256];
             String data = null;
@@ -42,8 +45,18 @@ namespace StreamReplicator
 
             foreach(Endpoint host in config.host_list)
             {
-                outputs.Add(new TcpClient(host.ip, host.port));
+                try
+                {
+                    outputs.Add(new TcpClient(host.ip, host.port));
+                }
+                catch
+                {
+                    Console.WriteLine("Failed to connect: {0}:{1}", host.ip, host.port);
+                    failed.Add(host);
+                }
             }
+
+            inputStream.Start();
 
             // Enter the listening loop.
             while (true)
@@ -55,23 +68,89 @@ namespace StreamReplicator
                 TcpClient client = inputStream.AcceptTcpClient();
                 Console.WriteLine("Connected!");
 
+                foreach(Endpoint failedHost in failed)
+                {
+                    lastConnect = DateTime.Now;
+                    try
+                    {
+                        outputs.Add(new TcpClient(failedHost.ip, failedHost.port));
+                    }
+                    catch
+                    {
+                        tempFailed.Add(failedHost);
+                    }
+                }
+
+                failed.Clear();
+                foreach(Endpoint host in tempFailed)
+                {
+                    failed.Add(host);
+                }
+                tempFailed.Clear();
+
                 // Get a stream object for reading and writing
                 NetworkStream stream = client.GetStream();
 
                 int i;
 
-                // Loop to receive all the data sent by the client.
-                while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+                try
                 {
-                    // Translate data bytes to a ASCII string.
-                    data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
-
-                    foreach (TcpClient outClient in outputs)
+                    // Loop to receive all the data sent by the client.
+                    while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
                     {
-                        NetworkStream outStream = outClient.GetStream();
-                        stream.Write(bytes, 0, i);
+                        // Translate data bytes to a ASCII string.
+                        data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+
+                        List<TcpClient> toRemove = new List<TcpClient>();
+
+                        foreach (TcpClient outClient in outputs)
+                        {
+                            try
+                            {
+                                NetworkStream outStream = outClient.GetStream();
+                                stream.Write(bytes, 0, i);
+                            }
+                            catch
+                            {
+                                Endpoint host = new Endpoint();
+                                host.ip = ((System.Net.IPEndPoint)outClient.Client.RemoteEndPoint).Address.ToString();
+                                host.port = ((System.Net.IPEndPoint)outClient.Client.RemoteEndPoint).Port;
+                                failed.Add(host);
+                                toRemove.Add(outClient);
+                            }
+                        }
+
+                        foreach (TcpClient remove in toRemove)
+                        {
+                            outputs.Remove(remove);
+                        }
+
+                        if (failed.Count > 0 && (DateTime.Now - lastConnect).TotalSeconds > 5)
+                        {
+                            foreach (Endpoint failedHost in failed)
+                            {
+                                lastConnect = DateTime.Now;
+                                try
+                                {
+                                    outputs.Add(new TcpClient(failedHost.ip, failedHost.port));
+                                }
+                                catch
+                                {
+                                    tempFailed.Add(failedHost);
+                                }
+                            }
+
+                            failed.Clear();
+                            foreach (Endpoint host in tempFailed)
+                            {
+                                failed.Add(host);
+                            }
+                            tempFailed.Clear();
+                        }
                     }
                 }
+                catch
+                { }
 
                 // Shutdown and end connection
                 client.Close();

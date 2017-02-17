@@ -6,20 +6,32 @@ using System.Threading.Tasks;
 
 namespace Starfield
 {
-    // defines the general classes of drivers the Starfield supports
-    // this is used to allow a driver program to select a random driver for the appropriate time
+    /**
+     * <summary>    Defines the general classes of drivers the Starfield supports. This is used to
+     *              allow a control application to select an appropriate driver. </summary>
+     */
+
     public enum DriverTypes
     {
-        Ambient,                    // just an animation
-        AmbientInteractive,         // an animation that responds to input, will work as an ambient animation
-        SoundResponsive,            // responds to sound
-        Interactive,                // only responds to interactivity
-        InteractiveSoundResponsive, // responds to sound and interactivity
-        Experimental                // still in development
+         /** <summary>    just an animation. </summary> */
+        Ambient,
+         /** <summary>    an animation that responds to input, will work as an ambient animation. </summary> */
+        AmbientInteractive,
+         /** <summary>    responds to sound. </summary> */
+        SoundResponsive,
+         /** <summary>    only responds to interactivity. </summary> */
+        Interactive,
+         /** <summary>    responds to sound and interactivity. </summary> */
+        InteractiveSoundResponsive,
+         /** <summary>    still in development. </summary> */
+        Experimental
     }
 
-    // the DriverType attribute is used to tag a class at compile time, drivers that connect over the 
-    // network will need to supply this information when they connect
+    /**
+     * <summary>    The DriverType attribute is used to tag a class at compile time, drivers that
+     *              connect over the network will need to supply this information when they connect. </summary>
+     */
+
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     public sealed class DriverType : Attribute
     {
@@ -27,13 +39,24 @@ namespace Starfield
         // See the attribute guidelines at 
         //  http://go.microsoft.com/fwlink/?LinkId=85236
         private readonly DriverTypes type;
-    
-        // This is a positional argument
+
+        /**
+         * <summary>    This is a positional argument. </summary>
+         *
+         * <param name="type">  The type. </param>
+         */
+
         public DriverType(DriverTypes type) 
         { 
             this.type = type;     
         }
-   
+
+        /**
+         * <summary>    Gets the type. </summary>
+         *
+         * <value>  The type. </value>
+         */
+
         public DriverTypes Type
         {
             get { return type; }
