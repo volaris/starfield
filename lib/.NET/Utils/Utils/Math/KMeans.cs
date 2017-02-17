@@ -187,7 +187,7 @@ namespace StarfieldUtils.MathUtils
 
         private static double getDistortion(KMeansResult result, KMeansPoint[] points)
         {
-            //http://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance
+            // TODO: http://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance
             double distortion = 0;
             for (int i = 0; i < points.Length; i++)
             {
