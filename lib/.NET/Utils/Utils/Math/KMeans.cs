@@ -145,6 +145,7 @@ namespace StarfieldUtils.MathUtils
         // for now, we'll just use the sum of the distances between the points their centroids
         private static double getDistortion(KMeansResult result, KMeansPoint[] points)
         {
+            //http://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance
             double distortion = 0;
             for (int i = 0; i < points.Length; i++)
             {
