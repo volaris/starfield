@@ -7,11 +7,26 @@ using System.Drawing;
 
 namespace StarfieldUtils.ColorUtils
 {
+    /**
+     * <summary>    Various helper functions for manipulating color. </summary>
+     *
+     * <remarks>    Volar, 2/13/2017. </remarks>
+     */
+
     public class ColorUtils
     {
-        // use n as a percent to determine the color between start and goal
-        // n should be in the range (0,1), if it isn't wraparound can occur,
-        // preventOverlow will cap the value
+        /**
+         * <summary>    use n as a percent to determine the color between start and goal n should be in
+         *              the range [0.0,1.0], if it isn't wraparound can occur, preventOverlow will cap the value. </summary>
+         *
+         * <param name="start">             The start. </param>
+         * <param name="goal">              The goal. </param>
+         * <param name="n">                 The percent of the gradient between start and goal [0.0,1.0]. </param>
+         * <param name="preventOverflow">   True to prevent overflow. </param>
+         *
+         * <returns>    The gradient color. </returns>
+         */
+
         public static Color GetGradientColor(Color start, Color goal, float n, bool preventOverflow)
         {
             byte redDelta, goalRed, startRed, redDiff, red;
@@ -69,7 +84,16 @@ namespace StarfieldUtils.ColorUtils
             return Color.FromArgb(red, green, blue);
         }
 
-        // takes a list of know reference points and uses n as a percent between them
+        /**
+         * <summary>    takes a list of know reference points and uses n as a percent between them. </summary>
+         *
+         * <param name="colors">            The colors. </param>
+         * <param name="n">                 The percent of the gradient on the multi-stop color path [0.0,1.0]. </param>
+         * <param name="preventOverflow">   True to prevent overflow. </param>
+         *
+         * <returns>    The multi color gradient. </returns>
+         */
+
         public static Color GetMultiColorGradient(Color[] colors, float n, bool preventOverflow)
         {
             if(n < 0)
@@ -87,9 +111,13 @@ namespace StarfieldUtils.ColorUtils
             return StarfieldUtils.ColorUtils.ColorUtils.GetGradientColor(colors[index1], colors[index2], percent, true);
         }
 
-        // for the purposes of the starfield, vibrant colors are defined as 
-        // those without any grey component, this means that only two of the
-        // color components can have values.
+        /**
+         * <summary>    Retrieves a random vibrant color. For the purposes of the starfield, vibrant colors are defined as those without
+         *              any grey component, this means that only two of the color components can have values. </summary>
+         *
+         * <returns>    The random vibrant color. </returns>
+         */
+
         public static Color GetRandomVibrantColor()
         {
             Random rand = new Random();
@@ -136,15 +164,22 @@ namespace StarfieldUtils.ColorUtils
             }
         }
 
-        // For the purposes of the starfield, vibrant colors are defined as 
-        // those without any grey component, this means that only two of the
-        // color components can have values.
-        
-        // This function takes a single float as a percentage of red to red
-        // on the vibrant color spectrum as described above. Both 0.0 and 1.0
-        // will yield red.
 
-        // TODO: refactor GetRandomVibrantColor to use this function
+
+
+        /**
+         * <summary>  This function takes a single float as a percentage of red to red
+                      on the vibrant color spectrum as described above. Both 0.0 and 1.0
+                      will yield red. </summary>
+         * <para>  For the purposes of the starfield, vibrant colors are defined as those 
+         *         without any grey component, this means that only two of the color 
+         *         components can have values.</para>
+         *
+         * <param name="n"> The float to process. </param>
+         *
+         * <returns>    The vibrant color gradient. </returns>
+         */
+        // TODO: refactor GetRandomVibrantColor to use this function.
         public static Color GetVibrantColorGradient(float n)
         {
             Random rand = new Random();
@@ -191,7 +226,20 @@ namespace StarfieldUtils.ColorUtils
             }
         }
 
-        public  static Color BlendAveraged(Color[] colors, double[] weights)
+        /**
+         * <summary>    Blend the colors using a weighted average. </summary>
+         *
+         * <remarks>    Volar, 2/13/2017. </remarks>
+         *
+         * <exception cref="ArgumentException"> Thrown when colors and weights don't have the same number of elements. </exception>
+         *
+         * <param name="colors">    The colors. </param>
+         * <param name="weights">   The weights. </param>
+         *
+         * <returns>    A Color. </returns>
+         */
+
+        public static Color BlendAveraged(Color[] colors, double[] weights)
         {
             double red = 0;
             double green = 0;
@@ -217,6 +265,17 @@ namespace StarfieldUtils.ColorUtils
 
             return Color.FromArgb(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
         }
+
+        /**
+         * <summary>    Blend using raw weights. </summary>
+         *
+         * <exception cref="ArgumentException"> Thrown when colors and weights don't have the same number of elements. </exception>
+         *
+         * <param name="colors">    The colors. </param>
+         * <param name="weights">   The weights. </param>
+         *
+         * <returns>    A Color. </returns>
+         */
 
         public static Color BlendRaw(Color[] colors, double[] weights)
         {

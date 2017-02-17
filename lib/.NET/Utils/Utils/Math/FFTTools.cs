@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.MathUtils
 {
+    /**
+     * <summary>    Class providing various computations related to Fast Fourier Transforms. </summary>
+     *
+     * <remarks>    Volar, 2/13/2017. </remarks>
+     */
+
     public class FFTTools
     {
-        // round a value up in powers of 2
+        /**
+         * <summary>    round a value up in powers of 2. </summary>
+         *
+         * <param name="x"> The value to round. </param>
+         *
+         * <returns>    The rounded value. </returns>
+         */
+
         public static int RoundToNextPowerOf2(int x)
         {
             if (x <= 1) return 1;
@@ -21,6 +34,17 @@ namespace StarfieldUtils.MathUtils
             x++;
             return x;
         }
+
+        /**
+         * <summary>    Calculates the FFT using polar magnitude. </summary>
+         *
+         * <exception cref="Exception"> Thrown when length of fft result array must be big enough for next power of two. </exception>
+         *
+         * <param name="samples">       The samples. </param>
+         * <param name="fft">           The FFT. </param>
+         * <param name="dcComponent">   [out] The device-context component. </param>
+         */
+
         public static void ComputeFFTPolarMag(float[] samples, float[] fft, out float dcComponent)
         {
             int nextPowerOf2 = RoundToNextPowerOf2(samples.Length);
@@ -56,7 +80,16 @@ namespace StarfieldUtils.MathUtils
             // the fft array now holds plottable fft results from index 0 to N/2
         }
 
-        // returns the average of all the bytes in an array
+        /**
+         * <summary>    returns the average of all the bytes in an array. </summary>
+         *
+         * <remarks>    Volar, 2/13/2017. </remarks>
+         *
+         * <param name="data">  The data. </param>
+         *
+         * <returns>    The average value. </returns>
+         */
+
         int Average(byte[] data)
         {
             decimal total = 0;

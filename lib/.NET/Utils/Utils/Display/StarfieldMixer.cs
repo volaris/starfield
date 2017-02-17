@@ -7,11 +7,23 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.DisplayUtils
 {
+    /**
+     * <summary>    A used to fade between/mix the outputs of multiple starfield drivers. </summary>
+     *
+     */
+
 	public class StarfieldMixer
 	{
+        /**
+         * <summary>    Values that represent fade styles. </summary>
+         *
+         */
+
 		public enum FadeStyle
 		{
+             /** <summary>    An enum constant representing the linear option. </summary> */
 			Linear,
+             /** <summary>    An enum constant representing the Sine option. </summary> */
 			Sin
 		}
 
@@ -24,8 +36,22 @@ namespace StarfieldUtils.DisplayUtils
         // TODO: ReaderWriterLockSlim?
         private object lockObject = new object();
 
+        /**
+         * <summary>    Handler, called when the fade completed. </summary>
+         *
+         * <param name="Sender">    Source of the event. </param>
+         * <param name="channel">   The channel. </param>
+         */
+
         public delegate void FadeCompletedHandler(object Sender, StarfieldModel channel);
+        /** <summary>    Event queue for all listeners interested in FadeCompleted events. </summary> */
         public event FadeCompletedHandler FadeCompleted;
+
+        /**
+         * <summary>    Constructor. </summary>
+         *
+         * <param name="display">   The display. </param>
+         */
 
         public StarfieldMixer(StarfieldModel display)
 		{
@@ -81,6 +107,12 @@ namespace StarfieldUtils.DisplayUtils
             }
         }
 
+        /**
+         * <summary>    Adds a channel. </summary>
+         *
+         * <returns>    A StarfieldModel that should be used by the driver driving this channel. </returns>
+         */
+
 		public StarfieldModel AddChannel()
 		{
             StarfieldModel channel;
@@ -94,6 +126,12 @@ namespace StarfieldUtils.DisplayUtils
 			return channel;
 		}
 
+        /**
+         * <summary>    Removes the channel described by channel. </summary>
+         *
+         * <param name="channel">   The StarfieldModel backing the channel. </param>
+         */
+
 		public void RemoveChannel(StarfieldModel channel)
 		{
             lock (lockObject)
@@ -103,6 +141,15 @@ namespace StarfieldUtils.DisplayUtils
             }
 		}
 
+        /**
+         * <summary>    Cross fade between two channels. </summary>
+         *
+         * <param name="channelIn">     The channel to fade in. </param>
+         * <param name="channelOut">    The channel to fade out. </param>
+         * <param name="duration">      The duration of the fade. </param>
+         * <param name="fadeStyle">     The fade style. </param>
+         */
+
         public void CrossFade(StarfieldModel channelIn, StarfieldModel channelOut, TimeSpan duration, FadeStyle fadeStyle)
         {
             lock (lockObject)
@@ -111,6 +158,13 @@ namespace StarfieldUtils.DisplayUtils
                 FadeIn(channelIn, duration, fadeStyle);
             }
         }
+
+        /**
+         * <summary>    Fade out  all channels. </summary>
+         *
+         * <param name="duration">  The duration. </param>
+         * <param name="fadeStyle"> The fade style. </param>
+         */
 
         public void FadeOut(TimeSpan duration, FadeStyle fadeStyle)
         {
@@ -122,6 +176,14 @@ namespace StarfieldUtils.DisplayUtils
                 }
             }
         }
+
+        /**
+         * <summary>    Fade out the given channel. </summary>
+         *\
+         * <param name="channel">   The channel. </param>
+         * <param name="duration">  The duration. </param>
+         * <param name="fadeStyle"> The fade style. </param>
+         */
 
         public void FadeOut(StarfieldModel channel, TimeSpan duration, FadeStyle fadeStyle)
         {
@@ -139,6 +201,14 @@ namespace StarfieldUtils.DisplayUtils
             }
         }
 
+        /**
+         * <summary>    Fade in the given channel. </summary>
+         *
+         * <param name="channel">   The channel. </param>
+         * <param name="duration">  The duration. </param>
+         * <param name="fadeStyle"> The fade style. </param>
+         */
+
         public void FadeIn(StarfieldModel channel, TimeSpan duration, FadeStyle fadeStyle)
         {
             lock (lockObject)
@@ -154,6 +224,15 @@ namespace StarfieldUtils.DisplayUtils
                 faders[index] = Task.Run(() => doFadeIn(channel, duration, fadeStyle));
             }
         }
+
+        /**
+         * <summary>    Sets the fade percent for the given channel. </summary>
+         *
+         * <remarks>    Volar, 2/13/2017. </remarks>
+         *
+         * <param name="channel">   The channel. </param>
+         * <param name="level">     The level [0.0,1.0]. </param>
+         */
 
         public void SetChannelValue(StarfieldModel channel, float level)
         {   

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.SoundUtils
 {
+    /**
+     * <summary>    Used to retrieve the default sound processor for this platform. </summary>
+     */
+
     public class SoundProcessor
     {
         static BaseSoundProcessor processor = null;
@@ -14,7 +18,13 @@ namespace StarfieldUtils.SoundUtils
 
         }
 
+        /**
+         * <summary>    Gets sound processor. </summary>
+         *
+         * <returns>    The sound processor. </returns>
+         */
         // TODO: need to differentiate loopback and external input
+        // TODO: add processors for other platforms
         public static BaseSoundProcessor GetSoundProcessor()
         {
             if (processor != null)

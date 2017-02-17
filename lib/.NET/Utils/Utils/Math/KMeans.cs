@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.MathUtils
 {
+    /**
+     * <summary>    A point class used for K Means Clustering. </summary>
+     */
+     // TODO: convert to Vec2D
     public class KMeansPoint
     {
         public double x;
@@ -17,14 +21,36 @@ namespace StarfieldUtils.MathUtils
         }
     }
 
+    /**
+     * <summary>    Encapsulates the result of a K Means clustering run. </summary>
+     */
+
     public class KMeansResult
     {
+        /** <summary>    The centroids of the clusters. </summary> */
         public KMeansPoint[] centroids;
+        /** <summary>    Which points are in what centroids. </summary> */
         public int[] membership;
     }
 
+    /**
+     * <summary>    Class for providing K Means related computations. </summary>
+     *
+     * <remarks>    Volar, 2/13/2017. </remarks>
+     */
+
     public class KMeans
     {
+        /**
+         * <summary>    Calculates centroids of numClusters clusters using K Means. </summary>
+         *
+         * <param name="points">        The points. </param>
+         * <param name="numClusters">   Number of clusters. </param>
+         * <param name="numIterations"> Number of iterations. </param>
+         *
+         * <returns>    The found k means. </returns>
+         */
+
         public static KMeansResult FindKMeans(KMeansPoint[] points, int numClusters, int numIterations)
         {
             // initial clustering
@@ -113,10 +139,18 @@ namespace StarfieldUtils.MathUtils
             return result;
         }
 
-        // clusters a set with an unknown number of clusters
-        // runs kmeans for k in the range 1 to maxClusters
-        // finds the k where increasing k gives diminishing returns
-        // https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#An_Information_Theoretic_Approach
+        /**
+         * <summary>    clusters a set with an unknown number of clusters runs kmeans for k in the range
+         *              1 to maxClusters finds the k where increasing k gives diminishing returns
+         *              https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#An_Information_Theoretic_Approach. </summary>
+         *
+         * <param name="points">        The points. </param>
+         * <param name="maxClusters">   The maximum clusters. </param>
+         * <param name="numIterations"> Number of iterations. </param>
+         *
+         * <returns>    A KMeansResult. </returns>
+         */
+
         public static KMeansResult Cluster(KMeansPoint[] points, int maxClusters, int numIterations)
         {
             KMeansResult[] results = new KMeansResult[maxClusters];
@@ -141,8 +175,16 @@ namespace StarfieldUtils.MathUtils
             return results[index];
         }
 
-        // there are more complicated/better ways of doing this
-        // for now, we'll just use the sum of the distances between the points their centroids
+        /**
+         * <summary>    there are more complicated/better ways of doing this for now, we'll just use the
+         *              sum of the distances between the points their centroids. </summary>
+         *
+         * <param name="result">    The result. </param>
+         * <param name="points">    The points. </param>
+         *
+         * <returns>    The distortion. </returns>
+         */
+
         private static double getDistortion(KMeansResult result, KMeansPoint[] points)
         {
             double distortion = 0;

@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.SoundUtils
 {
+    /**
+     * <summary>    this class provides the interface but doesn't do any sound processing used for
+     *              platforms where sound response isn't implemented. </summary>
+     */
+
     public class NullSoundProcessor : BaseSoundProcessor
     {
-        // this class provides the interface but doesn't do any sound processing
-        // used for platforms where sound response isn't implemented
+        /**
+         * <summary>    Default constructor. </summary>
+         */
+
         public NullSoundProcessor()
         {
         }

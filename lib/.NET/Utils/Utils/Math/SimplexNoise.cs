@@ -35,6 +35,14 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.MathUtils
 {
+    /**
+     * <summary>    A class to help generate perlin  and simplex noise. </summary>
+     * <para> Originally by Casey Duncan, from https://github.com/caseman/noise.
+     * Repackaged as a plain C header by Micah Elizabeth Scott, from 
+     * https://github.com/ArdentHeavyIndustries/amcp-rpi/blob/master/effects/noise.h
+     * Ported to C# by Lane Haury</para>
+     */
+
     public class SimplexNoise
     {
         static float[,] GRAD3 = new float[,]{ {1,1,0},{-1,1,0},{1,-1,0},{-1,-1,0}, 
@@ -134,6 +142,15 @@ namespace StarfieldUtils.MathUtils
         const float F2 = 0.3660254037844386f;  // 0.5 * (sqrt(3.0) - 1.0)
         const float G2 = 0.21132486540518713f; // (3.0 - sqrt(3.0)) / 6.0
 
+        /**
+         * <summary>    2D Noise. </summary>
+         *
+         * <param name="x"> The x coordinate. </param>
+         * <param name="y"> The y coordinate. </param>
+         *
+         * <returns>    A float. </returns>
+         */
+
         public static float noise2(float x, float y)
         {
             int i1, j1, I, J, c;
@@ -196,6 +213,16 @@ namespace StarfieldUtils.MathUtils
 
         static float F3 = (1.0f / 3.0f);
         static float G3 = (1.0f / 6.0f);
+
+        /**
+         * <summary>    3D Noise. </summary>
+         *
+         * <param name="x"> The x coordinate. </param>
+         * <param name="y"> The y coordinate. </param>
+         * <param name="z"> The z coordinate. </param>
+         *
+         * <returns>    A float. </returns>
+         */
 
         public static float noise3(float x, float y, float z)
         {
@@ -286,6 +313,19 @@ namespace StarfieldUtils.MathUtils
             return (noise[0] + noise[1] + noise[2] + noise[3]) * 32.0f;
         }
 
+        /**
+         * <summary>    3D Simplex noise</summary>
+         *
+         * <param name="x">             The x coordinate. </param>
+         * <param name="y">             The y coordinate. </param>
+         * <param name="z">             The z coordinate. </param>
+         * <param name="octaves">       The number of iterations of noise generation. </param>
+         * <param name="persistence">   Decrease in amplitude between octaves. Lower values mean softer curves. Usually between .3 and .6. <param>
+         * <param name="lacunarity">    Increase in frequency between octaves. Usually around 2. </param>
+         *
+         * <returns>    A float. This is not guaranteed to be between -1 and 1, but will be close.</returns>
+         */
+
         public static float
         fbm_noise3(float x, float y, float z, int octaves, float persistence, float lacunarity)
         {
@@ -312,6 +352,17 @@ namespace StarfieldUtils.MathUtils
 
         static float F4 = 0.30901699437494745f; /* (sqrt(5.0) - 1.0) / 4.0 */
         static float G4 = 0.1381966011250105f; /* (5.0 - sqrt(5.0)) / 20.0 */
+
+        /**
+         * <summary>    4D Noise </summary>
+         *
+         * <param name="x"> The x coordinate. </param>
+         * <param name="y"> The y coordinate. </param>
+         * <param name="z"> The z coordinate. </param>
+         * <param name="w"> The w coordinate. </param>
+         *
+         * <returns>    A float. </returns>
+         */
 
         public static float noise4(float x, float y, float z, float w)
         {
@@ -404,6 +455,20 @@ namespace StarfieldUtils.MathUtils
 
             return (float)(27.0 * (noise[0] + noise[1] + noise[2] + noise[3] + noise[4]));
         }
+
+        /**
+         * <summary>    4D Simplex Noise. </summary>
+         *
+         * <param name="x">             The x coordinate. </param>
+         * <param name="y">             The y coordinate. </param>
+         * <param name="z">             The z coordinate. </param>
+         * <param name="w">             The w coordinate. </param>
+         * <param name="octaves">       The number of iterations of noise generation. </param>
+         * <param name="persistence">   Decrease in amplitude between octaves. Lower values mean softer curves. Usually between .3 and .6. <param>
+         * <param name="lacunarity">    Increase in frequency between octaves. Usually around 2. </param>
+         *
+         * <returns>    A float. </returns>
+         */
 
         public static float fbm_noise4(float x, float y, float z, float w, int octaves, float persistence, float lacunarity)
         {

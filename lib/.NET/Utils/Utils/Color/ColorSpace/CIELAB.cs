@@ -1,7 +1,18 @@
 ﻿using System;
 
+
+/**
+// namespace: StarfieldUtils.ColorUtils.ColorSpace
+//
+// summary:	Classes that represent different color spaces and utilities to convert between them.
+ */
+
 namespace StarfieldUtils.ColorUtils.ColorSpace
 {
+    /**
+     * <summary>    A CIELAB color space. </summary>
+     */
+
     public class CIELAB
     {
         private double l;
