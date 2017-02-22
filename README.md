@@ -15,7 +15,7 @@ The core of the Starfield is driven by a [Fadecandy](https://github.com/scanlime
 
 The prototype Starfield is a 7x5x4 voxel grid designed for hardware, animation, and construction technique testing.
 
-![Prototype Diagram](https://raw.githubusercontent.com/volaris/starfield/master/docs/images/Prototype.png)
+![Prototype Diagram](https://raw.githubusercontent.com/volaris/starfield/master/documentation/images/Prototype.png)
 
 ### Critical NW
 
