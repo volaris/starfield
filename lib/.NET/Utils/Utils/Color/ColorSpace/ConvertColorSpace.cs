@@ -2,12 +2,31 @@
 
 namespace StarfieldUtils.ColorUtils.ColorSpace
 {
+    //TODO: RGB conversion is lossy. Intermediate conversions should be to a non lossy color space like CIELAB instead.
+
+    /** <summary>    A class to convert color spaces. </summary> */
     public class ConvertColorSpace
     {
+        /**
+         * <summary>    Converts a CIELAB color to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
+
         public static System.Drawing.Color ToRGB(CIELAB colorSpace)
         {
             return ConvertColorSpace.ToRGB(ConvertColorSpace.ToCIEXYZ(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a CIEXYZ color  to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
 
         public static System.Drawing.Color ToRGB(CIEXYZ colorSpace)
         {
@@ -27,6 +46,14 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 Convert.ToInt32(Math.Round(rgb[2] * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
+        /**
+         * <summary>    Converts a CMYK color to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
+
         public static System.Drawing.Color ToRGB(CMYK colorSpace)
         {
             return System.Drawing.Color.FromArgb(
@@ -34,6 +61,14 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 Convert.ToInt32(Math.Round((1 - colorSpace.Magenta) * (1 - colorSpace.Black) * 255.0d, MidpointRounding.AwayFromZero)),
                 Convert.ToInt32(Math.Round((1 - colorSpace.Yellow) * (1 - colorSpace.Black) * 255.0d, MidpointRounding.AwayFromZero)));
         }
+
+        /**
+         * <summary>    Converts a HSB color to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
 
         public static System.Drawing.Color ToRGB(HSB colorSpace)
         {
@@ -96,6 +131,14 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 Convert.ToInt32(Math.Round(b * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
+        /**
+         * <summary>    Converts a HSL color to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
+
         public static System.Drawing.Color ToRGB(HSL colorSpace)
         {
             if(colorSpace.Saturation == 0)
@@ -145,6 +188,14 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             }
         }
 
+        /**
+         * <summary>    Converts a YUV color to a RGB color. </summary>
+         *
+         * <param name="colorSpace">    The color. </param>
+         *
+         * <returns>    ColorSpace as a System.Drawing.Color. </returns>
+         */
+
         public static System.Drawing.Color ToRGB(YUV colorSpace)
         {
             return System.Drawing.Color.FromArgb(
@@ -153,12 +204,29 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 Convert.ToInt32(Math.Round((colorSpace.Y + 2.032110091743119266 * colorSpace.U) * 255.0d, MidpointRounding.AwayFromZero)));
         }
 
+        /**
+         * <summary>    Converts a RGB color to a CIELAB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
+
         public static CIELAB ToCIELAB(System.Drawing.Color colorSpace)
         {
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToCIEXYZ(colorSpace));
         }
 
         delegate double xyzTransform(double d);
+
+        /**
+         * <summary>    Converts a CIEXYZ color to a CIELAB. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
+
         public static CIELAB ToCIELAB(CIEXYZ colorSpace)
         {
             xyzTransform f = x => ((x > 0.008856d) ? Math.Pow(x, (1.0d / 3.0d)) : (7.787d * x + 16.0d / 116.0d));
@@ -169,25 +237,65 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 200.0d * f(colorSpace.Y) - f(colorSpace.Z / 1.089d));
         }
 
+        /**
+         * <summary>    Converts a CMYK color to a CIELAB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
+
         public static CIELAB ToCIELAB(CMYK colorSpace)
         {
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSB color to a CIELAB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
 
         public static CIELAB ToCIELAB(HSB colorSpace)
         {
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a HSL color to a CIELAB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
+
         public static CIELAB ToCIELAB(HSL colorSpace)
         {
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a YUV color to a CIELAB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIELAB. </returns>
+         */
+
         public static CIELAB ToCIELAB(YUV colorSpace)
         {
             return ConvertColorSpace.ToCIELAB(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a RGB color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
 
         public static CIEXYZ ToCIEXYZ(System.Drawing.Color colorSpace)
         {
@@ -209,6 +317,14 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             );
         }
 
+        /**
+         * <summary>    Converts a CIELAB color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
+
         public static CIEXYZ ToCIEXYZ(CIELAB colorSpace)
         {
             double delta = 6.0 / 29.0;
@@ -228,25 +344,65 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
                 (fz > delta) ? 1.089d * fzCubed : (fz - 16.0 / 116.0) * 3 * (deltaSquared) * 1.089d);
         }
 
+        /**
+         * <summary>    Converts a CMYK color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
+
         public static CIEXYZ ToCIEXYZ(CMYK colorSpace)
         {
             return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSB color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
 
         public static CIEXYZ ToCIEXYZ(HSB colorSpace)
         {
             return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a HSL color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
+
         public static CIEXYZ ToCIEXYZ(HSL colorSpace)
         {
             return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a YUV color to a CIEXYZ color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CIEXYZ. </returns>
+         */
+
         public static CIEXYZ ToCIEXYZ(YUV colorSpace)
         {
             return ConvertColorSpace.ToCIEXYZ(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a RGB color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
 
         public static CMYK ToCMYK(System.Drawing.Color colorSpace)
         {
@@ -266,30 +422,78 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             }
         }
 
+        /**
+         * <summary>    Converts a CIELAB color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
+
         public static CMYK ToCMYK(CIELAB colorSpace)
         {
             return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a CIEXYC color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
 
         public static CMYK ToCMYK(CIEXYZ colorSpace)
         {
             return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a HSB color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
+
         public static CMYK ToCMYK(HSB colorSpace)
         {
             return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSL color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
 
         public static CMYK ToCMYK(HSL colorSpace)
         {
             return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a YUV color to a CMYK color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a CMYK. </returns>
+         */
+
         public static CMYK ToCMYK(YUV colorSpace)
         {
             return ConvertColorSpace.ToCMYK(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a RGB color to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
 
         public static HSB ToHSB(System.Drawing.Color colorSpace)
         {
@@ -338,30 +542,78 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             return new HSB(h, s, b);
         }
 
+        /**
+         * <summary>    Converts a CIELAB color to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
+
         public static HSB ToHSB(CIELAB colorSpace)
         {
             return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a CIEXYC color to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
 
         public static HSB ToHSB(CIEXYZ colorSpace)
         {
             return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a CMYK color to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
+
         public static HSB ToHSB(CMYK colorSpace)
         {
             return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSL color to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
 
         public static HSB ToHSB(HSL colorSpace)
         {
             return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a YUV to an HSB color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSB. </returns>
+         */
+
         public static HSB ToHSB(YUV colorSpace)
         {
             return ConvertColorSpace.ToHSB(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a RGB to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
 
         public static HSL ToHSL(System.Drawing.Color colorSpace)
         {
@@ -411,30 +663,78 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
             return new HSL(h, s, l);
         }
 
+        /**
+         * <summary>    Converts a CIELAB to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
+
         public static HSL ToHSL(CIELAB colorSpace)
         {
             return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a CIEXYZ to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
 
         public static HSL ToHSL(CIEXYZ colorSpace)
         {
             return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a CMYK to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
+
         public static HSL ToHSL(CMYK colorSpace)
         {
             return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSB color to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
 
         public static HSL ToHSL(HSB colorSpace)
         {
             return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a YUV color to an HSL color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a HSL. </returns>
+         */
+
         public static HSL ToHSL(YUV colorSpace)
         {
             return ConvertColorSpace.ToHSL(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a RGB to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
 
         public static YUV ToYUV(System.Drawing.Color colorSpace)
         {
@@ -450,25 +750,65 @@ namespace StarfieldUtils.ColorUtils.ColorSpace
 
         }
 
+        /**
+         * <summary>    Converts a CIELAB color to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
+
         public static YUV ToYUV(CIELAB colorSpace)
         {
             return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a CIEXYZ color to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
 
         public static YUV ToYUV(CIEXYZ colorSpace)
         {
             return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a CMYK color to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
+
         public static YUV ToYUV(CMYK colorSpace)
         {
             return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
 
+        /**
+         * <summary>    Converts a HSB color to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
+
         public static YUV ToYUV(HSB colorSpace)
         {
             return ConvertColorSpace.ToYUV(ConvertColorSpace.ToRGB(colorSpace));
         }
+
+        /**
+         * <summary>    Converts a HSL color to a YUV color. </summary>
+         *
+         * <param name="colorSpace">    The color space. </param>
+         *
+         * <returns>    ColorSpace as a YUV. </returns>
+         */
 
         public static YUV ToYUV(HSL colorSpace)
         {

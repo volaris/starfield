@@ -6,11 +6,25 @@ using System.Threading.Tasks;
 
 namespace StarfieldUtils.DataStructures
 {
+    /**
+     * <summary>    Generic Priority Queue. </summary>
+     *
+     * <typeparam name="T"> Generic type parameter. </typeparam>
+     */
+
     public class PriorityQueue<T>
     {
 
         private List<T> data;
         private Comparison<T> comparison;
+
+        /**
+         * <summary>    Constructor. </summary>
+         *
+         * <exception cref="ArgumentException"> Thrown when comparison is null and T is not an IComparable&lt;T&gt;. </exception>
+         *
+         * <param name="comparison">    (Optional) The comparison. </param>
+         */
 
         public PriorityQueue(Comparison<T> comparison = null)
         {
@@ -34,6 +48,12 @@ namespace StarfieldUtils.DataStructures
             }
         }
 
+        /**
+         * <summary>    Adds an object onto the end of this queue. </summary>
+         *
+         * <param name="item">  The item. </param>
+         */
+
         public void Enqueue(T item)
         {
             data.Add(item);
@@ -46,6 +66,12 @@ namespace StarfieldUtils.DataStructures
                 ci = pi;
             }
         }
+
+        /**
+         * <summary>    Removes the head object from this queue. </summary>
+         *
+         * <returns>    The head object from this queue. </returns>
+         */
 
         public T Dequeue()
         {
@@ -71,16 +97,34 @@ namespace StarfieldUtils.DataStructures
             return frontItem;
         }
 
+        /**
+         * <summary>    Returns the top-of-stack object without removing it. </summary>
+         *
+         * <returns>    The current top-of-stack object. </returns>
+         */
+
         public T Peek()
         {
             T frontItem = data[0];
             return frontItem;
         }
 
+        /**
+         * <summary>    Gets the count. </summary>
+         *
+         * <returns>    An int. </returns>
+         */
+
         public int Count()
         {
             return data.Count;
         }
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
 
         public override string ToString()
         {
@@ -90,6 +134,12 @@ namespace StarfieldUtils.DataStructures
             s += "count = " + data.Count;
             return s;
         }
+
+        /**
+         * <summary>    Query if this object is consistent. </summary>
+         *
+         * <returns>    True if consistent, false if not. </returns>
+         */
 
         public bool IsConsistent()
         {

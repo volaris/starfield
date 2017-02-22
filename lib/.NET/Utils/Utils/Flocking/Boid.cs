@@ -8,6 +8,7 @@ using StarfieldUtils.MathUtils;
 
 namespace StarfieldUtils.FlockingUtils
 {
+    /** <summary>    Represents an individual boid for the boid swarming algorithm. </summary> */
     public class Boid
     {
         private static Random rnd = new Random();
@@ -20,11 +21,28 @@ namespace StarfieldUtils.FlockingUtils
         public Vec3D Position;
         public Color Color;
 
+        /**
+         * <summary>    Constructor. </summary>
+         *
+         * <param name="x">     The x coordinate. </param>
+         * <param name="y">     The y coordinate. </param>
+         * <param name="z">     The z coordinate. </param>
+         * <param name="color"> The color. </param>
+         */
+
         public Boid(double x, double y, double z, Color color)
         {
             Position = new Vec3D(x, y, z);
             Color = color;
         }
+
+        /**
+         * <summary>    Constructor with random placement. </summary>
+         *
+         * <param name="center">    The center. </param>
+         * <param name="boundary">  The boundary. </param>
+         * <param name="color">     The color. </param>
+         */
 
         public Boid(Vec3D center, int boundary, Color color)
         {
@@ -32,6 +50,14 @@ namespace StarfieldUtils.FlockingUtils
             Position = new Vec3D(center.X + ((2 * boundary) * rand.NextDouble() - boundary), center.Y + ((2 * boundary) * rand.NextDouble() - boundary), center.Z + ((2 * boundary) * rand.NextDouble() - boundary));
             Color = color;
         }
+
+        /**
+         * <summary>    Movement step function. </summary>
+         *
+         * <param name="boids">     The boids. </param>
+         * <param name="goal">      The goal. </param>
+         * <param name="center">    The center. </param>
+         */
 
         public void Move(List<Boid> boids, Vec3D goal, Vec3D center)
         {

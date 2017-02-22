@@ -9,6 +9,7 @@ using Starfield;
 
 namespace Starfield.Networking
 {
+    /** <summary>    A TCP starfield client. This class sends the model's data to the pixel drivers via TCP. </summary> */
     public class TCPStarfieldClient
     {
         private StarfieldModel model;
@@ -21,8 +22,16 @@ namespace Starfield.Networking
         // stream to get jumbled.
         private Object lockObject = new Object();
 
-        // interval between flushing pixel data to the server
+        /** <summary>    interval between flushing pixel data to the server. </summary> */
         public ulong AnimationInterval = 30;
+
+        /**
+         * <summary>    Constructor. </summary>
+         *
+         * <param name="starfield"> The starfield Model. </param>
+         * <param name="ip">        The IP. </param>
+         * <param name="port">      The port. </param>
+         */
 
         public TCPStarfieldClient(StarfieldModel starfield, IPAddress ip, int port)
         {
@@ -77,6 +86,7 @@ namespace Starfield.Networking
             }
         }
 
+        /** <summary>    Stops this object. </summary> */
         public void Stop()
         {
             flush.Enabled = false;

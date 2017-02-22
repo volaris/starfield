@@ -9,8 +9,6 @@ namespace StarfieldUtils.ColorUtils
 {
     /**
      * <summary>    Various helper functions for manipulating color. </summary>
-     *
-     * <remarks>    Volar, 2/13/2017. </remarks>
      */
 
     public class ColorUtils

@@ -9,6 +9,10 @@ using Starfield.Presence;
 
 namespace Starfield
 {
+    /**
+     * <summary>    This is the core Starfield class. It defines and manages all of the properties that determine what is displayed on the Starfield</summary>
+     */
+
     public class StarfieldModel
     {
         // these should match the values for the simulator or the Starfield

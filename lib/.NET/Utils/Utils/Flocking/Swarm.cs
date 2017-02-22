@@ -8,10 +8,22 @@ using StarfieldUtils.MathUtils;
 
 namespace StarfieldUtils.FlockingUtils
 {
+    /** <summary>    Represents a swarm of boids. </summary> */
     public class Swarm
     {
+        /** <summary>    The boids. </summary> */
         public List<Boid> Boids = new List<Boid>();
+        /** <summary>    The goal. </summary> */
         public Vec3D Goal = null;
+
+        /**
+         * <summary>    Constructor. </summary>
+         *
+         * <param name="center">    The center. </param>
+         * <param name="boundary">  The boundary. </param>
+         * <param name="count">     Number of. </param>
+         * <param name="colors">    The colors. </param>
+         */
 
         public Swarm(Vec3D center, int boundary, int count, Color[] colors)
         {
@@ -26,6 +38,7 @@ namespace StarfieldUtils.FlockingUtils
             }
         }
 
+        /** <summary>    Move all the boids. </summary> */
         public void MoveBoids()
         {
             Vec3D center = GetCenter();
@@ -34,6 +47,12 @@ namespace StarfieldUtils.FlockingUtils
                 boid.Move(Boids, Goal, center);
             }
         }
+
+        /**
+         * <summary>    Gets the center of the flock. </summary>
+         *
+         * <returns>    The center. </returns>
+         */
 
         public Vec3D GetCenter()
         {

@@ -49,6 +49,7 @@
     <Compile Include="DriverLoader.cs" />
     <Compile Include="DriverType.cs" />
     <Compile Include="IStarfieldDriver.cs" />
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="networking\OPCClient.cs" />
     <Compile Include="networking\TCPStarfieldClient.cs" />
     <Compile Include="networking\TCPStarfieldServer.cs" />

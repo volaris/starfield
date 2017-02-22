@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="925632d5-b597-4623-a15f-b5b538d382f7" Title="Namespaces" Url="html/R_Project_Documentation.htm">
-    <HelpTOCNode Id="316801f8-4a22-4402-9153-7e5be241dc70" Title="ClipperLib" Url="html/N_ClipperLib.htm">
-      <HelpTOCNode Id="efd78a6c-d833-4d47-8d10-9e87cd92a009" Title="Clipper Class" Url="html/T_ClipperLib_Clipper.htm">
+  <HelpTOCNode Id="97c7afd6-b964-45a6-867a-f06a50fd7172" Title="Namespaces" Url="html/R_Project_Documentation.htm">
+    <HelpTOCNode Id="da6aef41-844f-402b-afe8-e49485113142" Title="ClipperLib" Url="html/N_ClipperLib.htm">
+      <HelpTOCNode Id="06f0f0b5-4fab-4335-a42c-6c8cc8d91fd5" Title="Clipper Class" Url="html/T_ClipperLib_Clipper.htm">
         <HelpTOCNode Title="Clipper Constructor " Url="html/M_ClipperLib_Clipper__ctor.htm" />
-        <HelpTOCNode Id="ac5d01f3-d6bb-43f0-a77b-a8326573416c" Title="Clipper Properties" Url="html/Properties_T_ClipperLib_Clipper.htm">
+        <HelpTOCNode Id="57a4e0e1-a838-40df-9a5f-471f37264810" Title="Clipper Properties" Url="html/Properties_T_ClipperLib_Clipper.htm">
           <HelpTOCNode Title="ReverseSolution Property " Url="html/P_ClipperLib_Clipper_ReverseSolution.htm" />
           <HelpTOCNode Title="StrictlySimple Property " Url="html/P_ClipperLib_Clipper_StrictlySimple.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e7bfab56-bbc6-4d71-aa69-ba9e8fd65b79" Title="Clipper Methods" Url="html/Methods_T_ClipperLib_Clipper.htm">
+        <HelpTOCNode Id="e144c1ab-d823-44e2-9c8f-94bb449132a2" Title="Clipper Methods" Url="html/Methods_T_ClipperLib_Clipper.htm">
           <HelpTOCNode Title="Area Method " Url="html/M_ClipperLib_Clipper_Area.htm" />
           <HelpTOCNode Title="CleanPolygon Method " Url="html/M_ClipperLib_Clipper_CleanPolygon.htm" />
           <HelpTOCNode Title="CleanPolygons Method " Url="html/M_ClipperLib_Clipper_CleanPolygons.htm" />
           <HelpTOCNode Title="ClosedPathsFromPolyTree Method " Url="html/M_ClipperLib_Clipper_ClosedPathsFromPolyTree.htm" />
-          <HelpTOCNode Id="17ac328f-ce7e-450c-b9ec-e0ccc4d98b59" Title="Execute Method " Url="html/Overload_ClipperLib_Clipper_Execute.htm">
+          <HelpTOCNode Id="485b8dd7-99a9-443d-bbfe-9cbc3f7d299a" Title="Execute Method " Url="html/Overload_ClipperLib_Clipper_Execute.htm">
             <HelpTOCNode Title="Execute Method (ClipType, PolyTree, PolyFillType)" Url="html/M_ClipperLib_Clipper_Execute.htm" />
             <HelpTOCNode Title="Execute Method (ClipType, List(List(IntPoint)), PolyFillType)" Url="html/M_ClipperLib_Clipper_Execute_2.htm" />
             <HelpTOCNode Title="Execute Method (ClipType, PolyTree, PolyFillType, PolyFillType)" Url="html/M_ClipperLib_Clipper_Execute_1.htm" />
             <HelpTOCNode Title="Execute Method (ClipType, List(List(IntPoint)), PolyFillType, PolyFillType)" Url="html/M_ClipperLib_Clipper_Execute_3.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="MinkowskiDiff Method " Url="html/M_ClipperLib_Clipper_MinkowskiDiff.htm" />
-          <HelpTOCNode Id="e71b0916-6574-4205-9818-9b0296059d30" Title="MinkowskiSum Method " Url="html/Overload_ClipperLib_Clipper_MinkowskiSum.htm">
+          <HelpTOCNode Id="b4ca6e22-186e-425e-9f0c-5e483c087dcd" Title="MinkowskiSum Method " Url="html/Overload_ClipperLib_Clipper_MinkowskiSum.htm">
             <HelpTOCNode Title="MinkowskiSum Method (List(IntPoint), List(IntPoint), Boolean)" Url="html/M_ClipperLib_Clipper_MinkowskiSum.htm" />
             <HelpTOCNode Title="MinkowskiSum Method (List(IntPoint), List(List(IntPoint)), Boolean)" Url="html/M_ClipperLib_Clipper_MinkowskiSum_1.htm" />
           </HelpTOCNode>
@@ -33,88 +33,88 @@
           <HelpTOCNode Title="SimplifyPolygon Method " Url="html/M_ClipperLib_Clipper_SimplifyPolygon.htm" />
           <HelpTOCNode Title="SimplifyPolygons Method " Url="html/M_ClipperLib_Clipper_SimplifyPolygons.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="0d034f6f-d7e1-4c35-9c54-c47054b2f07c" Title="Clipper Fields" Url="html/Fields_T_ClipperLib_Clipper.htm">
+        <HelpTOCNode Id="c327e4eb-36f8-42cc-b478-a14bc8f49a52" Title="Clipper Fields" Url="html/Fields_T_ClipperLib_Clipper.htm">
           <HelpTOCNode Title="ioPreserveCollinear Field" Url="html/F_ClipperLib_Clipper_ioPreserveCollinear.htm" />
           <HelpTOCNode Title="ioReverseSolution Field" Url="html/F_ClipperLib_Clipper_ioReverseSolution.htm" />
           <HelpTOCNode Title="ioStrictlySimple Field" Url="html/F_ClipperLib_Clipper_ioStrictlySimple.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d8bafae7-9b49-4949-ba83-aa3b29b7ba8b" Title="ClipperBase Class" Url="html/T_ClipperLib_ClipperBase.htm">
-        <HelpTOCNode Id="40ab1f4f-6801-477b-8a26-e210171d5113" Title="ClipperBase Properties" Url="html/Properties_T_ClipperLib_ClipperBase.htm">
+      <HelpTOCNode Id="ade65212-a2ee-4dc2-ba65-200265e32959" Title="ClipperBase Class" Url="html/T_ClipperLib_ClipperBase.htm">
+        <HelpTOCNode Id="3b03c018-c25b-4779-81ca-8fa68ead3ee1" Title="ClipperBase Properties" Url="html/Properties_T_ClipperLib_ClipperBase.htm">
           <HelpTOCNode Title="PreserveCollinear Property " Url="html/P_ClipperLib_ClipperBase_PreserveCollinear.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="bf7a8863-d214-4382-90cf-9f00934d3740" Title="ClipperBase Methods" Url="html/Methods_T_ClipperLib_ClipperBase.htm">
+        <HelpTOCNode Id="38d3f259-a968-4808-80a9-a9cb6de1c3c3" Title="ClipperBase Methods" Url="html/Methods_T_ClipperLib_ClipperBase.htm">
           <HelpTOCNode Title="AddPath Method " Url="html/M_ClipperLib_ClipperBase_AddPath.htm" />
           <HelpTOCNode Title="AddPaths Method " Url="html/M_ClipperLib_ClipperBase_AddPaths.htm" />
           <HelpTOCNode Title="Clear Method " Url="html/M_ClipperLib_ClipperBase_Clear.htm" />
           <HelpTOCNode Title="GetBounds Method " Url="html/M_ClipperLib_ClipperBase_GetBounds.htm" />
           <HelpTOCNode Title="Swap Method " Url="html/M_ClipperLib_ClipperBase_Swap.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f58fcb02-138f-4304-994f-7626dd9eee0c" Title="ClipperBase Fields" Url="html/Fields_T_ClipperLib_ClipperBase.htm">
+        <HelpTOCNode Id="d917f3eb-ce46-4b07-bfda-fcdc1d89d2aa" Title="ClipperBase Fields" Url="html/Fields_T_ClipperLib_ClipperBase.htm">
           <HelpTOCNode Title="hiRange Field" Url="html/F_ClipperLib_ClipperBase_hiRange.htm" />
           <HelpTOCNode Title="loRange Field" Url="html/F_ClipperLib_ClipperBase_loRange.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="abeb1a3f-0276-42be-bd07-6be881f3ab65" Title="ClipperOffset Class" Url="html/T_ClipperLib_ClipperOffset.htm">
+      <HelpTOCNode Id="dffe0023-ecc7-401c-8173-85fab313b4bc" Title="ClipperOffset Class" Url="html/T_ClipperLib_ClipperOffset.htm">
         <HelpTOCNode Title="ClipperOffset Constructor " Url="html/M_ClipperLib_ClipperOffset__ctor.htm" />
-        <HelpTOCNode Id="e4f29ede-15bf-4e66-8b3f-7823d2e7cee1" Title="ClipperOffset Properties" Url="html/Properties_T_ClipperLib_ClipperOffset.htm">
+        <HelpTOCNode Id="cfb539ad-20dd-48ae-8986-11982d71fbf6" Title="ClipperOffset Properties" Url="html/Properties_T_ClipperLib_ClipperOffset.htm">
           <HelpTOCNode Title="ArcTolerance Property " Url="html/P_ClipperLib_ClipperOffset_ArcTolerance.htm" />
           <HelpTOCNode Title="MiterLimit Property " Url="html/P_ClipperLib_ClipperOffset_MiterLimit.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7313aefa-b060-4f32-a852-c7b3a05900cd" Title="ClipperOffset Methods" Url="html/Methods_T_ClipperLib_ClipperOffset.htm">
+        <HelpTOCNode Id="3c0a2598-7392-4d93-9c0e-b5b141964805" Title="ClipperOffset Methods" Url="html/Methods_T_ClipperLib_ClipperOffset.htm">
           <HelpTOCNode Title="AddPath Method " Url="html/M_ClipperLib_ClipperOffset_AddPath.htm" />
           <HelpTOCNode Title="AddPaths Method " Url="html/M_ClipperLib_ClipperOffset_AddPaths.htm" />
           <HelpTOCNode Title="Clear Method " Url="html/M_ClipperLib_ClipperOffset_Clear.htm" />
-          <HelpTOCNode Id="ff692a29-5a52-4e8f-813a-cb105b97ea55" Title="Execute Method " Url="html/Overload_ClipperLib_ClipperOffset_Execute.htm">
+          <HelpTOCNode Id="d6a17b7e-0ad3-4692-8683-2e890d56877e" Title="Execute Method " Url="html/Overload_ClipperLib_ClipperOffset_Execute.htm">
             <HelpTOCNode Title="Execute Method (List(List(IntPoint)), Double)" Url="html/M_ClipperLib_ClipperOffset_Execute_1.htm" />
             <HelpTOCNode Title="Execute Method (PolyTree, Double)" Url="html/M_ClipperLib_ClipperOffset_Execute.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="ClipType Enumeration" Url="html/T_ClipperLib_ClipType.htm" />
-      <HelpTOCNode Id="5806d71b-53a5-4f38-944b-7c615d77e6ee" Title="DoublePoint Structure" Url="html/T_ClipperLib_DoublePoint.htm">
-        <HelpTOCNode Id="a1bd40da-e5d4-4a77-ae10-bc4cb057aa09" Title="DoublePoint Constructor " Url="html/Overload_ClipperLib_DoublePoint__ctor.htm">
+      <HelpTOCNode Id="e6c0d8d0-4a50-4001-9c62-87688610f137" Title="DoublePoint Structure" Url="html/T_ClipperLib_DoublePoint.htm">
+        <HelpTOCNode Id="3de67de0-d401-4d43-bb84-793dfeb5ba68" Title="DoublePoint Constructor " Url="html/Overload_ClipperLib_DoublePoint__ctor.htm">
           <HelpTOCNode Title="DoublePoint Constructor (DoublePoint)" Url="html/M_ClipperLib_DoublePoint__ctor.htm" />
           <HelpTOCNode Title="DoublePoint Constructor (IntPoint)" Url="html/M_ClipperLib_DoublePoint__ctor_1.htm" />
           <HelpTOCNode Title="DoublePoint Constructor (Double, Double)" Url="html/M_ClipperLib_DoublePoint__ctor_2.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="DoublePoint Methods" Url="html/Methods_T_ClipperLib_DoublePoint.htm" />
-        <HelpTOCNode Id="bcfbceed-5265-4dd8-90f9-34a16216d9d7" Title="DoublePoint Fields" Url="html/Fields_T_ClipperLib_DoublePoint.htm">
+        <HelpTOCNode Id="99f3e069-82fe-4b34-8d22-5a5c6c7a9077" Title="DoublePoint Fields" Url="html/Fields_T_ClipperLib_DoublePoint.htm">
           <HelpTOCNode Title="X Field" Url="html/F_ClipperLib_DoublePoint_X.htm" />
           <HelpTOCNode Title="Y Field" Url="html/F_ClipperLib_DoublePoint_Y.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="EndType Enumeration" Url="html/T_ClipperLib_EndType.htm" />
-      <HelpTOCNode Id="01aee2a2-ce19-4c96-a69d-868dd09bfb0b" Title="IntersectNode Class" Url="html/T_ClipperLib_IntersectNode.htm">
+      <HelpTOCNode Id="534c0ca7-0a01-45f2-8190-131ac325e6da" Title="IntersectNode Class" Url="html/T_ClipperLib_IntersectNode.htm">
         <HelpTOCNode Title="IntersectNode Constructor " Url="html/M_ClipperLib_IntersectNode__ctor.htm" />
         <HelpTOCNode Title="IntersectNode Methods" Url="html/Methods_T_ClipperLib_IntersectNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="2882b5d4-0ef1-4ab8-acab-56904566bbb8" Title="IntPoint Structure" Url="html/T_ClipperLib_IntPoint.htm">
-        <HelpTOCNode Id="46d45434-1f4e-46f8-a9cd-e6ca31d721a8" Title="IntPoint Constructor " Url="html/Overload_ClipperLib_IntPoint__ctor.htm">
+      <HelpTOCNode Id="4d1b6c1a-d7a9-4c6a-9994-4ecd859a16e4" Title="IntPoint Structure" Url="html/T_ClipperLib_IntPoint.htm">
+        <HelpTOCNode Id="cfec0d18-7804-4748-8c0e-9d6111c240b9" Title="IntPoint Constructor " Url="html/Overload_ClipperLib_IntPoint__ctor.htm">
           <HelpTOCNode Title="IntPoint Constructor (IntPoint)" Url="html/M_ClipperLib_IntPoint__ctor.htm" />
           <HelpTOCNode Title="IntPoint Constructor (Double, Double)" Url="html/M_ClipperLib_IntPoint__ctor_1.htm" />
           <HelpTOCNode Title="IntPoint Constructor (Int64, Int64)" Url="html/M_ClipperLib_IntPoint__ctor_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="62c99f02-531d-4594-85f8-402c2ff4539a" Title="IntPoint Methods" Url="html/Methods_T_ClipperLib_IntPoint.htm">
+        <HelpTOCNode Id="833b5d2c-b765-45fb-bd0a-2beba3d7b54f" Title="IntPoint Methods" Url="html/Methods_T_ClipperLib_IntPoint.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_ClipperLib_IntPoint_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_ClipperLib_IntPoint_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a98d19c9-948c-419d-82b0-cf9337605754" Title="IntPoint Operators" Url="html/Operators_T_ClipperLib_IntPoint.htm">
+        <HelpTOCNode Id="f7a9fbdf-ae6f-4454-9cdb-fc0a55a59f13" Title="IntPoint Operators" Url="html/Operators_T_ClipperLib_IntPoint.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_ClipperLib_IntPoint_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_ClipperLib_IntPoint_op_Inequality.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ce9e4a5e-a0de-4eb8-b76f-b012af58b7d9" Title="IntPoint Fields" Url="html/Fields_T_ClipperLib_IntPoint.htm">
+        <HelpTOCNode Id="75601be0-9e47-43a1-a05a-f71c47ae18b0" Title="IntPoint Fields" Url="html/Fields_T_ClipperLib_IntPoint.htm">
           <HelpTOCNode Title="X Field" Url="html/F_ClipperLib_IntPoint_X.htm" />
           <HelpTOCNode Title="Y Field" Url="html/F_ClipperLib_IntPoint_Y.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2df7ba14-c887-4a3d-b6e0-9669d6159564" Title="IntRect Structure" Url="html/T_ClipperLib_IntRect.htm">
-        <HelpTOCNode Id="9a2386fb-ffbd-4324-b7d3-f5aba635a5d0" Title="IntRect Constructor " Url="html/Overload_ClipperLib_IntRect__ctor.htm">
+      <HelpTOCNode Id="ed12414e-eb4d-4958-b59e-d1a9205c7247" Title="IntRect Structure" Url="html/T_ClipperLib_IntRect.htm">
+        <HelpTOCNode Id="e819a622-ac1f-4693-be06-f3e6f5b30f9e" Title="IntRect Constructor " Url="html/Overload_ClipperLib_IntRect__ctor.htm">
           <HelpTOCNode Title="IntRect Constructor (IntRect)" Url="html/M_ClipperLib_IntRect__ctor.htm" />
           <HelpTOCNode Title="IntRect Constructor (Int64, Int64, Int64, Int64)" Url="html/M_ClipperLib_IntRect__ctor_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="IntRect Methods" Url="html/Methods_T_ClipperLib_IntRect.htm" />
-        <HelpTOCNode Id="5e7ccaa7-46e7-4e1a-afd7-c974d917a9ef" Title="IntRect Fields" Url="html/Fields_T_ClipperLib_IntRect.htm">
+        <HelpTOCNode Id="0de0eaee-47cf-47bd-8462-d4ce57bb75f6" Title="IntRect Fields" Url="html/Fields_T_ClipperLib_IntRect.htm">
           <HelpTOCNode Title="bottom Field" Url="html/F_ClipperLib_IntRect_bottom.htm" />
           <HelpTOCNode Title="left Field" Url="html/F_ClipperLib_IntRect_left.htm" />
           <HelpTOCNode Title="right Field" Url="html/F_ClipperLib_IntRect_right.htm" />
@@ -122,16 +122,16 @@
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="JoinType Enumeration" Url="html/T_ClipperLib_JoinType.htm" />
-      <HelpTOCNode Id="59f51e11-cb1f-4bb3-8308-ee347005d887" Title="MyIntersectNodeSort Class" Url="html/T_ClipperLib_MyIntersectNodeSort.htm">
+      <HelpTOCNode Id="6fa64998-8500-48fd-8045-d48a14f9307c" Title="MyIntersectNodeSort Class" Url="html/T_ClipperLib_MyIntersectNodeSort.htm">
         <HelpTOCNode Title="MyIntersectNodeSort Constructor " Url="html/M_ClipperLib_MyIntersectNodeSort__ctor.htm" />
-        <HelpTOCNode Id="13272d2a-8c03-4114-9dc6-b6358ccdc4bb" Title="MyIntersectNodeSort Methods" Url="html/Methods_T_ClipperLib_MyIntersectNodeSort.htm">
+        <HelpTOCNode Id="b945207f-ea3f-44e2-be97-7aa0cb2de59e" Title="MyIntersectNodeSort Methods" Url="html/Methods_T_ClipperLib_MyIntersectNodeSort.htm">
           <HelpTOCNode Title="Compare Method " Url="html/M_ClipperLib_MyIntersectNodeSort_Compare.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="PolyFillType Enumeration" Url="html/T_ClipperLib_PolyFillType.htm" />
-      <HelpTOCNode Id="82ceade0-a037-42fb-9235-55c014faea20" Title="PolyNode Class" Url="html/T_ClipperLib_PolyNode.htm">
+      <HelpTOCNode Id="6129564a-b25b-4d6a-bb2e-054562ca66af" Title="PolyNode Class" Url="html/T_ClipperLib_PolyNode.htm">
         <HelpTOCNode Title="PolyNode Constructor " Url="html/M_ClipperLib_PolyNode__ctor.htm" />
-        <HelpTOCNode Id="2bc3e0fb-4bb9-4aa3-89a4-c4beb8992d6c" Title="PolyNode Properties" Url="html/Properties_T_ClipperLib_PolyNode.htm">
+        <HelpTOCNode Id="b826227e-28c5-46ca-bcf4-67b99a52ec3d" Title="PolyNode Properties" Url="html/Properties_T_ClipperLib_PolyNode.htm">
           <HelpTOCNode Title="ChildCount Property " Url="html/P_ClipperLib_PolyNode_ChildCount.htm" />
           <HelpTOCNode Title="Childs Property " Url="html/P_ClipperLib_PolyNode_Childs.htm" />
           <HelpTOCNode Title="Contour Property " Url="html/P_ClipperLib_PolyNode_Contour.htm" />
@@ -139,25 +139,25 @@
           <HelpTOCNode Title="IsOpen Property " Url="html/P_ClipperLib_PolyNode_IsOpen.htm" />
           <HelpTOCNode Title="Parent Property " Url="html/P_ClipperLib_PolyNode_Parent.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7d1f2d5f-b4cd-4a90-8a78-a388027185b1" Title="PolyNode Methods" Url="html/Methods_T_ClipperLib_PolyNode.htm">
+        <HelpTOCNode Id="b5564cba-b3ae-434f-9e2a-a5f4cd3c3060" Title="PolyNode Methods" Url="html/Methods_T_ClipperLib_PolyNode.htm">
           <HelpTOCNode Title="GetNext Method " Url="html/M_ClipperLib_PolyNode_GetNext.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c4fb9d9c-d755-4e53-bbd4-17f8e492a107" Title="PolyTree Class" Url="html/T_ClipperLib_PolyTree.htm">
+      <HelpTOCNode Id="0616cd5a-0347-4a2d-bbcb-22342903ac38" Title="PolyTree Class" Url="html/T_ClipperLib_PolyTree.htm">
         <HelpTOCNode Title="PolyTree Constructor " Url="html/M_ClipperLib_PolyTree__ctor.htm" />
-        <HelpTOCNode Id="3db6919a-5fe6-48c6-841b-127695487a5a" Title="PolyTree Properties" Url="html/Properties_T_ClipperLib_PolyTree.htm">
+        <HelpTOCNode Id="8d8cd1e3-45e6-42fb-86ae-bd0098a63d3e" Title="PolyTree Properties" Url="html/Properties_T_ClipperLib_PolyTree.htm">
           <HelpTOCNode Title="Total Property " Url="html/P_ClipperLib_PolyTree_Total.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="63b5ee7b-7b59-41ee-9b4b-c731b7e0142b" Title="PolyTree Methods" Url="html/Methods_T_ClipperLib_PolyTree.htm">
+        <HelpTOCNode Id="5c4c4117-6135-4296-9261-c7442f2977a8" Title="PolyTree Methods" Url="html/Methods_T_ClipperLib_PolyTree.htm">
           <HelpTOCNode Title="Clear Method " Url="html/M_ClipperLib_PolyTree_Clear.htm" />
           <HelpTOCNode Title="GetFirst Method " Url="html/M_ClipperLib_PolyTree_GetFirst.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="PolyType Enumeration" Url="html/T_ClipperLib_PolyType.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="1ca0afe1-f963-4eb6-8112-c73863cd3105" Title="Delaunay" Url="html/N_Delaunay.htm">
-      <HelpTOCNode Id="83859077-407c-45fc-a50b-76eec4477d53" Title="DelaunayHelpers Class" Url="html/T_Delaunay_DelaunayHelpers.htm">
-        <HelpTOCNode Id="09b610d1-3a9b-4b7c-9360-f94870225a40" Title="DelaunayHelpers Methods" Url="html/Methods_T_Delaunay_DelaunayHelpers.htm">
+    <HelpTOCNode Id="f150b1ee-0b7a-4112-a1cd-822a01c293c8" Title="Delaunay" Url="html/N_Delaunay.htm">
+      <HelpTOCNode Id="1a05515c-b723-40a0-94c1-5e4264e812a4" Title="DelaunayHelpers Class" Url="html/T_Delaunay_DelaunayHelpers.htm">
+        <HelpTOCNode Id="7d3dbbb8-9548-40d1-8bb7-2e9d0074bb26" Title="DelaunayHelpers Methods" Url="html/Methods_T_Delaunay_DelaunayHelpers.htm">
           <HelpTOCNode Title="DelaunayLinesForEdges Method " Url="html/M_Delaunay_DelaunayHelpers_DelaunayLinesForEdges.htm" />
           <HelpTOCNode Title="Kruskal Method " Url="html/M_Delaunay_DelaunayHelpers_Kruskal.htm" />
           <HelpTOCNode Title="SelectEdgesForSitePoint Method " Url="html/M_Delaunay_DelaunayHelpers_SelectEdgesForSitePoint.htm" />
@@ -165,8 +165,8 @@
           <HelpTOCNode Title="VisibleLineSegments Method " Url="html/M_Delaunay_DelaunayHelpers_VisibleLineSegments.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="5cfeb60b-c7b1-42a4-a442-1e465aea9bb1" Title="Edge Class" Url="html/T_Delaunay_Edge.htm">
-        <HelpTOCNode Id="fed6f9d8-6de6-49e7-9bd7-496a18138284" Title="Edge Properties" Url="html/Properties_T_Delaunay_Edge.htm">
+      <HelpTOCNode Id="a450b03b-851c-436d-8df5-4767142d74ed" Title="Edge Class" Url="html/T_Delaunay_Edge.htm">
+        <HelpTOCNode Id="be916260-83d5-416b-aeb3-f7a3264aea24" Title="Edge Properties" Url="html/Properties_T_Delaunay_Edge.htm">
           <HelpTOCNode Title="clippedEnds Property " Url="html/P_Delaunay_Edge_clippedEnds.htm" />
           <HelpTOCNode Title="leftSite Property " Url="html/P_Delaunay_Edge_leftSite.htm" />
           <HelpTOCNode Title="leftVertex Property " Url="html/P_Delaunay_Edge_leftVertex.htm" />
@@ -174,7 +174,7 @@
           <HelpTOCNode Title="rightVertex Property " Url="html/P_Delaunay_Edge_rightVertex.htm" />
           <HelpTOCNode Title="visible Property " Url="html/P_Delaunay_Edge_visible.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a866faeb-b0ac-49d8-b4ea-3e63da88725e" Title="Edge Methods" Url="html/Methods_T_Delaunay_Edge.htm">
+        <HelpTOCNode Id="d27274ca-5b8a-444c-8c57-b4622c962aab" Title="Edge Methods" Url="html/Methods_T_Delaunay_Edge.htm">
           <HelpTOCNode Title="ClipVertices Method " Url="html/M_Delaunay_Edge_ClipVertices.htm" />
           <HelpTOCNode Title="CompareSitesDistances Method " Url="html/M_Delaunay_Edge_CompareSitesDistances.htm" />
           <HelpTOCNode Title="CompareSitesDistances_MAX Method " Url="html/M_Delaunay_Edge_CompareSitesDistances_MAX.htm" />
@@ -189,23 +189,23 @@
           <HelpTOCNode Title="Vertex Method " Url="html/M_Delaunay_Edge_Vertex.htm" />
           <HelpTOCNode Title="VoronoiEdge Method " Url="html/M_Delaunay_Edge_VoronoiEdge.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a40b68fd-c2eb-4795-b667-fb7b1d3b6793" Title="Edge Fields" Url="html/Fields_T_Delaunay_Edge.htm">
+        <HelpTOCNode Id="6393c842-14ca-467e-93fd-87bd102fd4ca" Title="Edge Fields" Url="html/Fields_T_Delaunay_Edge.htm">
           <HelpTOCNode Title="a Field" Url="html/F_Delaunay_Edge_a.htm" />
           <HelpTOCNode Title="b Field" Url="html/F_Delaunay_Edge_b.htm" />
           <HelpTOCNode Title="c Field" Url="html/F_Delaunay_Edge_c.htm" />
           <HelpTOCNode Title="DELETED Field" Url="html/F_Delaunay_Edge_DELETED.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="91483585-c54f-4b5b-940b-08e430be126f" Title="Halfedge Class" Url="html/T_Delaunay_Halfedge.htm">
+      <HelpTOCNode Id="9351bdc8-51b3-4714-9e4f-1942d406492b" Title="Halfedge Class" Url="html/T_Delaunay_Halfedge.htm">
         <HelpTOCNode Title="Halfedge Constructor " Url="html/M_Delaunay_Halfedge__ctor.htm" />
-        <HelpTOCNode Id="d7a2cb18-5312-4583-b9ef-f5c4e97ca46a" Title="Halfedge Methods" Url="html/Methods_T_Delaunay_Halfedge.htm">
+        <HelpTOCNode Id="552368bc-5aec-4724-87fe-b4b433d80ffa" Title="Halfedge Methods" Url="html/Methods_T_Delaunay_Halfedge.htm">
           <HelpTOCNode Title="Create Method " Url="html/M_Delaunay_Halfedge_Create.htm" />
           <HelpTOCNode Title="CreateDummy Method " Url="html/M_Delaunay_Halfedge_CreateDummy.htm" />
           <HelpTOCNode Title="Dispose Method " Url="html/M_Delaunay_Halfedge_Dispose.htm" />
           <HelpTOCNode Title="ReallyDispose Method " Url="html/M_Delaunay_Halfedge_ReallyDispose.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_Delaunay_Halfedge_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="702d53bb-34ed-4037-b107-28f249c4e4ea" Title="Halfedge Fields" Url="html/Fields_T_Delaunay_Halfedge.htm">
+        <HelpTOCNode Id="08e894e6-078d-4d18-a16e-9671d365b600" Title="Halfedge Fields" Url="html/Fields_T_Delaunay_Halfedge.htm">
           <HelpTOCNode Title="edge Field" Url="html/F_Delaunay_Halfedge_edge.htm" />
           <HelpTOCNode Title="edgeListLeftNeighbor Field" Url="html/F_Delaunay_Halfedge_edgeListLeftNeighbor.htm" />
           <HelpTOCNode Title="edgeListRightNeighbor Field" Url="html/F_Delaunay_Halfedge_edgeListRightNeighbor.htm" />
@@ -215,28 +215,28 @@
           <HelpTOCNode Title="ystar Field" Url="html/F_Delaunay_Halfedge_ystar.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1eadeebc-eccc-4c55-a09b-b36c08e1442e" Title="ICoord Interface" Url="html/T_Delaunay_ICoord.htm">
-        <HelpTOCNode Id="f907d6e4-90c9-4301-b9c0-899856528c59" Title="ICoord Properties" Url="html/Properties_T_Delaunay_ICoord.htm">
+      <HelpTOCNode Id="34848728-d77d-4727-8fe2-f48b89a07645" Title="ICoord Interface" Url="html/T_Delaunay_ICoord.htm">
+        <HelpTOCNode Id="9edb26ba-f514-48bf-ac35-076a07ef19f9" Title="ICoord Properties" Url="html/Properties_T_Delaunay_ICoord.htm">
           <HelpTOCNode Title="Coord Property " Url="html/P_Delaunay_ICoord_Coord.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="KruskalType Enumeration" Url="html/T_Delaunay_KruskalType.htm" />
-      <HelpTOCNode Id="3aa1f4a3-3e8c-40c8-8beb-8aa8a2801334" Title="Node Class" Url="html/T_Delaunay_Node.htm">
+      <HelpTOCNode Id="88ca6c3a-d039-4479-bd8e-3dc201815dbb" Title="Node Class" Url="html/T_Delaunay_Node.htm">
         <HelpTOCNode Title="Node Constructor " Url="html/M_Delaunay_Node__ctor.htm" />
         <HelpTOCNode Title="Node Methods" Url="html/Methods_T_Delaunay_Node.htm" />
-        <HelpTOCNode Id="2d91b4ad-f534-47d4-b85d-18b831da3d5f" Title="Node Fields" Url="html/Fields_T_Delaunay_Node.htm">
+        <HelpTOCNode Id="2aac273c-2f47-4409-b950-b8e362fa95a5" Title="Node Fields" Url="html/Fields_T_Delaunay_Node.htm">
           <HelpTOCNode Title="parent Field" Url="html/F_Delaunay_Node_parent.htm" />
           <HelpTOCNode Title="pool Field" Url="html/F_Delaunay_Node_pool.htm" />
           <HelpTOCNode Title="treeSize Field" Url="html/F_Delaunay_Node_treeSize.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="e174e698-2d4c-4980-85be-5e101f6c3bd6" Title="Site Class" Url="html/T_Delaunay_Site.htm">
-        <HelpTOCNode Id="00d617ee-56a2-4e95-b053-4fb9c1802910" Title="Site Properties" Url="html/Properties_T_Delaunay_Site.htm">
+      <HelpTOCNode Id="d48205b2-d199-4702-b401-2d511a23b7a7" Title="Site Class" Url="html/T_Delaunay_Site.htm">
+        <HelpTOCNode Id="e2739e2e-28cb-4289-831d-55c523e91f44" Title="Site Properties" Url="html/Properties_T_Delaunay_Site.htm">
           <HelpTOCNode Title="Coord Property " Url="html/P_Delaunay_Site_Coord.htm" />
           <HelpTOCNode Title="edgeOrientations Property " Url="html/P_Delaunay_Site_edgeOrientations.htm" />
           <HelpTOCNode Title="x Property " Url="html/P_Delaunay_Site_x.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="6b9f1f42-7fe8-43ad-8f21-3d1ef0331007" Title="Site Methods" Url="html/Methods_T_Delaunay_Site.htm">
+        <HelpTOCNode Id="04a41844-8d63-4978-b2d4-1cbea5741c05" Title="Site Methods" Url="html/Methods_T_Delaunay_Site.htm">
           <HelpTOCNode Title="AddEdge Method " Url="html/M_Delaunay_Site_AddEdge.htm" />
           <HelpTOCNode Title="CloseEnough Method " Url="html/M_Delaunay_Site_CloseEnough.htm" />
           <HelpTOCNode Title="CompareTo Method " Url="html/M_Delaunay_Site_CompareTo.htm" />
@@ -247,17 +247,17 @@
           <HelpTOCNode Title="NeighborSites Method " Url="html/M_Delaunay_Site_NeighborSites.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_Delaunay_Site_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a3d08db9-ee95-4ee3-a08c-2674ac599dc3" Title="Site Fields" Url="html/Fields_T_Delaunay_Site.htm">
+        <HelpTOCNode Id="7e008250-786a-43a6-9537-638219c438a8" Title="Site Fields" Url="html/Fields_T_Delaunay_Site.htm">
           <HelpTOCNode Title="color Field" Url="html/F_Delaunay_Site_color.htm" />
           <HelpTOCNode Title="weight Field" Url="html/F_Delaunay_Site_weight.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d774e5ba-77ba-4002-9b05-afb190648eba" Title="SiteList Class" Url="html/T_Delaunay_SiteList.htm">
+      <HelpTOCNode Id="47ce329b-64a0-47e1-a51f-2b0338b3b3b0" Title="SiteList Class" Url="html/T_Delaunay_SiteList.htm">
         <HelpTOCNode Title="SiteList Constructor " Url="html/M_Delaunay_SiteList__ctor.htm" />
-        <HelpTOCNode Id="1e1d0fc2-7506-4a13-a14b-2b9a4ff7da6b" Title="SiteList Properties" Url="html/Properties_T_Delaunay_SiteList.htm">
+        <HelpTOCNode Id="e163bf68-52e3-4308-808a-a9f0aa4e102a" Title="SiteList Properties" Url="html/Properties_T_Delaunay_SiteList.htm">
           <HelpTOCNode Title="Count Property " Url="html/P_Delaunay_SiteList_Count.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="35a2dd51-c96d-4313-8ed9-2e2ba5f5dcd8" Title="SiteList Methods" Url="html/Methods_T_Delaunay_SiteList.htm">
+        <HelpTOCNode Id="03416f60-a8bc-4fa6-85b5-3353b609d6c9" Title="SiteList Methods" Url="html/Methods_T_Delaunay_SiteList.htm">
           <HelpTOCNode Title="Add Method " Url="html/M_Delaunay_SiteList_Add.htm" />
           <HelpTOCNode Title="Circles Method " Url="html/M_Delaunay_SiteList_Circles.htm" />
           <HelpTOCNode Title="Dispose Method " Url="html/M_Delaunay_SiteList_Dispose.htm" />
@@ -268,66 +268,66 @@
           <HelpTOCNode Title="SiteCoords Method " Url="html/M_Delaunay_SiteList_SiteCoords.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="5cd9bfe7-2bca-46af-9738-9acba4e29010" Title="Triangle Class" Url="html/T_Delaunay_Triangle.htm">
+      <HelpTOCNode Id="4a38fbb3-c080-4597-badd-571872b274a5" Title="Triangle Class" Url="html/T_Delaunay_Triangle.htm">
         <HelpTOCNode Title="Triangle Constructor " Url="html/M_Delaunay_Triangle__ctor.htm" />
-        <HelpTOCNode Id="8e611cf5-77ef-4286-a92a-cc1465ca2ee7" Title="Triangle Properties" Url="html/Properties_T_Delaunay_Triangle.htm">
+        <HelpTOCNode Id="b58afc70-7050-4143-b192-dc76f4ffc837" Title="Triangle Properties" Url="html/Properties_T_Delaunay_Triangle.htm">
           <HelpTOCNode Title="sites Property " Url="html/P_Delaunay_Triangle_sites.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="1db4045a-4d26-4a04-8d1d-76479a727bbc" Title="Triangle Methods" Url="html/Methods_T_Delaunay_Triangle.htm">
+        <HelpTOCNode Id="e671ed7f-2b16-48f5-9551-1fc6a3d57ba0" Title="Triangle Methods" Url="html/Methods_T_Delaunay_Triangle.htm">
           <HelpTOCNode Title="Dispose Method " Url="html/M_Delaunay_Triangle_Dispose.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="5723d59f-e615-4abe-b4e2-e28b3741afd2" Title="Vertex Class" Url="html/T_Delaunay_Vertex.htm">
+      <HelpTOCNode Id="b6c8bb9a-43c5-440b-82f4-04be33cf4955" Title="Vertex Class" Url="html/T_Delaunay_Vertex.htm">
         <HelpTOCNode Title="Vertex Constructor " Url="html/M_Delaunay_Vertex__ctor.htm" />
-        <HelpTOCNode Id="b81db0b4-4304-4826-9891-fbcb4bf89e2e" Title="Vertex Properties" Url="html/Properties_T_Delaunay_Vertex.htm">
+        <HelpTOCNode Id="ea6f3ce5-aff2-4832-8eb1-80fd1ec61be5" Title="Vertex Properties" Url="html/Properties_T_Delaunay_Vertex.htm">
           <HelpTOCNode Title="Coord Property " Url="html/P_Delaunay_Vertex_Coord.htm" />
           <HelpTOCNode Title="vertexIndex Property " Url="html/P_Delaunay_Vertex_vertexIndex.htm" />
           <HelpTOCNode Title="x Property " Url="html/P_Delaunay_Vertex_x.htm" />
           <HelpTOCNode Title="y Property " Url="html/P_Delaunay_Vertex_y.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5799d830-cae3-4ce3-bc97-1bfd5d7a6b82" Title="Vertex Methods" Url="html/Methods_T_Delaunay_Vertex.htm">
+        <HelpTOCNode Id="cdf0f2ea-04a0-4161-9af2-4e9c809de15f" Title="Vertex Methods" Url="html/Methods_T_Delaunay_Vertex.htm">
           <HelpTOCNode Title="Dispose Method " Url="html/M_Delaunay_Vertex_Dispose.htm" />
           <HelpTOCNode Title="Intersect Method " Url="html/M_Delaunay_Vertex_Intersect.htm" />
           <HelpTOCNode Title="SetIndex Method " Url="html/M_Delaunay_Vertex_SetIndex.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_Delaunay_Vertex_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b76c2286-7db1-4c48-a667-28507db48699" Title="Vertex Fields" Url="html/Fields_T_Delaunay_Vertex.htm">
+        <HelpTOCNode Id="103a61c9-9bc6-4162-abb7-25c240bde922" Title="Vertex Fields" Url="html/Fields_T_Delaunay_Vertex.htm">
           <HelpTOCNode Title="VERTEX_AT_INFINITY Field" Url="html/F_Delaunay_Vertex_VERTEX_AT_INFINITY.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="VertexOrSite Enumeration" Url="html/T_Delaunay_VertexOrSite.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="990ccab9-b506-48a6-9839-39dc132a67f6" Title="Delaunay.Geo" Url="html/N_Delaunay_Geo.htm">
-      <HelpTOCNode Id="dd454b43-743d-46d0-8786-0cfd60e6ff2c" Title="Circle Class" Url="html/T_Delaunay_Geo_Circle.htm">
+    <HelpTOCNode Id="b9e3c958-f029-477d-ac12-d7bdbe1039c6" Title="Delaunay.Geo" Url="html/N_Delaunay_Geo.htm">
+      <HelpTOCNode Id="aaa9de8f-cfd2-4127-9f98-3108aaa1e70f" Title="Circle Class" Url="html/T_Delaunay_Geo_Circle.htm">
         <HelpTOCNode Title="Circle Constructor " Url="html/M_Delaunay_Geo_Circle__ctor.htm" />
-        <HelpTOCNode Id="85449668-f0a7-4889-bbab-8635a5ac8302" Title="Circle Methods" Url="html/Methods_T_Delaunay_Geo_Circle.htm">
+        <HelpTOCNode Id="ddadd997-f1b2-4889-968c-f67f8899655f" Title="Circle Methods" Url="html/Methods_T_Delaunay_Geo_Circle.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M_Delaunay_Geo_Circle_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b63768dc-aa30-4777-86c9-aa83465b865e" Title="Circle Fields" Url="html/Fields_T_Delaunay_Geo_Circle.htm">
+        <HelpTOCNode Id="876927f7-12d5-4236-bd0a-7e18f1bad485" Title="Circle Fields" Url="html/Fields_T_Delaunay_Geo_Circle.htm">
           <HelpTOCNode Title="center Field" Url="html/F_Delaunay_Geo_Circle_center.htm" />
           <HelpTOCNode Title="radius Field" Url="html/F_Delaunay_Geo_Circle_radius.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="59e2133f-e61d-4b38-8d95-0595efd09017" Title="LineSegment Class" Url="html/T_Delaunay_Geo_LineSegment.htm">
+      <HelpTOCNode Id="92dfe2fb-5cfb-4149-8a71-723bca85db43" Title="LineSegment Class" Url="html/T_Delaunay_Geo_LineSegment.htm">
         <HelpTOCNode Title="LineSegment Constructor " Url="html/M_Delaunay_Geo_LineSegment__ctor.htm" />
-        <HelpTOCNode Id="5aed4097-408a-45f8-af1a-7f8c7ad55839" Title="LineSegment Methods" Url="html/Methods_T_Delaunay_Geo_LineSegment.htm">
+        <HelpTOCNode Id="22908afd-89db-4c38-8832-cd196b1cbbad" Title="LineSegment Methods" Url="html/Methods_T_Delaunay_Geo_LineSegment.htm">
           <HelpTOCNode Title="CompareLengths Method " Url="html/M_Delaunay_Geo_LineSegment_CompareLengths.htm" />
           <HelpTOCNode Title="CompareLengths_MAX Method " Url="html/M_Delaunay_Geo_LineSegment_CompareLengths_MAX.htm" />
           <HelpTOCNode Title="Intersection Method " Url="html/M_Delaunay_Geo_LineSegment_Intersection.htm" />
           <HelpTOCNode Title="IntersectsWith Method " Url="html/M_Delaunay_Geo_LineSegment_IntersectsWith.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_Delaunay_Geo_LineSegment_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f307ca5b-8955-4c46-8dda-5c5aa58779f2" Title="LineSegment Fields" Url="html/Fields_T_Delaunay_Geo_LineSegment.htm">
+        <HelpTOCNode Id="d9e3226c-df93-4d20-8737-6ff772bece4f" Title="LineSegment Fields" Url="html/Fields_T_Delaunay_Geo_LineSegment.htm">
           <HelpTOCNode Title="p0 Field" Url="html/F_Delaunay_Geo_LineSegment_p0.htm" />
           <HelpTOCNode Title="p1 Field" Url="html/F_Delaunay_Geo_LineSegment_p1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="068b4b3e-1472-4541-8d9c-110a7adf04dd" Title="Polygon Class" Url="html/T_Delaunay_Geo_Polygon.htm">
+      <HelpTOCNode Id="d0fbfe6b-470e-45af-8000-c474996e1fb9" Title="Polygon Class" Url="html/T_Delaunay_Geo_Polygon.htm">
         <HelpTOCNode Title="Polygon Constructor " Url="html/M_Delaunay_Geo_Polygon__ctor.htm" />
-        <HelpTOCNode Id="5494969a-9d24-4abb-bfcc-3a8420392cb5" Title="Polygon Properties" Url="html/Properties_T_Delaunay_Geo_Polygon.htm">
+        <HelpTOCNode Id="3d514fd8-da3e-48a9-8ab4-3aa6804da876" Title="Polygon Properties" Url="html/Properties_T_Delaunay_Geo_Polygon.htm">
           <HelpTOCNode Title="Vertices Property " Url="html/P_Delaunay_Geo_Polygon_Vertices.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="85ff38fc-ceec-44a9-96e1-7414f1f7533f" Title="Polygon Methods" Url="html/Methods_T_Delaunay_Geo_Polygon.htm">
+        <HelpTOCNode Id="61cf5d2f-4401-4781-9bfd-64157911057d" Title="Polygon Methods" Url="html/Methods_T_Delaunay_Geo_Polygon.htm">
           <HelpTOCNode Title="Area Method " Url="html/M_Delaunay_Geo_Polygon_Area.htm" />
           <HelpTOCNode Title="Centroid Method " Url="html/M_Delaunay_Geo_Polygon_Centroid.htm" />
           <HelpTOCNode Title="ContainsPoint Method " Url="html/M_Delaunay_Geo_Polygon_ContainsPoint.htm" />
@@ -335,23 +335,23 @@
           <HelpTOCNode Title="Intersection Method " Url="html/M_Delaunay_Geo_Polygon_Intersection.htm" />
           <HelpTOCNode Title="Intersections Method " Url="html/M_Delaunay_Geo_Polygon_Intersections.htm" />
           <HelpTOCNode Title="Scale Method " Url="html/M_Delaunay_Geo_Polygon_Scale.htm" />
-          <HelpTOCNode Id="492e94d6-966f-4f58-8ee4-45c5d38935d9" Title="Smooth Method " Url="html/Overload_Delaunay_Geo_Polygon_Smooth.htm">
+          <HelpTOCNode Id="670b4e49-5b11-4762-8a8c-9679ec98f56c" Title="Smooth Method " Url="html/Overload_Delaunay_Geo_Polygon_Smooth.htm">
             <HelpTOCNode Title="Smooth Method " Url="html/M_Delaunay_Geo_Polygon_Smooth.htm" />
             <HelpTOCNode Title="Smooth Method (Int32)" Url="html/M_Delaunay_Geo_Polygon_Smooth_1.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="Winding Method " Url="html/M_Delaunay_Geo_Polygon_Winding.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="3e98e089-8002-4ff3-ab24-bb814c89f352" Title="Rect Class" Url="html/T_Delaunay_Geo_Rect.htm">
+      <HelpTOCNode Id="a3cb527e-bab6-4a26-9efb-dbc7708b6965" Title="Rect Class" Url="html/T_Delaunay_Geo_Rect.htm">
         <HelpTOCNode Title="Rect Constructor " Url="html/M_Delaunay_Geo_Rect__ctor.htm" />
-        <HelpTOCNode Id="2a579c70-f173-49b0-a550-364a07e7af0c" Title="Rect Properties" Url="html/Properties_T_Delaunay_Geo_Rect.htm">
+        <HelpTOCNode Id="ee54df26-602c-4d5b-80e2-154863603c36" Title="Rect Properties" Url="html/Properties_T_Delaunay_Geo_Rect.htm">
           <HelpTOCNode Title="height Property " Url="html/P_Delaunay_Geo_Rect_height.htm" />
           <HelpTOCNode Title="width Property " Url="html/P_Delaunay_Geo_Rect_width.htm" />
           <HelpTOCNode Title="x Property " Url="html/P_Delaunay_Geo_Rect_x.htm" />
           <HelpTOCNode Title="y Property " Url="html/P_Delaunay_Geo_Rect_y.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="Rect Methods" Url="html/Methods_T_Delaunay_Geo_Rect.htm" />
-        <HelpTOCNode Id="36266511-7766-42e9-aa63-7c14d08fa2d6" Title="Rect Fields" Url="html/Fields_T_Delaunay_Geo_Rect.htm">
+        <HelpTOCNode Id="8332dde7-3f22-457f-b739-223cedb5add2" Title="Rect Fields" Url="html/Fields_T_Delaunay_Geo_Rect.htm">
           <HelpTOCNode Title="xMax Field" Url="html/F_Delaunay_Geo_Rect_xMax.htm" />
           <HelpTOCNode Title="xMin Field" Url="html/F_Delaunay_Geo_Rect_xMin.htm" />
           <HelpTOCNode Title="yMax Field" Url="html/F_Delaunay_Geo_Rect_yMax.htm" />
@@ -360,88 +360,88 @@
       </HelpTOCNode>
       <HelpTOCNode Title="Winding Enumeration" Url="html/T_Delaunay_Geo_Winding.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="40535764-fa2d-4853-92e6-e82c8f042214" Title="Delaunay.LR" Url="html/N_Delaunay_LR.htm">
+    <HelpTOCNode Id="046f33c8-78d2-4f8d-bf2f-21876ead445b" Title="Delaunay.LR" Url="html/N_Delaunay_LR.htm">
       <HelpTOCNode Title="Side Enumeration" Url="html/T_Delaunay_LR_Side.htm" />
-      <HelpTOCNode Id="8aa3b808-a710-4cc9-b1d6-d837fb527c7f" Title="SideHelper Class" Url="html/T_Delaunay_LR_SideHelper.htm">
+      <HelpTOCNode Id="a2daa51a-3c26-427a-8298-9fd61e65efb3" Title="SideHelper Class" Url="html/T_Delaunay_LR_SideHelper.htm">
         <HelpTOCNode Title="SideHelper Constructor " Url="html/M_Delaunay_LR_SideHelper__ctor.htm" />
-        <HelpTOCNode Id="cf620ef3-7e07-44cc-9266-20d8ae03bb38" Title="SideHelper Methods" Url="html/Methods_T_Delaunay_LR_SideHelper.htm">
+        <HelpTOCNode Id="42548882-b000-454e-aed4-b75f23fe6282" Title="SideHelper Methods" Url="html/Methods_T_Delaunay_LR_SideHelper.htm">
           <HelpTOCNode Title="Other Method " Url="html/M_Delaunay_LR_SideHelper_Other.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fcc2563d-1338-4cc1-8aae-ebabe60931f2" Title="Starfield" Url="html/N_Starfield.htm">
-      <HelpTOCNode Id="269d6c1d-6cbc-40a8-b7b5-36fd2e346f3b" Title="CustomDriver Class" Url="html/T_Starfield_CustomDriver.htm">
+    <HelpTOCNode Id="9e020a9e-f4b4-4c41-ae8a-db447d98b683" Title="Starfield" Url="html/N_Starfield.htm">
+      <HelpTOCNode Id="13607d54-065d-4330-88f0-c1f712fd53b6" Title="CustomDriver Class" Url="html/T_Starfield_CustomDriver.htm">
         <HelpTOCNode Title="CustomDriver Constructor " Url="html/M_Starfield_CustomDriver__ctor.htm" />
-        <HelpTOCNode Id="f0f8f05e-2316-4810-bd8e-6b466b9e2c07" Title="CustomDriver Methods" Url="html/Methods_T_Starfield_CustomDriver.htm">
+        <HelpTOCNode Id="cbb1f959-0179-47ef-937d-943e1edcb883" Title="CustomDriver Methods" Url="html/Methods_T_Starfield_CustomDriver.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M_Starfield_CustomDriver_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="82285c57-09bc-4888-a5ca-2edf5ef3ddf8" Title="CustomDriver Fields" Url="html/Fields_T_Starfield_CustomDriver.htm">
+        <HelpTOCNode Id="a83072bf-a02b-47c0-bc08-d0071bf112b9" Title="CustomDriver Fields" Url="html/Fields_T_Starfield_CustomDriver.htm">
           <HelpTOCNode Title="Driver Field" Url="html/F_Starfield_CustomDriver_Driver.htm" />
           <HelpTOCNode Title="Name Field" Url="html/F_Starfield_CustomDriver_Name.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ec0d0a81-7e19-4918-9214-c1dcb1de744e" Title="DriverLoader Class" Url="html/T_Starfield_DriverLoader.htm">
+      <HelpTOCNode Id="1a611f2d-5e9a-4f11-9dee-5a812e3c559f" Title="DriverLoader Class" Url="html/T_Starfield_DriverLoader.htm">
         <HelpTOCNode Title="DriverLoader Constructor " Url="html/M_Starfield_DriverLoader__ctor.htm" />
-        <HelpTOCNode Id="c955d8cf-70d5-461d-8f11-e4bd9bb7e7ef" Title="DriverLoader Methods" Url="html/Methods_T_Starfield_DriverLoader.htm">
-          <HelpTOCNode Id="06c8d80d-4774-4ac2-abcd-823f788510cb" Title="LoadBuiltinDrivers Method " Url="html/Overload_Starfield_DriverLoader_LoadBuiltinDrivers.htm">
+        <HelpTOCNode Id="e569d780-617c-424a-b362-fa624d1757e9" Title="DriverLoader Methods" Url="html/Methods_T_Starfield_DriverLoader.htm">
+          <HelpTOCNode Id="9004214f-8c65-4d49-8f03-cf664c1d8e99" Title="LoadBuiltinDrivers Method " Url="html/Overload_Starfield_DriverLoader_LoadBuiltinDrivers.htm">
             <HelpTOCNode Title="LoadBuiltinDrivers Method (ICollection(IStarfieldDriver))" Url="html/M_Starfield_DriverLoader_LoadBuiltinDrivers.htm" />
             <HelpTOCNode Title="LoadBuiltinDrivers Method (ICollection(IStarfieldDriver), DriverLoader.DriverFilterDelegate)" Url="html/M_Starfield_DriverLoader_LoadBuiltinDrivers_1.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="LoadCustomDrivers Method " Url="html/M_Starfield_DriverLoader_LoadCustomDrivers.htm" />
-          <HelpTOCNode Id="675d0a0d-fb38-4e03-be5d-01444c1e7479" Title="LoadDefaultDrivers Method " Url="html/Overload_Starfield_DriverLoader_LoadDefaultDrivers.htm">
+          <HelpTOCNode Id="de2f7293-fe19-40fa-ba6a-63ae315d3391" Title="LoadDefaultDrivers Method " Url="html/Overload_Starfield_DriverLoader_LoadDefaultDrivers.htm">
             <HelpTOCNode Title="LoadDefaultDrivers Method (ICollection(IStarfieldDriver))" Url="html/M_Starfield_DriverLoader_LoadDefaultDrivers.htm" />
             <HelpTOCNode Title="LoadDefaultDrivers Method (ICollection(IStarfieldDriver), DriverLoader.DriverFilterDelegate)" Url="html/M_Starfield_DriverLoader_LoadDefaultDrivers_1.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="b844dab4-abab-41af-ac9b-cfd6c0bbe9c9" Title="LoadPlugins Method " Url="html/Overload_Starfield_DriverLoader_LoadPlugins.htm">
+          <HelpTOCNode Id="a9fec62d-b981-423b-92ab-fb5ae737babc" Title="LoadPlugins Method " Url="html/Overload_Starfield_DriverLoader_LoadPlugins.htm">
             <HelpTOCNode Title="LoadPlugins Method (ICollection(IStarfieldDriver))" Url="html/M_Starfield_DriverLoader_LoadPlugins.htm" />
             <HelpTOCNode Title="LoadPlugins Method (ICollection(IStarfieldDriver), DriverLoader.DriverFilterDelegate)" Url="html/M_Starfield_DriverLoader_LoadPlugins_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="DriverLoader.DriverFilterDelegate Delegate" Url="html/T_Starfield_DriverLoader_DriverFilterDelegate.htm" />
-      <HelpTOCNode Id="cd37e0cb-26c5-47e9-8a03-48a88c40eac4" Title="DriverType Class" Url="html/T_Starfield_DriverType.htm">
+      <HelpTOCNode Id="247fd2ad-1dc2-4d79-9380-cecf44c02351" Title="DriverType Class" Url="html/T_Starfield_DriverType.htm">
         <HelpTOCNode Title="DriverType Constructor " Url="html/M_Starfield_DriverType__ctor.htm" />
-        <HelpTOCNode Id="948328d1-a094-41a9-864d-f3c5db461f3a" Title="DriverType Properties" Url="html/Properties_T_Starfield_DriverType.htm">
+        <HelpTOCNode Id="d8502176-1028-4530-bea7-24fe363cbccc" Title="DriverType Properties" Url="html/Properties_T_Starfield_DriverType.htm">
           <HelpTOCNode Title="Type Property " Url="html/P_Starfield_DriverType_Type.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="DriverType Methods" Url="html/Methods_T_Starfield_DriverType.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="DriverTypes Enumeration" Url="html/T_Starfield_DriverTypes.htm" />
-      <HelpTOCNode Id="2712458f-1f3f-4a5f-b29f-d02c8fbf6661" Title="IStarfieldDriver Interface" Url="html/T_Starfield_IStarfieldDriver.htm">
-        <HelpTOCNode Id="a316b097-1ab7-4f52-a892-cd106345fceb" Title="IStarfieldDriver Methods" Url="html/Methods_T_Starfield_IStarfieldDriver.htm">
+      <HelpTOCNode Id="8164266c-3285-4b93-84e2-9d599c188e35" Title="IStarfieldDriver Interface" Url="html/T_Starfield_IStarfieldDriver.htm">
+        <HelpTOCNode Id="e644ddd6-dbc2-4839-871f-f265ccda1b65" Title="IStarfieldDriver Methods" Url="html/Methods_T_Starfield_IStarfieldDriver.htm">
           <HelpTOCNode Title="Render Method " Url="html/M_Starfield_IStarfieldDriver_Render.htm" />
           <HelpTOCNode Title="Start Method " Url="html/M_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="Stop Method " Url="html/M_Starfield_IStarfieldDriver_Stop.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="f3cb62b8-3cdf-414e-a9d2-4bba88ffa0eb" Title="SplitStarfieldModel Class" Url="html/T_Starfield_SplitStarfieldModel.htm">
+      <HelpTOCNode Id="6d3655ef-5f0c-4df8-890c-6cb403e274d9" Title="SplitStarfieldModel Class" Url="html/T_Starfield_SplitStarfieldModel.htm">
         <HelpTOCNode Title="SplitStarfieldModel Constructor " Url="html/M_Starfield_SplitStarfieldModel__ctor.htm" />
-        <HelpTOCNode Id="6df29c1f-068c-4299-85c9-9065949dd157" Title="SplitStarfieldModel Properties" Url="html/Properties_T_Starfield_SplitStarfieldModel.htm">
+        <HelpTOCNode Id="db66717f-a216-4be9-9acf-22a2db7c8fc0" Title="SplitStarfieldModel Properties" Url="html/Properties_T_Starfield_SplitStarfieldModel.htm">
           <HelpTOCNode Title="Model1 Property " Url="html/P_Starfield_SplitStarfieldModel_Model1.htm" />
           <HelpTOCNode Title="Model2 Property " Url="html/P_Starfield_SplitStarfieldModel_Model2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="bb5e16b7-0bf1-4386-b15a-c532a5ff2dec" Title="SplitStarfieldModel Methods" Url="html/Methods_T_Starfield_SplitStarfieldModel.htm">
+        <HelpTOCNode Id="f652646b-7bb7-41f7-821a-dd26bf6e8d1c" Title="SplitStarfieldModel Methods" Url="html/Methods_T_Starfield_SplitStarfieldModel.htm">
           <HelpTOCNode Title="Clear Method " Url="html/M_Starfield_SplitStarfieldModel_Clear.htm" />
           <HelpTOCNode Title="GetColor Method " Url="html/M_Starfield_SplitStarfieldModel_GetColor.htm" />
           <HelpTOCNode Title="SetColor Method " Url="html/M_Starfield_SplitStarfieldModel_SetColor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b418fc3c-9059-42f9-97ea-e267d14a5c05" Title="SplitStarfieldModel Fields" Url="html/Fields_T_Starfield_SplitStarfieldModel.htm">
+        <HelpTOCNode Id="fc6155a5-492e-4cc7-ad9d-b2a464bdabdc" Title="SplitStarfieldModel Fields" Url="html/Fields_T_Starfield_SplitStarfieldModel.htm">
           <HelpTOCNode Title="model1 Field" Url="html/F_Starfield_SplitStarfieldModel_model1.htm" />
           <HelpTOCNode Title="model2 Field" Url="html/F_Starfield_SplitStarfieldModel_model2.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c50c4db9-78ef-4b21-8c49-14897675b995" Title="StarfieldModel Class" Url="html/T_Starfield_StarfieldModel.htm">
-        <HelpTOCNode Id="926fec40-6a70-4248-a60a-e5860aff5fc9" Title="StarfieldModel Constructor " Url="html/Overload_Starfield_StarfieldModel__ctor.htm">
+      <HelpTOCNode Id="6cdc2323-ad61-4b3a-adaa-0edbaab7aad0" Title="StarfieldModel Class" Url="html/T_Starfield_StarfieldModel.htm">
+        <HelpTOCNode Id="5055b84e-ffb0-4db8-a0e6-f295d229864c" Title="StarfieldModel Constructor " Url="html/Overload_Starfield_StarfieldModel__ctor.htm">
           <HelpTOCNode Title="StarfieldModel Constructor " Url="html/M_Starfield_StarfieldModel__ctor.htm" />
           <HelpTOCNode Title="StarfieldModel Constructor (Single, Single, Single, UInt64, UInt64, UInt64)" Url="html/M_Starfield_StarfieldModel__ctor_1.htm" />
           <HelpTOCNode Title="StarfieldModel Constructor (Single, Single, Single, UInt64, UInt64, UInt64, PresenceClient)" Url="html/M_Starfield_StarfieldModel__ctor_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="86dbba2e-1e36-435d-9b94-9ddb975373ab" Title="StarfieldModel Properties" Url="html/Properties_T_Starfield_StarfieldModel.htm">
+        <HelpTOCNode Id="a2a341d6-ef10-44af-bbb2-2430611daa29" Title="StarfieldModel Properties" Url="html/Properties_T_Starfield_StarfieldModel.htm">
           <HelpTOCNode Title="Brightness Property " Url="html/P_Starfield_StarfieldModel_Brightness.htm" />
           <HelpTOCNode Title="MinLevel Property " Url="html/P_Starfield_StarfieldModel_MinLevel.htm" />
           <HelpTOCNode Title="NeedSafetyLight Property " Url="html/P_Starfield_StarfieldModel_NeedSafetyLight.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e0612d75-43eb-48bb-b91d-57ced836778f" Title="StarfieldModel Methods" Url="html/Methods_T_Starfield_StarfieldModel.htm">
+        <HelpTOCNode Id="8e710da9-3d8f-425a-a483-90a2bdf87154" Title="StarfieldModel Methods" Url="html/Methods_T_Starfield_StarfieldModel.htm">
           <HelpTOCNode Title="BurningManStarfield Method " Url="html/M_Starfield_StarfieldModel_BurningManStarfield.htm" />
           <HelpTOCNode Title="Clear Method " Url="html/M_Starfield_StarfieldModel_Clear.htm" />
           <HelpTOCNode Title="CriticalNWStarfield Method " Url="html/M_Starfield_StarfieldModel_CriticalNWStarfield.htm" />
@@ -456,7 +456,7 @@
           <HelpTOCNode Title="Starfield2017 Method " Url="html/M_Starfield_StarfieldModel_Starfield2017.htm" />
           <HelpTOCNode Title="Stop Method " Url="html/M_Starfield_StarfieldModel_Stop.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="c3eaaad3-6470-4e08-9477-d553bd8a8995" Title="StarfieldModel Fields" Url="html/Fields_T_Starfield_StarfieldModel.htm">
+        <HelpTOCNode Id="4b328091-c7b5-4eda-9c17-8dba7dfb8f8b" Title="StarfieldModel Fields" Url="html/Fields_T_Starfield_StarfieldModel.htm">
           <HelpTOCNode Title="DEFAULT_NUM_X Field" Url="html/F_Starfield_StarfieldModel_DEFAULT_NUM_X.htm" />
           <HelpTOCNode Title="DEFAULT_NUM_Y Field" Url="html/F_Starfield_StarfieldModel_DEFAULT_NUM_Y.htm" />
           <HelpTOCNode Title="DEFAULT_NUM_Z Field" Url="html/F_Starfield_StarfieldModel_DEFAULT_NUM_Z.htm" />
@@ -476,39 +476,39 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="90f7553a-96d3-4b12-a437-54728b2602a2" Title="Starfield.Networking" Url="html/N_Starfield_Networking.htm">
-      <HelpTOCNode Id="4c81dc2c-8c5a-4fb4-8120-d3f174214609" Title="TCPStarfieldClient Class" Url="html/T_Starfield_Networking_TCPStarfieldClient.htm">
+    <HelpTOCNode Id="9cb5f683-72f8-448b-872f-a9eb5e4f4b02" Title="Starfield.Networking" Url="html/N_Starfield_Networking.htm">
+      <HelpTOCNode Id="d081bee5-adba-4438-99ae-09bcc1855845" Title="TCPStarfieldClient Class" Url="html/T_Starfield_Networking_TCPStarfieldClient.htm">
         <HelpTOCNode Title="TCPStarfieldClient Constructor " Url="html/M_Starfield_Networking_TCPStarfieldClient__ctor.htm" />
-        <HelpTOCNode Id="cc2b8d2d-1205-4729-8795-76cc6c722331" Title="TCPStarfieldClient Methods" Url="html/Methods_T_Starfield_Networking_TCPStarfieldClient.htm">
+        <HelpTOCNode Id="aae69204-7e75-4ce9-89f7-236f9e0e8408" Title="TCPStarfieldClient Methods" Url="html/Methods_T_Starfield_Networking_TCPStarfieldClient.htm">
           <HelpTOCNode Title="Stop Method " Url="html/M_Starfield_Networking_TCPStarfieldClient_Stop.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b9e91766-b38f-4116-a644-665b22d099c7" Title="TCPStarfieldClient Fields" Url="html/Fields_T_Starfield_Networking_TCPStarfieldClient.htm">
+        <HelpTOCNode Id="fa2f22c8-aad0-48ce-9386-021b66c23706" Title="TCPStarfieldClient Fields" Url="html/Fields_T_Starfield_Networking_TCPStarfieldClient.htm">
           <HelpTOCNode Title="AnimationInterval Field" Url="html/F_Starfield_Networking_TCPStarfieldClient_AnimationInterval.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b4776255-fae4-4b40-bbc2-deddbc90b100" Title="Starfield.Presence" Url="html/N_Starfield_Presence.htm">
-      <HelpTOCNode Id="5b83f402-566c-460b-9115-94833e894341" Title="Activity Class" Url="html/T_Starfield_Presence_Activity.htm">
+    <HelpTOCNode Id="979912a4-0337-412e-9628-11a90193776d" Title="Starfield.Presence" Url="html/N_Starfield_Presence.htm">
+      <HelpTOCNode Id="835f7260-6c02-4831-86a4-59206ad8bc63" Title="Activity Class" Url="html/T_Starfield_Presence_Activity.htm">
         <HelpTOCNode Title="Activity Constructor " Url="html/M_Starfield_Presence_Activity__ctor.htm" />
         <HelpTOCNode Title="Activity Methods" Url="html/Methods_T_Starfield_Presence_Activity.htm" />
-        <HelpTOCNode Id="01a10bf0-1e06-4591-8e7b-6b6f6854b996" Title="Activity Fields" Url="html/Fields_T_Starfield_Presence_Activity.htm">
+        <HelpTOCNode Id="a651079b-36a4-474d-a969-c3af24f60856" Title="Activity Fields" Url="html/Fields_T_Starfield_Presence_Activity.htm">
           <HelpTOCNode Title="activity Field" Url="html/F_Starfield_Presence_Activity_activity.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="504a8aac-1fb8-4342-a6f4-52dffe91c7c2" Title="PresenceClient Class" Url="html/T_Starfield_Presence_PresenceClient.htm">
-        <HelpTOCNode Id="7a867efc-b65e-43e6-9cff-4cd8a35a0c35" Title="PresenceClient Constructor " Url="html/Overload_Starfield_Presence_PresenceClient__ctor.htm">
+      <HelpTOCNode Id="773cb22d-4211-40b7-a908-e81ffc88cd45" Title="PresenceClient Class" Url="html/T_Starfield_Presence_PresenceClient.htm">
+        <HelpTOCNode Id="08351a7e-0b35-4074-93a1-abbc6c580fa0" Title="PresenceClient Constructor " Url="html/Overload_Starfield_Presence_PresenceClient__ctor.htm">
           <HelpTOCNode Title="PresenceClient Constructor " Url="html/M_Starfield_Presence_PresenceClient__ctor.htm" />
           <HelpTOCNode Title="PresenceClient Constructor (String)" Url="html/M_Starfield_Presence_PresenceClient__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5d6e89bd-7086-46fb-b394-d4739ec25184" Title="PresenceClient Methods" Url="html/Methods_T_Starfield_Presence_PresenceClient.htm">
+        <HelpTOCNode Id="5d17f84f-36ef-4f51-ae94-5973e57cdf42" Title="PresenceClient Methods" Url="html/Methods_T_Starfield_Presence_PresenceClient.htm">
           <HelpTOCNode Title="GetLatest Method " Url="html/M_Starfield_Presence_PresenceClient_GetLatest.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b2117f70-dc82-466f-b92e-d774733dcf38" Title="StarfieldDrivers" Url="html/N_StarfieldDrivers.htm">
-      <HelpTOCNode Id="515cb940-8841-4172-b6aa-1f83d4b61824" Title="Snakes Class" Url="html/T_StarfieldDrivers_Snakes.htm">
+    <HelpTOCNode Id="c590e48c-acff-4aee-9566-40f4bb812c82" Title="StarfieldDrivers" Url="html/N_StarfieldDrivers.htm">
+      <HelpTOCNode Id="c6cd872b-3ff4-42c0-b648-89562901599b" Title="Snakes Class" Url="html/T_StarfieldDrivers_Snakes.htm">
         <HelpTOCNode Title="Snakes Constructor " Url="html/M_StarfieldDrivers_Snakes__ctor.htm" />
-        <HelpTOCNode Id="b63d7c2e-1277-4d1b-912c-d24368208f05" Title="Snakes Properties" Url="html/Properties_T_StarfieldDrivers_Snakes.htm">
+        <HelpTOCNode Id="59066da1-961e-4f71-ae32-8f828384eee9" Title="Snakes Properties" Url="html/Properties_T_StarfieldDrivers_Snakes.htm">
           <HelpTOCNode Title="FadeSnakes Property " Url="html/P_StarfieldDrivers_Snakes_FadeSnakes.htm" />
           <HelpTOCNode Title="NumSnakes Property " Url="html/P_StarfieldDrivers_Snakes_NumSnakes.htm" />
           <HelpTOCNode Title="OnSoundChangeDir Property " Url="html/P_StarfieldDrivers_Snakes_OnSoundChangeDir.htm" />
@@ -517,7 +517,7 @@
           <HelpTOCNode Title="SnakeLength Property " Url="html/P_StarfieldDrivers_Snakes_SnakeLength.htm" />
           <HelpTOCNode Title="SnakeSpeedFactor Property " Url="html/P_StarfieldDrivers_Snakes_SnakeSpeedFactor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="d7ee0902-aeda-4a7e-aaf1-79cf6a95057c" Title="Snakes Methods" Url="html/Methods_T_StarfieldDrivers_Snakes.htm">
+        <HelpTOCNode Id="a2288722-b738-4308-aaa9-ea67822e60fa" Title="Snakes Methods" Url="html/Methods_T_StarfieldDrivers_Snakes.htm">
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Snakes_Render.htm" />
           <HelpTOCNode Title="Start Method " Url="html/M_StarfieldDrivers_Snakes_Start.htm" />
           <HelpTOCNode Title="Stop Method " Url="html/M_StarfieldDrivers_Snakes_Stop.htm" />
@@ -525,19 +525,19 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6900d05d-71e2-4612-99dc-8deabe8c359a" Title="StarfieldDrivers.Animation" Url="html/N_StarfieldDrivers_Animation.htm">
-      <HelpTOCNode Id="d32a3e97-5072-4889-8823-75d38604ec13" Title="RainbowTest Class" Url="html/T_StarfieldDrivers_Animation_RainbowTest.htm">
+    <HelpTOCNode Id="d99f6edb-9268-48f1-9e2a-0f26edfe242d" Title="StarfieldDrivers.Animation" Url="html/N_StarfieldDrivers_Animation.htm">
+      <HelpTOCNode Id="bd2df1fa-85cb-45ea-8247-7d15bbc60d63" Title="RainbowTest Class" Url="html/T_StarfieldDrivers_Animation_RainbowTest.htm">
         <HelpTOCNode Title="RainbowTest Constructor " Url="html/M_StarfieldDrivers_Animation_RainbowTest__ctor.htm" />
-        <HelpTOCNode Id="912ac031-532e-4356-b7ec-0187716ee341" Title="RainbowTest Methods" Url="html/Methods_T_StarfieldDrivers_Animation_RainbowTest.htm">
+        <HelpTOCNode Id="2ade03a0-f7d5-4899-a73c-17b13f8d96d8" Title="RainbowTest Methods" Url="html/Methods_T_StarfieldDrivers_Animation_RainbowTest.htm">
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Render.htm" />
           <HelpTOCNode Title="Start Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Start.htm" />
           <HelpTOCNode Title="Stop Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Stop.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="b3e4da66-6da5-47cb-985f-6b042eb8d1e4" Title="RaverPlaid Class" Url="html/T_StarfieldDrivers_Animation_RaverPlaid.htm">
+      <HelpTOCNode Id="c8e3ea10-8404-4106-b11f-808ef3f275ff" Title="RaverPlaid Class" Url="html/T_StarfieldDrivers_Animation_RaverPlaid.htm">
         <HelpTOCNode Title="RaverPlaid Constructor " Url="html/M_StarfieldDrivers_Animation_RaverPlaid__ctor.htm" />
-        <HelpTOCNode Id="a006a890-a85a-4f2a-ad97-70202017d05a" Title="RaverPlaid Methods" Url="html/Methods_T_StarfieldDrivers_Animation_RaverPlaid.htm">
+        <HelpTOCNode Id="ea2fadc7-2e03-431f-bae9-b72519836887" Title="RaverPlaid Methods" Url="html/Methods_T_StarfieldDrivers_Animation_RaverPlaid.htm">
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Render.htm" />
           <HelpTOCNode Title="Start Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Start.htm" />
           <HelpTOCNode Title="Stop Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Stop.htm" />
@@ -545,105 +545,105 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a33b25c5-9e01-4932-aaa0-0b898018636e" Title="StarfieldDrivers.Drivers" Url="html/N_StarfieldDrivers_Drivers.htm">
-      <HelpTOCNode Id="fc4e823e-12e1-44ac-a5dd-5281b71fc8d7" Title="CenterWave Class" Url="html/T_StarfieldDrivers_Drivers_CenterWave.htm">
+    <HelpTOCNode Id="a893e111-5111-4b5e-9775-252dcc68eb86" Title="StarfieldDrivers.Drivers" Url="html/N_StarfieldDrivers_Drivers.htm">
+      <HelpTOCNode Id="15445627-9579-4e0d-b991-cef8f4b5a5b6" Title="CenterWave Class" Url="html/T_StarfieldDrivers_Drivers_CenterWave.htm">
         <HelpTOCNode Title="CenterWave Constructor " Url="html/M_StarfieldDrivers_Drivers_CenterWave__ctor.htm" />
-        <HelpTOCNode Id="1fc08148-d81a-4198-b6b4-b9836ed6f695" Title="CenterWave Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_CenterWave.htm">
+        <HelpTOCNode Id="3142aea5-9785-4d21-a00f-0a3a6dc27d5a" Title="CenterWave Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_CenterWave.htm">
           <HelpTOCNode Title="BackColor Property " Url="html/P_StarfieldDrivers_Drivers_CenterWave_BackColor.htm" />
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_CenterWave_DrawColor.htm" />
           <HelpTOCNode Title="Interval Property " Url="html/P_StarfieldDrivers_Drivers_CenterWave_Interval.htm" />
           <HelpTOCNode Title="Rainbow Property " Url="html/P_StarfieldDrivers_Drivers_CenterWave_Rainbow.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="239e80ce-e4a4-4030-a64a-24850c1327f5" Title="CenterWave Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_CenterWave.htm">
+        <HelpTOCNode Id="d8176b48-9bd9-4575-bca3-82c8e0a6ea02" Title="CenterWave Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_CenterWave.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7ccd5b00-d9d1-4e1a-ad64-3531fd093524" Title="Checkout Class" Url="html/T_StarfieldDrivers_Drivers_Checkout.htm">
+      <HelpTOCNode Id="32f4c9fc-91a2-4276-8b79-eaf4de9598c0" Title="Checkout Class" Url="html/T_StarfieldDrivers_Drivers_Checkout.htm">
         <HelpTOCNode Title="Checkout Constructor " Url="html/M_StarfieldDrivers_Drivers_Checkout__ctor.htm" />
-        <HelpTOCNode Id="b6f7c084-1f3d-4f95-bda1-ceb04697380c" Title="Checkout Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Checkout.htm">
+        <HelpTOCNode Id="d59754b6-733b-4fa1-ba96-4f941e067dbe" Title="Checkout Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Checkout.htm">
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_Checkout_DrawColor.htm" />
           <HelpTOCNode Title="Panel Property " Url="html/P_StarfieldDrivers_Drivers_Checkout_Panel.htm" />
           <HelpTOCNode Title="X Property " Url="html/P_StarfieldDrivers_Drivers_Checkout_X.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f8bd03db-e55d-4b1c-bc97-9dbc1929c578" Title="Checkout Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Checkout.htm">
+        <HelpTOCNode Id="461c073b-c5ea-432f-a4c9-4298f8e08559" Title="Checkout Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Checkout.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="69225c03-a7b6-4db4-bae9-41200e2a4308" Title="FadingStatic Class" Url="html/T_StarfieldDrivers_Drivers_FadingStatic.htm">
+      <HelpTOCNode Id="c7ac4e50-0e45-4750-a1a0-be0227f313b7" Title="FadingStatic Class" Url="html/T_StarfieldDrivers_Drivers_FadingStatic.htm">
         <HelpTOCNode Title="FadingStatic Constructor " Url="html/M_StarfieldDrivers_Drivers_FadingStatic__ctor.htm" />
-        <HelpTOCNode Id="d9ee390d-224e-44ca-bd0e-ee6530f7c5d3" Title="FadingStatic Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_FadingStatic.htm">
+        <HelpTOCNode Id="1c07b436-2593-4d35-88aa-8a138064cf98" Title="FadingStatic Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_FadingStatic.htm">
           <HelpTOCNode Title="AnimationDuration Property " Url="html/P_StarfieldDrivers_Drivers_FadingStatic_AnimationDuration.htm" />
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_FadingStatic_DrawColor.htm" />
           <HelpTOCNode Title="Flash Property " Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Flash.htm" />
           <HelpTOCNode Title="Increment Property " Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Increment.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="3d3d5178-73ac-4590-9dc5-1baf4d404e69" Title="FadingStatic Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FadingStatic.htm">
+        <HelpTOCNode Id="23bb84b0-fac6-4641-b21f-424ee2afbeb1" Title="FadingStatic Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FadingStatic.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="c8872144-e51c-4368-8798-5689feb75c4a" Title="FluidPour Class" Url="html/T_StarfieldDrivers_Drivers_FluidPour.htm">
+      <HelpTOCNode Id="2147d2b7-6bf3-42eb-a610-56ff47e00fae" Title="FluidPour Class" Url="html/T_StarfieldDrivers_Drivers_FluidPour.htm">
         <HelpTOCNode Title="FluidPour Constructor " Url="html/M_StarfieldDrivers_Drivers_FluidPour__ctor.htm" />
-        <HelpTOCNode Id="14caa7dd-3f9d-4c09-ae67-3bd00ed3a3e5" Title="FluidPour Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FluidPour.htm">
+        <HelpTOCNode Id="8d0c14dc-b36c-4778-ad57-d04cd4b9b090" Title="FluidPour Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FluidPour.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a3c3b816-ae32-422e-be3a-34cb3caca73a" Title="Rain Class" Url="html/T_StarfieldDrivers_Drivers_Rain.htm">
+      <HelpTOCNode Id="d69d25af-d639-4d62-ad6f-a32d1399d56c" Title="Rain Class" Url="html/T_StarfieldDrivers_Drivers_Rain.htm">
         <HelpTOCNode Title="Rain Constructor " Url="html/M_StarfieldDrivers_Drivers_Rain__ctor.htm" />
-        <HelpTOCNode Id="373b3d0a-3e20-4fc7-91b5-27e445abb133" Title="Rain Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Rain.htm">
+        <HelpTOCNode Id="f993f8ed-1be6-4e7d-aaaa-5d25db7b30d0" Title="Rain Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Rain.htm">
           <HelpTOCNode Title="Down Property " Url="html/P_StarfieldDrivers_Drivers_Rain_Down.htm" />
           <HelpTOCNode Title="Lightning Property " Url="html/P_StarfieldDrivers_Drivers_Rain_Lightning.htm" />
           <HelpTOCNode Title="LightningColor Property " Url="html/P_StarfieldDrivers_Drivers_Rain_LightningColor.htm" />
           <HelpTOCNode Title="RainColor Property " Url="html/P_StarfieldDrivers_Drivers_Rain_RainColor.htm" />
           <HelpTOCNode Title="WrapTime Property " Url="html/P_StarfieldDrivers_Drivers_Rain_WrapTime.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="64feae42-1a5c-4d11-865a-a2435da1ab36" Title="Rain Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Rain.htm">
+        <HelpTOCNode Id="400b3469-0420-4b3f-bb06-f3319cd966a6" Title="Rain Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Rain.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_Rain_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0168e267-92cc-4037-910e-a0e26a1c60ad" Title="SolidColor Class" Url="html/T_StarfieldDrivers_Drivers_SolidColor.htm">
+      <HelpTOCNode Id="a34ee927-89d8-4424-a72f-9827c484c378" Title="SolidColor Class" Url="html/T_StarfieldDrivers_Drivers_SolidColor.htm">
         <HelpTOCNode Title="SolidColor Constructor " Url="html/M_StarfieldDrivers_Drivers_SolidColor__ctor.htm" />
-        <HelpTOCNode Id="20ffe10c-ac99-41f8-b33c-2b0bc09af78d" Title="SolidColor Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_SolidColor.htm">
+        <HelpTOCNode Id="8e3c8fa8-18fb-42d8-9b6b-662decdb652e" Title="SolidColor Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_SolidColor.htm">
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_SolidColor_DrawColor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="54c1044a-cfff-4e0d-b3b1-799ed1a5be76" Title="SolidColor Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_SolidColor.htm">
+        <HelpTOCNode Id="71760f94-16cf-48bd-bcea-68cb550a0da9" Title="SolidColor Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_SolidColor.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="64e95d01-fe8c-4b5a-ba63-91d3ba5636bd" Title="Static Class" Url="html/T_StarfieldDrivers_Drivers_Static.htm">
+      <HelpTOCNode Id="2cd38baa-2d81-474e-8837-5918bd503bb7" Title="Static Class" Url="html/T_StarfieldDrivers_Drivers_Static.htm">
         <HelpTOCNode Title="Static Constructor " Url="html/M_StarfieldDrivers_Drivers_Static__ctor.htm" />
-        <HelpTOCNode Id="38e8fa05-45d6-4c3b-9dba-ddc148a7d173" Title="Static Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Static.htm">
+        <HelpTOCNode Id="7b7d5b94-c732-40a9-83f0-98df45bc7bad" Title="Static Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Static.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_Static_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_Drivers_Static_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="59b87f6a-997e-429c-b1bc-1d59f271eb21" Title="TestFill Class" Url="html/T_StarfieldDrivers_Drivers_TestFill.htm">
+      <HelpTOCNode Id="1068be0a-0d29-4fca-8e01-bfe985dbb5fa" Title="TestFill Class" Url="html/T_StarfieldDrivers_Drivers_TestFill.htm">
         <HelpTOCNode Title="TestFill Constructor " Url="html/M_StarfieldDrivers_Drivers_TestFill__ctor.htm" />
-        <HelpTOCNode Id="1f12da44-6f51-49c5-9dd1-5088a66c16cd" Title="TestFill Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_TestFill.htm">
+        <HelpTOCNode Id="715a84a6-8768-48dc-8cda-56ba6a1cb05d" Title="TestFill Properties" Url="html/Properties_T_StarfieldDrivers_Drivers_TestFill.htm">
           <HelpTOCNode Title="Colors Property " Url="html/P_StarfieldDrivers_Drivers_TestFill_Colors.htm" />
           <HelpTOCNode Title="Delay Property " Url="html/P_StarfieldDrivers_Drivers_TestFill_Delay.htm" />
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_TestFill_DrawColor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="740cea48-25be-4c63-a342-24ae3d6af877" Title="TestFill Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_TestFill.htm">
+        <HelpTOCNode Id="e8f3c887-dd35-4a68-a863-7538a7f89cca" Title="TestFill Methods" Url="html/Methods_T_StarfieldDrivers_Drivers_TestFill.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Render.htm" />
@@ -651,62 +651,62 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="dcd56701-c307-4ab8-8e92-f543b776368e" Title="StarfieldDrivers.PresenceResponsive" Url="html/N_StarfieldDrivers_PresenceResponsive.htm">
-      <HelpTOCNode Id="83bb3399-f569-402e-b4a2-d06ebaa6272f" Title="GenericTrails Class" Url="html/T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
+    <HelpTOCNode Id="0b2a3a61-d3cf-4790-a669-7f93ce5dcc32" Title="StarfieldDrivers.PresenceResponsive" Url="html/N_StarfieldDrivers_PresenceResponsive.htm">
+      <HelpTOCNode Id="be905741-3e16-41bc-9fc2-d054bf4d541c" Title="GenericTrails Class" Url="html/T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
         <HelpTOCNode Title="GenericTrails Constructor " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails__ctor.htm" />
-        <HelpTOCNode Id="2c50c877-54c4-43d8-86b1-5318c9101a3c" Title="GenericTrails Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
+        <HelpTOCNode Id="32aed3d6-adc4-48e6-9650-c294d564ed4c" Title="GenericTrails Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
           <HelpTOCNode Title="Driver Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_Driver.htm" />
           <HelpTOCNode Title="FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_FadeRate.htm" />
           <HelpTOCNode Title="Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_Height.htm" />
           <HelpTOCNode Title="MaxHeight Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_MaxHeight.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a9adfdbe-3e6f-4c3a-a7dc-4b8904cd1114" Title="GenericTrails Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
+        <HelpTOCNode Id="ec1ff566-aa83-4ad6-83db-f079bcbe6171" Title="GenericTrails Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="3cf0f074-ae0a-49ba-aacb-b47d683f8e04" Title="GenericTrails Fields" Url="html/Fields_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
+        <HelpTOCNode Id="b6dde12b-1f50-4d14-b5a8-d3d81e58c585" Title="GenericTrails Fields" Url="html/Fields_T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm">
           <HelpTOCNode Title="drivers Field" Url="html/F_StarfieldDrivers_PresenceResponsive_GenericTrails_drivers.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9f5466d5-4afa-4590-b507-affe89ba827e" Title="PresenceClouds Class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
+      <HelpTOCNode Id="af7cafb6-1c71-46ec-8ab1-3c3c4fb759c9" Title="PresenceClouds Class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
         <HelpTOCNode Title="PresenceClouds Constructor " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds__ctor.htm" />
-        <HelpTOCNode Id="a245b728-d08d-4dd4-8764-ec6fedfbd75c" Title="PresenceClouds Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
+        <HelpTOCNode Id="33e58f11-9862-428b-80d2-71d0c0473f57" Title="PresenceClouds Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceClouds_DrawColor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="27a7d9b6-4914-4912-9784-6b745ee53840" Title="PresenceClouds Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
+        <HelpTOCNode Id="6deb334c-1b17-4613-bce0-1acbab81e8d3" Title="PresenceClouds Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="1b4225f0-c917-406e-a5a5-595801e2a1b1" Title="PresenceTrails Class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
+      <HelpTOCNode Id="f1a1d54a-2c12-4b4c-a081-bfaac2855ff1" Title="PresenceTrails Class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
         <HelpTOCNode Title="PresenceTrails Constructor " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails__ctor.htm" />
-        <HelpTOCNode Id="d2b64c15-5ae9-491f-ae70-db80df6de79b" Title="PresenceTrails Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
+        <HelpTOCNode Id="4befbfa0-3a66-4b77-b4fb-7c63d3f68c31" Title="PresenceTrails Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
           <HelpTOCNode Title="DrawColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_DrawColor.htm" />
           <HelpTOCNode Title="FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_FadeRate.htm" />
           <HelpTOCNode Title="Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_Height.htm" />
           <HelpTOCNode Title="MaxHeight Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_MaxHeight.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="49440b8c-ec05-4839-b3bd-24fd23dfcf59" Title="PresenceTrails Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
+        <HelpTOCNode Id="31812988-4527-4f81-a60a-b143f5d7c49b" Title="PresenceTrails Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Render.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_ToString.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7f1b09bf-1917-47a4-af4c-e2fee112313f" Title="WhackAMole Class" Url="html/T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
+      <HelpTOCNode Id="5a95d7da-70d4-4bfc-b0b7-0424cb291ae2" Title="WhackAMole Class" Url="html/T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
         <HelpTOCNode Title="WhackAMole Constructor " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole__ctor.htm" />
-        <HelpTOCNode Id="475e03c0-75e8-41cc-b1c7-0b2e7b02a816" Title="WhackAMole Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
+        <HelpTOCNode Id="39a0837a-7c49-40e0-a17c-2bed774c8843" Title="WhackAMole Properties" Url="html/Properties_T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
           <HelpTOCNode Title="FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_FadeRate.htm" />
           <HelpTOCNode Title="Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_Height.htm" />
           <HelpTOCNode Title="MaxHeight Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_MaxHeight.htm" />
           <HelpTOCNode Title="WaitColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_WaitColor.htm" />
           <HelpTOCNode Title="WinColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_WinColor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2c36a901-5ad9-4b71-93a4-e6ad98e801ac" Title="WhackAMole Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
+        <HelpTOCNode Id="1981798d-8ad1-4718-b150-6437ec888377" Title="WhackAMole Methods" Url="html/Methods_T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm">
           <HelpTOCNode Title="IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Starfield_IStarfieldDriver_Start.htm" />
           <HelpTOCNode Title="IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Starfield_IStarfieldDriver_Stop.htm" />
           <HelpTOCNode Title="Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Render.htm" />
@@ -714,10 +714,10 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2deadafc-2b72-4d9d-9f3f-aad06e717f87" Title="StarfieldUtils.CFDUtils" Url="html/N_StarfieldUtils_CFDUtils.htm">
-      <HelpTOCNode Id="1e4cae2e-2206-4d4e-a306-0b3b46642416" Title="DefaultKernels Class" Url="html/T_StarfieldUtils_CFDUtils_DefaultKernels.htm">
+    <HelpTOCNode Id="fad97eae-4f57-4354-aea5-1b147b0c1351" Title="StarfieldUtils.CFDUtils" Url="html/N_StarfieldUtils_CFDUtils.htm">
+      <HelpTOCNode Id="1695dc9f-58fc-4753-a884-147d145fa7c8" Title="DefaultKernels Class" Url="html/T_StarfieldUtils_CFDUtils_DefaultKernels.htm">
         <HelpTOCNode Title="DefaultKernels Constructor " Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels__ctor.htm" />
-        <HelpTOCNode Id="fc269dcc-3734-4597-b044-acc5ec912239" Title="DefaultKernels Methods" Url="html/Methods_T_StarfieldUtils_CFDUtils_DefaultKernels.htm">
+        <HelpTOCNode Id="a823b572-00db-46fb-9f69-b8c137b1ae4d" Title="DefaultKernels Methods" Url="html/Methods_T_StarfieldUtils_CFDUtils_DefaultKernels.htm">
           <HelpTOCNode Title="WPoly6 Method " Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6.htm" />
           <HelpTOCNode Title="WPoly6Gradient Method " Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6Gradient.htm" />
           <HelpTOCNode Title="WPoly6Laplacian Method " Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6Laplacian.htm" />
@@ -727,9 +727,9 @@
           <HelpTOCNode Title="WViscosityLaplacian Method " Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WViscosityLaplacian.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6eff3e7d-9b2d-4297-91c2-10d1f387fdbb" Title="Particle Structure" Url="html/T_StarfieldUtils_CFDUtils_Particle.htm">
+      <HelpTOCNode Id="0e58dea5-140c-4af0-b8f2-b735de1263a9" Title="Particle Structure" Url="html/T_StarfieldUtils_CFDUtils_Particle.htm">
         <HelpTOCNode Title="Particle Methods" Url="html/Methods_T_StarfieldUtils_CFDUtils_Particle.htm" />
-        <HelpTOCNode Id="5f454c20-5bda-4c1b-acd7-eeaf17cbf162" Title="Particle Fields" Url="html/Fields_T_StarfieldUtils_CFDUtils_Particle.htm">
+        <HelpTOCNode Id="3ff9cf62-4dd1-4597-b0b4-fb2709eba206" Title="Particle Fields" Url="html/Fields_T_StarfieldUtils_CFDUtils_Particle.htm">
           <HelpTOCNode Title="ActualDensity Field" Url="html/F_StarfieldUtils_CFDUtils_Particle_ActualDensity.htm" />
           <HelpTOCNode Title="ColorDelta Field" Url="html/F_StarfieldUtils_CFDUtils_Particle_ColorDelta.htm" />
           <HelpTOCNode Title="DrawColor Field" Url="html/F_StarfieldUtils_CFDUtils_Particle_DrawColor.htm" />
@@ -749,9 +749,9 @@
           <HelpTOCNode Title="Viscosity Field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Viscosity.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="bf3e4bbd-ba7e-46a5-b98f-7a552aaf4d85" Title="Solver Class" Url="html/T_StarfieldUtils_CFDUtils_Solver.htm">
+      <HelpTOCNode Id="f0c99c39-4173-4528-acdf-53694fad0665" Title="Solver Class" Url="html/T_StarfieldUtils_CFDUtils_Solver.htm">
         <HelpTOCNode Title="Solver Constructor " Url="html/M_StarfieldUtils_CFDUtils_Solver__ctor.htm" />
-        <HelpTOCNode Id="5942240c-225f-4232-97ef-3bbc598e315a" Title="Solver Methods" Url="html/Methods_T_StarfieldUtils_CFDUtils_Solver.htm">
+        <HelpTOCNode Id="582aac36-83fd-4231-88fe-4896fa3a210a" Title="Solver Methods" Url="html/Methods_T_StarfieldUtils_CFDUtils_Solver.htm">
           <HelpTOCNode Title="ApplyExternalForces Method " Url="html/M_StarfieldUtils_CFDUtils_Solver_ApplyExternalForces.htm" />
           <HelpTOCNode Title="ComputeBasicForces Method " Url="html/M_StarfieldUtils_CFDUtils_Solver_ComputeBasicForces.htm" />
           <HelpTOCNode Title="ComputeDensities Method " Url="html/M_StarfieldUtils_CFDUtils_Solver_ComputeDensities.htm" />
@@ -760,7 +760,7 @@
           <HelpTOCNode Title="GetParticle Method " Url="html/M_StarfieldUtils_CFDUtils_Solver_GetParticle.htm" />
           <HelpTOCNode Title="Integrate Method " Url="html/M_StarfieldUtils_CFDUtils_Solver_Integrate.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ec75ed94-b205-43ee-a194-58bce2fbdd8b" Title="Solver Fields" Url="html/Fields_T_StarfieldUtils_CFDUtils_Solver.htm">
+        <HelpTOCNode Id="a3c83c16-10a5-41f8-9625-816981495cad" Title="Solver Fields" Url="html/Fields_T_StarfieldUtils_CFDUtils_Solver.htm">
           <HelpTOCNode Title="delta_t Field" Url="html/F_StarfieldUtils_CFDUtils_Solver_delta_t.htm" />
           <HelpTOCNode Title="FarCorner Field" Url="html/F_StarfieldUtils_CFDUtils_Solver_FarCorner.htm" />
           <HelpTOCNode Title="k Field" Url="html/F_StarfieldUtils_CFDUtils_Solver_k.htm" />
@@ -771,10 +771,10 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8f3eb38d-a2c3-42eb-8a23-cefec8e00200" Title="StarfieldUtils.ColorUtils" Url="html/N_StarfieldUtils_ColorUtils.htm">
-      <HelpTOCNode Id="f96de85a-dfb2-45e6-a90c-94cf41be2168" Title="ColorUtils Class" Url="html/T_StarfieldUtils_ColorUtils_ColorUtils.htm">
+    <HelpTOCNode Id="8d34f880-511a-459c-b6ae-633d8919f572" Title="StarfieldUtils.ColorUtils" Url="html/N_StarfieldUtils_ColorUtils.htm">
+      <HelpTOCNode Id="5900522d-5a92-4072-86f8-32c282300e4f" Title="ColorUtils Class" Url="html/T_StarfieldUtils_ColorUtils_ColorUtils.htm">
         <HelpTOCNode Title="ColorUtils Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorUtils__ctor.htm" />
-        <HelpTOCNode Id="a598dc4b-bbfd-4fc2-8d24-30c588dbce39" Title="ColorUtils Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorUtils.htm">
+        <HelpTOCNode Id="52b65a16-a2a8-4e46-b6a8-2e9d3ab2d9ec" Title="ColorUtils Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorUtils.htm">
           <HelpTOCNode Title="BlendAveraged Method " Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_BlendAveraged.htm" />
           <HelpTOCNode Title="BlendRaw Method " Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_BlendRaw.htm" />
           <HelpTOCNode Title="GetGradientColor Method " Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_GetGradientColor.htm" />
@@ -784,60 +784,60 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7aaafa46-8590-48ad-866b-aa6f5c54f472" Title="StarfieldUtils.ColorUtils.ColorSpace" Url="html/N_StarfieldUtils_ColorUtils_ColorSpace.htm">
-      <HelpTOCNode Id="a38681f4-11d8-44e0-85af-e74ca71a691f" Title="CIELAB Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
+    <HelpTOCNode Id="5d821857-4f15-4e3a-a68f-58ddedf09eac" Title="StarfieldUtils.ColorUtils.ColorSpace" Url="html/N_StarfieldUtils_ColorUtils_ColorSpace.htm">
+      <HelpTOCNode Id="bd056cb7-4add-481a-8134-f101865f327f" Title="CIELAB Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
         <HelpTOCNode Title="CIELAB Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB__ctor.htm" />
-        <HelpTOCNode Id="89f79658-3573-4c9e-9941-26873bca6a1a" Title="CIELAB Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
+        <HelpTOCNode Id="02b93e3c-e607-4be4-8047-4b4f6a92993f" Title="CIELAB Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
           <HelpTOCNode Title="A Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_A.htm" />
           <HelpTOCNode Title="B Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_B.htm" />
           <HelpTOCNode Title="L Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_L.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f4568d47-912e-4881-83fb-533663a6edce" Title="CIELAB Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
+        <HelpTOCNode Id="986d220a-c27e-464e-94bf-8c32c2c083f3" Title="CIELAB Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5491a1d3-eca0-4463-8a04-53b54a3f3b98" Title="CIELAB Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
+        <HelpTOCNode Id="7c3835f5-7f29-4150-bc28-fb6406d30204" Title="CIELAB Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CIELAB.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="3551b60f-ae74-465a-9e33-cbe12023ff72" Title="CIEXYZ Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
+      <HelpTOCNode Id="b9ef2e24-4635-4a34-a6f6-331579f22c0e" Title="CIEXYZ Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
         <HelpTOCNode Title="CIEXYZ Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ__ctor.htm" />
-        <HelpTOCNode Id="5f609d63-ac38-452a-98b7-9eae01d94184" Title="CIEXYZ Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
+        <HelpTOCNode Id="1ffd31a4-ce5e-47b2-a14d-1c6daf332b3a" Title="CIEXYZ Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
           <HelpTOCNode Title="X Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_X.htm" />
           <HelpTOCNode Title="Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Y.htm" />
           <HelpTOCNode Title="Z Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Z.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="30b7062f-ef93-4032-ab04-1c1e58be2caa" Title="CIEXYZ Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
+        <HelpTOCNode Id="d9b7f744-8d1e-4070-a723-6171c32725b1" Title="CIEXYZ Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="12b68b2b-a33d-4389-ba56-f48710a90561" Title="CIEXYZ Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
+        <HelpTOCNode Id="6ddaa3ff-f6a4-4a63-9b31-359e4dd42ee0" Title="CIEXYZ Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ad8f9780-d0f3-4c72-b3a7-69171fa03643" Title="CMYK Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
+      <HelpTOCNode Id="f6c52b14-7de3-4558-a599-45ecd90b5cbb" Title="CMYK Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
         <HelpTOCNode Title="CMYK Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CMYK__ctor.htm" />
-        <HelpTOCNode Id="03bfdc91-740a-494f-8edb-9a199093ff00" Title="CMYK Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
+        <HelpTOCNode Id="cee39292-557d-433f-9c45-9aca38bd26c7" Title="CMYK Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
           <HelpTOCNode Title="Black Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Black.htm" />
           <HelpTOCNode Title="Cyan Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Cyan.htm" />
           <HelpTOCNode Title="Magenta Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Magenta.htm" />
           <HelpTOCNode Title="Yellow Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Yellow.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="cbd94e23-1c15-442c-bba7-12237d194377" Title="CMYK Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
+        <HelpTOCNode Id="22c2ef59-4ef2-4b0f-b193-cfaf0f268e1e" Title="CMYK Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CMYK_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="1c7180ea-ed2b-40ba-8f8e-65b73913069b" Title="CMYK Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
+        <HelpTOCNode Id="717f1f93-70be-4dd3-88f3-0bfe983aa41a" Title="CMYK Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_CMYK.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CMYK_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CMYK_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="74b94a8e-d2a1-45b4-8abe-7be0d760ab4a" Title="ConvertColorSpace Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm">
+      <HelpTOCNode Id="8ce71b3f-7a09-4108-ad6c-bb447efdd69c" Title="ConvertColorSpace Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm">
         <HelpTOCNode Title="ConvertColorSpace Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace__ctor.htm" />
-        <HelpTOCNode Id="7203ef31-2ec9-4df5-b836-bb0ce4fb5b27" Title="ConvertColorSpace Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm">
-          <HelpTOCNode Id="be212e12-d8ca-45a8-bd05-70414758e9a3" Title="ToCIELAB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB.htm">
+        <HelpTOCNode Id="8ad09c51-d56b-418a-b110-6929ad7ddf6f" Title="ConvertColorSpace Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm">
+          <HelpTOCNode Id="2b1faad3-e045-4a2b-9799-c5106f5f09cf" Title="ToCIELAB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB.htm">
             <HelpTOCNode Title="ToCIELAB Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB_5.htm" />
             <HelpTOCNode Title="ToCIELAB Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB.htm" />
             <HelpTOCNode Title="ToCIELAB Method (CMYK)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB_1.htm" />
@@ -845,7 +845,7 @@
             <HelpTOCNode Title="ToCIELAB Method (HSL)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB_3.htm" />
             <HelpTOCNode Title="ToCIELAB Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB_4.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="22d1ab68-0bda-4342-88bd-dd59438cc4c2" Title="ToCIEXYZ Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ.htm">
+          <HelpTOCNode Id="daa9bdc0-eaf5-403b-b78d-ec996b12ca23" Title="ToCIEXYZ Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ.htm">
             <HelpTOCNode Title="ToCIEXYZ Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ_5.htm" />
             <HelpTOCNode Title="ToCIEXYZ Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ.htm" />
             <HelpTOCNode Title="ToCIEXYZ Method (CMYK)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ_1.htm" />
@@ -853,7 +853,7 @@
             <HelpTOCNode Title="ToCIEXYZ Method (HSL)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ_3.htm" />
             <HelpTOCNode Title="ToCIEXYZ Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ_4.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="d05f8f8f-4c1c-497e-bd4f-ed9484833ba8" Title="ToCMYK Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK.htm">
+          <HelpTOCNode Id="5437098c-38a7-473e-befa-d5435d2a9819" Title="ToCMYK Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK.htm">
             <HelpTOCNode Title="ToCMYK Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK_5.htm" />
             <HelpTOCNode Title="ToCMYK Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK.htm" />
             <HelpTOCNode Title="ToCMYK Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK_1.htm" />
@@ -861,7 +861,7 @@
             <HelpTOCNode Title="ToCMYK Method (HSL)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK_3.htm" />
             <HelpTOCNode Title="ToCMYK Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK_4.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="31309a9e-5630-44d2-9c92-762413430a59" Title="ToHSB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB.htm">
+          <HelpTOCNode Id="60ec35ef-7ede-42ac-94d4-7552c7f93533" Title="ToHSB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB.htm">
             <HelpTOCNode Title="ToHSB Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB_5.htm" />
             <HelpTOCNode Title="ToHSB Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB.htm" />
             <HelpTOCNode Title="ToHSB Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB_1.htm" />
@@ -869,7 +869,7 @@
             <HelpTOCNode Title="ToHSB Method (HSL)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB_3.htm" />
             <HelpTOCNode Title="ToHSB Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSB_4.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="62bf2954-7b07-45d5-b25a-0ced8e6ae103" Title="ToHSL Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL.htm">
+          <HelpTOCNode Id="651ca832-4631-4e22-bbf2-e731eaddb4d0" Title="ToHSL Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL.htm">
             <HelpTOCNode Title="ToHSL Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL_5.htm" />
             <HelpTOCNode Title="ToHSL Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL.htm" />
             <HelpTOCNode Title="ToHSL Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL_1.htm" />
@@ -877,7 +877,7 @@
             <HelpTOCNode Title="ToHSL Method (HSB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL_3.htm" />
             <HelpTOCNode Title="ToHSL Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL_4.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="fed915f7-e077-46c0-919e-0d49fbcbfe43" Title="ToRGB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB.htm">
+          <HelpTOCNode Id="a3277cd1-1896-4bee-8de8-92832dabe037" Title="ToRGB Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB.htm">
             <HelpTOCNode Title="ToRGB Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB.htm" />
             <HelpTOCNode Title="ToRGB Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB_1.htm" />
             <HelpTOCNode Title="ToRGB Method (CMYK)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB_2.htm" />
@@ -885,7 +885,7 @@
             <HelpTOCNode Title="ToRGB Method (HSL)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB_4.htm" />
             <HelpTOCNode Title="ToRGB Method (YUV)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB_5.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="48772c9f-74fd-4323-89bb-b71ae90213c3" Title="ToYUV Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV.htm">
+          <HelpTOCNode Id="d58e9494-961d-4686-b83d-9a39ffbbe0e3" Title="ToYUV Method " Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV.htm">
             <HelpTOCNode Title="ToYUV Method (Color)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV_5.htm" />
             <HelpTOCNode Title="ToYUV Method (CIELAB)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV.htm" />
             <HelpTOCNode Title="ToYUV Method (CIEXYZ)" Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV_1.htm" />
@@ -895,59 +895,59 @@
           </HelpTOCNode>
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2b972d49-096a-4f40-bc6d-5270b722717d" Title="HSB Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
+      <HelpTOCNode Id="e28ef5cf-5891-4d9b-9e02-833d61227846" Title="HSB Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
         <HelpTOCNode Title="HSB Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSB__ctor.htm" />
-        <HelpTOCNode Id="f0090c28-0820-48bf-a200-2ebd184bd6ea" Title="HSB Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
+        <HelpTOCNode Id="ab2845cb-7ee5-4374-b755-579971aeea09" Title="HSB Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
           <HelpTOCNode Title="Brightness Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSB_Brightness.htm" />
           <HelpTOCNode Title="Hue Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSB_Hue.htm" />
           <HelpTOCNode Title="Saturation Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSB_Saturation.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="dcfdc3b1-a66c-4fdf-866a-e2fe59ee2045" Title="HSB Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
+        <HelpTOCNode Id="e6d0b08f-4b96-40ab-a1a2-b7d337f3a687" Title="HSB Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSB_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSB_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="09709861-51e3-4144-a44a-dfa0c2b05702" Title="HSB Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
+        <HelpTOCNode Id="6ef49e56-1b4b-4dc1-8aef-c90916ce1f1b" Title="HSB Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSB_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSB_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0943b52a-ae63-4138-b2ef-2821deaab6b5" Title="HSL Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
+      <HelpTOCNode Id="9979494b-d9de-416c-ad2d-663f94a5f74c" Title="HSL Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
         <HelpTOCNode Title="HSL Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSL__ctor.htm" />
-        <HelpTOCNode Id="aa828166-4551-4835-89b6-6308f8e76108" Title="HSL Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
+        <HelpTOCNode Id="b6f9d041-5973-454c-b0fa-ebea32b3305d" Title="HSL Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
           <HelpTOCNode Title="Hue Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSL_Hue.htm" />
           <HelpTOCNode Title="Luminosity Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSL_Luminosity.htm" />
           <HelpTOCNode Title="Saturation Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSL_Saturation.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="fee79226-8c44-46f3-bd4d-0e9b48caf290" Title="HSL Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
+        <HelpTOCNode Id="c2301a18-7a05-44d0-88bd-56f09a9dadff" Title="HSL Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSL_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSL_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b7d46604-dbc2-4aea-9e5d-b4594a77874a" Title="HSL Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
+        <HelpTOCNode Id="84289ea2-172d-4d08-bc49-fd1ee482a42a" Title="HSL Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_HSL.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSL_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_HSL_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2b233824-4518-456e-9446-d3e6bf2b1857" Title="YUV Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
+      <HelpTOCNode Id="1d1dd118-40f0-48d1-b646-a7543240fc9c" Title="YUV Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
         <HelpTOCNode Title="YUV Constructor " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_YUV__ctor.htm" />
-        <HelpTOCNode Id="ac1dc4f0-6a1c-45b2-a0ff-a0436e0883be" Title="YUV Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
+        <HelpTOCNode Id="8e1ebce6-ef56-477d-82ee-be5f1d4f314c" Title="YUV Properties" Url="html/Properties_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
           <HelpTOCNode Title="U Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_U.htm" />
           <HelpTOCNode Title="V Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_V.htm" />
           <HelpTOCNode Title="Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_Y.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="24bad754-6fd2-4c20-aadb-f41ebc259990" Title="YUV Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
+        <HelpTOCNode Id="84be04f2-43df-4210-b150-e6aef2350f59" Title="YUV Methods" Url="html/Methods_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_YUV_Equals.htm" />
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_YUV_GetHashCode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="14e6c39f-b3a4-41db-96b3-95fdf678da18" Title="YUV Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
+        <HelpTOCNode Id="65769eb5-ba9f-4494-9f04-ec5e0298e216" Title="YUV Operators" Url="html/Operators_T_StarfieldUtils_ColorUtils_ColorSpace_YUV.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_YUV_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_YUV_op_Inequality.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8cb41aa4-8e53-4fa7-9b50-3d18e91680dc" Title="StarfieldUtils.DataStructures" Url="html/N_StarfieldUtils_DataStructures.htm">
-      <HelpTOCNode Id="b9e22fad-3aa8-4bf1-aa3d-9864c9006a31" Title="PriorityQueue(T) Class" Url="html/T_StarfieldUtils_DataStructures_PriorityQueue_1.htm">
+    <HelpTOCNode Id="10821245-e76c-484d-9fe6-68eb0a3a5639" Title="StarfieldUtils.DataStructures" Url="html/N_StarfieldUtils_DataStructures.htm">
+      <HelpTOCNode Id="d93d3978-5b2c-4082-9eeb-cd3b0f1c2582" Title="PriorityQueue(T) Class" Url="html/T_StarfieldUtils_DataStructures_PriorityQueue_1.htm">
         <HelpTOCNode Title="PriorityQueue(T) Constructor " Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1__ctor.htm" />
-        <HelpTOCNode Id="3ed9645c-e022-4427-b81b-8ea03308e70d" Title="PriorityQueue(T) Methods" Url="html/Methods_T_StarfieldUtils_DataStructures_PriorityQueue_1.htm">
+        <HelpTOCNode Id="dd5338f2-f3c9-4746-be34-e0f8033cdeb9" Title="PriorityQueue(T) Methods" Url="html/Methods_T_StarfieldUtils_DataStructures_PriorityQueue_1.htm">
           <HelpTOCNode Title="Count Method " Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_Count.htm" />
           <HelpTOCNode Title="Dequeue Method " Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_Dequeue.htm" />
           <HelpTOCNode Title="Enqueue Method " Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_Enqueue.htm" />
@@ -957,37 +957,37 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c4672e17-ace3-438e-8b0a-858cdc9c89b6" Title="StarfieldUtils.DisplayUtils" Url="html/N_StarfieldUtils_DisplayUtils.htm">
-      <HelpTOCNode Id="4a7ffc00-4541-4c9d-94e6-2a948b90f38c" Title="StarfieldMixer Class" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
+    <HelpTOCNode Id="3a5bd476-9be4-4215-9db8-054dc6c5f82b" Title="StarfieldUtils.DisplayUtils" Url="html/N_StarfieldUtils_DisplayUtils.htm">
+      <HelpTOCNode Id="72f145e5-f2c8-4b8a-8856-d1bbe1ecec8b" Title="StarfieldMixer Class" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
         <HelpTOCNode Title="StarfieldMixer Constructor " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer__ctor.htm" />
-        <HelpTOCNode Id="a2e31565-1020-4792-b6b7-b51da71e9d4f" Title="StarfieldMixer Methods" Url="html/Methods_T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
+        <HelpTOCNode Id="6d4f6a1e-40ba-4929-8c01-bd926306c00f" Title="StarfieldMixer Methods" Url="html/Methods_T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
           <HelpTOCNode Title="AddChannel Method " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_AddChannel.htm" />
           <HelpTOCNode Title="CrossFade Method " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_CrossFade.htm" />
           <HelpTOCNode Title="FadeIn Method " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeIn.htm" />
-          <HelpTOCNode Id="18c4176f-ecde-44c9-8256-73dbee80b716" Title="FadeOut Method " Url="html/Overload_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeOut.htm">
+          <HelpTOCNode Id="07a8eae7-9105-49b5-b709-e242ed086953" Title="FadeOut Method " Url="html/Overload_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeOut.htm">
             <HelpTOCNode Title="FadeOut Method (TimeSpan, StarfieldMixer.FadeStyle)" Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeOut_1.htm" />
             <HelpTOCNode Title="FadeOut Method (StarfieldModel, TimeSpan, StarfieldMixer.FadeStyle)" Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeOut.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="RemoveChannel Method " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_RemoveChannel.htm" />
           <HelpTOCNode Title="SetChannelValue Method " Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_SetChannelValue.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="79fd0202-f3ed-44d7-9a58-f33f94de6898" Title="StarfieldMixer Events" Url="html/Events_T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
+        <HelpTOCNode Id="c02662c6-eea8-4716-ae93-de03cc154a3e" Title="StarfieldMixer Events" Url="html/Events_T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm">
           <HelpTOCNode Title="FadeCompleted Event" Url="html/E_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeCompleted.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="StarfieldMixer.FadeCompletedHandler Delegate" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeCompletedHandler.htm" />
       <HelpTOCNode Title="StarfieldMixer.FadeStyle Enumeration" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeStyle.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3b5c51c8-c477-4101-a85e-2a58d6e39240" Title="StarfieldUtils.FlockingUtils" Url="html/N_StarfieldUtils_FlockingUtils.htm">
-      <HelpTOCNode Id="dbb4f19e-2f8b-4804-8e2f-c1a4cc5827b2" Title="Boid Class" Url="html/T_StarfieldUtils_FlockingUtils_Boid.htm">
-        <HelpTOCNode Id="8c6b3afb-4e3f-4923-8b11-d9d5536bac75" Title="Boid Constructor " Url="html/Overload_StarfieldUtils_FlockingUtils_Boid__ctor.htm">
+    <HelpTOCNode Id="cc159eca-b797-424f-b7ed-c1135bc93be4" Title="StarfieldUtils.FlockingUtils" Url="html/N_StarfieldUtils_FlockingUtils.htm">
+      <HelpTOCNode Id="67ce6502-ef24-44ef-86c8-d6acfa4bba6c" Title="Boid Class" Url="html/T_StarfieldUtils_FlockingUtils_Boid.htm">
+        <HelpTOCNode Id="7dd54f94-e52b-4a92-91c0-eaf0e6299a3b" Title="Boid Constructor " Url="html/Overload_StarfieldUtils_FlockingUtils_Boid__ctor.htm">
           <HelpTOCNode Title="Boid Constructor (Vec3D, Int32, Color)" Url="html/M_StarfieldUtils_FlockingUtils_Boid__ctor.htm" />
           <HelpTOCNode Title="Boid Constructor (Double, Double, Double, Color)" Url="html/M_StarfieldUtils_FlockingUtils_Boid__ctor_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="50cd1b12-a552-436c-bed4-7581ecd1b5c4" Title="Boid Methods" Url="html/Methods_T_StarfieldUtils_FlockingUtils_Boid.htm">
+        <HelpTOCNode Id="e903339f-5d03-4894-a975-17f452fd1e44" Title="Boid Methods" Url="html/Methods_T_StarfieldUtils_FlockingUtils_Boid.htm">
           <HelpTOCNode Title="Move Method " Url="html/M_StarfieldUtils_FlockingUtils_Boid_Move.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="01751484-abf6-4a68-93e5-074c4b863136" Title="Boid Fields" Url="html/Fields_T_StarfieldUtils_FlockingUtils_Boid.htm">
+        <HelpTOCNode Id="c47a2c8b-0df8-42cb-b10a-17771f665bf0" Title="Boid Fields" Url="html/Fields_T_StarfieldUtils_FlockingUtils_Boid.htm">
           <HelpTOCNode Title="Color Field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_Color.htm" />
           <HelpTOCNode Title="dX Field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_dX.htm" />
           <HelpTOCNode Title="dY Field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_dY.htm" />
@@ -995,23 +995,23 @@
           <HelpTOCNode Title="Position Field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_Position.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="b0a4e2a6-76b3-44c3-8983-d8079baeceaa" Title="Swarm Class" Url="html/T_StarfieldUtils_FlockingUtils_Swarm.htm">
+      <HelpTOCNode Id="9218553a-35eb-4ad7-90e7-65ede16560b1" Title="Swarm Class" Url="html/T_StarfieldUtils_FlockingUtils_Swarm.htm">
         <HelpTOCNode Title="Swarm Constructor " Url="html/M_StarfieldUtils_FlockingUtils_Swarm__ctor.htm" />
-        <HelpTOCNode Id="fbfbba64-23fe-4b6b-98f6-7a5388de5e5f" Title="Swarm Methods" Url="html/Methods_T_StarfieldUtils_FlockingUtils_Swarm.htm">
+        <HelpTOCNode Id="2b8036b3-bb06-43ec-9d97-f515352a3fb1" Title="Swarm Methods" Url="html/Methods_T_StarfieldUtils_FlockingUtils_Swarm.htm">
           <HelpTOCNode Title="GetCenter Method " Url="html/M_StarfieldUtils_FlockingUtils_Swarm_GetCenter.htm" />
           <HelpTOCNode Title="MoveBoids Method " Url="html/M_StarfieldUtils_FlockingUtils_Swarm_MoveBoids.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f4e3097a-0574-4de1-865f-b18e1e824d76" Title="Swarm Fields" Url="html/Fields_T_StarfieldUtils_FlockingUtils_Swarm.htm">
+        <HelpTOCNode Id="dc252e5c-b330-4ced-a2c2-4f1ff4203c38" Title="Swarm Fields" Url="html/Fields_T_StarfieldUtils_FlockingUtils_Swarm.htm">
           <HelpTOCNode Title="Boids Field" Url="html/F_StarfieldUtils_FlockingUtils_Swarm_Boids.htm" />
           <HelpTOCNode Title="Goal Field" Url="html/F_StarfieldUtils_FlockingUtils_Swarm_Goal.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="23f6a035-156b-4ecd-9eb1-a2bafb74f462" Title="StarfieldUtils.MathUtils" Url="html/N_StarfieldUtils_MathUtils.htm">
-      <HelpTOCNode Id="e0be0bc8-d425-455f-ae98-1d9b8f7f701f" Title="AffineCoefs2d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs2d.htm">
+    <HelpTOCNode Id="fa75af34-d83e-4833-9df8-0138e6a22a25" Title="StarfieldUtils.MathUtils" Url="html/N_StarfieldUtils_MathUtils.htm">
+      <HelpTOCNode Id="65ecb160-7ffa-4caf-8465-b497a7b65fae" Title="AffineCoefs2d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs2d.htm">
         <HelpTOCNode Title="AffineCoefs2d Constructor " Url="html/M_StarfieldUtils_MathUtils_AffineCoefs2d__ctor.htm" />
         <HelpTOCNode Title="AffineCoefs2d Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_AffineCoefs2d.htm" />
-        <HelpTOCNode Id="0551d223-1de9-4d91-9420-ed775ef98de9" Title="AffineCoefs2d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs2d.htm">
+        <HelpTOCNode Id="b31d6c6e-889f-4e91-abf0-3a91552b49fd" Title="AffineCoefs2d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs2d.htm">
           <HelpTOCNode Title="a Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs2d_a.htm" />
           <HelpTOCNode Title="b Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs2d_b.htm" />
           <HelpTOCNode Title="c Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs2d_c.htm" />
@@ -1020,10 +1020,10 @@
           <HelpTOCNode Title="f Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs2d_f.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0fc1a211-4142-428e-b671-b6aa20822f43" Title="AffineCoefs3d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs3d.htm">
+      <HelpTOCNode Id="d7970cbd-04f6-4c86-8476-1826fe82d570" Title="AffineCoefs3d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs3d.htm">
         <HelpTOCNode Title="AffineCoefs3d Constructor " Url="html/M_StarfieldUtils_MathUtils_AffineCoefs3d__ctor.htm" />
         <HelpTOCNode Title="AffineCoefs3d Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_AffineCoefs3d.htm" />
-        <HelpTOCNode Id="9af1607e-c728-4185-aaef-3fdd6519b047" Title="AffineCoefs3d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs3d.htm">
+        <HelpTOCNode Id="bdd28cf1-23ed-4819-b503-418e11385545" Title="AffineCoefs3d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs3d.htm">
           <HelpTOCNode Title="a Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_a.htm" />
           <HelpTOCNode Title="b Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_b.htm" />
           <HelpTOCNode Title="c Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_c.htm" />
@@ -1038,10 +1038,10 @@
           <HelpTOCNode Title="l Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_l.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="d476bb39-485d-436b-bcd6-30dcf9de7f25" Title="AffineCoefs4d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs4d.htm">
+      <HelpTOCNode Id="22c13d9b-e04b-4a9e-b5f6-c5e6f32218df" Title="AffineCoefs4d Class" Url="html/T_StarfieldUtils_MathUtils_AffineCoefs4d.htm">
         <HelpTOCNode Title="AffineCoefs4d Constructor " Url="html/M_StarfieldUtils_MathUtils_AffineCoefs4d__ctor.htm" />
         <HelpTOCNode Title="AffineCoefs4d Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_AffineCoefs4d.htm" />
-        <HelpTOCNode Id="a375e722-5194-4461-b328-4f619d171485" Title="AffineCoefs4d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs4d.htm">
+        <HelpTOCNode Id="4e99acbe-b1a3-47d6-b9a7-293bd507c32a" Title="AffineCoefs4d Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_AffineCoefs4d.htm">
           <HelpTOCNode Title="a Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_a.htm" />
           <HelpTOCNode Title="b Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_b.htm" />
           <HelpTOCNode Title="c Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_c.htm" />
@@ -1064,47 +1064,47 @@
           <HelpTOCNode Title="t Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_t.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9c7c2c75-b28b-4db9-b0aa-563033e11bb5" Title="FFTTools Class" Url="html/T_StarfieldUtils_MathUtils_FFTTools.htm">
+      <HelpTOCNode Id="a5b8abab-f8e2-4d73-987f-5e3628190ce8" Title="FFTTools Class" Url="html/T_StarfieldUtils_MathUtils_FFTTools.htm">
         <HelpTOCNode Title="FFTTools Constructor " Url="html/M_StarfieldUtils_MathUtils_FFTTools__ctor.htm" />
-        <HelpTOCNode Id="8e859f0e-b774-435e-b12d-127570d03f82" Title="FFTTools Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_FFTTools.htm">
+        <HelpTOCNode Id="95fd3dd8-cac4-44bd-8619-92cd631ea8d2" Title="FFTTools Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_FFTTools.htm">
           <HelpTOCNode Title="ComputeFFTPolarMag Method " Url="html/M_StarfieldUtils_MathUtils_FFTTools_ComputeFFTPolarMag.htm" />
           <HelpTOCNode Title="RoundToNextPowerOf2 Method " Url="html/M_StarfieldUtils_MathUtils_FFTTools_RoundToNextPowerOf2.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="83c2350f-44a2-46be-bbce-a67183f409e9" Title="KMeans Class" Url="html/T_StarfieldUtils_MathUtils_KMeans.htm">
+      <HelpTOCNode Id="293ae625-346f-49ee-957f-ce9fc36bdc05" Title="KMeans Class" Url="html/T_StarfieldUtils_MathUtils_KMeans.htm">
         <HelpTOCNode Title="KMeans Constructor " Url="html/M_StarfieldUtils_MathUtils_KMeans__ctor.htm" />
-        <HelpTOCNode Id="4c0a368c-f1fc-4f3e-a95c-8740cd27ac01" Title="KMeans Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_KMeans.htm">
+        <HelpTOCNode Id="504cafd8-070c-48b3-85a1-33ce963f2a69" Title="KMeans Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_KMeans.htm">
           <HelpTOCNode Title="Cluster Method " Url="html/M_StarfieldUtils_MathUtils_KMeans_Cluster.htm" />
           <HelpTOCNode Title="FindKMeans Method " Url="html/M_StarfieldUtils_MathUtils_KMeans_FindKMeans.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9bb5ba8d-9cc8-44fc-8879-c8465aa6cc30" Title="KMeansPoint Class" Url="html/T_StarfieldUtils_MathUtils_KMeansPoint.htm">
+      <HelpTOCNode Id="98d60eb6-81b1-4a4f-a2d9-a0a20c9436de" Title="KMeansPoint Class" Url="html/T_StarfieldUtils_MathUtils_KMeansPoint.htm">
         <HelpTOCNode Title="KMeansPoint Constructor " Url="html/M_StarfieldUtils_MathUtils_KMeansPoint__ctor.htm" />
-        <HelpTOCNode Id="f6932ece-63bb-430a-9aaa-854516350785" Title="KMeansPoint Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_KMeansPoint.htm">
+        <HelpTOCNode Id="be3040c6-b2e0-40ee-ae91-60af6348120a" Title="KMeansPoint Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_KMeansPoint.htm">
           <HelpTOCNode Title="distance Method " Url="html/M_StarfieldUtils_MathUtils_KMeansPoint_distance.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="312b28d6-e8fe-42d7-8ef7-75beb5a468c1" Title="KMeansPoint Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_KMeansPoint.htm">
+        <HelpTOCNode Id="cf731255-cf41-4d07-a183-5b38873ff9d9" Title="KMeansPoint Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_KMeansPoint.htm">
           <HelpTOCNode Title="x Field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_x.htm" />
           <HelpTOCNode Title="y Field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_y.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="170910c1-82af-4b69-9bba-3f266cda3765" Title="KMeansResult Class" Url="html/T_StarfieldUtils_MathUtils_KMeansResult.htm">
+      <HelpTOCNode Id="0b7e3a9f-cfaa-4ff3-9994-d3d1dbd9f468" Title="KMeansResult Class" Url="html/T_StarfieldUtils_MathUtils_KMeansResult.htm">
         <HelpTOCNode Title="KMeansResult Constructor " Url="html/M_StarfieldUtils_MathUtils_KMeansResult__ctor.htm" />
         <HelpTOCNode Title="KMeansResult Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_KMeansResult.htm" />
-        <HelpTOCNode Id="588e02e4-41a6-4109-8642-5d82a5eb68e8" Title="KMeansResult Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_KMeansResult.htm">
+        <HelpTOCNode Id="c2a7311f-87f8-4688-bc65-be20830deda6" Title="KMeansResult Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_KMeansResult.htm">
           <HelpTOCNode Title="centroids Field" Url="html/F_StarfieldUtils_MathUtils_KMeansResult_centroids.htm" />
           <HelpTOCNode Title="membership Field" Url="html/F_StarfieldUtils_MathUtils_KMeansResult_membership.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="278a06a4-3cf1-4d78-ba36-9f1578f94f4a" Title="Quaternion Structure" Url="html/T_StarfieldUtils_MathUtils_Quaternion.htm">
-        <HelpTOCNode Id="64267faa-212b-4c0d-8785-2d48acffb2c5" Title="Quaternion Constructor " Url="html/Overload_StarfieldUtils_MathUtils_Quaternion__ctor.htm">
+      <HelpTOCNode Id="1a333271-60ff-4431-8787-6b4360a83a00" Title="Quaternion Structure" Url="html/T_StarfieldUtils_MathUtils_Quaternion.htm">
+        <HelpTOCNode Id="725bd0a0-6e4b-4a73-90e9-41610ea60368" Title="Quaternion Constructor " Url="html/Overload_StarfieldUtils_MathUtils_Quaternion__ctor.htm">
           <HelpTOCNode Title="Quaternion Constructor (Single, Vec3D)" Url="html/M_StarfieldUtils_MathUtils_Quaternion__ctor_1.htm" />
           <HelpTOCNode Title="Quaternion Constructor (Double, Double, Double, Double)" Url="html/M_StarfieldUtils_MathUtils_Quaternion__ctor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="4dd0c9de-8c1d-4341-a349-11e9e4d1bc99" Title="Quaternion Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Quaternion.htm">
+        <HelpTOCNode Id="378bb362-8dd8-4338-8897-9e2226785243" Title="Quaternion Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Quaternion.htm">
           <HelpTOCNode Title="V Property " Url="html/P_StarfieldUtils_MathUtils_Quaternion_V.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e23334c6-40a6-440a-a90c-eeba8365d5cc" Title="Quaternion Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Quaternion.htm">
+        <HelpTOCNode Id="018ef7e9-a24c-4b31-aa1e-5f842bf1c2fa" Title="Quaternion Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Quaternion.htm">
           <HelpTOCNode Title="Conjugate Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_Conjugate.htm" />
           <HelpTOCNode Title="Copy Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_Copy.htm" />
           <HelpTOCNode Title="Equals Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_Equals.htm" />
@@ -1113,26 +1113,26 @@
           <HelpTOCNode Title="GetHashCode Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_GetHashCode.htm" />
           <HelpTOCNode Title="Multiply Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_Multiply.htm" />
           <HelpTOCNode Title="Normalise Method " Url="html/M_StarfieldUtils_MathUtils_Quaternion_Normalise.htm" />
-          <HelpTOCNode Id="f222c695-b6a4-4888-823c-6622437d1bcc" Title="Rotate Method " Url="html/Overload_StarfieldUtils_MathUtils_Quaternion_Rotate.htm">
+          <HelpTOCNode Id="b8ed1f98-59c7-423f-9363-585b52be8991" Title="Rotate Method " Url="html/Overload_StarfieldUtils_MathUtils_Quaternion_Rotate.htm">
             <HelpTOCNode Title="Rotate Method (Vec3D)" Url="html/M_StarfieldUtils_MathUtils_Quaternion_Rotate.htm" />
             <HelpTOCNode Title="Rotate Method (Vec3D[])" Url="html/M_StarfieldUtils_MathUtils_Quaternion_Rotate_1.htm" />
           </HelpTOCNode>
         </HelpTOCNode>
-        <HelpTOCNode Id="9623c6cc-eddc-4243-bed5-527cb11b2d6f" Title="Quaternion Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Quaternion.htm">
+        <HelpTOCNode Id="80b9131b-9859-4d51-a4a8-aefb194ee7b2" Title="Quaternion Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Quaternion.htm">
           <HelpTOCNode Title="Equality Operator " Url="html/M_StarfieldUtils_MathUtils_Quaternion_op_Equality.htm" />
           <HelpTOCNode Title="Inequality Operator " Url="html/M_StarfieldUtils_MathUtils_Quaternion_op_Inequality.htm" />
           <HelpTOCNode Title="Multiply Operator " Url="html/M_StarfieldUtils_MathUtils_Quaternion_op_Multiply.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a0859a02-1666-40b4-a349-d1c99d6e7359" Title="Quaternion Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Quaternion.htm">
+        <HelpTOCNode Id="5d78da43-ce1a-4b21-b75a-e8fd3683b2b4" Title="Quaternion Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Quaternion.htm">
           <HelpTOCNode Title="W Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_W.htm" />
           <HelpTOCNode Title="X Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_X.htm" />
           <HelpTOCNode Title="Y Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_Y.htm" />
           <HelpTOCNode Title="Z Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_Z.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="2ef82630-3fa8-4409-9e1e-6dd7e80dd801" Title="SimplexNoise Class" Url="html/T_StarfieldUtils_MathUtils_SimplexNoise.htm">
+      <HelpTOCNode Id="4cd3383e-9b7e-409e-8024-11ce2d4ef5a7" Title="SimplexNoise Class" Url="html/T_StarfieldUtils_MathUtils_SimplexNoise.htm">
         <HelpTOCNode Title="SimplexNoise Constructor " Url="html/M_StarfieldUtils_MathUtils_SimplexNoise__ctor.htm" />
-        <HelpTOCNode Id="e1b348ae-5b4c-4c7a-acbd-917318cd1608" Title="SimplexNoise Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_SimplexNoise.htm">
+        <HelpTOCNode Id="47e880fb-8ea0-4726-8c5a-75dbe7058a21" Title="SimplexNoise Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_SimplexNoise.htm">
           <HelpTOCNode Title="fbm_noise3 Method " Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_fbm_noise3.htm" />
           <HelpTOCNode Title="fbm_noise4 Method " Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_fbm_noise4.htm" />
           <HelpTOCNode Title="noise2 Method " Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise2.htm" />
@@ -1140,9 +1140,9 @@
           <HelpTOCNode Title="noise4 Method " Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise4.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7d88cb0b-0a56-4720-8619-1fdb02f9c7bd" Title="Vec2D Class" Url="html/T_StarfieldUtils_MathUtils_Vec2D.htm">
+      <HelpTOCNode Id="8c58a366-ddbf-4718-a9df-14f352a3da34" Title="Vec2D Class" Url="html/T_StarfieldUtils_MathUtils_Vec2D.htm">
         <HelpTOCNode Title="Vec2D Constructor " Url="html/M_StarfieldUtils_MathUtils_Vec2D__ctor.htm" />
-        <HelpTOCNode Id="75ac70e6-4f00-440f-af99-94f496d54222" Title="Vec2D Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Vec2D.htm">
+        <HelpTOCNode Id="62da0e52-e8ca-409a-b861-0c9ace603496" Title="Vec2D Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Vec2D.htm">
           <HelpTOCNode Title="Magnitude Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_Magnitude.htm" />
           <HelpTOCNode Title="X Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_X.htm" />
           <HelpTOCNode Title="XAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_XAxis.htm" />
@@ -1150,59 +1150,59 @@
           <HelpTOCNode Title="YAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_YAxis.htm" />
           <HelpTOCNode Title="Zero Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_Zero.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2264911e-75f2-472b-af18-a721e93d64e3" Title="Vec2D Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Vec2D.htm">
+        <HelpTOCNode Id="ac33eff4-bc08-436f-8fc9-eb74767b15fc" Title="Vec2D Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Vec2D.htm">
           <HelpTOCNode Title="DistanceTo Method " Url="html/M_StarfieldUtils_MathUtils_Vec2D_DistanceTo.htm" />
           <HelpTOCNode Title="Dot Method " Url="html/M_StarfieldUtils_MathUtils_Vec2D_Dot.htm" />
           <HelpTOCNode Title="ToString Method " Url="html/M_StarfieldUtils_MathUtils_Vec2D_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ac6cb584-40bc-429e-a776-5c2d692f28ab" Title="Vec2D Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Vec2D.htm">
+        <HelpTOCNode Id="2dcbc1cf-54d8-4d02-8931-99085a7f8d7b" Title="Vec2D Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Vec2D.htm">
           <HelpTOCNode Title="Addition Operator " Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Addition.htm" />
           <HelpTOCNode Title="Division Operator " Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Division.htm" />
-          <HelpTOCNode Id="1ff269ed-1541-4b66-9d75-1e92fcdd9453" Title="Multiply Operator " Url="html/Overload_StarfieldUtils_MathUtils_Vec2D_op_Multiply.htm">
+          <HelpTOCNode Id="a1b9f340-9b6b-4b45-8a43-2de83a2e5e69" Title="Multiply Operator " Url="html/Overload_StarfieldUtils_MathUtils_Vec2D_op_Multiply.htm">
             <HelpTOCNode Title="Multiply Operator (Double, Vec2D)" Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Multiply_1.htm" />
             <HelpTOCNode Title="Multiply Operator (Vec2D, Double)" Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Multiply.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="Subtraction Operator " Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Subtraction.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="89f45e8e-c3dd-423b-8663-ae232d861a02" Title="Vec2D Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Vec2D.htm">
+        <HelpTOCNode Id="2692b205-0371-4c7c-8b45-b28e33ef9835" Title="Vec2D Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Vec2D.htm">
           <HelpTOCNode Title="baseVector Field" Url="html/F_StarfieldUtils_MathUtils_Vec2D_baseVector.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="7667f731-8a4f-4424-a49a-141522c6ca2e" Title="Vec3D Class" Url="html/T_StarfieldUtils_MathUtils_Vec3D.htm">
+      <HelpTOCNode Id="3b85ac27-3796-43fc-9f8f-bf9ef3377550" Title="Vec3D Class" Url="html/T_StarfieldUtils_MathUtils_Vec3D.htm">
         <HelpTOCNode Title="Vec3D Constructor " Url="html/M_StarfieldUtils_MathUtils_Vec3D__ctor.htm" />
-        <HelpTOCNode Id="4e1f4fbe-e3a1-49eb-89e6-b97c2acd94bc" Title="Vec3D Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Vec3D.htm">
+        <HelpTOCNode Id="5974c59b-9ca3-41cf-91cf-58c220c250c7" Title="Vec3D Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Vec3D.htm">
           <HelpTOCNode Title="Magnitude Property " Url="html/P_StarfieldUtils_MathUtils_Vec3D_Magnitude.htm" />
           <HelpTOCNode Title="XAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec3D_XAxis.htm" />
           <HelpTOCNode Title="YAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec3D_YAxis.htm" />
           <HelpTOCNode Title="ZAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec3D_ZAxis.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="48d191f4-82f9-4a5f-bf99-31379e8c19b1" Title="Vec3D Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Vec3D.htm">
+        <HelpTOCNode Id="91aa28f1-f06f-4b63-8fbd-4e0b3dd8be61" Title="Vec3D Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Vec3D.htm">
           <HelpTOCNode Title="DistanceTo Method " Url="html/M_StarfieldUtils_MathUtils_Vec3D_DistanceTo.htm" />
           <HelpTOCNode Title="Dot Method " Url="html/M_StarfieldUtils_MathUtils_Vec3D_Dot.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ed361ae1-ed77-44a8-a802-ed8f0f5f7263" Title="Vec3D Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Vec3D.htm">
+        <HelpTOCNode Id="113fcfdc-efdb-4b59-8fd6-ad569f8afc12" Title="Vec3D Operators" Url="html/Operators_T_StarfieldUtils_MathUtils_Vec3D.htm">
           <HelpTOCNode Title="Addition Operator " Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Addition.htm" />
           <HelpTOCNode Title="Division Operator " Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Division.htm" />
-          <HelpTOCNode Id="e4f1f9c3-451a-4de3-98d4-06faa822be2b" Title="Multiply Operator " Url="html/Overload_StarfieldUtils_MathUtils_Vec3D_op_Multiply.htm">
+          <HelpTOCNode Id="e483a781-cf83-478e-8659-b6cba26cb220" Title="Multiply Operator " Url="html/Overload_StarfieldUtils_MathUtils_Vec3D_op_Multiply.htm">
             <HelpTOCNode Title="Multiply Operator (Double, Vec3D)" Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Multiply_1.htm" />
             <HelpTOCNode Title="Multiply Operator (Vec3D, Double)" Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Multiply.htm" />
           </HelpTOCNode>
           <HelpTOCNode Title="Subtraction Operator " Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Subtraction.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b86c26d3-87a4-4c65-b8f5-c15f3fb4f1f9" Title="Vec3D Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Vec3D.htm">
+        <HelpTOCNode Id="51690542-2d61-4007-a3b3-21aaa5813bf1" Title="Vec3D Fields" Url="html/Fields_T_StarfieldUtils_MathUtils_Vec3D.htm">
           <HelpTOCNode Title="X Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_X.htm" />
           <HelpTOCNode Title="Y Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_Y.htm" />
           <HelpTOCNode Title="Z Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_Z.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="14e3e5e7-eabf-485e-916f-2c6c10a1860b" Title="Voronoi Class" Url="html/T_StarfieldUtils_MathUtils_Voronoi.htm">
+      <HelpTOCNode Id="2dca5f92-9787-479b-a755-9d4a13f64452" Title="Voronoi Class" Url="html/T_StarfieldUtils_MathUtils_Voronoi.htm">
         <HelpTOCNode Title="Voronoi Constructor " Url="html/M_StarfieldUtils_MathUtils_Voronoi__ctor.htm" />
-        <HelpTOCNode Id="5e9c74a1-e865-481f-8beb-fbe7075d27ae" Title="Voronoi Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Voronoi.htm">
+        <HelpTOCNode Id="9d0beb28-56b7-4ed3-9066-f4ce17c46f96" Title="Voronoi Properties" Url="html/Properties_T_StarfieldUtils_MathUtils_Voronoi.htm">
           <HelpTOCNode Title="plotBounds Property " Url="html/P_StarfieldUtils_MathUtils_Voronoi_plotBounds.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="29ec3907-ae91-4f8d-b540-3ed4e0aaa483" Title="Voronoi Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Voronoi.htm">
+        <HelpTOCNode Id="35ffd142-7420-4d12-b6d0-926f034d31b4" Title="Voronoi Methods" Url="html/Methods_T_StarfieldUtils_MathUtils_Voronoi.htm">
           <HelpTOCNode Title="Circles Method " Url="html/M_StarfieldUtils_MathUtils_Voronoi_Circles.htm" />
-          <HelpTOCNode Id="ac24c758-8870-49cd-ab07-c08556a0c818" Title="CompareByYThenX Method " Url="html/Overload_StarfieldUtils_MathUtils_Voronoi_CompareByYThenX.htm">
+          <HelpTOCNode Id="4737cdf6-b61c-4973-81e3-b876fd45c750" Title="CompareByYThenX Method " Url="html/Overload_StarfieldUtils_MathUtils_Voronoi_CompareByYThenX.htm">
             <HelpTOCNode Title="CompareByYThenX Method (Site, Site)" Url="html/M_StarfieldUtils_MathUtils_Voronoi_CompareByYThenX.htm" />
             <HelpTOCNode Title="CompareByYThenX Method (Site, Vec2D)" Url="html/M_StarfieldUtils_MathUtils_Voronoi_CompareByYThenX_1.htm" />
           </HelpTOCNode>
@@ -1224,53 +1224,53 @@
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e2e03ffe-d21e-4875-852a-08f914f8e41d" Title="StarfieldUtils.Sound" Url="html/N_StarfieldUtils_Sound.htm">
-      <HelpTOCNode Id="2c85a7e7-8844-4dd1-a423-beb0d8cbc78f" Title="SoundUtils Class" Url="html/T_StarfieldUtils_Sound_SoundUtils.htm">
+    <HelpTOCNode Id="cae324b8-8659-48a9-92d1-43258aa07dca" Title="StarfieldUtils.Sound" Url="html/N_StarfieldUtils_Sound.htm">
+      <HelpTOCNode Id="dab036e4-610d-446a-938c-632fda49bdc0" Title="SoundUtils Class" Url="html/T_StarfieldUtils_Sound_SoundUtils.htm">
         <HelpTOCNode Title="SoundUtils Constructor " Url="html/M_StarfieldUtils_Sound_SoundUtils__ctor.htm" />
-        <HelpTOCNode Id="5772dd98-1d35-4488-b327-fcb8331b57bb" Title="SoundUtils Methods" Url="html/Methods_T_StarfieldUtils_Sound_SoundUtils.htm">
+        <HelpTOCNode Id="b496f58c-7175-49d9-a087-fddb29229f11" Title="SoundUtils Methods" Url="html/Methods_T_StarfieldUtils_Sound_SoundUtils.htm">
           <HelpTOCNode Title="convertPCM Method " Url="html/M_StarfieldUtils_Sound_SoundUtils_convertPCM.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="89374fd8-e5c8-459c-b6f2-72f5b2f24f02" Title="StarfieldUtils.SoundUtils" Url="html/N_StarfieldUtils_SoundUtils.htm">
-      <HelpTOCNode Id="48309242-f7c9-4af3-b57e-5fdb4f485803" Title="Artifact Class" Url="html/T_StarfieldUtils_SoundUtils_Artifact.htm">
+    <HelpTOCNode Id="32d470a6-c66b-41b4-b477-3a5beabc7f87" Title="StarfieldUtils.SoundUtils" Url="html/N_StarfieldUtils_SoundUtils.htm">
+      <HelpTOCNode Id="cf6ba030-7117-41e6-8514-5c3f3e048b46" Title="Artifact Class" Url="html/T_StarfieldUtils_SoundUtils_Artifact.htm">
         <HelpTOCNode Title="Artifact Constructor " Url="html/M_StarfieldUtils_SoundUtils_Artifact__ctor.htm" />
         <HelpTOCNode Title="Artifact Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_Artifact.htm" />
-        <HelpTOCNode Id="9d64b9ba-ba50-4286-ad84-1e7f5b958fc3" Title="Artifact Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_Artifact.htm">
+        <HelpTOCNode Id="607c2631-d8bd-4c93-86a9-8ba8c88d7a0e" Title="Artifact Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_Artifact.htm">
           <HelpTOCNode Title="OPM Field" Url="html/F_StarfieldUtils_SoundUtils_Artifact_OPM.htm" />
           <HelpTOCNode Title="Type Field" Url="html/F_StarfieldUtils_SoundUtils_Artifact_Type.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="ArtifactDetectionAlgorithm Enumeration" Url="html/T_StarfieldUtils_SoundUtils_ArtifactDetectionAlgorithm.htm" />
-      <HelpTOCNode Id="94fbd005-79c7-4e58-b772-4e79b516e9bd" Title="BaseSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
+      <HelpTOCNode Id="6bd5107e-14a6-4802-94de-9cb726493275" Title="BaseSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
         <HelpTOCNode Title="BaseSoundProcessor Constructor " Url="html/M_StarfieldUtils_SoundUtils_BaseSoundProcessor__ctor.htm" />
-        <HelpTOCNode Id="349a3b99-1f1b-4e11-8889-ee319e463c84" Title="BaseSoundProcessor Properties" Url="html/Properties_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
+        <HelpTOCNode Id="0e428a68-8fbf-42ef-8c4b-1d3a6dca5682" Title="BaseSoundProcessor Properties" Url="html/Properties_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
           <HelpTOCNode Title="ArtifactDelay Property " Url="html/P_StarfieldUtils_SoundUtils_BaseSoundProcessor_ArtifactDelay.htm" />
           <HelpTOCNode Title="MinimumArtifactThreshold Property " Url="html/P_StarfieldUtils_SoundUtils_BaseSoundProcessor_MinimumArtifactThreshold.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="63d1ca40-444a-47eb-ae98-7fd5523193c6" Title="BaseSoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
+        <HelpTOCNode Id="5cbdd315-7902-4918-9299-b01993076df0" Title="BaseSoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
           <HelpTOCNode Title="ProcessFrame Method " Url="html/M_StarfieldUtils_SoundUtils_BaseSoundProcessor_ProcessFrame.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="95de5501-3a41-4d4f-80d6-1be5d316e9c8" Title="BaseSoundProcessor Events" Url="html/Events_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
+        <HelpTOCNode Id="92e740a7-6bb1-4bc4-868f-20847ea788dc" Title="BaseSoundProcessor Events" Url="html/Events_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
           <HelpTOCNode Title="OnArtifactDetected Event" Url="html/E_StarfieldUtils_SoundUtils_BaseSoundProcessor_OnArtifactDetected.htm" />
           <HelpTOCNode Title="OnFrameUpdate Event" Url="html/E_StarfieldUtils_SoundUtils_BaseSoundProcessor_OnFrameUpdate.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="0bc6f826-37f1-428f-9776-71c1dcfce684" Title="BaseSoundProcessor Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
+        <HelpTOCNode Id="9086e8b4-0f2f-4ee0-a12f-3a48116d4a45" Title="BaseSoundProcessor Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm">
           <HelpTOCNode Title="lastArtifact Field" Url="html/F_StarfieldUtils_SoundUtils_BaseSoundProcessor_lastArtifact.htm" />
           <HelpTOCNode Title="lastOnset Field" Url="html/F_StarfieldUtils_SoundUtils_BaseSoundProcessor_lastOnset.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="4b08e8ce-3a16-4707-bf15-63a63c7874a2" Title="CSCoreLoopbackSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm">
+      <HelpTOCNode Id="208baa04-13ce-4862-995e-f4ba179866ad" Title="CSCoreLoopbackSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm">
         <HelpTOCNode Title="CSCoreLoopbackSoundProcessor Constructor " Url="html/M_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor__ctor.htm" />
         <HelpTOCNode Title="CSCoreLoopbackSoundProcessor Properties" Url="html/Properties_T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm" />
         <HelpTOCNode Title="CSCoreLoopbackSoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm" />
         <HelpTOCNode Title="CSCoreLoopbackSoundProcessor Events" Url="html/Events_T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm" />
         <HelpTOCNode Title="CSCoreLoopbackSoundProcessor Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_CSCoreLoopbackSoundProcessor.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="572858d4-f78a-4db8-ba1d-fc6a1050e131" Title="Frame Class" Url="html/T_StarfieldUtils_SoundUtils_Frame.htm">
+      <HelpTOCNode Id="b2c9c566-0a02-40e9-b15c-be9fa8770d15" Title="Frame Class" Url="html/T_StarfieldUtils_SoundUtils_Frame.htm">
         <HelpTOCNode Title="Frame Constructor " Url="html/M_StarfieldUtils_SoundUtils_Frame__ctor.htm" />
         <HelpTOCNode Title="Frame Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_Frame.htm" />
-        <HelpTOCNode Id="bfe872e4-1db2-405c-ab44-76a989310ed0" Title="Frame Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_Frame.htm">
+        <HelpTOCNode Id="772b1461-a42b-4cbc-b788-c2f3a45e92b4" Title="Frame Fields" Url="html/Fields_T_StarfieldUtils_SoundUtils_Frame.htm">
           <HelpTOCNode Title="bands Field" Url="html/F_StarfieldUtils_SoundUtils_Frame_bands.htm" />
           <HelpTOCNode Title="EQ Field" Url="html/F_StarfieldUtils_SoundUtils_Frame_EQ.htm" />
           <HelpTOCNode Title="FFT Field" Url="html/F_StarfieldUtils_SoundUtils_Frame_FFT.htm" />
@@ -1278,7 +1278,7 @@
           <HelpTOCNode Title="VU Field" Url="html/F_StarfieldUtils_SoundUtils_Frame_VU.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="31521577-99a7-4c69-b222-a52aa0d7c359" Title="NullSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_NullSoundProcessor.htm">
+      <HelpTOCNode Id="e6186548-302f-40e0-bc53-d98e6bcf63df" Title="NullSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_NullSoundProcessor.htm">
         <HelpTOCNode Title="NullSoundProcessor Constructor " Url="html/M_StarfieldUtils_SoundUtils_NullSoundProcessor__ctor.htm" />
         <HelpTOCNode Title="NullSoundProcessor Properties" Url="html/Properties_T_StarfieldUtils_SoundUtils_NullSoundProcessor.htm" />
         <HelpTOCNode Title="NullSoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_NullSoundProcessor.htm" />
@@ -1287,8 +1287,8 @@
       </HelpTOCNode>
       <HelpTOCNode Title="OnArtifactDetectedHandler Delegate" Url="html/T_StarfieldUtils_SoundUtils_OnArtifactDetectedHandler.htm" />
       <HelpTOCNode Title="OnFrameUpdateHandler Delegate" Url="html/T_StarfieldUtils_SoundUtils_OnFrameUpdateHandler.htm" />
-      <HelpTOCNode Id="41578f45-74d9-4d84-95cd-78031b9401c6" Title="SoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_SoundProcessor.htm">
-        <HelpTOCNode Id="ab287fb3-feca-4522-9d7f-96592a5ac257" Title="SoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_SoundProcessor.htm">
+      <HelpTOCNode Id="7a0e4fd7-07d1-41e9-9ca4-691ec6ffb42c" Title="SoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_SoundProcessor.htm">
+        <HelpTOCNode Id="df3b0839-ed9e-412b-a425-555457db155f" Title="SoundProcessor Methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_SoundProcessor.htm">
           <HelpTOCNode Title="GetSoundProcessor Method " Url="html/M_StarfieldUtils_SoundUtils_SoundProcessor_GetSoundProcessor.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
