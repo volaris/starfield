@@ -8,12 +8,14 @@ using System.Drawing;
 using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 
-namespace StarfieldDrivers
+namespace StarfieldDrivers.Fractal
 {
+    /** <summary>    A 3D fractal flame. </summary> */
     [DriverType(DriverTypes.Ambient)]
-    class FractalFlame : IStarfieldDriver
+    public class FractalFlame : IStarfieldDriver
     {
         #region Enums
+        /** <summary>    Values that represent the states of this animation. </summary> */
         enum State
         {
             Sleep,
@@ -21,6 +23,7 @@ namespace StarfieldDrivers
             FadeOut
         }
 
+        /** <summary>    Values that represent variants. </summary> */
         enum Variants
         {
             Prime3D
@@ -28,6 +31,7 @@ namespace StarfieldDrivers
         #endregion
 
         #region Structs
+        /** <summary>    A color structure. </summary> */
         private struct ColorStruct
         {
             public int index;
@@ -50,16 +54,36 @@ namespace StarfieldDrivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the number of steps in this animation. </summary>
+         *
+         * <value>  The total number of steps. </value>
+         */
+
         public int NumSteps
         {
             get { return numSteps; }
             set { numSteps = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the primary color. </summary>
+         *
+         * <value>  The color of the primary. </value>
+         */
+
         public Color PrimaryColor
         {
             get { return primaryColor; }
             set { primaryColor = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the secondary color. </summary>
+         *
+         * <value>  The color of the secondary. </value>
+         */
 
         public Color SecondaryColor
         {
@@ -69,6 +93,7 @@ namespace StarfieldDrivers
         #endregion
 
         #region Constructors
+        /** <summary>    Default constructor. </summary> */
         public FractalFlame()
         {
             newFractal.Elapsed += newFractal_Elapsed;
@@ -83,6 +108,13 @@ namespace StarfieldDrivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NumX; x++)
@@ -126,6 +158,12 @@ namespace StarfieldDrivers
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             this.Starfield = Starfield;
@@ -135,6 +173,7 @@ namespace StarfieldDrivers
             newFractal.Start();
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
             newFractal.Stop();
@@ -142,6 +181,13 @@ namespace StarfieldDrivers
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Fractal Flame";

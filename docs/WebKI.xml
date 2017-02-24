@@ -95,9 +95,15 @@
   <HelpKINode Title="AffineCoefs4d.r field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_r.htm" />
   <HelpKINode Title="AffineCoefs4d.s field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_s.htm" />
   <HelpKINode Title="AffineCoefs4d.t field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_t.htm" />
+  <HelpKINode Title="AlgorithmDemo namespace" Url="html/N_AlgorithmDemo.htm" />
+  <HelpKINode Title="AlgorithmDemo.FormDemo class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
+  <HelpKINode Title="Alive property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_Alive.htm" />
+  <HelpKINode Title="AlternateDirections property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_AlternateDirections.htm" />
   <HelpKINode Title="Ambient enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
+  <HelpKINode Title="Ambient namespace" Url="html/N_Ambient.htm" />
+  <HelpKINode Title="Ambient.FormDemo class" Url="html/T_Ambient_FormDemo.htm" />
   <HelpKINode Title="AmbientInteractive enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
-  <HelpKINode Title="AnimationDuration property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_AnimationDuration.htm" />
+  <HelpKINode Title="AnimationDuration property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_AnimationDuration.htm" />
   <HelpKINode Title="AnimationInterval field" Url="html/F_Starfield_Networking_TCPStarfieldClient_AnimationInterval.htm" />
   <HelpKINode Title="ApplyExternalForces method" Url="html/M_StarfieldUtils_CFDUtils_Solver_ApplyExternalForces.htm" />
   <HelpKINode Title="ArcTolerance property" Url="html/P_ClipperLib_ClipperOffset_ArcTolerance.htm" />
@@ -124,7 +130,7 @@
     <HelpKINode Title="Edge.b Field" Url="html/F_Delaunay_Edge_b.htm" />
   </HelpKINode>
   <HelpKINode Title="B property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_B.htm" />
-  <HelpKINode Title="BackColor property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_BackColor.htm" />
+  <HelpKINode Title="BackColor property" Url="html/P_StarfieldDrivers_Animation_CenterWave_BackColor.htm" />
   <HelpKINode Title="bands field" Url="html/F_StarfieldUtils_SoundUtils_Frame_bands.htm" />
   <HelpKINode Title="BaseSoundProcessor class">
     <HelpKINode Title="BaseSoundProcessor Class" Url="html/T_StarfieldUtils_SoundUtils_BaseSoundProcessor.htm" />
@@ -144,6 +150,8 @@
   <HelpKINode Title="BaseSoundProcessor.OnFrameUpdate event" Url="html/E_StarfieldUtils_SoundUtils_BaseSoundProcessor_OnFrameUpdate.htm" />
   <HelpKINode Title="BaseSoundProcessor.ProcessFrame method" Url="html/M_StarfieldUtils_SoundUtils_BaseSoundProcessor_ProcessFrame.htm" />
   <HelpKINode Title="baseVector field" Url="html/F_StarfieldUtils_MathUtils_Vec2D_baseVector.htm" />
+  <HelpKINode Title="BirthLowerThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_BirthLowerThreshold.htm" />
+  <HelpKINode Title="BirthUpperThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_BirthUpperThreshold.htm" />
   <HelpKINode Title="Black property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Black.htm" />
   <HelpKINode Title="BlendAveraged method" Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_BlendAveraged.htm" />
   <HelpKINode Title="BlendRaw method" Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_BlendRaw.htm" />
@@ -162,6 +170,24 @@
   <HelpKINode Title="Boid.Move method" Url="html/M_StarfieldUtils_FlockingUtils_Boid_Move.htm" />
   <HelpKINode Title="Boid.Position field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_Position.htm" />
   <HelpKINode Title="Boids field" Url="html/F_StarfieldUtils_FlockingUtils_Swarm_Boids.htm" />
+  <HelpKINode Title="BoidSwarms class">
+    <HelpKINode Title="BoidSwarms Class" Url="html/T_StarfieldDrivers_Flocking_BoidSwarms.htm" />
+    <HelpKINode Title="about BoidSwarms class" Url="html/T_StarfieldDrivers_Flocking_BoidSwarms.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Flocking_BoidSwarms.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Flocking_BoidSwarms.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BoidSwarms.AlternateDirections property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_AlternateDirections.htm" />
+  <HelpKINode Title="BoidSwarms.BoidSwarms constructor" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms__ctor.htm" />
+  <HelpKINode Title="BoidSwarms.GoalThreshold property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_GoalThreshold.htm" />
+  <HelpKINode Title="BoidSwarms.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="BoidSwarms.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="BoidSwarms.LocationMultiplier property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_LocationMultiplier.htm" />
+  <HelpKINode Title="BoidSwarms.NumBoidsPerSwarm property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_NumBoidsPerSwarm.htm" />
+  <HelpKINode Title="BoidSwarms.NumSwarms property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_NumSwarms.htm" />
+  <HelpKINode Title="BoidSwarms.Render method" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Render.htm" />
+  <HelpKINode Title="BoidSwarms.ToString method" Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_ToString.htm" />
+  <HelpKINode Title="BoidSwarms.Trails property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_Trails.htm" />
   <HelpKINode Title="bottom field" Url="html/F_ClipperLib_IntRect_bottom.htm" />
   <HelpKINode Title="Brightness property">
     <HelpKINode Title="HSB.Brightness Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSB_Brightness.htm" />
@@ -174,40 +200,53 @@
     <HelpKINode Title="AffineCoefs4d.c Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_c.htm" />
     <HelpKINode Title="Edge.c Field" Url="html/F_Delaunay_Edge_c.htm" />
   </HelpKINode>
+  <HelpKINode Title="CapAtMax property">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_CapAtMax.htm" />
+    <HelpKINode Title="RainbowSimplex.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_CapAtMax.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_CapAtMax.htm" />
+    <HelpKINode Title="SimplexClouds.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_CapAtMax.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_CapAtMax.htm" />
+    <HelpKINode Title="SimplexCurtains.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_CapAtMax.htm" />
+    <HelpKINode Title="SimplexSmoke.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_CapAtMax.htm" />
+    <HelpKINode Title="SimplexTwinkle.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_CapAtMax.htm" />
+    <HelpKINode Title="SimplexWaves.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_CapAtMax.htm" />
+    <HelpKINode Title="SingleColorSimplex.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_CapAtMax.htm" />
+    <HelpKINode Title="TwoColorSimplex.CapAtMax Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_CapAtMax.htm" />
+  </HelpKINode>
   <HelpKINode Title="center field" Url="html/F_Delaunay_Geo_Circle_center.htm" />
   <HelpKINode Title="CenterWave class">
-    <HelpKINode Title="CenterWave Class" Url="html/T_StarfieldDrivers_Drivers_CenterWave.htm" />
-    <HelpKINode Title="about CenterWave class" Url="html/T_StarfieldDrivers_Drivers_CenterWave.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_CenterWave__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_CenterWave.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_CenterWave.htm" />
+    <HelpKINode Title="CenterWave Class" Url="html/T_StarfieldDrivers_Animation_CenterWave.htm" />
+    <HelpKINode Title="about CenterWave class" Url="html/T_StarfieldDrivers_Animation_CenterWave.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Animation_CenterWave__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Animation_CenterWave.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Animation_CenterWave.htm" />
   </HelpKINode>
-  <HelpKINode Title="CenterWave.BackColor property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_BackColor.htm" />
-  <HelpKINode Title="CenterWave.CenterWave constructor" Url="html/M_StarfieldDrivers_Drivers_CenterWave__ctor.htm" />
-  <HelpKINode Title="CenterWave.DrawColor property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_DrawColor.htm" />
-  <HelpKINode Title="CenterWave.Interval property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_Interval.htm" />
-  <HelpKINode Title="CenterWave.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="CenterWave.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="CenterWave.Rainbow property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_Rainbow.htm" />
-  <HelpKINode Title="CenterWave.Render method" Url="html/M_StarfieldDrivers_Drivers_CenterWave_Render.htm" />
-  <HelpKINode Title="CenterWave.ToString method" Url="html/M_StarfieldDrivers_Drivers_CenterWave_ToString.htm" />
+  <HelpKINode Title="CenterWave.BackColor property" Url="html/P_StarfieldDrivers_Animation_CenterWave_BackColor.htm" />
+  <HelpKINode Title="CenterWave.CenterWave constructor" Url="html/M_StarfieldDrivers_Animation_CenterWave__ctor.htm" />
+  <HelpKINode Title="CenterWave.DrawColor property" Url="html/P_StarfieldDrivers_Animation_CenterWave_DrawColor.htm" />
+  <HelpKINode Title="CenterWave.Interval property" Url="html/P_StarfieldDrivers_Animation_CenterWave_Interval.htm" />
+  <HelpKINode Title="CenterWave.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Animation_CenterWave_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="CenterWave.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Animation_CenterWave_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="CenterWave.Rainbow property" Url="html/P_StarfieldDrivers_Animation_CenterWave_Rainbow.htm" />
+  <HelpKINode Title="CenterWave.Render method" Url="html/M_StarfieldDrivers_Animation_CenterWave_Render.htm" />
+  <HelpKINode Title="CenterWave.ToString method" Url="html/M_StarfieldDrivers_Animation_CenterWave_ToString.htm" />
   <HelpKINode Title="Centroid method" Url="html/M_Delaunay_Geo_Polygon_Centroid.htm" />
   <HelpKINode Title="centroids field" Url="html/F_StarfieldUtils_MathUtils_KMeansResult_centroids.htm" />
   <HelpKINode Title="Checkout class">
-    <HelpKINode Title="Checkout Class" Url="html/T_StarfieldDrivers_Drivers_Checkout.htm" />
-    <HelpKINode Title="about Checkout class" Url="html/T_StarfieldDrivers_Drivers_Checkout.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_Checkout__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Checkout.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Checkout.htm" />
+    <HelpKINode Title="Checkout Class" Url="html/T_StarfieldDrivers_Test_Checkout.htm" />
+    <HelpKINode Title="about Checkout class" Url="html/T_StarfieldDrivers_Test_Checkout.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Test_Checkout__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Test_Checkout.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Test_Checkout.htm" />
   </HelpKINode>
-  <HelpKINode Title="Checkout.Checkout constructor" Url="html/M_StarfieldDrivers_Drivers_Checkout__ctor.htm" />
-  <HelpKINode Title="Checkout.DrawColor property" Url="html/P_StarfieldDrivers_Drivers_Checkout_DrawColor.htm" />
-  <HelpKINode Title="Checkout.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="Checkout.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="Checkout.Panel property" Url="html/P_StarfieldDrivers_Drivers_Checkout_Panel.htm" />
-  <HelpKINode Title="Checkout.Render method" Url="html/M_StarfieldDrivers_Drivers_Checkout_Render.htm" />
-  <HelpKINode Title="Checkout.ToString method" Url="html/M_StarfieldDrivers_Drivers_Checkout_ToString.htm" />
-  <HelpKINode Title="Checkout.X property" Url="html/P_StarfieldDrivers_Drivers_Checkout_X.htm" />
+  <HelpKINode Title="Checkout.Checkout constructor" Url="html/M_StarfieldDrivers_Test_Checkout__ctor.htm" />
+  <HelpKINode Title="Checkout.DrawColor property" Url="html/P_StarfieldDrivers_Test_Checkout_DrawColor.htm" />
+  <HelpKINode Title="Checkout.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Test_Checkout_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="Checkout.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Test_Checkout_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="Checkout.Panel property" Url="html/P_StarfieldDrivers_Test_Checkout_Panel.htm" />
+  <HelpKINode Title="Checkout.Render method" Url="html/M_StarfieldDrivers_Test_Checkout_Render.htm" />
+  <HelpKINode Title="Checkout.ToString method" Url="html/M_StarfieldDrivers_Test_Checkout_ToString.htm" />
+  <HelpKINode Title="Checkout.X property" Url="html/P_StarfieldDrivers_Test_Checkout_X.htm" />
   <HelpKINode Title="ChildCount property" Url="html/P_ClipperLib_PolyNode_ChildCount.htm" />
   <HelpKINode Title="Childs property" Url="html/P_ClipperLib_PolyNode_Childs.htm" />
   <HelpKINode Title="CIELAB class">
@@ -366,7 +405,7 @@
   <HelpKINode Title="color field" Url="html/F_Delaunay_Site_color.htm" />
   <HelpKINode Title="Color field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_Color.htm" />
   <HelpKINode Title="ColorDelta field" Url="html/F_StarfieldUtils_CFDUtils_Particle_ColorDelta.htm" />
-  <HelpKINode Title="Colors property" Url="html/P_StarfieldDrivers_Drivers_TestFill_Colors.htm" />
+  <HelpKINode Title="Colors property" Url="html/P_StarfieldDrivers_Test_TestFill_Colors.htm" />
   <HelpKINode Title="ColorUtils class">
     <HelpKINode Title="ColorUtils Class" Url="html/T_StarfieldUtils_ColorUtils_ColorUtils.htm" />
     <HelpKINode Title="about ColorUtils class" Url="html/T_StarfieldUtils_ColorUtils_ColorUtils.htm" />
@@ -394,6 +433,8 @@
   <HelpKINode Title="Conjugate method" Url="html/M_StarfieldUtils_MathUtils_Quaternion_Conjugate.htm" />
   <HelpKINode Title="ContainsPoint method" Url="html/M_Delaunay_Geo_Polygon_ContainsPoint.htm" />
   <HelpKINode Title="Contour property" Url="html/P_ClipperLib_PolyNode_Contour.htm" />
+  <HelpKINode Title="ControllerConfigGenerator namespace" Url="html/N_ControllerConfigGenerator.htm" />
+  <HelpKINode Title="ControllerConfigGenerator.FormDemo class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
   <HelpKINode Title="ConvertColorSpace class">
     <HelpKINode Title="ConvertColorSpace Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm" />
     <HelpKINode Title="about ConvertColorSpace class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace.htm" />
@@ -408,7 +449,7 @@
   <HelpKINode Title="ConvertColorSpace.ToHSL method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToHSL.htm" />
   <HelpKINode Title="ConvertColorSpace.ToRGB method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB.htm" />
   <HelpKINode Title="ConvertColorSpace.ToYUV method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV.htm" />
-  <HelpKINode Title="convertPCM method" Url="html/M_StarfieldUtils_Sound_SoundUtils_convertPCM.htm" />
+  <HelpKINode Title="convertPCM method" Url="html/M_StarfieldUtils_SoundUtils_SoundUtils_convertPCM.htm" />
   <HelpKINode Title="Coord property">
     <HelpKINode Title="ICoord.Coord Property " Url="html/P_Delaunay_ICoord_Coord.htm" />
     <HelpKINode Title="Site.Coord Property " Url="html/P_Delaunay_Site_Coord.htm" />
@@ -457,6 +498,9 @@
     <HelpKINode Title="AffineCoefs3d.d Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_d.htm" />
     <HelpKINode Title="AffineCoefs4d.d Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_d.htm" />
   </HelpKINode>
+  <HelpKINode Title="Dead property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_Dead.htm" />
+  <HelpKINode Title="DeathLowerThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_DeathLowerThreshold.htm" />
+  <HelpKINode Title="DeathUpperThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_DeathUpperThreshold.htm" />
   <HelpKINode Title="DefaultKernels class">
     <HelpKINode Title="DefaultKernels Class" Url="html/T_StarfieldUtils_CFDUtils_DefaultKernels.htm" />
     <HelpKINode Title="about DefaultKernels class" Url="html/T_StarfieldUtils_CFDUtils_DefaultKernels.htm" />
@@ -512,7 +556,10 @@
   <HelpKINode Title="DelaunayLinesForEdges method" Url="html/M_Delaunay_DelaunayHelpers_DelaunayLinesForEdges.htm" />
   <HelpKINode Title="DelaunayLinesForSite method" Url="html/M_StarfieldUtils_MathUtils_Voronoi_DelaunayLinesForSite.htm" />
   <HelpKINode Title="DelaunayTriangulation method" Url="html/M_StarfieldUtils_MathUtils_Voronoi_DelaunayTriangulation.htm" />
-  <HelpKINode Title="Delay property" Url="html/P_StarfieldDrivers_Drivers_TestFill_Delay.htm" />
+  <HelpKINode Title="Delay property">
+    <HelpKINode Title="GameOfLife.Delay Property " Url="html/P_StarfieldDrivers_Animation_GameOfLife_Delay.htm" />
+    <HelpKINode Title="TestFill.Delay Property " Url="html/P_StarfieldDrivers_Test_TestFill_Delay.htm" />
+  </HelpKINode>
   <HelpKINode Title="DELETED field" Url="html/F_Delaunay_Edge_DELETED.htm" />
   <HelpKINode Title="delta_t field" Url="html/F_StarfieldUtils_CFDUtils_Solver_delta_t.htm" />
   <HelpKINode Title="Dequeue method" Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_Dequeue.htm" />
@@ -520,6 +567,10 @@
   <HelpKINode Title="dimmer field" Url="html/F_Starfield_StarfieldModel_dimmer.htm" />
   <HelpKINode Title="Dispose method">
     <HelpKINode Title="Edge.Dispose Method " Url="html/M_Delaunay_Edge_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_ControllerConfigGenerator_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_AlgorithmDemo_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_DualController_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_Ambient_FormDemo_Dispose.htm" />
     <HelpKINode Title="Halfedge.Dispose Method " Url="html/M_Delaunay_Halfedge_Dispose.htm" />
     <HelpKINode Title="Site.Dispose Method " Url="html/M_Delaunay_Site_Dispose.htm" />
     <HelpKINode Title="SiteList.Dispose Method " Url="html/M_Delaunay_SiteList_Dispose.htm" />
@@ -551,16 +602,18 @@
   <HelpKINode Title="DoublePoint.DoublePoint constructor" Url="html/Overload_ClipperLib_DoublePoint__ctor.htm" />
   <HelpKINode Title="DoublePoint.X field" Url="html/F_ClipperLib_DoublePoint_X.htm" />
   <HelpKINode Title="DoublePoint.Y field" Url="html/F_ClipperLib_DoublePoint_Y.htm" />
-  <HelpKINode Title="Down property" Url="html/P_StarfieldDrivers_Drivers_Rain_Down.htm" />
+  <HelpKINode Title="Down property" Url="html/P_StarfieldDrivers_Animation_Rain_Down.htm" />
   <HelpKINode Title="DrawColor field" Url="html/F_StarfieldUtils_CFDUtils_Particle_DrawColor.htm" />
   <HelpKINode Title="DrawColor property">
-    <HelpKINode Title="CenterWave.DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_CenterWave_DrawColor.htm" />
-    <HelpKINode Title="Checkout.DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_Checkout_DrawColor.htm" />
-    <HelpKINode Title="FadingStatic.DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_FadingStatic_DrawColor.htm" />
+    <HelpKINode Title="CenterWave.DrawColor Property " Url="html/P_StarfieldDrivers_Animation_CenterWave_DrawColor.htm" />
+    <HelpKINode Title="Checkout.DrawColor Property " Url="html/P_StarfieldDrivers_Test_Checkout_DrawColor.htm" />
+    <HelpKINode Title="FadingStatic.DrawColor Property " Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_DrawColor.htm" />
     <HelpKINode Title="PresenceClouds.DrawColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceClouds_DrawColor.htm" />
     <HelpKINode Title="PresenceTrails.DrawColor Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_DrawColor.htm" />
-    <HelpKINode Title="SolidColor.DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_SolidColor_DrawColor.htm" />
-    <HelpKINode Title="TestFill.DrawColor Property " Url="html/P_StarfieldDrivers_Drivers_TestFill_DrawColor.htm" />
+    <HelpKINode Title="SimplexTwinkle.DrawColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_DrawColor.htm" />
+    <HelpKINode Title="SingleColorSimplex.DrawColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_DrawColor.htm" />
+    <HelpKINode Title="SolidColor.DrawColor Property " Url="html/P_StarfieldDrivers_Test_SolidColor_DrawColor.htm" />
+    <HelpKINode Title="TestFill.DrawColor Property " Url="html/P_StarfieldDrivers_Test_TestFill_DrawColor.htm" />
   </HelpKINode>
   <HelpKINode Title="DreamBurningManStarfield method" Url="html/M_Starfield_StarfieldModel_DreamBurningManStarfield.htm" />
   <HelpKINode Title="DreamCriticalNWStarfield method" Url="html/M_Starfield_StarfieldModel_DreamCriticalNWStarfield.htm" />
@@ -578,6 +631,7 @@
   <HelpKINode Title="DriverLoader.LoadCustomDrivers method" Url="html/M_Starfield_DriverLoader_LoadCustomDrivers.htm" />
   <HelpKINode Title="DriverLoader.LoadDefaultDrivers method" Url="html/Overload_Starfield_DriverLoader_LoadDefaultDrivers.htm" />
   <HelpKINode Title="DriverLoader.LoadPlugins method" Url="html/Overload_Starfield_DriverLoader_LoadPlugins.htm" />
+  <HelpKINode Title="DriverLocation enumeration" Url="html/T_DualController_DriverLocation.htm" />
   <HelpKINode Title="drivers field" Url="html/F_StarfieldDrivers_PresenceResponsive_GenericTrails_drivers.htm" />
   <HelpKINode Title="DriverType class">
     <HelpKINode Title="DriverType Class" Url="html/T_Starfield_DriverType.htm" />
@@ -589,6 +643,9 @@
   <HelpKINode Title="DriverType.DriverType constructor" Url="html/M_Starfield_DriverType__ctor.htm" />
   <HelpKINode Title="DriverType.Type property" Url="html/P_Starfield_DriverType_Type.htm" />
   <HelpKINode Title="DriverTypes enumeration" Url="html/T_Starfield_DriverTypes.htm" />
+  <HelpKINode Title="DualController namespace" Url="html/N_DualController.htm" />
+  <HelpKINode Title="DualController.DriverLocation enumeration" Url="html/T_DualController_DriverLocation.htm" />
+  <HelpKINode Title="DualController.FormDemo class" Url="html/T_DualController_FormDemo.htm" />
   <HelpKINode Title="dX field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_dX.htm" />
   <HelpKINode Title="dY field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_dY.htm" />
   <HelpKINode Title="dZ field" Url="html/F_StarfieldUtils_FlockingUtils_Boid_dZ.htm" />
@@ -667,36 +724,47 @@
     <HelpKINode Title="ClipperOffset.Execute Method " Url="html/Overload_ClipperLib_ClipperOffset_Execute.htm" />
   </HelpKINode>
   <HelpKINode Title="Experimental enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
+  <HelpKINode Title="Exterior enumeration member" Url="html/T_DualController_DriverLocation.htm" />
   <HelpKINode Title="f field">
     <HelpKINode Title="AffineCoefs2d.f Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs2d_f.htm" />
     <HelpKINode Title="AffineCoefs3d.f Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_f.htm" />
     <HelpKINode Title="AffineCoefs4d.f Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_f.htm" />
   </HelpKINode>
+  <HelpKINode Title="Fade property">
+    <HelpKINode Title="SimplexClouds.Fade Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Fade.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.Fade Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Fade.htm" />
+    <HelpKINode Title="SimplexSmoke.Fade Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Fade.htm" />
+  </HelpKINode>
   <HelpKINode Title="FadeCompleted event" Url="html/E_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeCompleted.htm" />
   <HelpKINode Title="FadeIn method" Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeIn.htm" />
+  <HelpKINode Title="FadeInThreshold property">
+    <HelpKINode Title="SimplexClouds.FadeInThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_FadeInThreshold.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.FadeInThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_FadeInThreshold.htm" />
+  </HelpKINode>
   <HelpKINode Title="FadeOut method" Url="html/Overload_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeOut.htm" />
   <HelpKINode Title="FadeRate property">
     <HelpKINode Title="GenericTrails.FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_FadeRate.htm" />
     <HelpKINode Title="PresenceTrails.FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_FadeRate.htm" />
     <HelpKINode Title="WhackAMole.FadeRate Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_FadeRate.htm" />
   </HelpKINode>
-  <HelpKINode Title="FadeSnakes property" Url="html/P_StarfieldDrivers_Snakes_FadeSnakes.htm" />
+  <HelpKINode Title="FadeSnakes property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_FadeSnakes.htm" />
+  <HelpKINode Title="FadeThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_FadeThreshold.htm" />
   <HelpKINode Title="FadingStatic class">
-    <HelpKINode Title="FadingStatic Class" Url="html/T_StarfieldDrivers_Drivers_FadingStatic.htm" />
-    <HelpKINode Title="about FadingStatic class" Url="html/T_StarfieldDrivers_Drivers_FadingStatic.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_FadingStatic__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FadingStatic.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_FadingStatic.htm" />
+    <HelpKINode Title="FadingStatic Class" Url="html/T_StarfieldDrivers_Noise_White_FadingStatic.htm" />
+    <HelpKINode Title="about FadingStatic class" Url="html/T_StarfieldDrivers_Noise_White_FadingStatic.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_White_FadingStatic.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_White_FadingStatic.htm" />
   </HelpKINode>
-  <HelpKINode Title="FadingStatic.AnimationDuration property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_AnimationDuration.htm" />
-  <HelpKINode Title="FadingStatic.DrawColor property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_DrawColor.htm" />
-  <HelpKINode Title="FadingStatic.FadingStatic constructor" Url="html/M_StarfieldDrivers_Drivers_FadingStatic__ctor.htm" />
-  <HelpKINode Title="FadingStatic.Flash property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Flash.htm" />
-  <HelpKINode Title="FadingStatic.Increment property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Increment.htm" />
-  <HelpKINode Title="FadingStatic.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="FadingStatic.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="FadingStatic.Render method" Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Render.htm" />
-  <HelpKINode Title="FadingStatic.ToString method" Url="html/M_StarfieldDrivers_Drivers_FadingStatic_ToString.htm" />
+  <HelpKINode Title="FadingStatic.AnimationDuration property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_AnimationDuration.htm" />
+  <HelpKINode Title="FadingStatic.DrawColor property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_DrawColor.htm" />
+  <HelpKINode Title="FadingStatic.FadingStatic constructor" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic__ctor.htm" />
+  <HelpKINode Title="FadingStatic.Flash property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_Flash.htm" />
+  <HelpKINode Title="FadingStatic.Increment property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_Increment.htm" />
+  <HelpKINode Title="FadingStatic.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="FadingStatic.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="FadingStatic.Render method" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Render.htm" />
+  <HelpKINode Title="FadingStatic.ToString method" Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_ToString.htm" />
   <HelpKINode Title="FarCorner field" Url="html/F_StarfieldUtils_CFDUtils_Solver_FarCorner.htm" />
   <HelpKINode Title="fbm_noise3 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_fbm_noise3.htm" />
   <HelpKINode Title="fbm_noise4 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_fbm_noise4.htm" />
@@ -711,19 +779,89 @@
   <HelpKINode Title="FFTTools.FFTTools constructor" Url="html/M_StarfieldUtils_MathUtils_FFTTools__ctor.htm" />
   <HelpKINode Title="FFTTools.RoundToNextPowerOf2 method" Url="html/M_StarfieldUtils_MathUtils_FFTTools_RoundToNextPowerOf2.htm" />
   <HelpKINode Title="FindKMeans method" Url="html/M_StarfieldUtils_MathUtils_KMeans_FindKMeans.htm" />
-  <HelpKINode Title="Flash property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Flash.htm" />
+  <HelpKINode Title="Flash property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_Flash.htm" />
   <HelpKINode Title="FluidPour class">
-    <HelpKINode Title="FluidPour Class" Url="html/T_StarfieldDrivers_Drivers_FluidPour.htm" />
-    <HelpKINode Title="about FluidPour class" Url="html/T_StarfieldDrivers_Drivers_FluidPour.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_FluidPour__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_FluidPour.htm" />
+    <HelpKINode Title="FluidPour Class" Url="html/T_StarfieldDrivers_CFD_FluidPour.htm" />
+    <HelpKINode Title="about FluidPour class" Url="html/T_StarfieldDrivers_CFD_FluidPour.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_CFD_FluidPour__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_CFD_FluidPour.htm" />
   </HelpKINode>
-  <HelpKINode Title="FluidPour.FluidPour constructor" Url="html/M_StarfieldDrivers_Drivers_FluidPour__ctor.htm" />
-  <HelpKINode Title="FluidPour.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="FluidPour.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="FluidPour.Render method" Url="html/M_StarfieldDrivers_Drivers_FluidPour_Render.htm" />
-  <HelpKINode Title="FluidPour.ToString method" Url="html/M_StarfieldDrivers_Drivers_FluidPour_ToString.htm" />
+  <HelpKINode Title="FluidPour.FluidPour constructor" Url="html/M_StarfieldDrivers_CFD_FluidPour__ctor.htm" />
+  <HelpKINode Title="FluidPour.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_CFD_FluidPour_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="FluidPour.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_CFD_FluidPour_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="FluidPour.Render method" Url="html/M_StarfieldDrivers_CFD_FluidPour_Render.htm" />
+  <HelpKINode Title="FluidPour.ToString method" Url="html/M_StarfieldDrivers_CFD_FluidPour_ToString.htm" />
   <HelpKINode Title="Force field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Force.htm" />
+  <HelpKINode Title="FormDemo class">
+    <HelpKINode Title="FormDemo Class" Url="html/T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="FormDemo Class" Url="html/T_DualController_FormDemo.htm" />
+    <HelpKINode Title="FormDemo Class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="FormDemo Class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_DualController_FormDemo.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="constructor" Url="html/M_DualController_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Ambient_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ControllerConfigGenerator_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_AlgorithmDemo_FormDemo__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_DualController_FormDemo.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_DualController_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_DualController_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_AlgorithmDemo_FormDemo.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FormDemo.Dispose method">
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_AlgorithmDemo_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_Ambient_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_ControllerConfigGenerator_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_DualController_FormDemo_Dispose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FormDemo.FormDemo constructor">
+    <HelpKINode Title="FormDemo Constructor " Url="html/M_Ambient_FormDemo__ctor.htm" />
+    <HelpKINode Title="FormDemo Constructor " Url="html/M_AlgorithmDemo_FormDemo__ctor.htm" />
+    <HelpKINode Title="FormDemo Constructor " Url="html/M_ControllerConfigGenerator_FormDemo__ctor.htm" />
+    <HelpKINode Title="FormDemo Constructor " Url="html/M_DualController_FormDemo__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FractalFlame class">
+    <HelpKINode Title="FractalFlame Class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame.htm" />
+    <HelpKINode Title="about FractalFlame class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Fractal_FractalFlame__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Fractal_FractalFlame.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Fractal_FractalFlame.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FractalFlame.FractalFlame constructor" Url="html/M_StarfieldDrivers_Fractal_FractalFlame__ctor.htm" />
+  <HelpKINode Title="FractalFlame.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="FractalFlame.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="FractalFlame.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="FractalFlame.NumSteps property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame_NumSteps.htm" />
+  <HelpKINode Title="FractalFlame.PrimaryColor property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame_PrimaryColor.htm" />
+  <HelpKINode Title="FractalFlame.SecondaryColor property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame_SecondaryColor.htm" />
+  <HelpKINode Title="FractalFlame.ToString method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame_ToString.htm" />
+  <HelpKINode Title="FractalFlame4D class">
+    <HelpKINode Title="FractalFlame4D Class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame4D.htm" />
+    <HelpKINode Title="about FractalFlame4D class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame4D.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Fractal_FractalFlame4D.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Fractal_FractalFlame4D.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FractalFlame4D.FractalFlame4D constructor" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D__ctor.htm" />
+  <HelpKINode Title="FractalFlame4D.HoldTime property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_HoldTime.htm" />
+  <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="FractalFlame4D.NumSteps property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_NumSteps.htm" />
+  <HelpKINode Title="FractalFlame4D.PrimaryColor property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_PrimaryColor.htm" />
+  <HelpKINode Title="FractalFlame4D.SecondaryColor property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_SecondaryColor.htm" />
+  <HelpKINode Title="FractalFlame4D.SubTimeSteps property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_SubTimeSteps.htm" />
+  <HelpKINode Title="FractalFlame4D.ToString method" Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_ToString.htm" />
   <HelpKINode Title="Frame class">
     <HelpKINode Title="Frame Class" Url="html/T_StarfieldUtils_SoundUtils_Frame.htm" />
     <HelpKINode Title="about Frame class" Url="html/T_StarfieldUtils_SoundUtils_Frame.htm" />
@@ -742,6 +880,26 @@
     <HelpKINode Title="AffineCoefs3d.g Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_g.htm" />
     <HelpKINode Title="AffineCoefs4d.g Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_g.htm" />
   </HelpKINode>
+  <HelpKINode Title="GameOfLife class">
+    <HelpKINode Title="GameOfLife Class" Url="html/T_StarfieldDrivers_Animation_GameOfLife.htm" />
+    <HelpKINode Title="about GameOfLife class" Url="html/T_StarfieldDrivers_Animation_GameOfLife.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Animation_GameOfLife__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Animation_GameOfLife.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Animation_GameOfLife.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameOfLife.Alive property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_Alive.htm" />
+  <HelpKINode Title="GameOfLife.BirthLowerThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_BirthLowerThreshold.htm" />
+  <HelpKINode Title="GameOfLife.BirthUpperThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_BirthUpperThreshold.htm" />
+  <HelpKINode Title="GameOfLife.Dead property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_Dead.htm" />
+  <HelpKINode Title="GameOfLife.DeathLowerThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_DeathLowerThreshold.htm" />
+  <HelpKINode Title="GameOfLife.DeathUpperThreshold property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_DeathUpperThreshold.htm" />
+  <HelpKINode Title="GameOfLife.Delay property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_Delay.htm" />
+  <HelpKINode Title="GameOfLife.GameOfLife constructor" Url="html/M_StarfieldDrivers_Animation_GameOfLife__ctor.htm" />
+  <HelpKINode Title="GameOfLife.Render method" Url="html/M_StarfieldDrivers_Animation_GameOfLife_Render.htm" />
+  <HelpKINode Title="GameOfLife.SeedDenominator property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_SeedDenominator.htm" />
+  <HelpKINode Title="GameOfLife.Start method" Url="html/M_StarfieldDrivers_Animation_GameOfLife_Start.htm" />
+  <HelpKINode Title="GameOfLife.Stop method" Url="html/M_StarfieldDrivers_Animation_GameOfLife_Stop.htm" />
+  <HelpKINode Title="GameOfLife.ToString method" Url="html/M_StarfieldDrivers_Animation_GameOfLife_ToString.htm" />
   <HelpKINode Title="GenericTrails class">
     <HelpKINode Title="GenericTrails Class" Url="html/T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm" />
     <HelpKINode Title="about GenericTrails class" Url="html/T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm" />
@@ -788,6 +946,7 @@
   <HelpKINode Title="GetVerticesBetween method" Url="html/M_Delaunay_Geo_Polygon_GetVerticesBetween.htm" />
   <HelpKINode Title="GetVibrantColorGradient method" Url="html/M_StarfieldUtils_ColorUtils_ColorUtils_GetVibrantColorGradient.htm" />
   <HelpKINode Title="Goal field" Url="html/F_StarfieldUtils_FlockingUtils_Swarm_Goal.htm" />
+  <HelpKINode Title="GoalThreshold property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_GoalThreshold.htm" />
   <HelpKINode Title="h field">
     <HelpKINode Title="AffineCoefs3d.h Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs3d_h.htm" />
     <HelpKINode Title="AffineCoefs4d.h Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_h.htm" />
@@ -812,13 +971,20 @@
   <HelpKINode Title="Halfedge.ToString method" Url="html/M_Delaunay_Halfedge_ToString.htm" />
   <HelpKINode Title="Halfedge.vertex field" Url="html/F_Delaunay_Halfedge_vertex.htm" />
   <HelpKINode Title="Halfedge.ystar field" Url="html/F_Delaunay_Halfedge_ystar.htm" />
-  <HelpKINode Title="height property" Url="html/P_Delaunay_Geo_Rect_height.htm" />
   <HelpKINode Title="Height property">
     <HelpKINode Title="GenericTrails.Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_GenericTrails_Height.htm" />
     <HelpKINode Title="PresenceTrails.Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_PresenceTrails_Height.htm" />
     <HelpKINode Title="WhackAMole.Height Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_Height.htm" />
   </HelpKINode>
+  <HelpKINode Title="height property" Url="html/P_Delaunay_Geo_Rect_height.htm" />
+  <HelpKINode Title="HighContrast property">
+    <HelpKINode Title="SimplexClouds.HighContrast Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_HighContrast.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.HighContrast Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_HighContrast.htm" />
+    <HelpKINode Title="SimplexCurtains.HighContrast Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_HighContrast.htm" />
+    <HelpKINode Title="SimplexSmoke.HighContrast Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_HighContrast.htm" />
+  </HelpKINode>
   <HelpKINode Title="hiRange field" Url="html/F_ClipperLib_ClipperBase_hiRange.htm" />
+  <HelpKINode Title="HoldTime property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_HoldTime.htm" />
   <HelpKINode Title="HomeStarfield method" Url="html/M_Starfield_StarfieldModel_HomeStarfield.htm" />
   <HelpKINode Title="HSB class">
     <HelpKINode Title="HSB Class" Url="html/T_StarfieldUtils_ColorUtils_ColorSpace_HSB.htm" />
@@ -868,7 +1034,7 @@
     <HelpKINode Title="properties" Url="html/Properties_T_Delaunay_ICoord.htm" />
   </HelpKINode>
   <HelpKINode Title="ICoord.Coord property" Url="html/P_Delaunay_ICoord_Coord.htm" />
-  <HelpKINode Title="Increment property" Url="html/P_StarfieldDrivers_Drivers_FadingStatic_Increment.htm" />
+  <HelpKINode Title="Increment property" Url="html/P_StarfieldDrivers_Noise_White_FadingStatic_Increment.htm" />
   <HelpKINode Title="Inequality operator">
     <HelpKINode Title="CIELAB.Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_op_Inequality.htm" />
     <HelpKINode Title="CIEXYZ.Inequality Operator " Url="html/M_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_op_Inequality.htm" />
@@ -883,6 +1049,7 @@
   <HelpKINode Title="Interactive enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
   <HelpKINode Title="InteractiveSoundResponsive enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
   <HelpKINode Title="InterfaceTensionColor field" Url="html/F_StarfieldUtils_CFDUtils_Particle_InterfaceTensionColor.htm" />
+  <HelpKINode Title="Interior enumeration member" Url="html/T_DualController_DriverLocation.htm" />
   <HelpKINode Title="Intersect method" Url="html/M_Delaunay_Vertex_Intersect.htm" />
   <HelpKINode Title="Intersection method">
     <HelpKINode Title="LineSegment.Intersection Method " Url="html/M_Delaunay_Geo_LineSegment_Intersection.htm" />
@@ -897,7 +1064,7 @@
   </HelpKINode>
   <HelpKINode Title="IntersectNode.IntersectNode constructor" Url="html/M_ClipperLib_IntersectNode__ctor.htm" />
   <HelpKINode Title="IntersectsWith method" Url="html/M_Delaunay_Geo_LineSegment_IntersectsWith.htm" />
-  <HelpKINode Title="Interval property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_Interval.htm" />
+  <HelpKINode Title="Interval property" Url="html/P_StarfieldDrivers_Animation_CenterWave_Interval.htm" />
   <HelpKINode Title="IntPoint structure">
     <HelpKINode Title="IntPoint Structure" Url="html/T_ClipperLib_IntPoint.htm" />
     <HelpKINode Title="about IntPoint structure" Url="html/T_ClipperLib_IntPoint.htm" />
@@ -937,34 +1104,77 @@
     <HelpKINode Title="about IStarfieldDriver interface" Url="html/T_Starfield_IStarfieldDriver.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Starfield_IStarfieldDriver.htm" />
   </HelpKINode>
+  <HelpKINode Title="IStarfieldDriver.Render explicitly implemented method">
+    <HelpKINode Title="FractalFlame.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexClouds.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SimplexWaves.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Render.htm" />
+    <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Render Method " Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Render.htm" />
+  </HelpKINode>
   <HelpKINode Title="IStarfieldDriver.Render method" Url="html/M_Starfield_IStarfieldDriver_Render.htm" />
   <HelpKINode Title="IStarfieldDriver.Start explicitly implemented method">
-    <HelpKINode Title="CenterWave.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="Checkout.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="FadingStatic.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="FluidPour.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="BoidSwarms.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="CenterWave.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Animation_CenterWave_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="Checkout.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Test_Checkout_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="FadingStatic.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="FluidPour.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_CFD_FluidPour_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="FractalFlame.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Start.htm" />
     <HelpKINode Title="GenericTrails.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Start.htm" />
     <HelpKINode Title="PresenceClouds.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Starfield_IStarfieldDriver_Start.htm" />
     <HelpKINode Title="PresenceTrails.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="Rain.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="SolidColor.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="Static.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Start.htm" />
-    <HelpKINode Title="TestFill.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="Rain.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Animation_Rain_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexClouds.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SimplexWaves.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="SolidColor.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Test_SolidColor_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="Static.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_White_Static_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="TestFill.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Test_TestFill_Starfield_IStarfieldDriver_Start.htm" />
+    <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Start.htm" />
     <HelpKINode Title="WhackAMole.IStarfieldDriver.Start Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Starfield_IStarfieldDriver_Start.htm" />
   </HelpKINode>
   <HelpKINode Title="IStarfieldDriver.Start method" Url="html/M_Starfield_IStarfieldDriver_Start.htm" />
   <HelpKINode Title="IStarfieldDriver.Stop explicitly implemented method">
-    <HelpKINode Title="CenterWave.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="Checkout.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="FadingStatic.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="FluidPour.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="BoidSwarms.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="CenterWave.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Animation_CenterWave_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="Checkout.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Test_Checkout_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="FadingStatic.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="FluidPour.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_CFD_FluidPour_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="FractalFlame.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="FractalFlame4D.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_Starfield_IStarfieldDriver_Stop.htm" />
     <HelpKINode Title="GenericTrails.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Stop.htm" />
     <HelpKINode Title="PresenceClouds.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Starfield_IStarfieldDriver_Stop.htm" />
     <HelpKINode Title="PresenceTrails.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="Rain.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="SolidColor.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="Static.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Stop.htm" />
-    <HelpKINode Title="TestFill.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="Rain.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Animation_Rain_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexClouds.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SimplexWaves.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="SolidColor.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Test_SolidColor_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="Static.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_White_Static_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="TestFill.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Test_TestFill_Starfield_IStarfieldDriver_Stop.htm" />
+    <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Stop.htm" />
     <HelpKINode Title="WhackAMole.IStarfieldDriver.Stop Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Starfield_IStarfieldDriver_Stop.htm" />
   </HelpKINode>
   <HelpKINode Title="IStarfieldDriver.Stop method" Url="html/M_Starfield_IStarfieldDriver_Stop.htm" />
@@ -1020,6 +1230,19 @@
     <HelpKINode Title="AffineCoefs4d.l Field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_l.htm" />
   </HelpKINode>
   <HelpKINode Title="L property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIELAB_L.htm" />
+  <HelpKINode Title="Lacunarity property">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Lacunarity.htm" />
+    <HelpKINode Title="RainbowSimplex.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Lacunarity.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Lacunarity.htm" />
+    <HelpKINode Title="SimplexClouds.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Lacunarity.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Lacunarity.htm" />
+    <HelpKINode Title="SimplexCurtains.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Lacunarity.htm" />
+    <HelpKINode Title="SimplexSmoke.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Lacunarity.htm" />
+    <HelpKINode Title="SimplexTwinkle.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Lacunarity.htm" />
+    <HelpKINode Title="SimplexWaves.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_Lacunarity.htm" />
+    <HelpKINode Title="SingleColorSimplex.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Lacunarity.htm" />
+    <HelpKINode Title="TwoColorSimplex.Lacunarity Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Lacunarity.htm" />
+  </HelpKINode>
   <HelpKINode Title="lastArtifact field" Url="html/F_StarfieldUtils_SoundUtils_BaseSoundProcessor_lastArtifact.htm" />
   <HelpKINode Title="lastOnset field" Url="html/F_StarfieldUtils_SoundUtils_BaseSoundProcessor_lastOnset.htm" />
   <HelpKINode Title="LEDColors field" Url="html/F_Starfield_StarfieldModel_LEDColors.htm" />
@@ -1028,8 +1251,8 @@
   <HelpKINode Title="leftRight field" Url="html/F_Delaunay_Halfedge_leftRight.htm" />
   <HelpKINode Title="leftSite property" Url="html/P_Delaunay_Edge_leftSite.htm" />
   <HelpKINode Title="leftVertex property" Url="html/P_Delaunay_Edge_leftVertex.htm" />
-  <HelpKINode Title="Lightning property" Url="html/P_StarfieldDrivers_Drivers_Rain_Lightning.htm" />
-  <HelpKINode Title="LightningColor property" Url="html/P_StarfieldDrivers_Drivers_Rain_LightningColor.htm" />
+  <HelpKINode Title="Lightning property" Url="html/P_StarfieldDrivers_Animation_Rain_Lightning.htm" />
+  <HelpKINode Title="LightningColor property" Url="html/P_StarfieldDrivers_Animation_Rain_LightningColor.htm" />
   <HelpKINode Title="Linear enumeration member" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeStyle.htm" />
   <HelpKINode Title="LineSegment class">
     <HelpKINode Title="LineSegment Class" Url="html/T_Delaunay_Geo_LineSegment.htm" />
@@ -1050,8 +1273,13 @@
   <HelpKINode Title="LoadCustomDrivers method" Url="html/M_Starfield_DriverLoader_LoadCustomDrivers.htm" />
   <HelpKINode Title="LoadDefaultDrivers method" Url="html/Overload_Starfield_DriverLoader_LoadDefaultDrivers.htm" />
   <HelpKINode Title="LoadPlugins method" Url="html/Overload_Starfield_DriverLoader_LoadPlugins.htm" />
+  <HelpKINode Title="LocationMultiplier property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_LocationMultiplier.htm" />
   <HelpKINode Title="lockObject field" Url="html/F_Starfield_StarfieldModel_lockObject.htm" />
   <HelpKINode Title="loRange field" Url="html/F_ClipperLib_ClipperBase_loRange.htm" />
+  <HelpKINode Title="LowerThreshold property">
+    <HelpKINode Title="SimplexColumnsAndCurtains.LowerThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_LowerThreshold.htm" />
+    <HelpKINode Title="SimplexCurtains.LowerThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_LowerThreshold.htm" />
+  </HelpKINode>
   <HelpKINode Title="Luminosity property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSL_Luminosity.htm" />
   <HelpKINode Title="m field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_m.htm" />
   <HelpKINode Title="Magenta property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CMYK_Magenta.htm" />
@@ -1066,6 +1294,7 @@
     <HelpKINode Title="WhackAMole.MaxHeight Property " Url="html/P_StarfieldDrivers_PresenceResponsive_WhackAMole_MaxHeight.htm" />
   </HelpKINode>
   <HelpKINode Title="MAXIMUM enumeration member" Url="html/T_Delaunay_KruskalType.htm" />
+  <HelpKINode Title="MaxTime property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_MaxTime.htm" />
   <HelpKINode Title="membership field" Url="html/F_StarfieldUtils_MathUtils_KMeansResult_membership.htm" />
   <HelpKINode Title="MINIMUM enumeration member" Url="html/T_Delaunay_KruskalType.htm" />
   <HelpKINode Title="MinimumArtifactThreshold property" Url="html/P_StarfieldUtils_SoundUtils_BaseSoundProcessor_MinimumArtifactThreshold.htm" />
@@ -1122,6 +1351,24 @@
   <HelpKINode Title="noise2 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise2.htm" />
   <HelpKINode Title="noise3 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise3.htm" />
   <HelpKINode Title="noise4 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise4.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed class">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed Class" Url="html/T_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="about NoisyRainbowSimplexSmoothed class" Url="html/T_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_CapAtMax.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Lacunarity.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.NoisyRainbowSimplexSmoothed constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed__ctor.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_NumOctaves.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Persistance.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.TimeDiv property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_TimeDiv.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_TimeStep.htm" />
+  <HelpKINode Title="NoisyRainbowSimplexSmoothed.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_ToString.htm" />
   <HelpKINode Title="NONE enumeration member" Url="html/T_Delaunay_Geo_Winding.htm" />
   <HelpKINode Title="Normalise method" Url="html/M_StarfieldUtils_MathUtils_Quaternion_Normalise.htm" />
   <HelpKINode Title="NullSoundProcessor class">
@@ -1134,19 +1381,39 @@
     <HelpKINode Title="properties" Url="html/Properties_T_StarfieldUtils_SoundUtils_NullSoundProcessor.htm" />
   </HelpKINode>
   <HelpKINode Title="NullSoundProcessor.NullSoundProcessor constructor" Url="html/M_StarfieldUtils_SoundUtils_NullSoundProcessor__ctor.htm" />
-  <HelpKINode Title="NumSnakes property" Url="html/P_StarfieldDrivers_Snakes_NumSnakes.htm" />
+  <HelpKINode Title="NumBoidsPerSwarm property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_NumBoidsPerSwarm.htm" />
+  <HelpKINode Title="NumOctaves property">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_NumOctaves.htm" />
+    <HelpKINode Title="RainbowSimplex.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_NumOctaves.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_NumOctaves.htm" />
+    <HelpKINode Title="SimplexClouds.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_NumOctaves.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_NumOctaves.htm" />
+    <HelpKINode Title="SimplexCurtains.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_NumOctaves.htm" />
+    <HelpKINode Title="SimplexSmoke.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_NumOctaves.htm" />
+    <HelpKINode Title="SimplexTwinkle.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_NumOctaves.htm" />
+    <HelpKINode Title="SimplexWaves.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_NumOctaves.htm" />
+    <HelpKINode Title="SingleColorSimplex.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_NumOctaves.htm" />
+    <HelpKINode Title="TwoColorSimplex.NumOctaves Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_NumOctaves.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NumSnakes property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_NumSnakes.htm" />
+  <HelpKINode Title="NumSteps property">
+    <HelpKINode Title="FractalFlame.NumSteps Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame_NumSteps.htm" />
+    <HelpKINode Title="FractalFlame4D.NumSteps Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_NumSteps.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NumSwarms property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_NumSwarms.htm" />
   <HelpKINode Title="NumX field" Url="html/F_Starfield_StarfieldModel_NumX.htm" />
   <HelpKINode Title="NumY field" Url="html/F_Starfield_StarfieldModel_NumY.htm" />
   <HelpKINode Title="NumZ field" Url="html/F_Starfield_StarfieldModel_NumZ.htm" />
   <HelpKINode Title="o field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_o.htm" />
+  <HelpKINode Title="OffPercent property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_OffPercent.htm" />
   <HelpKINode Title="OnArtifactDetected event" Url="html/E_StarfieldUtils_SoundUtils_BaseSoundProcessor_OnArtifactDetected.htm" />
   <HelpKINode Title="OnArtifactDetectedHandler delegate" Url="html/T_StarfieldUtils_SoundUtils_OnArtifactDetectedHandler.htm" />
   <HelpKINode Title="OnFrameUpdate event" Url="html/E_StarfieldUtils_SoundUtils_BaseSoundProcessor_OnFrameUpdate.htm" />
   <HelpKINode Title="OnFrameUpdateHandler delegate" Url="html/T_StarfieldUtils_SoundUtils_OnFrameUpdateHandler.htm" />
   <HelpKINode Title="Onset enumeration member" Url="html/T_StarfieldUtils_SoundUtils_ArtifactDetectionAlgorithm.htm" />
-  <HelpKINode Title="OnSoundChangeDir property" Url="html/P_StarfieldDrivers_Snakes_OnSoundChangeDir.htm" />
-  <HelpKINode Title="OnSoundSpeedUp property" Url="html/P_StarfieldDrivers_Snakes_OnSoundSpeedUp.htm" />
-  <HelpKINode Title="OnSoundSpeedUpMore property" Url="html/P_StarfieldDrivers_Snakes_OnSoundSpeedUpMore.htm" />
+  <HelpKINode Title="OnSoundChangeDir property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundChangeDir.htm" />
+  <HelpKINode Title="OnSoundSpeedUp property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundSpeedUp.htm" />
+  <HelpKINode Title="OnSoundSpeedUpMore property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundSpeedUpMore.htm" />
   <HelpKINode Title="OpenPathsFromPolyTree method" Url="html/M_ClipperLib_Clipper_OpenPathsFromPolyTree.htm" />
   <HelpKINode Title="OPM field" Url="html/F_StarfieldUtils_SoundUtils_Artifact_OPM.htm" />
   <HelpKINode Title="Orientation method" Url="html/M_ClipperLib_Clipper_Orientation.htm" />
@@ -1154,7 +1421,7 @@
   <HelpKINode Title="p field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_p.htm" />
   <HelpKINode Title="p0 field" Url="html/F_Delaunay_Geo_LineSegment_p0.htm" />
   <HelpKINode Title="p1 field" Url="html/F_Delaunay_Geo_LineSegment_p1.htm" />
-  <HelpKINode Title="Panel property" Url="html/P_StarfieldDrivers_Drivers_Checkout_Panel.htm" />
+  <HelpKINode Title="Panel property" Url="html/P_StarfieldDrivers_Test_Checkout_Panel.htm" />
   <HelpKINode Title="parent field" Url="html/F_Delaunay_Node_parent.htm" />
   <HelpKINode Title="Parent property" Url="html/P_ClipperLib_PolyNode_Parent.htm" />
   <HelpKINode Title="Particle structure">
@@ -1181,6 +1448,19 @@
   <HelpKINode Title="Particle.Velocity field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Velocity.htm" />
   <HelpKINode Title="Particle.Viscosity field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Viscosity.htm" />
   <HelpKINode Title="Peek method" Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_Peek.htm" />
+  <HelpKINode Title="Persistance property">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_Persistance.htm" />
+    <HelpKINode Title="RainbowSimplex.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Persistance.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Persistance.htm" />
+    <HelpKINode Title="SimplexClouds.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Persistance.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Persistance.htm" />
+    <HelpKINode Title="SimplexCurtains.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Persistance.htm" />
+    <HelpKINode Title="SimplexSmoke.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Persistance.htm" />
+    <HelpKINode Title="SimplexTwinkle.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Persistance.htm" />
+    <HelpKINode Title="SimplexWaves.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_Persistance.htm" />
+    <HelpKINode Title="SingleColorSimplex.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Persistance.htm" />
+    <HelpKINode Title="TwoColorSimplex.Persistance Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Persistance.htm" />
+  </HelpKINode>
   <HelpKINode Title="pftEvenOdd enumeration member" Url="html/T_ClipperLib_PolyFillType.htm" />
   <HelpKINode Title="pftNegative enumeration member" Url="html/T_ClipperLib_PolyFillType.htm" />
   <HelpKINode Title="pftNonZero enumeration member" Url="html/T_ClipperLib_PolyFillType.htm" />
@@ -1277,6 +1557,16 @@
   <HelpKINode Title="PresenceTrails.Render method" Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Render.htm" />
   <HelpKINode Title="PresenceTrails.ToString method" Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_ToString.htm" />
   <HelpKINode Title="PreserveCollinear property" Url="html/P_ClipperLib_ClipperBase_PreserveCollinear.htm" />
+  <HelpKINode Title="PrimaryColor property">
+    <HelpKINode Title="FractalFlame.PrimaryColor Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame_PrimaryColor.htm" />
+    <HelpKINode Title="FractalFlame4D.PrimaryColor Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_PrimaryColor.htm" />
+    <HelpKINode Title="SimplexClouds.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_PrimaryColor.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_PrimaryColor.htm" />
+    <HelpKINode Title="SimplexCurtains.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_PrimaryColor.htm" />
+    <HelpKINode Title="SimplexSmoke.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_PrimaryColor.htm" />
+    <HelpKINode Title="SimplexWaves.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_PrimaryColor.htm" />
+    <HelpKINode Title="TwoColorSimplex.PrimaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_PrimaryColor.htm" />
+  </HelpKINode>
   <HelpKINode Title="PriorityQueue(Of T) class">
     <HelpKINode Title="PriorityQueue(T) Class" Url="html/T_StarfieldUtils_DataStructures_PriorityQueue_1.htm" />
     <HelpKINode Title="about PriorityQueue(Of T) class" Url="html/T_StarfieldUtils_DataStructures_PriorityQueue_1.htm" />
@@ -1337,23 +1627,57 @@
   <HelpKINode Title="r field" Url="html/F_StarfieldUtils_MathUtils_AffineCoefs4d_r.htm" />
   <HelpKINode Title="radius field" Url="html/F_Delaunay_Geo_Circle_radius.htm" />
   <HelpKINode Title="Rain class">
-    <HelpKINode Title="Rain Class" Url="html/T_StarfieldDrivers_Drivers_Rain.htm" />
-    <HelpKINode Title="about Rain class" Url="html/T_StarfieldDrivers_Drivers_Rain.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_Rain__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Rain.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_Rain.htm" />
+    <HelpKINode Title="Rain Class" Url="html/T_StarfieldDrivers_Animation_Rain.htm" />
+    <HelpKINode Title="about Rain class" Url="html/T_StarfieldDrivers_Animation_Rain.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Animation_Rain__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Animation_Rain.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Animation_Rain.htm" />
   </HelpKINode>
-  <HelpKINode Title="Rain.Down property" Url="html/P_StarfieldDrivers_Drivers_Rain_Down.htm" />
-  <HelpKINode Title="Rain.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="Rain.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Rain_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="Rain.Lightning property" Url="html/P_StarfieldDrivers_Drivers_Rain_Lightning.htm" />
-  <HelpKINode Title="Rain.LightningColor property" Url="html/P_StarfieldDrivers_Drivers_Rain_LightningColor.htm" />
-  <HelpKINode Title="Rain.Rain constructor" Url="html/M_StarfieldDrivers_Drivers_Rain__ctor.htm" />
-  <HelpKINode Title="Rain.RainColor property" Url="html/P_StarfieldDrivers_Drivers_Rain_RainColor.htm" />
-  <HelpKINode Title="Rain.Render method" Url="html/M_StarfieldDrivers_Drivers_Rain_Render.htm" />
-  <HelpKINode Title="Rain.ToString method" Url="html/M_StarfieldDrivers_Drivers_Rain_ToString.htm" />
-  <HelpKINode Title="Rain.WrapTime property" Url="html/P_StarfieldDrivers_Drivers_Rain_WrapTime.htm" />
-  <HelpKINode Title="Rainbow property" Url="html/P_StarfieldDrivers_Drivers_CenterWave_Rainbow.htm" />
+  <HelpKINode Title="Rain.Down property" Url="html/P_StarfieldDrivers_Animation_Rain_Down.htm" />
+  <HelpKINode Title="Rain.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Animation_Rain_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="Rain.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Animation_Rain_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="Rain.Lightning property" Url="html/P_StarfieldDrivers_Animation_Rain_Lightning.htm" />
+  <HelpKINode Title="Rain.LightningColor property" Url="html/P_StarfieldDrivers_Animation_Rain_LightningColor.htm" />
+  <HelpKINode Title="Rain.Rain constructor" Url="html/M_StarfieldDrivers_Animation_Rain__ctor.htm" />
+  <HelpKINode Title="Rain.RainColor property" Url="html/P_StarfieldDrivers_Animation_Rain_RainColor.htm" />
+  <HelpKINode Title="Rain.Render method" Url="html/M_StarfieldDrivers_Animation_Rain_Render.htm" />
+  <HelpKINode Title="Rain.ToString method" Url="html/M_StarfieldDrivers_Animation_Rain_ToString.htm" />
+  <HelpKINode Title="Rain.WrapTime property" Url="html/P_StarfieldDrivers_Animation_Rain_WrapTime.htm" />
+  <HelpKINode Title="Rainbow property" Url="html/P_StarfieldDrivers_Animation_CenterWave_Rainbow.htm" />
+  <HelpKINode Title="RainbowSimplex class">
+    <HelpKINode Title="RainbowSimplex Class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplex.htm" />
+    <HelpKINode Title="about RainbowSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplex.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_RainbowSimplex.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_RainbowSimplex.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RainbowSimplex.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_CapAtMax.htm" />
+  <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="RainbowSimplex.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="RainbowSimplex.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Lacunarity.htm" />
+  <HelpKINode Title="RainbowSimplex.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_NumOctaves.htm" />
+  <HelpKINode Title="RainbowSimplex.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_Persistance.htm" />
+  <HelpKINode Title="RainbowSimplex.RainbowSimplex constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex__ctor.htm" />
+  <HelpKINode Title="RainbowSimplex.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_TimeStep.htm" />
+  <HelpKINode Title="RainbowSimplex.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_ToString.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed class">
+    <HelpKINode Title="RainbowSimplexSmoothed Class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="about RainbowSimplexSmoothed class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RainbowSimplexSmoothed.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_CapAtMax.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Lacunarity.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_NumOctaves.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_Persistance.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.RainbowSimplexSmoothed constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed__ctor.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_TimeStep.htm" />
+  <HelpKINode Title="RainbowSimplexSmoothed.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_ToString.htm" />
   <HelpKINode Title="RainbowTest class">
     <HelpKINode Title="RainbowTest Class" Url="html/T_StarfieldDrivers_Animation_RainbowTest.htm" />
     <HelpKINode Title="about RainbowTest class" Url="html/T_StarfieldDrivers_Animation_RainbowTest.htm" />
@@ -1365,7 +1689,7 @@
   <HelpKINode Title="RainbowTest.Start method" Url="html/M_StarfieldDrivers_Animation_RainbowTest_Start.htm" />
   <HelpKINode Title="RainbowTest.Stop method" Url="html/M_StarfieldDrivers_Animation_RainbowTest_Stop.htm" />
   <HelpKINode Title="RainbowTest.ToString method" Url="html/M_StarfieldDrivers_Animation_RainbowTest_ToString.htm" />
-  <HelpKINode Title="RainColor property" Url="html/P_StarfieldDrivers_Drivers_Rain_RainColor.htm" />
+  <HelpKINode Title="RainColor property" Url="html/P_StarfieldDrivers_Animation_Rain_RainColor.htm" />
   <HelpKINode Title="RaverPlaid class">
     <HelpKINode Title="RaverPlaid Class" Url="html/T_StarfieldDrivers_Animation_RaverPlaid.htm" />
     <HelpKINode Title="about RaverPlaid class" Url="html/T_StarfieldDrivers_Animation_RaverPlaid.htm" />
@@ -1402,21 +1726,23 @@
   </HelpKINode>
   <HelpKINode Title="RemoveChannel method" Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_RemoveChannel.htm" />
   <HelpKINode Title="Render method">
-    <HelpKINode Title="CenterWave.Render Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_Render.htm" />
-    <HelpKINode Title="Checkout.Render Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_Render.htm" />
-    <HelpKINode Title="FadingStatic.Render Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_Render.htm" />
-    <HelpKINode Title="FluidPour.Render Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_Render.htm" />
+    <HelpKINode Title="BoidSwarms.Render Method " Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_Render.htm" />
+    <HelpKINode Title="CenterWave.Render Method " Url="html/M_StarfieldDrivers_Animation_CenterWave_Render.htm" />
+    <HelpKINode Title="Checkout.Render Method " Url="html/M_StarfieldDrivers_Test_Checkout_Render.htm" />
+    <HelpKINode Title="FadingStatic.Render Method " Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_Render.htm" />
+    <HelpKINode Title="FluidPour.Render Method " Url="html/M_StarfieldDrivers_CFD_FluidPour_Render.htm" />
+    <HelpKINode Title="GameOfLife.Render Method " Url="html/M_StarfieldDrivers_Animation_GameOfLife_Render.htm" />
     <HelpKINode Title="GenericTrails.Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_Render.htm" />
     <HelpKINode Title="IStarfieldDriver.Render Method " Url="html/M_Starfield_IStarfieldDriver_Render.htm" />
     <HelpKINode Title="PresenceClouds.Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_Render.htm" />
     <HelpKINode Title="PresenceTrails.Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_Render.htm" />
-    <HelpKINode Title="Rain.Render Method " Url="html/M_StarfieldDrivers_Drivers_Rain_Render.htm" />
+    <HelpKINode Title="Rain.Render Method " Url="html/M_StarfieldDrivers_Animation_Rain_Render.htm" />
     <HelpKINode Title="RainbowTest.Render Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Render.htm" />
     <HelpKINode Title="RaverPlaid.Render Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Render.htm" />
-    <HelpKINode Title="Snakes.Render Method " Url="html/M_StarfieldDrivers_Snakes_Render.htm" />
-    <HelpKINode Title="SolidColor.Render Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_Render.htm" />
-    <HelpKINode Title="Static.Render Method " Url="html/M_StarfieldDrivers_Drivers_Static_Render.htm" />
-    <HelpKINode Title="TestFill.Render Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_Render.htm" />
+    <HelpKINode Title="Snakes.Render Method " Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Render.htm" />
+    <HelpKINode Title="SolidColor.Render Method " Url="html/M_StarfieldDrivers_Test_SolidColor_Render.htm" />
+    <HelpKINode Title="Static.Render Method " Url="html/M_StarfieldDrivers_Noise_White_Static_Render.htm" />
+    <HelpKINode Title="TestFill.Render Method " Url="html/M_StarfieldDrivers_Test_TestFill_Render.htm" />
     <HelpKINode Title="WhackAMole.Render Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_Render.htm" />
   </HelpKINode>
   <HelpKINode Title="RestDensity field" Url="html/F_StarfieldUtils_CFDUtils_Particle_RestDensity.htm" />
@@ -1435,6 +1761,18 @@
     <HelpKINode Title="HSL.Saturation Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_HSL_Saturation.htm" />
   </HelpKINode>
   <HelpKINode Title="Scale method" Url="html/M_Delaunay_Geo_Polygon_Scale.htm" />
+  <HelpKINode Title="Scale property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Scale.htm" />
+  <HelpKINode Title="SecondaryColor property">
+    <HelpKINode Title="FractalFlame.SecondaryColor Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame_SecondaryColor.htm" />
+    <HelpKINode Title="FractalFlame4D.SecondaryColor Property " Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_SecondaryColor.htm" />
+    <HelpKINode Title="SimplexClouds.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_SecondaryColor.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_SecondaryColor.htm" />
+    <HelpKINode Title="SimplexCurtains.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_SecondaryColor.htm" />
+    <HelpKINode Title="SimplexSmoke.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_SecondaryColor.htm" />
+    <HelpKINode Title="SimplexWaves.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_SecondaryColor.htm" />
+    <HelpKINode Title="TwoColorSimplex.SecondaryColor Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_SecondaryColor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SeedDenominator property" Url="html/P_StarfieldDrivers_Animation_GameOfLife_SeedDenominator.htm" />
   <HelpKINode Title="SelectEdgesForSitePoint method" Url="html/M_Delaunay_DelaunayHelpers_SelectEdgesForSitePoint.htm" />
   <HelpKINode Title="SelectNonIntersectingEdges method" Url="html/M_Delaunay_DelaunayHelpers_SelectNonIntersectingEdges.htm" />
   <HelpKINode Title="SetChannelValue method" Url="html/M_StarfieldUtils_DisplayUtils_StarfieldMixer_SetChannelValue.htm" />
@@ -1455,6 +1793,75 @@
   <HelpKINode Title="SideHelper.SideHelper constructor" Url="html/M_Delaunay_LR_SideHelper__ctor.htm" />
   <HelpKINode Title="sigma_i field" Url="html/F_StarfieldUtils_CFDUtils_Solver_sigma_i.htm" />
   <HelpKINode Title="sigma_s field" Url="html/F_StarfieldUtils_CFDUtils_Solver_sigma_s.htm" />
+  <HelpKINode Title="SimplexClouds class">
+    <HelpKINode Title="SimplexClouds Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexClouds.htm" />
+    <HelpKINode Title="about SimplexClouds class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexClouds.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexClouds.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexClouds.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexClouds.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_CapAtMax.htm" />
+  <HelpKINode Title="SimplexClouds.Fade property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Fade.htm" />
+  <HelpKINode Title="SimplexClouds.FadeInThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_FadeInThreshold.htm" />
+  <HelpKINode Title="SimplexClouds.HighContrast property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_HighContrast.htm" />
+  <HelpKINode Title="SimplexClouds.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexClouds.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexClouds.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexClouds.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Lacunarity.htm" />
+  <HelpKINode Title="SimplexClouds.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_NumOctaves.htm" />
+  <HelpKINode Title="SimplexClouds.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Persistance.htm" />
+  <HelpKINode Title="SimplexClouds.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_PrimaryColor.htm" />
+  <HelpKINode Title="SimplexClouds.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_SecondaryColor.htm" />
+  <HelpKINode Title="SimplexClouds.SimplexClouds constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds__ctor.htm" />
+  <HelpKINode Title="SimplexClouds.Threshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Threshold.htm" />
+  <HelpKINode Title="SimplexClouds.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_TimeStep.htm" />
+  <HelpKINode Title="SimplexClouds.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_ToString.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains class">
+    <HelpKINode Title="SimplexColumnsAndCurtains Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains.htm" />
+    <HelpKINode Title="about SimplexColumnsAndCurtains class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexColumnsAndCurtains.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_CapAtMax.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.Fade property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Fade.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.FadeInThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_FadeInThreshold.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.HighContrast property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_HighContrast.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Lacunarity.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.LowerThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_LowerThreshold.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_NumOctaves.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_Persistance.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_PrimaryColor.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_SecondaryColor.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.SimplexColumnsAndCurtains constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains__ctor.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_TimeStep.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_ToString.htm" />
+  <HelpKINode Title="SimplexColumnsAndCurtains.UpperThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_UpperThreshold.htm" />
+  <HelpKINode Title="SimplexCurtains class">
+    <HelpKINode Title="SimplexCurtains Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexCurtains.htm" />
+    <HelpKINode Title="about SimplexCurtains class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexCurtains.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexCurtains.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexCurtains.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexCurtains.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_CapAtMax.htm" />
+  <HelpKINode Title="SimplexCurtains.HighContrast property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_HighContrast.htm" />
+  <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexCurtains.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexCurtains.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Lacunarity.htm" />
+  <HelpKINode Title="SimplexCurtains.LowerThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_LowerThreshold.htm" />
+  <HelpKINode Title="SimplexCurtains.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_NumOctaves.htm" />
+  <HelpKINode Title="SimplexCurtains.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_Persistance.htm" />
+  <HelpKINode Title="SimplexCurtains.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_PrimaryColor.htm" />
+  <HelpKINode Title="SimplexCurtains.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_SecondaryColor.htm" />
+  <HelpKINode Title="SimplexCurtains.SimplexCurtains constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains__ctor.htm" />
+  <HelpKINode Title="SimplexCurtains.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_TimeStep.htm" />
+  <HelpKINode Title="SimplexCurtains.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_ToString.htm" />
+  <HelpKINode Title="SimplexCurtains.UpperThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_UpperThreshold.htm" />
   <HelpKINode Title="SimplexNoise class">
     <HelpKINode Title="SimplexNoise Class" Url="html/T_StarfieldUtils_MathUtils_SimplexNoise.htm" />
     <HelpKINode Title="about SimplexNoise class" Url="html/T_StarfieldUtils_MathUtils_SimplexNoise.htm" />
@@ -1467,9 +1874,90 @@
   <HelpKINode Title="SimplexNoise.noise3 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise3.htm" />
   <HelpKINode Title="SimplexNoise.noise4 method" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise_noise4.htm" />
   <HelpKINode Title="SimplexNoise.SimplexNoise constructor" Url="html/M_StarfieldUtils_MathUtils_SimplexNoise__ctor.htm" />
+  <HelpKINode Title="SimplexSmoke class">
+    <HelpKINode Title="SimplexSmoke Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexSmoke.htm" />
+    <HelpKINode Title="about SimplexSmoke class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexSmoke.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexSmoke.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexSmoke.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexSmoke.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_CapAtMax.htm" />
+  <HelpKINode Title="SimplexSmoke.Fade property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Fade.htm" />
+  <HelpKINode Title="SimplexSmoke.FadeThreshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_FadeThreshold.htm" />
+  <HelpKINode Title="SimplexSmoke.HighContrast property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_HighContrast.htm" />
+  <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexSmoke.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexSmoke.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Lacunarity.htm" />
+  <HelpKINode Title="SimplexSmoke.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_NumOctaves.htm" />
+  <HelpKINode Title="SimplexSmoke.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Persistance.htm" />
+  <HelpKINode Title="SimplexSmoke.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_PrimaryColor.htm" />
+  <HelpKINode Title="SimplexSmoke.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_SecondaryColor.htm" />
+  <HelpKINode Title="SimplexSmoke.SimplexSmoke constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke__ctor.htm" />
+  <HelpKINode Title="SimplexSmoke.Threshold property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Threshold.htm" />
+  <HelpKINode Title="SimplexSmoke.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_TimeStep.htm" />
+  <HelpKINode Title="SimplexSmoke.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_ToString.htm" />
+  <HelpKINode Title="SimplexTwinkle class">
+    <HelpKINode Title="SimplexTwinkle Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexTwinkle.htm" />
+    <HelpKINode Title="about SimplexTwinkle class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexTwinkle.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexTwinkle.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexTwinkle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexTwinkle.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_CapAtMax.htm" />
+  <HelpKINode Title="SimplexTwinkle.DrawColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_DrawColor.htm" />
+  <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexTwinkle.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexTwinkle.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Lacunarity.htm" />
+  <HelpKINode Title="SimplexTwinkle.MaxTime property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_MaxTime.htm" />
+  <HelpKINode Title="SimplexTwinkle.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_NumOctaves.htm" />
+  <HelpKINode Title="SimplexTwinkle.OffPercent property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_OffPercent.htm" />
+  <HelpKINode Title="SimplexTwinkle.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Persistance.htm" />
+  <HelpKINode Title="SimplexTwinkle.Scale property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_Scale.htm" />
+  <HelpKINode Title="SimplexTwinkle.SimplexTwinkle constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle__ctor.htm" />
+  <HelpKINode Title="SimplexTwinkle.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_TimeStep.htm" />
+  <HelpKINode Title="SimplexTwinkle.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_ToString.htm" />
+  <HelpKINode Title="SimplexWaves class">
+    <HelpKINode Title="SimplexWaves Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexWaves.htm" />
+    <HelpKINode Title="about SimplexWaves class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexWaves.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SimplexWaves.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SimplexWaves.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SimplexWaves.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_CapAtMax.htm" />
+  <HelpKINode Title="SimplexWaves.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SimplexWaves.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SimplexWaves.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SimplexWaves.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_Lacunarity.htm" />
+  <HelpKINode Title="SimplexWaves.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_NumOctaves.htm" />
+  <HelpKINode Title="SimplexWaves.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_Persistance.htm" />
+  <HelpKINode Title="SimplexWaves.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_PrimaryColor.htm" />
+  <HelpKINode Title="SimplexWaves.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_SecondaryColor.htm" />
+  <HelpKINode Title="SimplexWaves.SimplexWaves constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves__ctor.htm" />
+  <HelpKINode Title="SimplexWaves.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_TimeStep.htm" />
+  <HelpKINode Title="SimplexWaves.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_ToString.htm" />
   <HelpKINode Title="SimplifyPolygon method" Url="html/M_ClipperLib_Clipper_SimplifyPolygon.htm" />
   <HelpKINode Title="SimplifyPolygons method" Url="html/M_ClipperLib_Clipper_SimplifyPolygons.htm" />
   <HelpKINode Title="Sin enumeration member" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer_FadeStyle.htm" />
+  <HelpKINode Title="SingleColorSimplex class">
+    <HelpKINode Title="SingleColorSimplex Class" Url="html/T_StarfieldDrivers_Noise_Simplex_SingleColorSimplex.htm" />
+    <HelpKINode Title="about SingleColorSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_SingleColorSimplex.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_SingleColorSimplex.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_SingleColorSimplex.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SingleColorSimplex.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_CapAtMax.htm" />
+  <HelpKINode Title="SingleColorSimplex.DrawColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_DrawColor.htm" />
+  <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SingleColorSimplex.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SingleColorSimplex.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Lacunarity.htm" />
+  <HelpKINode Title="SingleColorSimplex.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_NumOctaves.htm" />
+  <HelpKINode Title="SingleColorSimplex.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_Persistance.htm" />
+  <HelpKINode Title="SingleColorSimplex.SingleColorSimplex constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex__ctor.htm" />
+  <HelpKINode Title="SingleColorSimplex.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_TimeStep.htm" />
+  <HelpKINode Title="SingleColorSimplex.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_ToString.htm" />
   <HelpKINode Title="Site class">
     <HelpKINode Title="Site Class" Url="html/T_Delaunay_Site.htm" />
     <HelpKINode Title="about Site class" Url="html/T_Delaunay_Site.htm" />
@@ -1522,40 +2010,40 @@
   <HelpKINode Title="SitesDistance method" Url="html/M_Delaunay_Edge_SitesDistance.htm" />
   <HelpKINode Title="Smooth method" Url="html/Overload_Delaunay_Geo_Polygon_Smooth.htm" />
   <HelpKINode Title="SmoothingLength field" Url="html/F_StarfieldUtils_CFDUtils_Solver_SmoothingLength.htm" />
-  <HelpKINode Title="SnakeLength property" Url="html/P_StarfieldDrivers_Snakes_SnakeLength.htm" />
+  <HelpKINode Title="SnakeLength property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_SnakeLength.htm" />
   <HelpKINode Title="Snakes class">
-    <HelpKINode Title="Snakes Class" Url="html/T_StarfieldDrivers_Snakes.htm" />
-    <HelpKINode Title="about Snakes class" Url="html/T_StarfieldDrivers_Snakes.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Snakes__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Snakes.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Snakes.htm" />
+    <HelpKINode Title="Snakes Class" Url="html/T_StarfieldDrivers_Sound_Responsive_Snakes.htm" />
+    <HelpKINode Title="about Snakes class" Url="html/T_StarfieldDrivers_Sound_Responsive_Snakes.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Sound_Responsive_Snakes.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Sound_Responsive_Snakes.htm" />
   </HelpKINode>
-  <HelpKINode Title="Snakes.FadeSnakes property" Url="html/P_StarfieldDrivers_Snakes_FadeSnakes.htm" />
-  <HelpKINode Title="Snakes.NumSnakes property" Url="html/P_StarfieldDrivers_Snakes_NumSnakes.htm" />
-  <HelpKINode Title="Snakes.OnSoundChangeDir property" Url="html/P_StarfieldDrivers_Snakes_OnSoundChangeDir.htm" />
-  <HelpKINode Title="Snakes.OnSoundSpeedUp property" Url="html/P_StarfieldDrivers_Snakes_OnSoundSpeedUp.htm" />
-  <HelpKINode Title="Snakes.OnSoundSpeedUpMore property" Url="html/P_StarfieldDrivers_Snakes_OnSoundSpeedUpMore.htm" />
-  <HelpKINode Title="Snakes.Render method" Url="html/M_StarfieldDrivers_Snakes_Render.htm" />
-  <HelpKINode Title="Snakes.SnakeLength property" Url="html/P_StarfieldDrivers_Snakes_SnakeLength.htm" />
-  <HelpKINode Title="Snakes.Snakes constructor" Url="html/M_StarfieldDrivers_Snakes__ctor.htm" />
-  <HelpKINode Title="Snakes.SnakeSpeedFactor property" Url="html/P_StarfieldDrivers_Snakes_SnakeSpeedFactor.htm" />
-  <HelpKINode Title="Snakes.Start method" Url="html/M_StarfieldDrivers_Snakes_Start.htm" />
-  <HelpKINode Title="Snakes.Stop method" Url="html/M_StarfieldDrivers_Snakes_Stop.htm" />
-  <HelpKINode Title="Snakes.ToString method" Url="html/M_StarfieldDrivers_Snakes_ToString.htm" />
-  <HelpKINode Title="SnakeSpeedFactor property" Url="html/P_StarfieldDrivers_Snakes_SnakeSpeedFactor.htm" />
+  <HelpKINode Title="Snakes.FadeSnakes property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_FadeSnakes.htm" />
+  <HelpKINode Title="Snakes.NumSnakes property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_NumSnakes.htm" />
+  <HelpKINode Title="Snakes.OnSoundChangeDir property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundChangeDir.htm" />
+  <HelpKINode Title="Snakes.OnSoundSpeedUp property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundSpeedUp.htm" />
+  <HelpKINode Title="Snakes.OnSoundSpeedUpMore property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_OnSoundSpeedUpMore.htm" />
+  <HelpKINode Title="Snakes.Render method" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Render.htm" />
+  <HelpKINode Title="Snakes.SnakeLength property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_SnakeLength.htm" />
+  <HelpKINode Title="Snakes.Snakes constructor" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes__ctor.htm" />
+  <HelpKINode Title="Snakes.SnakeSpeedFactor property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_SnakeSpeedFactor.htm" />
+  <HelpKINode Title="Snakes.Start method" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Start.htm" />
+  <HelpKINode Title="Snakes.Stop method" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Stop.htm" />
+  <HelpKINode Title="Snakes.ToString method" Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_ToString.htm" />
+  <HelpKINode Title="SnakeSpeedFactor property" Url="html/P_StarfieldDrivers_Sound_Responsive_Snakes_SnakeSpeedFactor.htm" />
   <HelpKINode Title="SolidColor class">
-    <HelpKINode Title="SolidColor Class" Url="html/T_StarfieldDrivers_Drivers_SolidColor.htm" />
-    <HelpKINode Title="about SolidColor class" Url="html/T_StarfieldDrivers_Drivers_SolidColor.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_SolidColor__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_SolidColor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_SolidColor.htm" />
+    <HelpKINode Title="SolidColor Class" Url="html/T_StarfieldDrivers_Test_SolidColor.htm" />
+    <HelpKINode Title="about SolidColor class" Url="html/T_StarfieldDrivers_Test_SolidColor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Test_SolidColor__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Test_SolidColor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Test_SolidColor.htm" />
   </HelpKINode>
-  <HelpKINode Title="SolidColor.DrawColor property" Url="html/P_StarfieldDrivers_Drivers_SolidColor_DrawColor.htm" />
-  <HelpKINode Title="SolidColor.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="SolidColor.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_SolidColor_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="SolidColor.Render method" Url="html/M_StarfieldDrivers_Drivers_SolidColor_Render.htm" />
-  <HelpKINode Title="SolidColor.SolidColor constructor" Url="html/M_StarfieldDrivers_Drivers_SolidColor__ctor.htm" />
-  <HelpKINode Title="SolidColor.ToString method" Url="html/M_StarfieldDrivers_Drivers_SolidColor_ToString.htm" />
+  <HelpKINode Title="SolidColor.DrawColor property" Url="html/P_StarfieldDrivers_Test_SolidColor_DrawColor.htm" />
+  <HelpKINode Title="SolidColor.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Test_SolidColor_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="SolidColor.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Test_SolidColor_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="SolidColor.Render method" Url="html/M_StarfieldDrivers_Test_SolidColor_Render.htm" />
+  <HelpKINode Title="SolidColor.SolidColor constructor" Url="html/M_StarfieldDrivers_Test_SolidColor__ctor.htm" />
+  <HelpKINode Title="SolidColor.ToString method" Url="html/M_StarfieldDrivers_Test_SolidColor_ToString.htm" />
   <HelpKINode Title="Solver class">
     <HelpKINode Title="Solver Class" Url="html/T_StarfieldUtils_CFDUtils_Solver.htm" />
     <HelpKINode Title="about Solver class" Url="html/T_StarfieldUtils_CFDUtils_Solver.htm" />
@@ -1586,13 +2074,13 @@
   <HelpKINode Title="SoundProcessor.GetSoundProcessor method" Url="html/M_StarfieldUtils_SoundUtils_SoundProcessor_GetSoundProcessor.htm" />
   <HelpKINode Title="SoundResponsive enumeration member" Url="html/T_Starfield_DriverTypes.htm" />
   <HelpKINode Title="SoundUtils class">
-    <HelpKINode Title="SoundUtils Class" Url="html/T_StarfieldUtils_Sound_SoundUtils.htm" />
-    <HelpKINode Title="about SoundUtils class" Url="html/T_StarfieldUtils_Sound_SoundUtils.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldUtils_Sound_SoundUtils__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldUtils_Sound_SoundUtils.htm" />
+    <HelpKINode Title="SoundUtils Class" Url="html/T_StarfieldUtils_SoundUtils_SoundUtils.htm" />
+    <HelpKINode Title="about SoundUtils class" Url="html/T_StarfieldUtils_SoundUtils_SoundUtils.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldUtils_SoundUtils_SoundUtils__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldUtils_SoundUtils_SoundUtils.htm" />
   </HelpKINode>
-  <HelpKINode Title="SoundUtils.convertPCM method" Url="html/M_StarfieldUtils_Sound_SoundUtils_convertPCM.htm" />
-  <HelpKINode Title="SoundUtils.SoundUtils constructor" Url="html/M_StarfieldUtils_Sound_SoundUtils__ctor.htm" />
+  <HelpKINode Title="SoundUtils.convertPCM method" Url="html/M_StarfieldUtils_SoundUtils_SoundUtils_convertPCM.htm" />
+  <HelpKINode Title="SoundUtils.SoundUtils constructor" Url="html/M_StarfieldUtils_SoundUtils_SoundUtils__ctor.htm" />
   <HelpKINode Title="SpanningTree method" Url="html/M_StarfieldUtils_MathUtils_Voronoi_SpanningTree.htm" />
   <HelpKINode Title="SplitStarfieldModel class">
     <HelpKINode Title="SplitStarfieldModel Class" Url="html/T_Starfield_SplitStarfieldModel.htm" />
@@ -1626,25 +2114,45 @@
   <HelpKINode Title="Starfield.StarfieldModel class" Url="html/T_Starfield_StarfieldModel.htm" />
   <HelpKINode Title="Starfield2016 method" Url="html/M_Starfield_StarfieldModel_Starfield2016.htm" />
   <HelpKINode Title="Starfield2017 method" Url="html/M_Starfield_StarfieldModel_Starfield2017.htm" />
-  <HelpKINode Title="StarfieldDrivers namespace" Url="html/N_StarfieldDrivers.htm" />
   <HelpKINode Title="StarfieldDrivers.Animation namespace" Url="html/N_StarfieldDrivers_Animation.htm" />
+  <HelpKINode Title="StarfieldDrivers.Animation.CenterWave class" Url="html/T_StarfieldDrivers_Animation_CenterWave.htm" />
+  <HelpKINode Title="StarfieldDrivers.Animation.GameOfLife class" Url="html/T_StarfieldDrivers_Animation_GameOfLife.htm" />
+  <HelpKINode Title="StarfieldDrivers.Animation.Rain class" Url="html/T_StarfieldDrivers_Animation_Rain.htm" />
   <HelpKINode Title="StarfieldDrivers.Animation.RainbowTest class" Url="html/T_StarfieldDrivers_Animation_RainbowTest.htm" />
   <HelpKINode Title="StarfieldDrivers.Animation.RaverPlaid class" Url="html/T_StarfieldDrivers_Animation_RaverPlaid.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers namespace" Url="html/N_StarfieldDrivers_Drivers.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.CenterWave class" Url="html/T_StarfieldDrivers_Drivers_CenterWave.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.Checkout class" Url="html/T_StarfieldDrivers_Drivers_Checkout.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.FadingStatic class" Url="html/T_StarfieldDrivers_Drivers_FadingStatic.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.FluidPour class" Url="html/T_StarfieldDrivers_Drivers_FluidPour.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.Rain class" Url="html/T_StarfieldDrivers_Drivers_Rain.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.SolidColor class" Url="html/T_StarfieldDrivers_Drivers_SolidColor.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.Static class" Url="html/T_StarfieldDrivers_Drivers_Static.htm" />
-  <HelpKINode Title="StarfieldDrivers.Drivers.TestFill class" Url="html/T_StarfieldDrivers_Drivers_TestFill.htm" />
+  <HelpKINode Title="StarfieldDrivers.CFD namespace" Url="html/N_StarfieldDrivers_CFD.htm" />
+  <HelpKINode Title="StarfieldDrivers.CFD.FluidPour class" Url="html/T_StarfieldDrivers_CFD_FluidPour.htm" />
+  <HelpKINode Title="StarfieldDrivers.Flocking namespace" Url="html/N_StarfieldDrivers_Flocking.htm" />
+  <HelpKINode Title="StarfieldDrivers.Flocking.BoidSwarms class" Url="html/T_StarfieldDrivers_Flocking_BoidSwarms.htm" />
+  <HelpKINode Title="StarfieldDrivers.Fractal namespace" Url="html/N_StarfieldDrivers_Fractal.htm" />
+  <HelpKINode Title="StarfieldDrivers.Fractal.FractalFlame class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame.htm" />
+  <HelpKINode Title="StarfieldDrivers.Fractal.FractalFlame4D class" Url="html/T_StarfieldDrivers_Fractal_FractalFlame4D.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex namespace" Url="html/N_StarfieldDrivers_Noise_Simplex.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.NoisyRainbowSimplexSmoothed class" Url="html/T_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.RainbowSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplex.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.RainbowSimplexSmoothed class" Url="html/T_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexClouds class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexClouds.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexColumnsAndCurtains class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexCurtains class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexCurtains.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexSmoke class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexSmoke.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexTwinkle class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexTwinkle.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SimplexWaves class" Url="html/T_StarfieldDrivers_Noise_Simplex_SimplexWaves.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.SingleColorSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_SingleColorSimplex.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.Simplex.TwoColorSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_TwoColorSimplex.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.White namespace" Url="html/N_StarfieldDrivers_Noise_White.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.White.FadingStatic class" Url="html/T_StarfieldDrivers_Noise_White_FadingStatic.htm" />
+  <HelpKINode Title="StarfieldDrivers.Noise.White.Static class" Url="html/T_StarfieldDrivers_Noise_White_Static.htm" />
   <HelpKINode Title="StarfieldDrivers.PresenceResponsive namespace" Url="html/N_StarfieldDrivers_PresenceResponsive.htm" />
   <HelpKINode Title="StarfieldDrivers.PresenceResponsive.GenericTrails class" Url="html/T_StarfieldDrivers_PresenceResponsive_GenericTrails.htm" />
   <HelpKINode Title="StarfieldDrivers.PresenceResponsive.PresenceClouds class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceClouds.htm" />
   <HelpKINode Title="StarfieldDrivers.PresenceResponsive.PresenceTrails class" Url="html/T_StarfieldDrivers_PresenceResponsive_PresenceTrails.htm" />
   <HelpKINode Title="StarfieldDrivers.PresenceResponsive.WhackAMole class" Url="html/T_StarfieldDrivers_PresenceResponsive_WhackAMole.htm" />
-  <HelpKINode Title="StarfieldDrivers.Snakes class" Url="html/T_StarfieldDrivers_Snakes.htm" />
+  <HelpKINode Title="StarfieldDrivers.Sound_Responsive namespace" Url="html/N_StarfieldDrivers_Sound_Responsive.htm" />
+  <HelpKINode Title="StarfieldDrivers.Sound_Responsive.Snakes class" Url="html/T_StarfieldDrivers_Sound_Responsive_Snakes.htm" />
+  <HelpKINode Title="StarfieldDrivers.Test namespace" Url="html/N_StarfieldDrivers_Test.htm" />
+  <HelpKINode Title="StarfieldDrivers.Test.Checkout class" Url="html/T_StarfieldDrivers_Test_Checkout.htm" />
+  <HelpKINode Title="StarfieldDrivers.Test.SolidColor class" Url="html/T_StarfieldDrivers_Test_SolidColor.htm" />
+  <HelpKINode Title="StarfieldDrivers.Test.TestFill class" Url="html/T_StarfieldDrivers_Test_TestFill.htm" />
   <HelpKINode Title="StarfieldMixer class">
     <HelpKINode Title="StarfieldMixer Class" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm" />
     <HelpKINode Title="about StarfieldMixer class" Url="html/T_StarfieldUtils_DisplayUtils_StarfieldMixer.htm" />
@@ -1740,8 +2248,6 @@
   <HelpKINode Title="StarfieldUtils.MathUtils.Vec2D class" Url="html/T_StarfieldUtils_MathUtils_Vec2D.htm" />
   <HelpKINode Title="StarfieldUtils.MathUtils.Vec3D class" Url="html/T_StarfieldUtils_MathUtils_Vec3D.htm" />
   <HelpKINode Title="StarfieldUtils.MathUtils.Voronoi class" Url="html/T_StarfieldUtils_MathUtils_Voronoi.htm" />
-  <HelpKINode Title="StarfieldUtils.Sound namespace" Url="html/N_StarfieldUtils_Sound.htm" />
-  <HelpKINode Title="StarfieldUtils.Sound.SoundUtils class" Url="html/T_StarfieldUtils_Sound_SoundUtils.htm" />
   <HelpKINode Title="StarfieldUtils.SoundUtils namespace" Url="html/N_StarfieldUtils_SoundUtils.htm" />
   <HelpKINode Title="StarfieldUtils.SoundUtils.Artifact class" Url="html/T_StarfieldUtils_SoundUtils_Artifact.htm" />
   <HelpKINode Title="StarfieldUtils.SoundUtils.ArtifactDetectionAlgorithm enumeration" Url="html/T_StarfieldUtils_SoundUtils_ArtifactDetectionAlgorithm.htm" />
@@ -1752,33 +2258,37 @@
   <HelpKINode Title="StarfieldUtils.SoundUtils.OnArtifactDetectedHandler delegate" Url="html/T_StarfieldUtils_SoundUtils_OnArtifactDetectedHandler.htm" />
   <HelpKINode Title="StarfieldUtils.SoundUtils.OnFrameUpdateHandler delegate" Url="html/T_StarfieldUtils_SoundUtils_OnFrameUpdateHandler.htm" />
   <HelpKINode Title="StarfieldUtils.SoundUtils.SoundProcessor class" Url="html/T_StarfieldUtils_SoundUtils_SoundProcessor.htm" />
+  <HelpKINode Title="StarfieldUtils.SoundUtils.SoundUtils class" Url="html/T_StarfieldUtils_SoundUtils_SoundUtils.htm" />
   <HelpKINode Title="Start method">
+    <HelpKINode Title="GameOfLife.Start Method " Url="html/M_StarfieldDrivers_Animation_GameOfLife_Start.htm" />
     <HelpKINode Title="IStarfieldDriver.Start Method " Url="html/M_Starfield_IStarfieldDriver_Start.htm" />
     <HelpKINode Title="RainbowTest.Start Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Start.htm" />
     <HelpKINode Title="RaverPlaid.Start Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Start.htm" />
-    <HelpKINode Title="Snakes.Start Method " Url="html/M_StarfieldDrivers_Snakes_Start.htm" />
+    <HelpKINode Title="Snakes.Start Method " Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Start.htm" />
   </HelpKINode>
   <HelpKINode Title="Static class">
-    <HelpKINode Title="Static Class" Url="html/T_StarfieldDrivers_Drivers_Static.htm" />
-    <HelpKINode Title="about Static class" Url="html/T_StarfieldDrivers_Drivers_Static.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_Static__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_Static.htm" />
+    <HelpKINode Title="Static Class" Url="html/T_StarfieldDrivers_Noise_White_Static.htm" />
+    <HelpKINode Title="about Static class" Url="html/T_StarfieldDrivers_Noise_White_Static.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_White_Static__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_White_Static.htm" />
   </HelpKINode>
-  <HelpKINode Title="Static.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="Static.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_Static_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="Static.Render method" Url="html/M_StarfieldDrivers_Drivers_Static_Render.htm" />
-  <HelpKINode Title="Static.Static constructor" Url="html/M_StarfieldDrivers_Drivers_Static__ctor.htm" />
-  <HelpKINode Title="Static.ToString method" Url="html/M_StarfieldDrivers_Drivers_Static_ToString.htm" />
+  <HelpKINode Title="Static.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_White_Static_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="Static.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_White_Static_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="Static.Render method" Url="html/M_StarfieldDrivers_Noise_White_Static_Render.htm" />
+  <HelpKINode Title="Static.Static constructor" Url="html/M_StarfieldDrivers_Noise_White_Static__ctor.htm" />
+  <HelpKINode Title="Static.ToString method" Url="html/M_StarfieldDrivers_Noise_White_Static_ToString.htm" />
   <HelpKINode Title="Stiffness field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Stiffness.htm" />
   <HelpKINode Title="Stop method">
+    <HelpKINode Title="GameOfLife.Stop Method " Url="html/M_StarfieldDrivers_Animation_GameOfLife_Stop.htm" />
     <HelpKINode Title="IStarfieldDriver.Stop Method " Url="html/M_Starfield_IStarfieldDriver_Stop.htm" />
     <HelpKINode Title="RainbowTest.Stop Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_Stop.htm" />
     <HelpKINode Title="RaverPlaid.Stop Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_Stop.htm" />
-    <HelpKINode Title="Snakes.Stop Method " Url="html/M_StarfieldDrivers_Snakes_Stop.htm" />
+    <HelpKINode Title="Snakes.Stop Method " Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_Stop.htm" />
     <HelpKINode Title="StarfieldModel.Stop Method " Url="html/M_Starfield_StarfieldModel_Stop.htm" />
     <HelpKINode Title="TCPStarfieldClient.Stop Method " Url="html/M_Starfield_Networking_TCPStarfieldClient_Stop.htm" />
   </HelpKINode>
   <HelpKINode Title="StrictlySimple property" Url="html/P_ClipperLib_Clipper_StrictlySimple.htm" />
+  <HelpKINode Title="SubTimeSteps property" Url="html/P_StarfieldDrivers_Fractal_FractalFlame4D_SubTimeSteps.htm" />
   <HelpKINode Title="Subtraction operator">
     <HelpKINode Title="Vec2D.Subtraction Operator " Url="html/M_StarfieldUtils_MathUtils_Vec2D_op_Subtraction.htm" />
     <HelpKINode Title="Vec3D.Subtraction Operator " Url="html/M_StarfieldUtils_MathUtils_Vec3D_op_Subtraction.htm" />
@@ -1815,20 +2325,38 @@
   <HelpKINode Title="TensionColorFieldLaplacianValue field" Url="html/F_StarfieldUtils_CFDUtils_Particle_TensionColorFieldLaplacianValue.htm" />
   <HelpKINode Title="TensionNormal field" Url="html/F_StarfieldUtils_CFDUtils_Particle_TensionNormal.htm" />
   <HelpKINode Title="TestFill class">
-    <HelpKINode Title="TestFill Class" Url="html/T_StarfieldDrivers_Drivers_TestFill.htm" />
-    <HelpKINode Title="about TestFill class" Url="html/T_StarfieldDrivers_Drivers_TestFill.htm" />
-    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Drivers_TestFill__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Drivers_TestFill.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Drivers_TestFill.htm" />
+    <HelpKINode Title="TestFill Class" Url="html/T_StarfieldDrivers_Test_TestFill.htm" />
+    <HelpKINode Title="about TestFill class" Url="html/T_StarfieldDrivers_Test_TestFill.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Test_TestFill__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Test_TestFill.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Test_TestFill.htm" />
   </HelpKINode>
-  <HelpKINode Title="TestFill.Colors property" Url="html/P_StarfieldDrivers_Drivers_TestFill_Colors.htm" />
-  <HelpKINode Title="TestFill.Delay property" Url="html/P_StarfieldDrivers_Drivers_TestFill_Delay.htm" />
-  <HelpKINode Title="TestFill.DrawColor property" Url="html/P_StarfieldDrivers_Drivers_TestFill_DrawColor.htm" />
-  <HelpKINode Title="TestFill.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Start.htm" />
-  <HelpKINode Title="TestFill.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Drivers_TestFill_Starfield_IStarfieldDriver_Stop.htm" />
-  <HelpKINode Title="TestFill.Render method" Url="html/M_StarfieldDrivers_Drivers_TestFill_Render.htm" />
-  <HelpKINode Title="TestFill.TestFill constructor" Url="html/M_StarfieldDrivers_Drivers_TestFill__ctor.htm" />
-  <HelpKINode Title="TestFill.ToString method" Url="html/M_StarfieldDrivers_Drivers_TestFill_ToString.htm" />
+  <HelpKINode Title="TestFill.Colors property" Url="html/P_StarfieldDrivers_Test_TestFill_Colors.htm" />
+  <HelpKINode Title="TestFill.Delay property" Url="html/P_StarfieldDrivers_Test_TestFill_Delay.htm" />
+  <HelpKINode Title="TestFill.DrawColor property" Url="html/P_StarfieldDrivers_Test_TestFill_DrawColor.htm" />
+  <HelpKINode Title="TestFill.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Test_TestFill_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="TestFill.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Test_TestFill_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="TestFill.Render method" Url="html/M_StarfieldDrivers_Test_TestFill_Render.htm" />
+  <HelpKINode Title="TestFill.TestFill constructor" Url="html/M_StarfieldDrivers_Test_TestFill__ctor.htm" />
+  <HelpKINode Title="TestFill.ToString method" Url="html/M_StarfieldDrivers_Test_TestFill_ToString.htm" />
+  <HelpKINode Title="Threshold property">
+    <HelpKINode Title="SimplexClouds.Threshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_Threshold.htm" />
+    <HelpKINode Title="SimplexSmoke.Threshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_Threshold.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimeDiv property" Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_TimeDiv.htm" />
+  <HelpKINode Title="TimeStep property">
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_TimeStep.htm" />
+    <HelpKINode Title="RainbowSimplex.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplex_TimeStep.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_TimeStep.htm" />
+    <HelpKINode Title="SimplexClouds.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexClouds_TimeStep.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_TimeStep.htm" />
+    <HelpKINode Title="SimplexCurtains.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_TimeStep.htm" />
+    <HelpKINode Title="SimplexSmoke.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexSmoke_TimeStep.htm" />
+    <HelpKINode Title="SimplexTwinkle.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_TimeStep.htm" />
+    <HelpKINode Title="SimplexWaves.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexWaves_TimeStep.htm" />
+    <HelpKINode Title="SingleColorSimplex.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_TimeStep.htm" />
+    <HelpKINode Title="TwoColorSimplex.TimeStep Property " Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_TimeStep.htm" />
+  </HelpKINode>
   <HelpKINode Title="ToCIELAB method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIELAB.htm" />
   <HelpKINode Title="ToCIEXYZ method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCIEXYZ.htm" />
   <HelpKINode Title="ToCMYK method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToCMYK.htm" />
@@ -1837,33 +2365,49 @@
   <HelpKINode Title="top field" Url="html/F_ClipperLib_IntRect_top.htm" />
   <HelpKINode Title="ToRGB method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToRGB.htm" />
   <HelpKINode Title="ToString method">
-    <HelpKINode Title="CenterWave.ToString Method " Url="html/M_StarfieldDrivers_Drivers_CenterWave_ToString.htm" />
-    <HelpKINode Title="Checkout.ToString Method " Url="html/M_StarfieldDrivers_Drivers_Checkout_ToString.htm" />
+    <HelpKINode Title="BoidSwarms.ToString Method " Url="html/M_StarfieldDrivers_Flocking_BoidSwarms_ToString.htm" />
+    <HelpKINode Title="CenterWave.ToString Method " Url="html/M_StarfieldDrivers_Animation_CenterWave_ToString.htm" />
+    <HelpKINode Title="Checkout.ToString Method " Url="html/M_StarfieldDrivers_Test_Checkout_ToString.htm" />
     <HelpKINode Title="Circle.ToString Method " Url="html/M_Delaunay_Geo_Circle_ToString.htm" />
     <HelpKINode Title="CustomDriver.ToString Method " Url="html/M_Starfield_CustomDriver_ToString.htm" />
     <HelpKINode Title="Edge.ToString Method " Url="html/M_Delaunay_Edge_ToString.htm" />
-    <HelpKINode Title="FadingStatic.ToString Method " Url="html/M_StarfieldDrivers_Drivers_FadingStatic_ToString.htm" />
-    <HelpKINode Title="FluidPour.ToString Method " Url="html/M_StarfieldDrivers_Drivers_FluidPour_ToString.htm" />
+    <HelpKINode Title="FadingStatic.ToString Method " Url="html/M_StarfieldDrivers_Noise_White_FadingStatic_ToString.htm" />
+    <HelpKINode Title="FluidPour.ToString Method " Url="html/M_StarfieldDrivers_CFD_FluidPour_ToString.htm" />
+    <HelpKINode Title="FractalFlame.ToString Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame_ToString.htm" />
+    <HelpKINode Title="FractalFlame4D.ToString Method " Url="html/M_StarfieldDrivers_Fractal_FractalFlame4D_ToString.htm" />
+    <HelpKINode Title="GameOfLife.ToString Method " Url="html/M_StarfieldDrivers_Animation_GameOfLife_ToString.htm" />
     <HelpKINode Title="GenericTrails.ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_GenericTrails_ToString.htm" />
     <HelpKINode Title="Halfedge.ToString Method " Url="html/M_Delaunay_Halfedge_ToString.htm" />
     <HelpKINode Title="LineSegment.ToString Method " Url="html/M_Delaunay_Geo_LineSegment_ToString.htm" />
+    <HelpKINode Title="NoisyRainbowSimplexSmoothed.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_NoisyRainbowSimplexSmoothed_ToString.htm" />
     <HelpKINode Title="PresenceClouds.ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceClouds_ToString.htm" />
     <HelpKINode Title="PresenceTrails.ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_PresenceTrails_ToString.htm" />
     <HelpKINode Title="PriorityQueue(T).ToString Method " Url="html/M_StarfieldUtils_DataStructures_PriorityQueue_1_ToString.htm" />
-    <HelpKINode Title="Rain.ToString Method " Url="html/M_StarfieldDrivers_Drivers_Rain_ToString.htm" />
+    <HelpKINode Title="Rain.ToString Method " Url="html/M_StarfieldDrivers_Animation_Rain_ToString.htm" />
+    <HelpKINode Title="RainbowSimplex.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplex_ToString.htm" />
+    <HelpKINode Title="RainbowSimplexSmoothed.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_RainbowSimplexSmoothed_ToString.htm" />
     <HelpKINode Title="RainbowTest.ToString Method " Url="html/M_StarfieldDrivers_Animation_RainbowTest_ToString.htm" />
     <HelpKINode Title="RaverPlaid.ToString Method " Url="html/M_StarfieldDrivers_Animation_RaverPlaid_ToString.htm" />
+    <HelpKINode Title="SimplexClouds.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexClouds_ToString.htm" />
+    <HelpKINode Title="SimplexColumnsAndCurtains.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_ToString.htm" />
+    <HelpKINode Title="SimplexCurtains.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexCurtains_ToString.htm" />
+    <HelpKINode Title="SimplexSmoke.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexSmoke_ToString.htm" />
+    <HelpKINode Title="SimplexTwinkle.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexTwinkle_ToString.htm" />
+    <HelpKINode Title="SimplexWaves.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SimplexWaves_ToString.htm" />
+    <HelpKINode Title="SingleColorSimplex.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_SingleColorSimplex_ToString.htm" />
     <HelpKINode Title="Site.ToString Method " Url="html/M_Delaunay_Site_ToString.htm" />
-    <HelpKINode Title="Snakes.ToString Method " Url="html/M_StarfieldDrivers_Snakes_ToString.htm" />
-    <HelpKINode Title="SolidColor.ToString Method " Url="html/M_StarfieldDrivers_Drivers_SolidColor_ToString.htm" />
-    <HelpKINode Title="Static.ToString Method " Url="html/M_StarfieldDrivers_Drivers_Static_ToString.htm" />
-    <HelpKINode Title="TestFill.ToString Method " Url="html/M_StarfieldDrivers_Drivers_TestFill_ToString.htm" />
+    <HelpKINode Title="Snakes.ToString Method " Url="html/M_StarfieldDrivers_Sound_Responsive_Snakes_ToString.htm" />
+    <HelpKINode Title="SolidColor.ToString Method " Url="html/M_StarfieldDrivers_Test_SolidColor_ToString.htm" />
+    <HelpKINode Title="Static.ToString Method " Url="html/M_StarfieldDrivers_Noise_White_Static_ToString.htm" />
+    <HelpKINode Title="TestFill.ToString Method " Url="html/M_StarfieldDrivers_Test_TestFill_ToString.htm" />
+    <HelpKINode Title="TwoColorSimplex.ToString Method " Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_ToString.htm" />
     <HelpKINode Title="Vec2D.ToString Method " Url="html/M_StarfieldUtils_MathUtils_Vec2D_ToString.htm" />
     <HelpKINode Title="Vertex.ToString Method " Url="html/M_Delaunay_Vertex_ToString.htm" />
     <HelpKINode Title="WhackAMole.ToString Method " Url="html/M_StarfieldDrivers_PresenceResponsive_WhackAMole_ToString.htm" />
   </HelpKINode>
   <HelpKINode Title="Total property" Url="html/P_ClipperLib_PolyTree_Total.htm" />
   <HelpKINode Title="ToYUV method" Url="html/Overload_StarfieldUtils_ColorUtils_ColorSpace_ConvertColorSpace_ToYUV.htm" />
+  <HelpKINode Title="Trails property" Url="html/P_StarfieldDrivers_Flocking_BoidSwarms_Trails.htm" />
   <HelpKINode Title="treeSize field" Url="html/F_Delaunay_Node_treeSize.htm" />
   <HelpKINode Title="Triangle class">
     <HelpKINode Title="Triangle Class" Url="html/T_Delaunay_Triangle.htm" />
@@ -1875,9 +2419,32 @@
   <HelpKINode Title="Triangle.Dispose method" Url="html/M_Delaunay_Triangle_Dispose.htm" />
   <HelpKINode Title="Triangle.sites property" Url="html/P_Delaunay_Triangle_sites.htm" />
   <HelpKINode Title="Triangle.Triangle constructor" Url="html/M_Delaunay_Triangle__ctor.htm" />
+  <HelpKINode Title="TwoColorSimplex class">
+    <HelpKINode Title="TwoColorSimplex Class" Url="html/T_StarfieldDrivers_Noise_Simplex_TwoColorSimplex.htm" />
+    <HelpKINode Title="about TwoColorSimplex class" Url="html/T_StarfieldDrivers_Noise_Simplex_TwoColorSimplex.htm" />
+    <HelpKINode Title="constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_StarfieldDrivers_Noise_Simplex_TwoColorSimplex.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_StarfieldDrivers_Noise_Simplex_TwoColorSimplex.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TwoColorSimplex.CapAtMax property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_CapAtMax.htm" />
+  <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Render explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Render.htm" />
+  <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Start explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Start.htm" />
+  <HelpKINode Title="TwoColorSimplex.IStarfieldDriver.Stop explicitly implemented method" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Starfield_IStarfieldDriver_Stop.htm" />
+  <HelpKINode Title="TwoColorSimplex.Lacunarity property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Lacunarity.htm" />
+  <HelpKINode Title="TwoColorSimplex.NumOctaves property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_NumOctaves.htm" />
+  <HelpKINode Title="TwoColorSimplex.Persistance property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_Persistance.htm" />
+  <HelpKINode Title="TwoColorSimplex.PrimaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_PrimaryColor.htm" />
+  <HelpKINode Title="TwoColorSimplex.SecondaryColor property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_SecondaryColor.htm" />
+  <HelpKINode Title="TwoColorSimplex.TimeStep property" Url="html/P_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_TimeStep.htm" />
+  <HelpKINode Title="TwoColorSimplex.ToString method" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex_ToString.htm" />
+  <HelpKINode Title="TwoColorSimplex.TwoColorSimplex constructor" Url="html/M_StarfieldDrivers_Noise_Simplex_TwoColorSimplex__ctor.htm" />
   <HelpKINode Title="Type field" Url="html/F_StarfieldUtils_SoundUtils_Artifact_Type.htm" />
   <HelpKINode Title="Type property" Url="html/P_Starfield_DriverType_Type.htm" />
   <HelpKINode Title="U property" Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_U.htm" />
+  <HelpKINode Title="UpperThreshold property">
+    <HelpKINode Title="SimplexColumnsAndCurtains.UpperThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexColumnsAndCurtains_UpperThreshold.htm" />
+    <HelpKINode Title="SimplexCurtains.UpperThreshold Property " Url="html/P_StarfieldDrivers_Noise_Simplex_SimplexCurtains_UpperThreshold.htm" />
+  </HelpKINode>
   <HelpKINode Title="V property">
     <HelpKINode Title="Quaternion.V Property " Url="html/P_StarfieldUtils_MathUtils_Quaternion_V.htm" />
     <HelpKINode Title="YUV.V Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_V.htm" />
@@ -2015,27 +2582,27 @@
   <HelpKINode Title="WPoly6 method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6.htm" />
   <HelpKINode Title="WPoly6Gradient method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6Gradient.htm" />
   <HelpKINode Title="WPoly6Laplacian method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WPoly6Laplacian.htm" />
-  <HelpKINode Title="WrapTime property" Url="html/P_StarfieldDrivers_Drivers_Rain_WrapTime.htm" />
+  <HelpKINode Title="WrapTime property" Url="html/P_StarfieldDrivers_Animation_Rain_WrapTime.htm" />
   <HelpKINode Title="WSpiky method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WSpiky.htm" />
   <HelpKINode Title="WSpikyGradient method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WSpikyGradient.htm" />
   <HelpKINode Title="WViscosity method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WViscosity.htm" />
   <HelpKINode Title="WViscosityLaplacian method" Url="html/M_StarfieldUtils_CFDUtils_DefaultKernels_WViscosityLaplacian.htm" />
   <HelpKINode Title="X field">
-    <HelpKINode Title="IntPoint.X Field" Url="html/F_ClipperLib_IntPoint_X.htm" />
-    <HelpKINode Title="DoublePoint.X Field" Url="html/F_ClipperLib_DoublePoint_X.htm" />
     <HelpKINode Title="Quaternion.X Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_X.htm" />
+    <HelpKINode Title="DoublePoint.X Field" Url="html/F_ClipperLib_DoublePoint_X.htm" />
+    <HelpKINode Title="IntPoint.X Field" Url="html/F_ClipperLib_IntPoint_X.htm" />
     <HelpKINode Title="Vec3D.X Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_X.htm" />
   </HelpKINode>
   <HelpKINode Title="x field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_x.htm" />
   <HelpKINode Title="x property">
     <HelpKINode Title="Vertex.x Property " Url="html/P_Delaunay_Vertex_x.htm" />
-    <HelpKINode Title="Site.x Property " Url="html/P_Delaunay_Site_x.htm" />
     <HelpKINode Title="Rect.x Property " Url="html/P_Delaunay_Geo_Rect_x.htm" />
+    <HelpKINode Title="Site.x Property " Url="html/P_Delaunay_Site_x.htm" />
   </HelpKINode>
   <HelpKINode Title="X property">
-    <HelpKINode Title="CIEXYZ.X Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_X.htm" />
-    <HelpKINode Title="Checkout.X Property " Url="html/P_StarfieldDrivers_Drivers_Checkout_X.htm" />
+    <HelpKINode Title="Checkout.X Property " Url="html/P_StarfieldDrivers_Test_Checkout_X.htm" />
     <HelpKINode Title="Vec2D.X Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_X.htm" />
+    <HelpKINode Title="CIEXYZ.X Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_X.htm" />
   </HelpKINode>
   <HelpKINode Title="XAxis property">
     <HelpKINode Title="Vec2D.XAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_XAxis.htm" />
@@ -2044,21 +2611,21 @@
   <HelpKINode Title="xMax field" Url="html/F_Delaunay_Geo_Rect_xMax.htm" />
   <HelpKINode Title="xMin field" Url="html/F_Delaunay_Geo_Rect_xMin.htm" />
   <HelpKINode Title="XStep field" Url="html/F_Starfield_StarfieldModel_XStep.htm" />
-  <HelpKINode Title="y field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_y.htm" />
   <HelpKINode Title="Y field">
     <HelpKINode Title="DoublePoint.Y Field" Url="html/F_ClipperLib_DoublePoint_Y.htm" />
-    <HelpKINode Title="IntPoint.Y Field" Url="html/F_ClipperLib_IntPoint_Y.htm" />
     <HelpKINode Title="Quaternion.Y Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_Y.htm" />
     <HelpKINode Title="Vec3D.Y Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_Y.htm" />
+    <HelpKINode Title="IntPoint.Y Field" Url="html/F_ClipperLib_IntPoint_Y.htm" />
   </HelpKINode>
+  <HelpKINode Title="y field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_y.htm" />
   <HelpKINode Title="Y property">
-    <HelpKINode Title="CIEXYZ.Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Y.htm" />
     <HelpKINode Title="Vec2D.Y Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_Y.htm" />
+    <HelpKINode Title="CIEXYZ.Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Y.htm" />
     <HelpKINode Title="YUV.Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_Y.htm" />
   </HelpKINode>
   <HelpKINode Title="y property">
-    <HelpKINode Title="Vertex.y Property " Url="html/P_Delaunay_Vertex_y.htm" />
     <HelpKINode Title="Rect.y Property " Url="html/P_Delaunay_Geo_Rect_y.htm" />
+    <HelpKINode Title="Vertex.y Property " Url="html/P_Delaunay_Vertex_y.htm" />
   </HelpKINode>
   <HelpKINode Title="YAxis property">
     <HelpKINode Title="Vec2D.YAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_YAxis.htm" />

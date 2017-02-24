@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 
 namespace ControllerConfigGenerator
 {
+    /** <summary>    User INterface for the Controller Config Generator tool. </summary> */
     public partial class FormDemo : Form
     {
         // how often IStarfieldDriver.Render() is called  in milliseconds
@@ -23,6 +24,7 @@ namespace ControllerConfigGenerator
         // The algorithm that is currently rendering to the display
         IStarfieldDriver CurrentDriver;
 
+        /** <summary>    Default constructor. </summary> */
         public FormDemo()
         {
             InitializeComponent();
@@ -82,7 +84,15 @@ namespace ControllerConfigGenerator
             }
         }
 
-        // the user has selected a new algorithm, stop the old one and start the new one
+        /**
+         * <summary>
+         * the user has selected a new algorithm, stop the old one and start the new one.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void comboBoxAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -94,9 +104,15 @@ namespace ControllerConfigGenerator
             { }
         }
 
-        // try loading an instance of the given type into the algorithm combo 
-        // box the type must inherit from IStarfield driver, be a class, and 
-        // not be abstract
+        /**
+         * <summary>
+         * try loading an instance of the given type into the algorithm combo box the type must inherit
+         * from IStarfield driver, be a class, and not be abstract.
+         * </summary>
+         *
+         * <param name="type">  The type. </param>
+         */
+
         private void loadType(Type type)
         {
             if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)

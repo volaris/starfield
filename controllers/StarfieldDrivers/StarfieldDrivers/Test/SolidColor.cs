@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Test
 {
+    /** <summary>    Draws a solid color. </summary> */
     [DriverType(DriverTypes.Experimental)]
     public class SolidColor : IStarfieldDriver
     {
@@ -16,6 +17,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the draw color. </summary>
+         *
+         * <value>  The color of the draw. </value>
+         */
+
         public Color DrawColor
         {
             get { return drawColor; }
@@ -24,6 +32,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             for(ulong x = 0; x < Starfield.NumX; x++)
@@ -38,16 +53,30 @@ namespace StarfieldDrivers.Drivers
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Solid Color";

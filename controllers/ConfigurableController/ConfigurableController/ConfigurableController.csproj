@@ -31,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\bin\ConfigurableController.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -71,6 +72,7 @@
     <Compile Include="FormDemo.Designer.cs">
       <DependentUpon>FormDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDemo.resx">

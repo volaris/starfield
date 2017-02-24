@@ -8,8 +8,9 @@ using System.Drawing;
 
 namespace StarfieldDrivers.Animation
 {
+    /** <summary>    3D game of life. </summary> */
     [DriverType(DriverTypes.Ambient)]
-    class GameOfLife : IStarfieldDriver
+    public class GameOfLife : IStarfieldDriver
     {
         #region Private Members
         bool[, ,] nextField, currentField;

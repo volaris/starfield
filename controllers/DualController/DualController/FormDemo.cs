@@ -15,12 +15,14 @@ using StarfieldUtils.DisplayUtils;
 
 namespace DualController
 {
+    /** <summary>    Values that represent driver location. </summary> */
     public enum DriverLocation
     {
         Interior,
         Exterior
     }
 
+    /** <summary>    The GUI for the Dual Controller. </summary> */
     public partial class FormDemo : Form
     {
         // how often IStarfieldDriver.Render() is called  in milliseconds
@@ -65,6 +67,7 @@ namespace DualController
 
         Random rand;
 
+        /** <summary>    Default constructor. </summary> */
         public FormDemo()
         {
             InitializeComponent();
@@ -184,6 +187,13 @@ namespace DualController
 
         private delegate void updateText();
 
+        /**
+         * <summary>    Fade completed. </summary>
+         *
+         * <param name="type">      The type. </param>
+         * <param name="channel">   The channel. </param>
+         */
+
         void FadeCompleted(DriverLocation type, StarfieldModel channel)
         {
             IStarfieldDriver[] CurrentDrivers = (type == DriverLocation.Exterior) ? CurrentDriversExterior : CurrentDriversInterior;
@@ -206,19 +216,40 @@ namespace DualController
             }
         }
 
+        /**
+         * <summary>    Mixer exterior fade completed. </summary>
+         *
+         * <param name="Sender">    Source of the event. </param>
+         * <param name="channel">   The channel. </param>
+         */
+
         void MixerExterior_FadeCompleted(object Sender, StarfieldModel channel)
         {
             FadeCompleted(DriverLocation.Exterior, channel);
         }
+
+        /**
+         * <summary>    Mixer interior fade completed. </summary>
+         *
+         * <param name="Sender">    Source of the event. </param>
+         * <param name="channel">   The channel. </param>
+         */
 
         private void MixerInterior_FadeCompleted(object Sender, StarfieldModel channel)
         {
             FadeCompleted(DriverLocation.Interior, channel);
         }
 
-        // request that the current driver renders a frame to the display
-        // if a driver hasn't completed rendering the previous frame, drop
-        // this frame
+        /**
+         * <summary>
+         * request that the current driver renders a frame to the display if a driver hasn't completed
+         * rendering the previous frame, drop this frame.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Elapsed event information. </param>
+         */
+
         void render_Elapsed(object sender, ElapsedEventArgs e)
         {
             bool lockTaken = false;
@@ -243,7 +274,15 @@ namespace DualController
             }
         }
 
-        // the user has selected a new algorithm, stop the old one and start the new one
+        /**
+         * <summary>
+         * the user has selected a new algorithm, stop the old one and start the new one.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void comboBoxInteriorAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
         {
             System.Threading.Monitor.Enter(RenderLock);
@@ -266,7 +305,7 @@ namespace DualController
             }
         }
 
-        // connect to the new starfield
+        /** <summary>    connect to the new starfield. </summary> */
         private void reconnect()
         {
             string ip = textBoxIP.Text;
@@ -298,6 +337,13 @@ namespace DualController
                 System.Threading.Monitor.Exit(RenderLock);
             }
         }
+
+        /**
+         * <summary>    Switch algorithm. </summary>
+         *
+         * <param name="running">   True to running. </param>
+         * <param name="driver">    The driver. </param>
+         */
 
         private void SwitchAlgorithm(bool running, DriverLocation driver)
         {
@@ -374,7 +420,13 @@ namespace DualController
             }
         }
 
-        // reset the current driver
+        /**
+         * <summary>    reset the current driver. </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void buttonRestart_Click(object sender, EventArgs e)
         {
             System.Threading.Monitor.Enter(RenderLock);
@@ -400,9 +452,15 @@ namespace DualController
             }
         }
 
-        // try loading an instance of the given type into the algorithm combo 
-        // box the type must inherit from IStarfield driver, be a class, and 
-        // not be abstract
+        /**
+         * <summary>
+         * try loading an instance of the given type into the algorithm combo box the type must inherit
+         * from IStarfield driver, be a class, and not be abstract.
+         * </summary>
+         *
+         * <param name="type">  The type. </param>
+         */
+
         private void loadType(Type type)
         {
             DriverTypes driverType = DriverTypes.Experimental;
@@ -426,8 +484,15 @@ namespace DualController
             }
         }
 
-        // the user wants to change the maximum brightness of the starfield,
-        // update the client
+        /**
+         * <summary>
+         * the user wants to change the maximum brightness of the starfield, update the client.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void trackBarInteriorBrightness_ValueChanged(object sender, EventArgs e)
         {
             Model.Model1.Brightness = (float)trackBarInteriorBrightness.Value / (float)trackBarInteriorBrightness.Maximum;

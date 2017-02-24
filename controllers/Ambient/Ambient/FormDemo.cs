@@ -15,6 +15,7 @@ using System.Timers;
 
 namespace Ambient
 {
+    /** <summary>    User interface for the ambient controller. </summary> */
     public partial class FormDemo : Form
     {
         // how often IStarfieldDriver.Render() is called  in milliseconds
@@ -113,9 +114,16 @@ namespace Ambient
             SwitchAlgorithm(true);
         }
 
-        // request that the current driver renders a frame to the display
-        // if a driver hasn't completed rendering the previous frame, drop
-        // this frame
+        /**
+         * <summary>
+         * request that the current driver renders a frame to the display if a driver hasn't completed
+         * rendering the previous frame, drop this frame.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Elapsed event information. </param>
+         */
+
         void render_Elapsed(object sender, ElapsedEventArgs e)
         {
             bool lockTaken = false;
@@ -148,14 +156,21 @@ namespace Ambient
             }
         }
 
-        // the user has requested that we render to a different Starfield size,
-        // update the client
+        /**
+         * <summary>
+         * the user has requested that we render to a different Starfield size, update the client.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void comboBoxStarfield_SelectedIndexChanged(object sender, EventArgs e)
         {
             reconnect();
         }
 
-        // connect to the new starfield
+        /** <summary>    connect to the new starfield. </summary> */
         private void reconnect()
         {
             string ip = textBoxIP.Text;
@@ -242,8 +257,15 @@ namespace Ambient
             return false;
         }
 
-        // the user wants to change the maximum brightness of the starfield,
-        // update the client
+        /**
+         * <summary>
+         * the user wants to change the maximum brightness of the starfield, update the client.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
         {
             Model.Brightness = (float)trackBarBrightness.Value / (float)trackBarBrightness.Maximum;

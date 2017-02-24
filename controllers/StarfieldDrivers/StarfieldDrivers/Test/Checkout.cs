@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Test
 {
+    /** <summary>    Animation for doing electronics/display checkout testing. </summary> */
     [DriverType(DriverTypes.Experimental)]
     public class Checkout : IStarfieldDriver
     {
@@ -17,16 +18,35 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the draw color. </summary>
+         *
+         * <value>  The color of the draw. </value>
+         */
+
         public Color DrawColor
         {
             get { return drawColor; }
             set { drawColor = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the x coordinate to draw. </summary>
+         *
+         * <value>  The x coordinate. </value>
+         */
+
         public ulong X
         {
             get; set;
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether to draw a whole panel. </summary>
+         *
+         * <value>  True if panel, false if not. </value>
+         */
 
         public bool Panel
         {
@@ -36,6 +56,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             for(ulong x = 0; x < Starfield.NumX; x++)
@@ -55,16 +82,30 @@ namespace StarfieldDrivers.Drivers
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Checkout";

@@ -14,6 +14,7 @@ using System.Timers;
 
 namespace AlgorithmDemo
 {
+    /** <summary>    User interface for the Algorithm Demo Controller. </summary> */
     public partial class FormDemo : Form
     {
         // how often IStarfieldDriver.Render() is called  in milliseconds
@@ -38,6 +39,7 @@ namespace AlgorithmDemo
         int DefaultPort = 7890; 
         System.Timers.Timer render;
 
+        /** <summary>    Default constructor. </summary> */
         public FormDemo()
         {
             InitializeComponent();
@@ -83,9 +85,16 @@ namespace AlgorithmDemo
             render.Start();
         }
 
-        // request that the current driver renders a frame to the display
-        // if a driver hasn't completed rendering the previous frame, drop
-        // this frame
+        /**
+         * <summary>
+         * request that the current driver renders a frame to the display if a driver hasn't completed
+         * rendering the previous frame, drop this frame.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Elapsed event information. </param>
+         */
+
         void render_Elapsed(object sender, ElapsedEventArgs e)
         {
             bool lockTaken = false;
@@ -109,7 +118,15 @@ namespace AlgorithmDemo
             }
         }
 
-        // the user has selected a new algorithm, stop the old one and start the new one
+        /**
+         * <summary>
+         * the user has selected a new algorithm, stop the old one and start the new one.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void comboBoxAlgorithm_SelectedIndexChanged(object sender, EventArgs e)
         {
             System.Threading.Monitor.Enter(RenderLock);
@@ -132,14 +149,21 @@ namespace AlgorithmDemo
             }
         }
 
-        // the user has requested that we render to a different Starfield size,
-        // update the client
+        /**
+         * <summary>
+         * the user has requested that we render to a different Starfield size, update the client.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void comboBoxStarfield_SelectedIndexChanged(object sender, EventArgs e)
         {
             reconnect();
         }
 
-        // connect to the new starfield
+        /** <summary>    connect to the new starfield. </summary> */
         private void reconnect()
         {
             string ip = textBoxIP.Text;
@@ -191,7 +215,13 @@ namespace AlgorithmDemo
             }
         }
 
-        // reset the current driver
+        /**
+         * <summary>    reset the current driver. </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void buttonRestart_Click(object sender, EventArgs e)
         {
             System.Threading.Monitor.Enter(RenderLock);
@@ -212,8 +242,15 @@ namespace AlgorithmDemo
             }
         }
 
-        // the user wants to change the maximum brightness of the starfield,
-        // update the client
+        /**
+         * <summary>
+         * the user wants to change the maximum brightness of the starfield, update the client.
+         * </summary>
+         *
+         * <param name="sender">    Source of the event. </param>
+         * <param name="e">         Event information. </param>
+         */
+
         private void trackBarBrightness_ValueChanged(object sender, EventArgs e)
         {
             Model.Brightness = (float)trackBarBrightness.Value / (float)trackBarBrightness.Maximum;

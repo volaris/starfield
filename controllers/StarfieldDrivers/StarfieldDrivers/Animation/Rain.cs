@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Animation
 {
+    /** <summary>    Animated rain storm with lightning. </summary> */
     [DriverType(DriverTypes.Ambient)]
     public class Rain : IStarfieldDriver
     {

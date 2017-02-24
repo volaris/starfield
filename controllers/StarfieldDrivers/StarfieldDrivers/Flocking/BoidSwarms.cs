@@ -9,10 +9,10 @@ using Starfield;
 using System.Timers;
 using StarfieldUtils.MathUtils;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Flocking
 {
     [DriverType(DriverTypes.Experimental)]
-    class BoidSwarms : IStarfieldDriver
+    public class BoidSwarms : IStarfieldDriver
     {
         #region Private Members
 
@@ -35,11 +35,24 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets a value indicating whether to use alternate directions. </summary>
+         *
+         * <value>  True if alternate directions, false if not. </value>
+         */
+
         public bool AlternateDirections
         {
             get { return alternateDirections; }
             set { alternateDirections = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the goal threshold. </summary>
+         *
+         * <value>  The goal threshold. </value>
+         */
 
         public float GoalThreshold
         {
@@ -47,11 +60,23 @@ namespace StarfieldDrivers.Drivers
             set { goalThreshold = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the location multiplier. </summary>
+         *
+         * <value>  The location multiplier. </value>
+         */
+
         public float LocationMultiplier
         {
             get { return locationMultiplier; }
             set { locationMultiplier = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the number of boids per swarms. </summary>
+         *
+         * <value>  The total number of boids per swarm. </value>
+         */
 
         public int NumBoidsPerSwarm
         {
@@ -59,11 +84,23 @@ namespace StarfieldDrivers.Drivers
             set { numBoidsPerSwarm = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the number of swarms. </summary>
+         *
+         * <value>  The total number of swarms. </value>
+         */
+
         public int NumSwarms
         {
             get { return numSwarms; }
             set { numSwarms = value; }
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether to draw trails. </summary>
+         *
+         * <value>  True if trails, false if not. </value>
+         */
 
         public bool Trails
         {
@@ -73,6 +110,7 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Constructors
+        /** <summary>    Default constructor. </summary> */
         public BoidSwarms()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
@@ -127,6 +165,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             if (Time == 0)
@@ -194,16 +239,30 @@ namespace StarfieldDrivers.Drivers
             Time = (Time + 1) % WrapTime;
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Boid Swarm";

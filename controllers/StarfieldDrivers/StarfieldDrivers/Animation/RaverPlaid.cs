@@ -11,6 +11,7 @@ using StarfieldUtils.ColorUtils;
 
 namespace StarfieldDrivers.Animation
 {
+    /** <summary>    Multiple sin wave color combinations. </summary> */
     [DriverType(DriverTypes.Ambient)]
     public class RaverPlaid : IStarfieldDriver
     {
@@ -27,6 +28,13 @@ namespace StarfieldDrivers.Animation
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             double t = (DateTime.Now - time).TotalSeconds;
@@ -53,17 +61,31 @@ namespace StarfieldDrivers.Animation
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Start(StarfieldModel Starfield)
         {
             time = DateTime.Now;
         }
 
+        /** <summary>    Stops this object. </summary> */
         public void Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Raver Plaid";

@@ -50,10 +50,12 @@
     <Compile Include="DriverType.cs" />
     <Compile Include="IStarfieldDriver.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="networking\NamespaceDoc.cs" />
     <Compile Include="networking\OPCClient.cs" />
     <Compile Include="networking\TCPStarfieldClient.cs" />
     <Compile Include="networking\TCPStarfieldServer.cs" />
     <Compile Include="Presence\Activity.cs" />
+    <Compile Include="Presence\NamespaceDoc.cs" />
     <Compile Include="Presence\PresenceClient.cs" />
     <Compile Include="SplitStarfieldModel.cs" />
     <Compile Include="StarfieldModel.cs" />

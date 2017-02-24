@@ -8,7 +8,7 @@ using Starfield;
 using StarfieldUtils.ColorUtils;
 using StarfieldUtils.SoundUtils;
 
-namespace StarfieldDrivers
+namespace StarfieldDrivers.Sound_Responsive
 {
     [DriverType(DriverTypes.SoundResponsive)]
     public class Snakes : IStarfieldDriver

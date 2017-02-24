@@ -49,18 +49,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\GameOfLife.cs" />
+    <Compile Include="Animation\NamespaceDoc.cs" />
     <Compile Include="Animation\RaverPlaid.cs" />
     <Compile Include="Animation\RainbowTest.cs" />
     <Compile Include="Animation\CenterWave.cs" />
+    <Compile Include="CFD\NamespaceDoc.cs" />
     <Compile Include="Flocking\BoidSwarms.cs" />
+    <Compile Include="Flocking\NamespaceDoc.cs" />
+    <Compile Include="Fractal\NamespaceDoc.cs" />
+    <Compile Include="Noise\Simplex\NamespaceDoc.cs" />
     <Compile Include="Noise\Simplex\RainbowSimplexSmoothed.cs" />
     <Compile Include="Noise\White\FadingStatic.cs" />
     <Compile Include="CFD\FluidPour.cs" />
     <Compile Include="Fractal\FractalFlame.cs" />
     <Compile Include="Fractal\FractalFlame4D.cs" />
+    <Compile Include="Noise\White\NamespaceDoc.cs" />
     <Compile Include="PresenceResponsive\InteractiveSoundResponsiveGlobes.cs" />
     <Compile Include="PresenceResponsive\GenericTrails.cs" />
     <Compile Include="PresenceResponsive\ConnectiveOrbs.cs" />
+    <Compile Include="PresenceResponsive\NamespaceDoc.cs" />
     <Compile Include="PresenceResponsive\PresenceTrails.cs" />
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />
@@ -83,6 +90,7 @@
     <Compile Include="Noise\Simplex\SimplexTwinkle.cs" />
     <Compile Include="Noise\Simplex\SimplexWaves.cs" />
     <Compile Include="Noise\Simplex\SingleColorSimplex.cs" />
+    <Compile Include="Sound Responsive\NamespaceDoc.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSpeed.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexClouds.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveSimplexSmokeGradientChange.cs" />
@@ -90,6 +98,7 @@
     <Compile Include="Sound Responsive\SoundResponsiveSimplex.cs" />
     <Compile Include="Sound Responsive\snakes.cs" />
     <Compile Include="Test\Checkout.cs" />
+    <Compile Include="Test\NamespaceDoc.cs" />
     <Compile Include="Test\SolidColor.cs" />
     <Compile Include="Sound Responsive\SolidColorSoundUpdate.cs" />
     <Compile Include="Sound Responsive\SoundResponsiveGlobes.cs" />

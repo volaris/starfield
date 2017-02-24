@@ -8,8 +8,9 @@ using Starfield;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Animation
 {
+    /** <summary>    3D sin wave </summary> */
     [DriverType(DriverTypes.Ambient)]
     public class CenterWave : IStarfieldDriver
     {
@@ -24,6 +25,7 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Constructors
+        /** <summary>    Default constructor. </summary> */
         public CenterWave()
         {
             rainbow10[0] = rainbow7[0] = Color.FromArgb(0xFF, 0, 0);
@@ -40,11 +42,24 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the color of the background. </summary>
+         *
+         * <value>  The color of the background. </value>
+         */
+
         public Color BackColor
         {
             get { return backColor; }
             set { backColor = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the draw color if not using a rainbow. </summary>
+         *
+         * <value>  The color of the draw. </value>
+         */
 
         public Color DrawColor
         {
@@ -52,11 +67,23 @@ namespace StarfieldDrivers.Drivers
             set { drawColor = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the interval between animation updates. </summary>
+         *
+         * <value>  The interval. </value>
+         */
+
         public float Interval
         {
             get { return interval; }
             set { interval = value; }
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether or not to use single or rainbow colors rainbow. </summary>
+         *
+         * <value>  True if rainbow, false if not. </value>
+         */
 
         public bool Rainbow
         {
@@ -66,6 +93,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             double distance;
@@ -102,17 +136,31 @@ namespace StarfieldDrivers.Drivers
             step++;
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             step = 0;
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Center Wave";

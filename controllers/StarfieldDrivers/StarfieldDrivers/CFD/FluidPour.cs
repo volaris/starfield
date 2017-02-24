@@ -8,8 +8,9 @@ using Starfield;
 using StarfieldUtils.CFDUtils;
 using StarfieldUtils.MathUtils;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.CFD
 {
+    /** <summary>    Animation based on pouring fluids. </summary> */
     [DriverType(DriverTypes.Experimental)]
     public class FluidPour : IStarfieldDriver
     {
@@ -20,6 +21,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             Console.WriteLine("Start Render: " + System.Threading.Thread.CurrentThread.ManagedThreadId + " - " + DateTime.Now);
@@ -112,16 +120,30 @@ namespace StarfieldDrivers.Drivers
             Console.WriteLine("End Render: " + System.Threading.Thread.CurrentThread.ManagedThreadId + " - " + DateTime.Now);
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Basic Fluid";

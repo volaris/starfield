@@ -7,8 +7,9 @@ using System.Drawing;
 using Starfield;
 using StarfieldUtils.ColorUtils;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Noise.White
 {
+    /** <summary>    Fading static animation. </summary> */
     [DriverType(DriverTypes.Ambient)]
     public class FadingStatic : IStarfieldDriver
     {
@@ -25,22 +26,48 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the duration of the animation. </summary>
+         *
+         * <value>  The animation duration. </value>
+         */
+
         public float AnimationDuration
         {
             get { return animationDuration; }
             set { animationDuration = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the draw color. </summary>
+         *
+         * <value>  The draw color. </value>
+         */
+
         public Color DrawColor
         {
             get { return drawColor; }
             set { drawColor = value; }
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether or not to flash. </summary>
+         *
+         * <value>  True if flash, false if not. </value>
+         */
+
         public bool Flash
         {
             get { return flash; }
             set { flash = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the amount to increment by. </summary>
+         *
+         * <value>  The amount to increment by. </value>
+         */
 
         public float Increment
         {
@@ -50,6 +77,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
 
@@ -102,18 +136,32 @@ namespace StarfieldDrivers.Drivers
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             Prev = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
             Next = new int[Starfield.NumX, Starfield.NumY, Starfield.NumZ];
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Fading Static";

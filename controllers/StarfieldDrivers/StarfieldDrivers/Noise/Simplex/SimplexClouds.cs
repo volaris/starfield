@@ -9,10 +9,11 @@ using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace StarfieldDrivers
+namespace StarfieldDrivers.Noise.Simplex
 {
+    /** <summary>    Simplex noise based clouds. </summary> */
     [DriverType(DriverTypes.Ambient)]
-    class SimplexClouds : IStarfieldDriver
+    public class SimplexClouds : IStarfieldDriver
     {
         #region Private Members
         Color primaryColor = Color.Blue;
@@ -30,11 +31,24 @@ namespace StarfieldDrivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets a value indicating whether noise values should be clamped. </summary>
+         *
+         * <value>  True if values should be clamped, false if not. </value>
+         */
+
         public bool CapAtMax
         {
             get { return capAtMax; }
             set { capAtMax = value; }
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether the fade. </summary>
+         *
+         * <value>  True if fade, false if not. </value>
+         */
 
         public bool Fade
         {
@@ -42,11 +56,23 @@ namespace StarfieldDrivers
             set { fade = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the fade in threshold. </summary>
+         *
+         * <value>  The fade in threshold. </value>
+         */
+
         public float FadeInThreshold
         {
             get { return fadeInThreshold; }
             set { fadeInThreshold = value; }
         }
+
+        /**
+         * <summary>    Gets or sets a value indicating whether the high contrast. </summary>
+         *
+         * <value>  True if high contrast, false if not. </value>
+         */
 
         public bool HighContrast
         {
@@ -54,11 +80,23 @@ namespace StarfieldDrivers
             set { highContrast = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the lacunarity. </summary>
+         *
+         * <value>  The lacunarity. </value>
+         */
+
         public float Lacunarity
         {
             get { return lacunarity; }
             set { lacunarity = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the number of octaves. </summary>
+         *
+         * <value>  The total number of octaves. </value>
+         */
 
         public int NumOctaves
         {
@@ -66,11 +104,23 @@ namespace StarfieldDrivers
             set { numOctaves = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the persistance. </summary>
+         *
+         * <value>  The persistance. </value>
+         */
+
         public float Persistance
         {
             get { return persistance; }
             set { persistance = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the primary color. </summary>
+         *
+         * <value>  The color of the primary. </value>
+         */
 
         public Color PrimaryColor
         {
@@ -78,17 +128,35 @@ namespace StarfieldDrivers
             set { primaryColor = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the secondary color. </summary>
+         *
+         * <value>  The color of the secondary. </value>
+         */
+
         public Color SecondaryColor
         {
             get { return secondaryColor; }
             set { secondaryColor = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the time step. </summary>
+         *
+         * <value>  The time step. </value>
+         */
+
         public float TimeStep
         {
             get { return timeStep; }
             set { timeStep = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the threshold. </summary>
+         *
+         * <value>  The threshold. </value>
+         */
 
         public float Threshold
         {
@@ -98,6 +166,13 @@ namespace StarfieldDrivers
         #endregion
 
         #region IstarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             for (ulong x = 0; x < Starfield.NumX; x++)
@@ -134,16 +209,30 @@ namespace StarfieldDrivers
             time = (time + TimeStep);
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Simplex Noise Clouds";

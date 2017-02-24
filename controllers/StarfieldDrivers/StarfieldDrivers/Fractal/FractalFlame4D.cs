@@ -9,12 +9,14 @@ using StarfieldUtils;
 using StarfieldUtils.MathUtils;
 using StarfieldUtils.ColorUtils;
 
-namespace StarfieldDrivers
+namespace StarfieldDrivers.Fractal
 {
+    /** <summary>    4D Fractal Flame Animation. </summary> */
     [DriverType(DriverTypes.Ambient)]
-    class FractalFlame4D : IStarfieldDriver
+    public class FractalFlame4D : IStarfieldDriver
     {
         #region Enums
+        /** <summary>    Values that represent states for this animation. </summary> */
         enum State
         {
             Hold,
@@ -22,6 +24,7 @@ namespace StarfieldDrivers
             FadeOut,
         }
 
+        /** <summary>    Values that represent variants for this animation. </summary> */
         enum Variants
         {
             Prime4D
@@ -29,6 +32,7 @@ namespace StarfieldDrivers
         #endregion
 
         #region Structs
+        /** <summary>    A color structure. </summary> */
         private struct ColorStruct
         {
             public int index;
@@ -53,11 +57,24 @@ namespace StarfieldDrivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets how long to hold the final visual before switching to a new one. </summary>
+         *
+         * <value>  The hold time. </value>
+         */
+
         public int HoldTime
         {
             get { return holdTime; }
             set { holdTime = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the number of steps in the animation. </summary>
+         *
+         * <value>  The total number of steps. </value>
+         */
 
         public int NumSteps
         {
@@ -65,17 +82,35 @@ namespace StarfieldDrivers
             set { numSteps = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the primary color. </summary>
+         *
+         * <value>  The color of the primary. </value>
+         */
+
         public Color PrimaryColor
         {
             get { return primaryColor; }
             set { primaryColor = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the secondary color. </summary>
+         *
+         * <value>  The color of the secondary. </value>
+         */
+
         public Color SecondaryColor
         {
             get { return secondaryColor; }
             set { secondaryColor = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the sub time steps. </summary>
+         *
+         * <value>  The sub time steps. </value>
+         */
 
         public int SubTimeSteps
         {
@@ -85,12 +120,20 @@ namespace StarfieldDrivers
         #endregion
 
         #region Constructors
+        /** <summary>    Default constructor. </summary> */
         public FractalFlame4D()
         {
         }
         #endregion
 
         #region IStarfieldDriver Implemention
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Render(StarfieldModel Starfield)
         {
             if(subTime == 0)
@@ -172,6 +215,12 @@ namespace StarfieldDrivers
             }
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             this.state = State.Hold;
@@ -179,12 +228,20 @@ namespace StarfieldDrivers
             GenerateFlame(Starfield);
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "4D Fractal Flame";

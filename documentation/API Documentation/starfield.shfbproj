@@ -19,8 +19,12 @@
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\..\lib\.NET\StarfieldLibs.sln" />
-      <DocumentationSource sourceFile="..\..\controllers\StarfieldDrivers\StarfieldDrivers.sln" />
-    </DocumentationSources>
+<DocumentationSource sourceFile="..\..\controllers\StarfieldDrivers\StarfieldDrivers.sln" />
+<DocumentationSource sourceFile="..\..\controllers\AlgorithmDemo\AlgorithmDemo\AlgorithmDemo.csproj" />
+<DocumentationSource sourceFile="..\..\controllers\Ambient\Ambient\Ambient.csproj" />
+<DocumentationSource sourceFile="..\..\controllers\ConfigurableController\ConfigurableController\ConfigurableController.csproj" />
+<DocumentationSource sourceFile="..\..\controllers\ControllerConfigGenerator\ControllerConfigGenerator\ControllerConfigGenerator.csproj" />
+<DocumentationSource sourceFile="..\..\controllers\DualController\DualController\DualController.csproj" /></DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>

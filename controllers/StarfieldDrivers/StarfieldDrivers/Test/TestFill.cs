@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Starfield;
 
-namespace StarfieldDrivers.Drivers
+namespace StarfieldDrivers.Test
 {
+    /** <summary>    Fills the starfield with test patterns. </summary> */
     [DriverType(DriverTypes.Experimental)]
     public class TestFill : IStarfieldDriver
     {
@@ -21,17 +22,36 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region Public Properties
+
+        /**
+         * <summary>    Gets or sets the colors. </summary>
+         *
+         * <value>  The colors. </value>
+         */
+
         public Color[] Colors
         {
             get { return colors; }
             set { colors = value; }
         }
 
+        /**
+         * <summary>    Gets or sets the delay. </summary>
+         *
+         * <value>  The delay. </value>
+         */
+
         public int Delay
         {
             get { return delay; }
             set { delay = value; }
         }
+
+        /**
+         * <summary>    Gets or sets the color of the draw. </summary>
+         *
+         * <value>  The color of the draw. </value>
+         */
 
         public Color DrawColor
         {
@@ -41,6 +61,13 @@ namespace StarfieldDrivers.Drivers
         #endregion
 
         #region IStarfieldDriver Implementation
+
+        /**
+         * <summary>    Renders the given Starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         public void Render(StarfieldModel Starfield)
         {
             if (step == 0)
@@ -73,18 +100,32 @@ namespace StarfieldDrivers.Drivers
             step = (step + 1) % Delay;
         }
 
+        /**
+         * <summary>    Starts the given starfield. </summary>
+         *
+         * <param name="Starfield"> The starfield. </param>
+         */
+
         void IStarfieldDriver.Start(StarfieldModel Starfield)
         {
             step = 0;
             fillIndex = 0;
         }
 
+        /** <summary>    Stops this object. </summary> */
         void IStarfieldDriver.Stop()
         {
         }
         #endregion
 
         #region Overrides
+
+        /**
+         * <summary>    Returns a string that represents the current object. </summary>
+         *
+         * <returns>    A string that represents the current object. </returns>
+         */
+
         public override string ToString()
         {
             return "Test Fill";

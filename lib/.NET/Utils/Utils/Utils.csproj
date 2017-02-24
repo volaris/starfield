@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CFD\DefaultKernels.cs" />
+    <Compile Include="CFD\NamespaceDoc.cs" />
     <Compile Include="CFD\Particle.cs" />
     <Compile Include="CFD\Solver.cs" />
     <Compile Include="Color\ColorSpace\CIELAB.cs" />
@@ -65,11 +66,16 @@
     <Compile Include="Color\ColorSpace\ConvertColorSpace.cs" />
     <Compile Include="Color\ColorSpace\HSB.cs" />
     <Compile Include="Color\ColorSpace\HSL.cs" />
+    <Compile Include="Color\ColorSpace\NamespaceDoc.cs" />
     <Compile Include="Color\ColorSpace\YUV.cs" />
     <Compile Include="Color\ColorUtils.cs" />
+    <Compile Include="Color\NamespaceDoc.cs" />
+    <Compile Include="Data Structures\NamespaceDoc.cs" />
     <Compile Include="Data Structures\PriorityQueue.cs" />
+    <Compile Include="Display\NamespaceDoc.cs" />
     <Compile Include="Display\StarfieldMixer.cs" />
     <Compile Include="Flocking\Boid.cs" />
+    <Compile Include="Flocking\NamespaceDoc.cs" />
     <Compile Include="Flocking\Swarm.cs" />
     <Compile Include="Math\Affine.cs" />
     <Compile Include="Math\Delaunay\DelaunayHelpers.cs" />
@@ -93,6 +99,7 @@
     <Compile Include="Math\Geometry\Polygon.cs" />
     <Compile Include="Math\Geometry\Winding.cs" />
     <Compile Include="Math\KMeans.cs" />
+    <Compile Include="Math\NamespaceDoc.cs" />
     <Compile Include="Math\Quaternion.cs" />
     <Compile Include="Math\SimplexNoise.cs" />
     <Compile Include="Math\Vec2D.cs" />
@@ -100,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sound\BaseSoundProcessor.cs" />
     <Compile Include="Sound\CSCoreLoopbackSoundProcessor.cs" />
+    <Compile Include="Sound\NamespaceDoc.cs" />
     <Compile Include="Sound\NullSoundProcessor.cs" />
     <Compile Include="Sound\SoundProcessor.cs" />
     <Compile Include="Sound\SoundUtils.cs" />
