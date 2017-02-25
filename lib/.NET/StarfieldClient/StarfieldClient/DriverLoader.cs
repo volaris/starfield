@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using Newtonsoft.Json;
+using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
 
 namespace Starfield
 {
@@ -53,12 +55,14 @@ namespace Starfield
                 string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
                 foreach (string filename in plugins)
                 {
+                    Console.WriteLine("Loading from: {0}", filename);
                     try
                     {
                         Assembly plugin = Assembly.LoadFrom(filename);
 
                         foreach (Type type in plugin.GetTypes())
                         {
+                            Console.WriteLine("Loading Type: {0}", type);
                             loadType(driverList, type, driverFilter);
                         }
                     }
@@ -66,6 +70,35 @@ namespace Starfield
                     {
                         Console.WriteLine("Unable to load: {0}", filename);
                     }
+                }
+            }
+
+            LoadPythonPlugins(driverList, driverFilter);
+        }
+
+        private static void LoadPythonPlugins(ICollection<IStarfieldDriver> driverList, DriverFilterDelegate driverFilter)
+        {
+            string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "scripts");
+            if (System.IO.Directory.Exists(path))
+            {
+                List<Type> pythonDriverTypes = new List<Type>();
+
+                // load the drivers
+                ScriptEngine engine = Python.CreateEngine();
+
+                var searchPaths = engine.GetSearchPaths();
+
+                searchPaths.Add(path);
+                engine.SetSearchPaths(searchPaths);
+
+                dynamic pythonDriversModule = engine.ImportModule("PythonDrivers");
+
+                pythonDriversModule.loadDrivers(pythonDriverTypes);
+
+                // add filtered instances to the driver list
+                foreach (Type type in pythonDriverTypes)
+                {
+                    loadType(driverList, type, driverFilter);
                 }
             }
         }
@@ -76,7 +109,7 @@ namespace Starfield
          * <param name="driverList">    List of drivers to fill with driver instances. </param>
          */
 
-        public static void LoadBuiltinDrivers(ICollection<IStarfieldDriver> driverList)
+            public static void LoadBuiltinDrivers(ICollection<IStarfieldDriver> driverList)
         {
             LoadBuiltinDrivers(driverList, delegate(Type type) { return true; });
         }
