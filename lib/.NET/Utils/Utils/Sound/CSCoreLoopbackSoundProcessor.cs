@@ -19,6 +19,7 @@ namespace StarfieldUtils.SoundUtils
         float[] soundDataChannel1;
         float[] soundDataChannel2;
 
+        /** <summary>    Default constructor. </summary> */
         public CSCoreLoopbackSoundProcessor() : base()
         {
             loopback = new CSCore.SoundIn.WasapiLoopbackCapture();
