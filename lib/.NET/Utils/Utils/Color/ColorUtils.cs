@@ -295,5 +295,21 @@ namespace StarfieldUtils.ColorUtils
 
             return Color.FromArgb(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
         }
+
+        /**
+         * <summary>    Converts a color to a gray scale. </summary>
+         *
+         * <param name="color"> The color to convert. </param>
+         *
+         * <returns>    Color as a grayscal Color. </returns>
+         */
+
+        public static Color ToGrayScale(Color color)
+        {
+            ColorSpace.CIELAB cielab = ColorSpace.ConvertColorSpace.ToCIELAB(color);
+            cielab.A = 0;
+            cielab.B = 0;
+            return ColorSpace.ConvertColorSpace.ToRGB(cielab);
+        }
     }
 }
