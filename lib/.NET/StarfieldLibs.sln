@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starfield", "StarfieldClient\StarfieldClient\Starfield.csproj", "{9FD24852-54FB-49FE-B0AB-B7FF9806297C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils\Utils.csproj", "{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9FD24852-54FB-49FE-B0AB-B7FF9806297C} = {9FD24852-54FB-49FE-B0AB-B7FF9806297C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
