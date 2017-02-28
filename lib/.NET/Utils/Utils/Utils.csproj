@@ -74,6 +74,7 @@
     <Compile Include="Data Structures\PriorityQueue.cs" />
     <Compile Include="Display\NamespaceDoc.cs" />
     <Compile Include="Display\StarfieldMixer.cs" />
+    <Compile Include="Display\PercentMixer.cs" />
     <Compile Include="Flocking\Boid.cs" />
     <Compile Include="Flocking\NamespaceDoc.cs" />
     <Compile Include="Flocking\Swarm.cs" />
