@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmDemo", "AlgorithmDemo\AlgorithmDemo.csproj", "{FF71DF1E-CD8D-40CB-B10D-A180C89845E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA41636A-DDCE-4109-9D10-FF4AFB40273C} = {BA41636A-DDCE-4109-9D10-FF4AFB40273C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarfieldDrivers", "..\StarfieldDrivers\StarfieldDrivers\StarfieldDrivers.csproj", "{BA41636A-DDCE-4109-9D10-FF4AFB40273C}"
 EndProject

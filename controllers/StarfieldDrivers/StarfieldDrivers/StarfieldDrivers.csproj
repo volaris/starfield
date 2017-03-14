@@ -72,6 +72,7 @@
     <Compile Include="PresenceResponsive\PresenceClouds.cs" />
     <Compile Include="PresenceResponsive\PresenceRainbowSimplexSmoothed.cs" />
     <Compile Include="PresenceResponsive\WhackAMole.cs" />
+    <Compile Include="Projection\NamespaceDoc.cs" />
     <Compile Include="Projection\ShapeProjectionTest.cs" />
     <Compile Include="Projection\ProjectionTest.cs" />
     <Compile Include="Sound Responsive\EdgeGlobeEQ.cs" />

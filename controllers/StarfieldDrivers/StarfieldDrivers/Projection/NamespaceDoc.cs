@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarfieldDrivers.PresenceResponsive
+namespace StarfieldDrivers.Projection
 {
     /** <summary>    2D -> 3D projection animations. </summary> */
     internal class NamespaceDoc
