@@ -58,5 +58,5 @@ TBD
 ### Documentation
 
 <ul>
-	<li><a href="html/R_Project_Documentation.htm">Namespaces</a></li>
+	<li><a href="api/html/R_Project_Documentation.htm">Namespaces</a></li>
 </ul>
