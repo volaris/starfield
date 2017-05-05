@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Starfield
-email: your-email@domain.com
+email: lane@fort-awesome.net
 description: > # this means to ignore newlines until "baseurl:"
   Software (simulation and control) and electronics for the starfield display.
 baseurl: "/starfield" # the subpath of your site, e.g. /blog
@@ -26,7 +26,7 @@ github_username:  volaris
 markdown: kramdown
 theme: jekyll-theme-cayman
 gems:
-  - jekyll-feed
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
