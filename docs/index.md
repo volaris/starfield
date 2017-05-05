@@ -60,3 +60,23 @@ TBD
 <ul>
 	<li><a href="api/html/R_Project_Documentation.htm">Namespaces</a></li>
 </ul>
+
+### Contributing
+
+If you would like to contribute to this guide or the [API documentation](api/html/R_Project_Documentation.htm) follow these steps...
+
+#### This guide
+1. [Pull or fork the master branch](https://github.com/volaris/starfield/)
+2. [Set up Jekyll](https://jekyllrb.com/docs/quickstart/). You'll need Ruby. Don't forget to `bundle`.
+3. Run the local server `jekyll serve` from `starfield/docs`
+4. Browse your local server `https://localhost:4000/starfield/` :warning: The trailing slash is important
+5. Make edits
+6. Commit changes
+7. Make a pull request
+
+#### API Docs
+1. [Pull or fork the master branch](https://github.com/volaris/starfield/)
+2. Make sure you can [build the solution](#building-solutions)
+3. TBD
+
+Need help with Markdown? [Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
