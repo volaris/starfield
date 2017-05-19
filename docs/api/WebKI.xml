@@ -574,9 +574,9 @@
   <HelpKINode Title="dimmer field" Url="html/F_Starfield_StarfieldModel_dimmer.htm" />
   <HelpKINode Title="Dispose method">
     <HelpKINode Title="Edge.Dispose Method " Url="html/M_Delaunay_Edge_Dispose.htm" />
-    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_AlgorithmDemo_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_ControllerConfigGenerator_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_DualController_FormDemo_Dispose.htm" />
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_AlgorithmDemo_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_Ambient_FormDemo_Dispose.htm" />
     <HelpKINode Title="Halfedge.Dispose Method " Url="html/M_Delaunay_Halfedge_Dispose.htm" />
     <HelpKINode Title="Site.Dispose Method " Url="html/M_Delaunay_Site_Dispose.htm" />
@@ -800,36 +800,36 @@
   <HelpKINode Title="FluidPour.ToString method" Url="html/M_StarfieldDrivers_CFD_FluidPour_ToString.htm" />
   <HelpKINode Title="Force field" Url="html/F_StarfieldUtils_CFDUtils_Particle_Force.htm" />
   <HelpKINode Title="FormDemo class">
-    <HelpKINode Title="FormDemo Class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
     <HelpKINode Title="FormDemo Class" Url="html/T_Ambient_FormDemo.htm" />
-    <HelpKINode Title="FormDemo Class" Url="html/T_DualController_FormDemo.htm" />
     <HelpKINode Title="FormDemo Class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
-    <HelpKINode Title="about FormDemo class" Url="html/T_DualController_FormDemo.htm" />
+    <HelpKINode Title="FormDemo Class" Url="html/T_DualController_FormDemo.htm" />
+    <HelpKINode Title="FormDemo Class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
     <HelpKINode Title="about FormDemo class" Url="html/T_Ambient_FormDemo.htm" />
-    <HelpKINode Title="about FormDemo class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_DualController_FormDemo.htm" />
     <HelpKINode Title="about FormDemo class" Url="html/T_ControllerConfigGenerator_FormDemo.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ControllerConfigGenerator_FormDemo__ctor.htm" />
-    <HelpKINode Title="constructor" Url="html/M_AlgorithmDemo_FormDemo__ctor.htm" />
-    <HelpKINode Title="constructor" Url="html/M_DualController_FormDemo__ctor.htm" />
+    <HelpKINode Title="about FormDemo class" Url="html/T_AlgorithmDemo_FormDemo.htm" />
     <HelpKINode Title="constructor" Url="html/M_Ambient_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_AlgorithmDemo_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ControllerConfigGenerator_FormDemo__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_DualController_FormDemo__ctor.htm" />
     <HelpKINode Title="events" Url="html/Events_T_DualController_FormDemo.htm" />
     <HelpKINode Title="events" Url="html/Events_T_ControllerConfigGenerator_FormDemo.htm" />
-    <HelpKINode Title="events" Url="html/Events_T_Ambient_FormDemo.htm" />
     <HelpKINode Title="events" Url="html/Events_T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Ambient_FormDemo.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_AlgorithmDemo_FormDemo.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_DualController_FormDemo.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ControllerConfigGenerator_FormDemo.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Ambient_FormDemo.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_AlgorithmDemo_FormDemo.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_DualController_FormDemo.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Ambient_FormDemo.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ControllerConfigGenerator_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_AlgorithmDemo_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Ambient_FormDemo.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_DualController_FormDemo.htm" />
   </HelpKINode>
   <HelpKINode Title="FormDemo.Dispose method">
+    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_Ambient_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_AlgorithmDemo_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_DualController_FormDemo_Dispose.htm" />
     <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_ControllerConfigGenerator_FormDemo_Dispose.htm" />
-    <HelpKINode Title="FormDemo.Dispose Method " Url="html/Overload_Ambient_FormDemo_Dispose.htm" />
   </HelpKINode>
   <HelpKINode Title="FormDemo.FormDemo constructor">
     <HelpKINode Title="FormDemo Constructor " Url="html/M_AlgorithmDemo_FormDemo__ctor.htm" />
@@ -2695,12 +2695,12 @@
   <HelpKINode Title="x field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_x.htm" />
   <HelpKINode Title="X property">
     <HelpKINode Title="Checkout.X Property " Url="html/P_StarfieldDrivers_Test_Checkout_X.htm" />
-    <HelpKINode Title="CIEXYZ.X Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_X.htm" />
     <HelpKINode Title="Vec2D.X Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_X.htm" />
+    <HelpKINode Title="CIEXYZ.X Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_X.htm" />
   </HelpKINode>
   <HelpKINode Title="x property">
-    <HelpKINode Title="Site.x Property " Url="html/P_Delaunay_Site_x.htm" />
     <HelpKINode Title="Rect.x Property " Url="html/P_Delaunay_Geo_Rect_x.htm" />
+    <HelpKINode Title="Site.x Property " Url="html/P_Delaunay_Site_x.htm" />
     <HelpKINode Title="Vertex.x Property " Url="html/P_Delaunay_Vertex_x.htm" />
   </HelpKINode>
   <HelpKINode Title="XAxis property">
@@ -2711,20 +2711,20 @@
   <HelpKINode Title="xMin field" Url="html/F_Delaunay_Geo_Rect_xMin.htm" />
   <HelpKINode Title="XStep field" Url="html/F_Starfield_StarfieldModel_XStep.htm" />
   <HelpKINode Title="Y field">
-    <HelpKINode Title="DoublePoint.Y Field" Url="html/F_ClipperLib_DoublePoint_Y.htm" />
     <HelpKINode Title="IntPoint.Y Field" Url="html/F_ClipperLib_IntPoint_Y.htm" />
+    <HelpKINode Title="DoublePoint.Y Field" Url="html/F_ClipperLib_DoublePoint_Y.htm" />
     <HelpKINode Title="Quaternion.Y Field" Url="html/F_StarfieldUtils_MathUtils_Quaternion_Y.htm" />
     <HelpKINode Title="Vec3D.Y Field" Url="html/F_StarfieldUtils_MathUtils_Vec3D_Y.htm" />
   </HelpKINode>
   <HelpKINode Title="y field" Url="html/F_StarfieldUtils_MathUtils_KMeansPoint_y.htm" />
-  <HelpKINode Title="y property">
-    <HelpKINode Title="Vertex.y Property " Url="html/P_Delaunay_Vertex_y.htm" />
-    <HelpKINode Title="Rect.y Property " Url="html/P_Delaunay_Geo_Rect_y.htm" />
-  </HelpKINode>
   <HelpKINode Title="Y property">
     <HelpKINode Title="CIEXYZ.Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_CIEXYZ_Y.htm" />
     <HelpKINode Title="Vec2D.Y Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_Y.htm" />
     <HelpKINode Title="YUV.Y Property " Url="html/P_StarfieldUtils_ColorUtils_ColorSpace_YUV_Y.htm" />
+  </HelpKINode>
+  <HelpKINode Title="y property">
+    <HelpKINode Title="Rect.y Property " Url="html/P_Delaunay_Geo_Rect_y.htm" />
+    <HelpKINode Title="Vertex.y Property " Url="html/P_Delaunay_Vertex_y.htm" />
   </HelpKINode>
   <HelpKINode Title="YAxis property">
     <HelpKINode Title="Vec2D.YAxis Property " Url="html/P_StarfieldUtils_MathUtils_Vec2D_YAxis.htm" />
