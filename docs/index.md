@@ -38,12 +38,24 @@ Download the simulator
 * [Mac](https://github.com/volaris/starfield/raw/master/simulator/builds/Mac.zip)
 * [Windows](https://github.com/volaris/starfield/raw/master/simulator/builds/Windows.zip)
 
-After running the executable, use the configuration panel to generate the Starfield size that you want to interract with.
+After running the executable, press *Play!* and use the configuration panel to generate the Starfield size that you want to interract with.
+
 ![Simulator Config](https://github.com/volaris/starfield/blob/master/documentation/images/SimulatorConfig.png?raw=true)
+
+You can move the camera around in the Simulator with WASD keys.
 
 ### Running the Demo
 
-TBD
+While the Simulator is running, start the demo.
+
+1. Open solution starfield\controllers\AlgorithmDemo\AlgorithmDemo.sln
+1. Switch project configuration to Release mode
+1. Build solution
+1. Run solution
+1. Choose a Starfield (Critical NW Starfield)
+1. Choose an algorithm (Smooth Rainbow Simplex Noise)
+
+![Demo Config](https://github.com/volaris/starfield/blob/master/documentation/images/AlgorithmDemo.png?raw=true)
 
 ### Testing the Client and Server
 
