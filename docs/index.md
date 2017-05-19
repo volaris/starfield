@@ -63,7 +63,32 @@ TBD
 
 ### Anatomy of an Algorithm
 
-TBD
+Starfield algorithms are included in the solution starfield\controllers\StarfieldDrivers\StarfieldDrivers.sln
+
+Let's start with a simple example: TestFill.
+
+```C#
+    [DriverType(DriverTypes.Experimental)]
+    public class TestFill : IStarfieldDriver
+    {
+    	...
+    }
+```
+
+TestFill implements the IStarfieldDriver interface. 
+
+```C#
+    public interface IStarfieldDriver
+    {
+        void Render(StarfieldModel Starfield);
+
+        void Start(StarfieldModel Starfield);
+
+        void Stop();
+    }
+```
+
+You can read the [IStarfieldDriver documentation](api/html/T_Starfield_IStarfieldDriver.htm). Then take a look at the source of [starfield\controllers\StarfieldDrivers\StarfieldDrivers\Test\TestFill.cs](https://github.com/volaris/starfield/blob/master/controllers/StarfieldDrivers/StarfieldDrivers/Test/TestFill.cs)
 
 ### How to Write a Starfield Plugin
 
