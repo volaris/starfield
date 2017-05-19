@@ -92,7 +92,28 @@ You can read the [IStarfieldDriver documentation](api/html/T_Starfield_IStarfiel
 
 ### How to Write a Starfield Plugin
 
-TBD
+Contributing directly to the Starfield project.
+
+1. Open solution starfield\controllers\StarfieldDrivers\StarfieldDrivers.sln
+1. Add your new class to one of the categories or create your own category (namespace)
+	- Animation
+	- CFD
+	- Flocking
+	- Fractal
+	- Noise
+	- PresenceResponsive
+	- Projection
+	- Sound Responsive
+	- Test
+1. Implement [IStarfieldDriver](api/html/T_Starfield_IStarfieldDriver.htm)
+1. Build the project
+
+Create your own Starfield algorithm project. This will allow you to compile a binary library (dll) and include it with an existing Starfield implemenation.
+
+1. Start a new solution
+1. Make sure you can [build the solution](#building-solutions)
+1. Add a reference to starfield/controllers/bin/Starfield.dll
+1. Optionally add a reference to starfield/controllers/bin/Utils.dll if you need extended math features
 
 ### Running the Simulator Over the Network
 
