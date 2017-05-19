@@ -6,7 +6,7 @@ Unity based simulator for the starfield.
 ## Usage
 
 After running the executable, use the configuration panel to generate the Starfield size that you want to interract with.
-![Simulator Config](https://raw.githubusercontent.com/volaris/starfield/master/docs/images/SimulatorConfig.png)
+![Simulator Config](https://github.com/volaris/starfield/blob/master/documentation/images/SimulatorConfig.png?raw=true)
 
 ## Connecting
 

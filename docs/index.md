@@ -33,7 +33,10 @@ The topics in this section will help you install all of the required tools, beco
 
 ### Get the Simulator
 
-TBD
+Download the simulator
+* [Linux](https://github.com/volaris/starfield/raw/master/simulator/builds/Linux.zip)
+* [Mac](https://github.com/volaris/starfield/raw/master/simulator/builds/Mac.zip)
+* [Windows](https://github.com/volaris/starfield/raw/master/simulator/builds/Windows.zip)
 
 ### Running the Demo
 
