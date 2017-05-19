@@ -38,6 +38,9 @@ Download the simulator
 * [Mac](https://github.com/volaris/starfield/raw/master/simulator/builds/Mac.zip)
 * [Windows](https://github.com/volaris/starfield/raw/master/simulator/builds/Windows.zip)
 
+After running the executable, use the configuration panel to generate the Starfield size that you want to interract with.
+![Simulator Config](https://github.com/volaris/starfield/blob/master/documentation/images/SimulatorConfig.png?raw=true)
+
 ### Running the Demo
 
 TBD
