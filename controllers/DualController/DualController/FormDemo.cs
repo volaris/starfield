@@ -79,48 +79,25 @@ namespace DualController
             DriversExterior = new List<IStarfieldDriver>();
 
             // load builtin drivers
-            foreach(Type type in Assembly.GetExecutingAssembly().GetTypes())
-            {
-                loadType(type);
-            }
+            DriverLoader.LoadBuiltinDrivers(DriversInterior);
+            DriverLoader.LoadBuiltinDrivers(DriversExterior);
 
             // load default drivers
-            try
-            {
-                foreach (Type type in Assembly.LoadFrom("StarfieldDrivers.dll").GetTypes())
-                {
-                    loadType(type);
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Unable to load: StarfieldDrivers.dll");
-            }
+            DriverLoader.LoadDefaultDrivers(DriversInterior);
+            DriverLoader.LoadDefaultDrivers(DriversExterior);
 
             // load plugins
-            string pluginPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            pluginPath = System.IO.Path.Combine(pluginPath, "plugins");
-            if(System.IO.Directory.Exists(pluginPath))
+            DriverLoader.LoadPlugins(DriversInterior);
+            DriverLoader.LoadPlugins(DriversExterior);
+
+            foreach (IStarfieldDriver driver in DriversInterior)
             {
-                Console.WriteLine("Loading Plugins");
+                comboBoxInteriorAlgorithm.Items.Add(driver);
+            }
 
-                string[] plugins = System.IO.Directory.GetFiles(pluginPath, "*.dll");
-                foreach(string filename in plugins)
-                {
-                    try
-                    {
-                        Assembly plugin = Assembly.LoadFrom(filename);
-
-                        foreach (Type type in plugin.GetTypes())
-                        {
-                            loadType(type);
-                        }
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Unable to load: {0}", filename);
-                    }
-                }
+            foreach (IStarfieldDriver driver in DriversExterior)
+            {
+                comboBoxExteriorAlgorithm.Items.Add(driver);
             }
 
             reconnect();
@@ -449,38 +426,6 @@ namespace DualController
             finally
             {
                 System.Threading.Monitor.Exit(RenderLock);
-            }
-        }
-
-        /**
-         * <summary>
-         * try loading an instance of the given type into the algorithm combo box the type must inherit
-         * from IStarfield driver, be a class, and not be abstract.
-         * </summary>
-         *
-         * <param name="type">  The type. </param>
-         */
-
-        private void loadType(Type type)
-        {
-            DriverTypes driverType = DriverTypes.Experimental;
-            Attribute attribute = type.GetCustomAttribute(typeof(DriverType));
-
-            if (attribute != null)
-            {
-                DriverType driverTypeAttribute = (DriverType)attribute;
-                driverType = driverTypeAttribute.Type;
-            }
-
-            if (typeof(IStarfieldDriver).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
-            {
-                comboBoxInteriorAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
-                comboBoxExteriorAlgorithm.Items.Add((IStarfieldDriver)Activator.CreateInstance(type));
-                if (driverType == DriverTypes.Ambient || driverType == DriverTypes.AmbientInteractive)
-                {
-                    DriversExterior.Add((IStarfieldDriver)Activator.CreateInstance(type));
-                    DriversInterior.Add((IStarfieldDriver)Activator.CreateInstance(type));
-                }
             }
         }
 
