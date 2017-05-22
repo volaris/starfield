@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starfield", "..\..\lib\.NET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "..\..\lib\.NET\Utils\Utils\Utils.csproj", "{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{96BA3D51-249B-4F96-A9A6-AD3F1D160AEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8F8C32D-D4F5-48B8-A28B-8871D87AD23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BA3D51-249B-4F96-A9A6-AD3F1D160AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BA3D51-249B-4F96-A9A6-AD3F1D160AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BA3D51-249B-4F96-A9A6-AD3F1D160AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BA3D51-249B-4F96-A9A6-AD3F1D160AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
