@@ -1,0 +1,1 @@
+python.exe .\basic.py --path=C:\Users\volar\Downloads\magnatagatune\ --data_size=100 --rounds=5 --save=.\weights
