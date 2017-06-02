@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Net;
-using Starfield;
+using System.Timers;
 
 namespace Starfield.Networking
 {
-    /** <summary>    A TCP starfield client. This class sends the model's data to the pixel drivers via TCP. </summary> */
-    public class TCPStarfieldClient
+    public class TCPStarfieldClientTee
     {
         private StarfieldModel model;
         private OPCClient client;
         private byte[] pixelData;
         private Timer flush;
+        List<OPCClient> clients;
 
         // Flush lock: this ensures that only one thread is sending data to
         // the server at a time. If we don't do this, it can cause the data
@@ -26,29 +22,33 @@ namespace Starfield.Networking
         public ulong AnimationInterval = 30;
 
         /**
-         * <summary>    Constructor. </summary>
+         * <summary>    Constructor. Creates a set of OPC connections to arbitrary endpoints</summary>
          *
          * <param name="starfield"> The starfield Model. </param>
-         * <param name="ip">        The IP. </param>
-         * <param name="port">      The port. </param>
+         * <param name="servers">        The endpoints. </param>
          */
-
-        public TCPStarfieldClient(StarfieldModel starfield, IPAddress ip, int port)
+        TCPStarfieldClientTee(StarfieldModel starfield, List<IPEndPoint> servers)
         {
+            clients = new List<OPCClient>();
+            foreach(IPEndPoint endpoint in servers)
+            {
+                OPCClient client = new OPCClient(endpoint);
+                clients.Add(client);
+                if (!client.CanConnect())
+                {
+                    Console.WriteLine("couldn't connect");
+                }
+            }
+
             this.model = starfield;
 
             pixelData = new byte[this.model.NumX * this.model.NumY * this.model.NumZ * 3];
-
-            client = new OPCClient(ip, port);
-            if (!client.CanConnect())
-            {
-                Console.WriteLine("couldn't connect");
-            }
-
+            
             flush = new Timer(AnimationInterval);
             flush.Elapsed += flush_Elapsed;
             flush.Start();
         }
+
 
         // flush the current color state to the display
         void flush_Elapsed(object sender, ElapsedEventArgs e)
@@ -61,7 +61,10 @@ namespace Starfield.Networking
                 StarfieldOPC.PackPixels(this.model, ref this.pixelData);
 
                 // send it
-                client.PutPixels(0, pixelData);
+                foreach (OPCClient client in clients)
+                {
+                    client.PutPixels(0, pixelData);
+                }
             }
             else
             {
@@ -79,7 +82,21 @@ namespace Starfield.Networking
         public void Stop()
         {
             flush.Enabled = false;
-            client.Disconnect();
+            foreach(OPCClient client in clients)
+            {
+                client.Disconnect();
+            }
+        }
+
+        public static TCPStarfieldClientTee CriticalTee(StarfieldModel model)
+        {
+            List<IPEndPoint> endpoints = new List<IPEndPoint>();
+            endpoints.Add(new IPEndPoint(IPAddress.Parse("192.168.0.50"), 7890));
+            endpoints.Add(new IPEndPoint(IPAddress.Parse("192.168.0.51"), 7890));
+            endpoints.Add(new IPEndPoint(IPAddress.Parse("192.168.0.52"), 7890));
+            endpoints.Add(new IPEndPoint(IPAddress.Parse("192.168.0.53"), 7890));
+            endpoints.Add(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7890));
+            return new TCPStarfieldClientTee(model, endpoints);
         }
     }
 }

@@ -15,19 +15,40 @@ namespace Starfield.Networking
         IPAddress ip = IPAddress.Loopback;
         int port = 7890;
         TcpClient client;
+        bool connecting = false;
 
-        // create an OPC connection to 127.0.0.1:7890
+        /**
+         * <summary>    Constructor. Creates an OPC connection to 127.0.0.1:7890</summary>
+         */
         public OPCClient()
         {
             dest = new IPEndPoint(ip, port);
             client = new TcpClient();
         }
 
-        // create an OPC connection to an arbitrary endpoint
+        /**
+         * <summary>    Constructor. Creates an OPC connection to an arbitrary endpoint</summary>
+         *
+         * <param name="ip">        The IP. </param>
+         * <param name="port">      The port. </param>
+         */
         public OPCClient(IPAddress ip, int port)
         {
             this.ip = ip;
             this.port = port;
+            dest = new IPEndPoint(ip, port);
+            client = new TcpClient();
+        }
+
+        /**
+         * <summary>    Constructor. Creates an OPC connection to an arbitrary endpoint</summary>
+         *
+         * <param name="endpoint">        The endpoint. </param>
+         */
+        public OPCClient(IPEndPoint endpoint)
+        {
+            this.ip = endpoint.Address;
+            this.port = endpoint.Port;
             dest = new IPEndPoint(ip, port);
             client = new TcpClient();
         }
@@ -39,11 +60,17 @@ namespace Starfield.Networking
             {
                 return true;
             }
+            
+            if(connecting)
+            {
+                return false;
+            }
 
             try
             {
-                client.Connect(dest);
-                return true;
+                client.BeginConnect(dest.Address, dest.Port, ConnectCallback, this);
+                connecting = true;
+                return false;
             }
             catch
             {
@@ -86,6 +113,24 @@ namespace Starfield.Networking
         public void Disconnect()
         {
             client.Close();
+        }
+
+        private static void ConnectCallback(IAsyncResult ar)
+        {
+            try
+            {
+                // Retrieve the socket from the state object.  
+                TcpClient client = ((OPCClient)ar.AsyncState).client;
+
+                // Complete the connection.  
+                client.EndConnect(ar);
+
+                ((OPCClient)ar.AsyncState).connecting = false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }
