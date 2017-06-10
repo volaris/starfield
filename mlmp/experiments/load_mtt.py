@@ -95,7 +95,8 @@ def load_mtt_audio_for_clip(mtt_path, clip_info, clip_id, verbose=False):
         print("loading audio: " + mp3_file_path)
     samples, sample_rate = librosa.load(mp3_file_path, sr=16000, mono=True)
     
-    frames = [samples[256*i:256*i+256] for i in range(0, int(len(samples)/256))]
+    raw_frames = [samples[256*i:256*i+256] for i in range(0, int(len(samples)/256))]
+    frames = fft(raw_frames)
     num_frames = len(frames)
     
     if verbose:
@@ -110,6 +111,10 @@ def load_mtt_audio_for_clip(mtt_path, clip_info, clip_id, verbose=False):
         print(sample_df.head())
 
     return sample_df
+    
+def fft(raw_frames):
+    ffts = [np.fft.fft(frame) for frame in raw_frames]
+    return ffts
 
 class FilterDelegate:
     clip_info = None
@@ -133,7 +138,13 @@ def prune_mtt_items_without_audio_or_feautures(index, mtt_path, clip_info):
     pruned = [i for i in filterfalse(delegate, index.values)]
     return pandas.Index(pruned).intersection(index)
 
-def load_mtt(mtt_path, load_features=False, load_audio=False, start=0, stop=None, jmp=1, verbose=False):
+def load_mtt(mtt_path,
+             load_features=False,
+             load_audio=False,
+             start=0,
+             stop=None,
+             jmp=1,
+             verbose=False):
     annotations = load_mtt_annotations(mtt_path, verbose)
     clip_info = load_mtt_clip_info(mtt_path, verbose)
     
