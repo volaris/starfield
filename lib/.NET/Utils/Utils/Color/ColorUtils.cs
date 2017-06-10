@@ -297,6 +297,24 @@ namespace StarfieldUtils.ColorUtils
         }
 
         /**
+         * <summary>    Blends two colors. </summary>
+         *
+         * <param name="color1">    The first color. </param>
+         * <param name="color2">    The second color. </param>
+         *
+         * <returns>    A Color. </returns>
+         */
+
+        public static Color Blend(Color color1, Color color2)
+        {
+            double red = ((double)color1.R + (double)color2.R) / 2;
+            double green = ((double)color1.G + (double)color2.G) / 2;
+            double blue = ((double)color1.B + (double)color2.B) / 2;
+
+            return Color.FromArgb(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
+        }
+
+        /**
          * <summary>    Converts a color to a gray scale. </summary>
          *
          * <param name="color"> The color to convert. </param>

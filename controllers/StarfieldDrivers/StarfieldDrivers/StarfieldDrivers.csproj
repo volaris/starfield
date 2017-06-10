@@ -57,6 +57,7 @@
     <Compile Include="Fractal\FractalFlame.cs" />
     <Compile Include="Fractal\FractalFlame4D.cs" />
     <Compile Include="Noise\White\NamespaceDoc.cs" />
+    <Compile Include="Noise\White\Shards.cs" />
     <Compile Include="PresenceResponsive\InteractiveSoundResponsiveGlobes.cs" />
     <Compile Include="PresenceResponsive\GenericTrails.cs" />
     <Compile Include="PresenceResponsive\ConnectiveOrbs.cs" />
