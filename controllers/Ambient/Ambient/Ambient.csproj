@@ -44,10 +44,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\lib\.NET\bin\Utils.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormDemo.cs">
@@ -89,6 +85,10 @@
     <ProjectReference Include="..\..\..\lib\.NET\StarfieldClient\StarfieldClient\Starfield.csproj">
       <Project>{9fd24852-54fb-49fe-b0ab-b7ff9806297c}</Project>
       <Name>Starfield</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\lib\.NET\Utils\Utils\Utils.csproj">
+      <Project>{b8f8c32d-d4f5-48b8-a28b-8871d87ad23c}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\StarfieldDrivers\StarfieldDrivers\StarfieldDrivers.csproj">
       <Project>{ba41636a-ddce-4109-9d10-ff4afb40273c}</Project>

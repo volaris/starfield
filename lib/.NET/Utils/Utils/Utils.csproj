@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSCore, Version=1.2.1.1, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\CSCore.1.2.1.1\lib\net35-client\CSCore.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\CSCore.1.2.1.1\lib\net35-client\CSCore.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Exocortex.DSP.v1, Version=1.0.5338.41091, Culture=neutral, processorArchitecture=MSIL">
@@ -42,16 +42,16 @@
       <HintPath>..\..\..\external\Exocortex.DSP.v1.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Filtering, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Filtering.0.3.0\lib\net40\MathNet.Filtering.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\MathNet.Filtering.0.3.0\lib\net40\MathNet.Filtering.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics, Version=3.17.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Numerics.3.17.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\MathNet.Numerics.3.17.0\lib\net40\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Spatial, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MathNet.Spatial.0.3.0\lib\net40\MathNet.Spatial.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\MathNet.Spatial.0.3.0\lib\net40\MathNet.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -133,15 +133,15 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets" Condition="Exists('..\..\packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets')" />
+  <Import Project="$(SolutionDir)packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets" Condition="Exists('$(SolutionDir)packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets'))" />
-    <Error Condition="!Exists('..\..\packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)packages\MathNet.Numerics.MKL.Win.2.2.0\build\MathNet.Numerics.MKL.Win.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets'))" />
   </Target>
-  <Import Project="..\..\packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets" Condition="Exists('..\..\packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets')" />
+  <Import Project="$(SolutionDir)packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets" Condition="Exists('$(SolutionDir)packages\MathNet.Numerics.MKL.Linux.2.0.0\build\MathNet.Numerics.MKL.Linux.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
