@@ -21,11 +21,11 @@ The topics in this section will help you install all of the required tools, beco
 * Open solution starfield\lib\.NET\StarfieldLibs.sln
 * Switch project configuration to Release mode
 * Build solution
-* You should see this: <pre>========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========</pre>
+* You should see this: `========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========`
 * Open solution starfield\controllers\StarfieldDrivers\StarfieldDrivers.sln
 * Switch project configuration to Release mode
 * Build solution
-* You should see this: <pre>========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========</pre>
+* You should see this: `========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========`
 
 ### Get the Simulator
 
