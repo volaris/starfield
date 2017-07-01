@@ -118,7 +118,7 @@ namespace StarfieldUtils.DisplayUtils
             StarfieldModel channel;
             lock (lockObject)
             {
-                channel = new StarfieldModel(display.XStep, display.YStep, display.ZStep, display.NumX, display.NumY, display.NumZ);
+                channel = StarfieldModel.CriticalNWStarfield();// new StarfieldModel(display.XStep, display.YStep, display.ZStep, display.NumX, display.NumY, display.NumZ);
                 channels.Add(channel);
                 weights.Add(0d);
                 faders.Add(null);
