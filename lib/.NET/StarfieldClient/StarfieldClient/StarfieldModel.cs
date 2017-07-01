@@ -128,7 +128,7 @@ namespace Starfield
 
         public static StarfieldModel Starfield2017()
         {
-            return new StarfieldModel(2.0f, 2.0f, 2.0f, 11, 5, 11, new PresenceClient());
+            return (StarfieldModel)new CriticalStarfieldModel(2.0f, 2.0f, 2.0f, 11, 5, 11, new PresenceClient());
         }
 
         /**
