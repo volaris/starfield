@@ -1,9 +1,9 @@
 #include <Adafruit_NeoPixel.h>
 
 #define PIN 0
-#define LENGTH 10
+#define LENGTH 21
 #define ON 40
-#define DELAY 75
+#define DELAY (1000 / LENGTH)
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
@@ -13,10 +13,10 @@
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
-Adafruit_NeoPixel strip1 = Adafruit_NeoPixel(LENGTH + 1, PIN, NEO_RGB + NEO_KHZ800  );
-Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(LENGTH + 1, PIN+1, NEO_RGB + NEO_KHZ800  );
-Adafruit_NeoPixel strip3 = Adafruit_NeoPixel(LENGTH + 1, PIN+2, NEO_RGB + NEO_KHZ800  );
-Adafruit_NeoPixel strip4 = Adafruit_NeoPixel(LENGTH + 1, PIN+3, NEO_RGB + NEO_KHZ800  );
+Adafruit_NeoPixel strip1 = Adafruit_NeoPixel(LENGTH + 1, PIN, NEO_GRB + NEO_KHZ800  );
+Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(LENGTH + 1, PIN+1, NEO_GRB + NEO_KHZ800  );
+Adafruit_NeoPixel strip3 = Adafruit_NeoPixel(LENGTH + 1, PIN+2, NEO_GRB + NEO_KHZ800  );
+Adafruit_NeoPixel strip4 = Adafruit_NeoPixel(LENGTH + 1, PIN+3, NEO_GRB + NEO_KHZ800  );
 
 void setup() {
   // put your setup code here, to run once:
