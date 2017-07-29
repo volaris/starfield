@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HDF.PInvoke, Version=1.8.16.20170, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HDF.PInvoke.1.8.16.11\lib\Net45\HDF.PInvoke.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.1\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="sharpHDF, Version=0.8.33.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\sharpHDF.0.8.33.0\lib\net45\sharpHDF.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KinectAudioData.cs" />
     <Compile Include="KinectMonitor.cs" />
     <Compile Include="KinectPresenceData.cs" />
     <Compile Include="Program.cs" />
@@ -57,4 +72,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)bin32" md "$(TargetDir)bin32"
+xcopy /s /y "$(SolutionDir)packages\HDF.PInvoke.1.8.16.11\lib\native\bin32\*.*" "$(TargetDir)bin32"
+if not exist "$(TargetDir)bin64" md "$(TargetDir)bin64"
+xcopy /s /y "$(SolutionDir)packages\HDF.PInvoke.1.8.16.11\lib\native\bin64\*.*" "$(TargetDir)bin64"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

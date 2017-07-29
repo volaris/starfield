@@ -12,11 +12,7 @@ namespace KinectPresenceMonitor
         {
             KinectMonitor km = new KinectMonitor();
 
-            // Prepare Kinect and setup callbacks
-            km.Initialize();
-
-            // Suspend while we're driven by callback events
-            Thread.Sleep(Timeout.Infinite);
+            km.Run();
         }
     }
 }
