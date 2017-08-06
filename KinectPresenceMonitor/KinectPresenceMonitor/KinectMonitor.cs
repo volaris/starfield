@@ -159,16 +159,8 @@ namespace KinectPresenceMonitor
                     }
 
                     TransmitAudioData(audioData);
-                    SaveAudioData(audioData);
                 }
             }
-        }
-
-        private void SaveAudioData(KinectAudioData audioData)
-        {
-            byte[] data = SerializeObjectToBSON<KinectAudioData>(audioData);
-            audioLog.Write(data, 0, data.Length);
-            audioLog.Flush();
         }
 
         private void TransmitAudioData(KinectAudioData audioData)
@@ -278,15 +270,7 @@ namespace KinectPresenceMonitor
                 
                 // Pass the data along to the destination server
                 TransmitBodyData(bodyData);
-                SaveBodyData(bodyData);
             }
-        }
-
-        private void SaveBodyData(KinectPresenceData bodyData)
-        {
-            byte[] data = SerializeObjectToBSON<KinectPresenceData>(bodyData);
-            bodyLog.Write(data, 0, data.Length);
-            bodyLog.Flush();
         }
 
         private void TransmitBodyData(KinectPresenceData bodyData)
