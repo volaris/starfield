@@ -17,7 +17,8 @@ while($true)
     
     # record a clip
     #fmedia.exe --record --out=$File --dev-capture=$Device --until=$Duration --channels=mono
-    ffmpeg -f dshow -i audio="Microphone Array (Xbox NUI Sensor)" -t $Duration $File
+    #ffmpeg -f dshow -i audio="Microphone Array (Xbox NUI Sensor)" -t $Duration $File
+    ffmpeg -f dshow -i audio="Microphone (AK5371                   )" -t $Duration $File
 
     # delay on failure, exit if too many failures in a row
     if($LASTEXITCODE -ne 0)
