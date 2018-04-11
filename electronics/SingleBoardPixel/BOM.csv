@@ -1,0 +1,4 @@
+Qty,Value,Device,Package,Parts,Description,MF,MPN
+2,.1uF,C-USC0402,C0402,"C1, C2",.1uF Capacitor,Taiyo Yuden,LMK105BJ104KV-F
+2,S4B-ZR,S4B-ZR,S4B-ZR,"J1, J2","ZH CONNECTOR 1.5 mm, 4 pin 1 row",JST,S4B-ZR(LF)(SN)
+2,WS2812B,WS2812B,SMD5050,"D1, D2",WS2812B SMD addressable RGB LED,Worldsemi,WS2812B
